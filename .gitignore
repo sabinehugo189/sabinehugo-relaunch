@@ -1,6 +1,15 @@
-node_modules
-*.log
-.nuxt
-nuxt.d.ts
-.output
+# secrets
 .env
+
+# cache
+.eslintcache
+.stylelintcache
+
+# logs
+*.log
+
+# build fragments
+.nuxt
+.output
+node_modules
+nuxt.d.ts
