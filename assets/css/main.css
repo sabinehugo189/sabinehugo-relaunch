@@ -1,1 +1,27 @@
-/* …tbd… */
+/**
+ * Open Props
+ * https://open-props.style/
+ */
+@import 'open-props/postcss/style';
+
+/* Font definitions */
+@import 'fonts.css';
+
+/* Open Props Adjustments */
+@import 'project-props.css';
+@import 'normalize.css';
+
+/* Nuxt Root Element */
+#__nuxt {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-rows: 1px auto 1fr auto;
+  padding-block-start: var(--size-5);
+  position: relative;
+}
+
+@media (--xl-n-above) {
+  #__nuxt {
+    padding-block-start: var(--size-10);
+  }
+}

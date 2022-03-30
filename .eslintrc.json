@@ -20,9 +20,25 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "vue/setup-compiler-macros": true
+  },
+  "globals": {
+    "definePageMeta": "readonly",
+    "ref": "readonly",
+    "useIntersectionObserver": "readonly",
+    "watch": "readonly"
   },
   "rules": {
-    "eqeqeq": ["error", "always", { "null": "ignore" }]
-  }
+    "eqeqeq": ["error", "smart"],
+    "vue/script-setup-uses-vars": "error"
+  },
+  "overrides": [
+    {
+      "files": ["pages/**/*.{js,ts,vue}", "layouts/**/*.{js,ts,vue}"],
+      "rules": {
+        "vue/multi-word-component-names": "off"
+      }
+    }
+  ]
 }

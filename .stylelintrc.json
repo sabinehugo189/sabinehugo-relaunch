@@ -18,6 +18,16 @@
     "color-format/format": {
       "format": "hsl"
     },
-    "alpha-value-notation": "number"
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-function-notation": "modern",
+    "hue-degree-notation": "angle",
+    "alpha-value-notation": "number",
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["custom-media"]
+      }
+    ]
   }
 }

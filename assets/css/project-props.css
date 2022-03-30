@@ -1,0 +1,153 @@
+/**
+ * Custom Media Queries 
+ */
+@custom-media --xl-only (1024px <= width <= 1280px);
+@custom-media --xl-n-above (width >= 1280px);
+@custom-media --xl-n-below (width <= 1280px);
+
+@custom-media --xxl-only (1280px <= width <= 1536px);
+@custom-media --xxl-n-above (width >= 1536px);
+@custom-media --xxl-n-below (width <= 1536px);
+
+@custom-media --xxxl-only (1536px <= width <= 1920px);
+@custom-media --xxxl-n-above (width >= 1920px);
+@custom-media --xxxl-n-below (width <= 1920px);
+
+:root {
+  /**
+   * Colors
+   */
+
+  /* Gray */
+  --gray-0: hsl(0deg 0% 98%);
+  --gray-1: hsl(0deg 0% 97%);
+  --gray-2: hsl(0deg 0% 90%);
+  --gray-3: hsl(0deg 0% 80%);
+  --gray-4: hsl(0deg 0% 64%);
+  --gray-5: hsl(0deg 0% 45%);
+  --gray-6: hsl(0deg 0% 33%);
+  --gray-7: hsl(0deg 0% 25%);
+  --gray-8: hsl(0deg 0% 15%);
+  --gray-9: hsl(0deg 0% 10%);
+
+  /* Red */
+  --red-0: hsl(0deg 100% 97%);
+  --red-1: hsl(0deg 100% 93%);
+  --red-2: hsl(0deg 100% 88%);
+  --red-3: hsl(0deg 100% 79%);
+  --red-4: hsl(0deg 100% 67%);
+  --red-5: hsl(0deg 100% 57%);
+  --red-6: hsl(0deg 100% 49%);
+  --red-7: hsl(0deg 100% 42%);
+  --red-8: hsl(0deg 97% 35%);
+  --red-9: hsl(0deg 87% 31%);
+
+  /* Orange */
+  --orange-0: hsl(47deg 100% 96%);
+  --orange-1: hsl(48deg 100% 91%);
+  --orange-2: hsl(46deg 100% 82%);
+  --orange-3: hsl(44deg 100% 71%);
+  --orange-4: hsl(41deg 100% 60%);
+  --orange-5: hsl(38deg 100% 52%);
+  --orange-6: hsl(33deg 100% 49%);
+  --orange-7: hsl(31deg 98% 40%);
+  --orange-8: hsl(28deg 87% 34%);
+  --orange-9: hsl(28deg 83% 28%);
+
+  /* White */
+  --white-hsl: 0deg 0% 100%;
+  --white: hsl(0deg 0% 100%);
+
+  /**
+   * Gradients
+   */
+
+  /* Gradient 19 */
+  --gradient-19: linear-gradient(
+    to bottom right,
+    var(--orange-6),
+    var(--orange-5)
+  );
+
+  /**
+   * Typography 
+   */
+
+  /* Font Families */
+  --font-sans: Gilroy, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif;
+
+  /* Font Sizes */
+  --font-size-2: 1.125rem;
+
+  /* Fluid Font Sizes */
+  --font-size-fluid-0: clamp(1.125rem, 0.5vw + 1rem, 1.375rem);
+  --font-size-fluid-1: clamp(1.5rem, 1.2vw + 1rem, 1.75rem);
+  --font-size-fluid-2: clamp(1.75rem, 1.8vw + 1rem, 2.375rem);
+  --font-size-fluid-3: clamp(1.75rem, 2vw + 1rem, 2.875rem);
+  --font-size-fluid-4: clamp(2.625rem, 3vw + 1.5rem, 4.625rem);
+
+  /* Line Height */
+  --font-lineheight-0: 1;
+
+  /**
+   * Sizes 
+   */
+
+  /* Absolute Sizes */
+  --size-px: 1px;
+
+  /* Relative Sizes */
+  --size-0\.5: 0.125rem;
+  --size-1: 0.25rem;
+  --size-1\.5: 0.375rem;
+  --size-2: 0.5rem;
+  --size-2\.5: 0.625rem;
+  --size-3: 0.75rem;
+  --size-3\.5: 0.875rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-13: 3.25rem;
+  --size-14: 3.5rem;
+  --size-15: 3.75rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-24: 6rem;
+  --size-28: 7rem;
+  --size-32: 8rem;
+  --size-36: 9rem;
+  --size-40: 10rem;
+  --size-44: 11rem;
+  --size-48: 12rem;
+  --size-52: 13rem;
+  --size-56: 14rem;
+  --size-60: 15rem;
+  --size-64: 16rem;
+  --size-72: 18rem;
+  --size-80: 20rem;
+  --size-96: 24rem;
+
+  /* Screen Sizes */
+  --size-xl: 1280px;
+  --size-xxl: 1440px;
+  --size-xxxl: 1920px;
+
+  /**
+   * Focus Rings 
+   */
+
+  --ring-color: var(--orange-4);
+
+  --ring-0: 0 0 0 0px var(--ring-color);
+  --ring-1: 0 0 0 1px var(--ring-color);
+  --ring-2: 0 0 0 2px var(--ring-color);
+  --ring-3: 0 0 0 3px var(--ring-color);
+  --ring-4: 0 0 0 4px var(--ring-color);
+}
