@@ -1,3 +1,5 @@
+@import 'brand.css';
+
 *,
 ::before,
 ::after {
@@ -39,7 +41,9 @@
 }
 
 :where(:not(:active)):focus-visible {
-  outline-offset: 5px;
+  outline-offset: var(--size-1);
+  outline-style: solid;
+  outline-width: thin;
 }
 
 :where(body) {
@@ -98,17 +102,34 @@
   padding-inline: var(--size-1);
 }
 
-:where(a[href]) {
-  text-decoration-color: var(--indigo-2);
-  transition: color 0.25s ease-in-out;
+:where(a[href]:link) {
+  color: var(--text-1);
+  text-decoration-color: var(--link);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
 }
 
 :where(a[href]:visited) {
-  text-decoration-color: var(--grape-2);
+  color: var(--text-1);
+  text-decoration-color: var(--link-visited);
 }
 
-:where(a:not(:hover)) {
-  text-decoration: inherit;
+:where(a[href]:hover) {
+  background-color: var(--link);
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.25s var(--ease-in-out-3),
+    color 0.25s var(--ease-in-out-3);
+}
+
+:where(a[href]:active) {
+  background-color: var(--link-visited);
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.25s var(--ease-in-out-3),
+    color 0.25s var(--ease-in-out-3);
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {

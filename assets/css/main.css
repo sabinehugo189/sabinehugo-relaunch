@@ -11,17 +11,20 @@
 @import 'project-props.css';
 @import 'normalize.css';
 
+@import 'utilities.css';
+@import 'buttons.css';
+
 /* Nuxt Root Element */
 #__nuxt {
   display: grid;
   flex: 1 1 auto;
-  grid-template-rows: 1px auto 1fr auto;
-  padding-block-start: var(--size-5);
+  grid-template-rows: var(--size-px) auto 1fr auto;
+  padding-block-start: calc(var(--size-5) - var(--size-px));
   position: relative;
 }
 
 @media (--xl-n-above) {
   #__nuxt {
-    padding-block-start: var(--size-10);
+    padding-block-start: calc(var(--size-10) - var(--size-px));
   }
 }

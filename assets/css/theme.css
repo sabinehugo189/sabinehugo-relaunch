@@ -1,0 +1,22 @@
+@import 'theme.light.css';
+
+:where(html) {
+  background-color: var(--surface-1);
+  color: var(--text-1);
+}
+
+:where(h1, h2, h3, h4, h5, h6, dt) {
+  color: var(--text-2);
+}
+
+:where(a[href]) {
+  color: var(--link);
+}
+
+:where(a[href]:visited) {
+  color: var(--link-visited);
+}
+
+:focus-visible {
+  outline-color: var(--link);
+}

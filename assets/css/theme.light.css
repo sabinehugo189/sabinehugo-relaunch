@@ -1,0 +1,16 @@
+:where(html) {
+  --brand: var(--orange-6);
+
+  --link: var(--brand);
+  --link-visited: var(--orange-7);
+
+  --text-1: var(--gray-6);
+  --text-2: var(--brand);
+
+  --surface-1: var(--gray-0);
+  --surface-2: var(--gray-2);
+  --surface-3: var(--gray-3);
+  --surface-4: var(--gray-4);
+
+  color-scheme: light;
+}

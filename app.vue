@@ -23,6 +23,5 @@ useIntersectionObserver(target, ([{ isIntersecting }]) => {
 .sentinel {
   background-color: transparent;
   height: var(--size-px);
-  margin-block-start: calc(var(--size-px) * -1);
 }
 </style>

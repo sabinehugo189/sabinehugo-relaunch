@@ -26,6 +26,8 @@
   "globals": {
     "definePageMeta": "readonly",
     "ref": "readonly",
+    "useRoute": "readonly",
+    "useRouter": "readonly",
     "useIntersectionObserver": "readonly",
     "watch": "readonly"
   },

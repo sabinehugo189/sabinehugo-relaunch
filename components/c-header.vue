@@ -2,7 +2,7 @@
   <header :class="{ 'is-stuck': isStuck }">
     <div class="inner">
       <c-logo />
-      <c-utilities />
+      <c-utilities :is-stuck="isStuck" />
     </div>
   </header>
 </template>
@@ -27,7 +27,7 @@ watch(
 
 <style scoped>
 header {
-  color: var(--orange-6);
+  color: var(--brand);
   max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   position: sticky;

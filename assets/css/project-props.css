@@ -138,16 +138,4 @@
   --size-xl: 1280px;
   --size-xxl: 1440px;
   --size-xxxl: 1920px;
-
-  /**
-   * Focus Rings 
-   */
-
-  --ring-color: var(--orange-4);
-
-  --ring-0: 0 0 0 0px var(--ring-color);
-  --ring-1: 0 0 0 1px var(--ring-color);
-  --ring-2: 0 0 0 2px var(--ring-color);
-  --ring-3: 0 0 0 3px var(--ring-color);
-  --ring-4: 0 0 0 4px var(--ring-color);
 }
