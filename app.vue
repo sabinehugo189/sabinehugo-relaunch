@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+/* global useIntersectionObserver */
 const target = ref(null);
 const isHidden = ref(false);
 

@@ -16,7 +16,7 @@
     </a>
     <NuxtLink
       href="/#contact"
-      :class="{ 'is-btn': isStuck }"
+      :class="{ 'is-btn': isStuck && xlNAbove }"
     >
       <svg
         aria-labelledby="emailSabineHugo"
@@ -35,6 +35,12 @@
 </template>
 
 <script setup>
+/* global useBreakpoints */
+import { breakpointsTailwind } from '@vueuse/core';
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const xlNAbove = breakpoints.greater('xl');
+
 const props = defineProps({
   isStuck: {
     type: Boolean,

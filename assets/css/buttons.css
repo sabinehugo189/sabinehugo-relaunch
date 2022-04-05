@@ -1,4 +1,4 @@
-:where(button, button[type], input[type='button'], input[type='submit'], input[type='reset']),
+:where(button, button[type], input[type='button'], input[type='submit'], input[type='reset'], .btn),
 :where(input[type='file'])::-webkit-file-upload-button,
 :where(input[type='file'])::file-selector-button {
   --_accent: var(--gray-0);
@@ -29,9 +29,11 @@
   gap: var(--size-2);
   justify-content: center;
   line-height: var(--font-lineheight-0);
+  margin: 0;
   padding: var(--_padding);
   -webkit-tap-highlight-color: transparent;
   text-align: center;
+  text-decoration: none;
   -webkit-touch-callout: none;
   transition: background-color 0.5s var(--ease-3) 3s;
   user-select: none;
@@ -56,8 +58,7 @@
   }
 }
 
-/* hover */
-:where(button:not([disabled]):not(:active):hover, button[type]:not([disabled]):not(:active):hover, input[type='button']:not([disabled]):not(:active):hover, input[type='submit']:not([disabled]):not(:active):hover, input[type='reset']:not([disabled]):not(:active):hover) {
+:where(button:not([disabled]:active):hover, button[type]:not([disabled]:active):hover, input[type='button']:not([disabled]:active):hover, input[type='submit']:not([disabled]:active):hover, input[type='reset']:not([disabled]:active):hover, .btn:not(:active):hover) {
   --_bg: var(--link);
   --_bg-gradient: ;
 
@@ -65,13 +66,8 @@
   transition-duration: 0.25s;
 }
 
-/* focus */
-:where(button:not(:active), button[type]:not(:active), input[type='button']:not(:active), input[type='submit']:not(:active), input[type='reset']:not(:active)):focus-visible {
-  outline-width: medium;
-}
-
 /* active */
-:where(button:not([disabled]):active, button[type]:not([disabled]):active, input[type='button']:not([disabled]):active, input[type='submit']:not([disabled]):active, input[type='reset']:not([disabled]):active) {
+:where(button:not([disabled]):active, button[type]:not([disabled]):active, input[type='button']:not([disabled]):active, input[type='submit']:not([disabled]):active, input[type='reset']:not([disabled]):active, .btn:not([disabled]):active) {
   --_bg: var(--link-visited);
   --_bg-gradient: ;
 
@@ -80,14 +76,14 @@
 }
 
 /* small */
-:where(button.is-small, button[type].is-small, input[type='button'].is-small, input[type='submit'].is-small, input[type='reset'].is-small) {
+:where(button.is-small, button[type].is-small, input[type='button'].is-small, input[type='submit'].is-small, input[type='reset'].is-small, .btn.is-small) {
   --_padding: var(--size-2) var(--size-7);
   --_size: var(--font-size-1);
 }
 
 /* icons */
 :where(button > svg, button[type] > svg, input[type='button']
-    > svg, input[type='submit'] > svg, input[type='reset'] > svg) {
+    > svg, input[type='submit'] > svg, input[type='reset'] > svg, .btn > svg) {
   block-size: var(--_icon-size);
   flex-shrink: 0;
   inline-size: var(--_icon-size);
@@ -95,7 +91,9 @@
 
 :where(button > svg *, button[type] > svg *, input[type='button']
     > svg
-    *, input[type='submit'] > svg *, input[type='reset'] > svg *) {
+    *, input[type='submit'] > svg *, input[type='reset'] > svg *, .btn
+    > svg
+    *) {
   stroke: var(--_icon-color);
   stroke-width: var(--border-size-2);
 }

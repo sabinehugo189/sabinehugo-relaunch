@@ -1,25 +1,148 @@
 <template>
   <div class="container">
-    <div>
-      <h2>Hero</h2>
+    <div class="container-inner">
+      <div
+        ref="el"
+        class="hero"
+      >
+        <h1>
+          Unsichtbare Zahnspange:
+          <small>Mehr Selbstvertrauen durch gerade Zähne.</small>
+        </h1>
+        <p>
+          Sie sind unzufrieden mit Ihrer Zahnstellung? Mit den unsichtbaren
+          Zahnschienen von Invisalign ist auch im Erwachsenenalter eine
+          erfolgreiche Behandlung einer Fehlstellung möglich.
+        </p>
+        <div class="cta-bar">
+          <NuxtLink
+            href="/#contact"
+            class="btn"
+          >
+            Jetzt Termin ausmachen
+          </NuxtLink>
+          <img
+            src="/quality-seal.png"
+            width="228"
+            height="138"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
+    <div class="shaded-edge"></div>
   </div>
 </template>
 
+<script setup>
+/* global useHeaderHeight, useCssVar */
+
+const el = ref(null);
+const { headerHeight } = useHeaderHeight();
+
+const height = useCssVar('--header-height', el);
+
+watch(
+  () => headerHeight.value,
+  (hh) => {
+    height.value = `${parseInt(hh)}px`;
+  },
+);
+</script>
+
 <style scoped>
 .container {
-  box-shadow: inset 0 -0.5em 0.5em -0.5em hsl(0deg 0% 0% / 0.1);
+  margin-block-end: var(--size-48);
+  position: relative;
 }
 
-.container > div {
+.container-inner {
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
 }
 
+.shaded-edge {
+  box-shadow: inset 0 -0.5em 0.5em -0.5em hsl(0deg 0% 0% / 0.1);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.hero {
+  background-color: var(--gray-1);
+  background-image: url('/bg-hero.jpg');
+  background-position: bottom center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-8);
+  padding-block: var(--size-16) var(--size-5);
+  padding-inline: var(--size-5);
+}
+
+.hero::after {
+  aspect-ratio: 1 / 1;
+  content: '';
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-fluid-4);
+  gap: var(--size-5);
+  max-inline-size: var(--size-content-0);
+}
+
+h1 > small {
+  font-size: var(--font-size-fluid-3);
+}
+
+p {
+  max-inline-size: var(--size-content-2);
+}
+
+.cta-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-8);
+}
+
+.cta-bar > a {
+  align-self: flex-start;
+}
+
+@media (--lg-n-above) {
+  .hero {
+    background-position: bottom right;
+    background-size: 65%;
+    justify-content: center;
+    padding-block: var(--size-5);
+  }
+
+  .hero::after {
+    content: none;
+  }
+}
+
 @media (--xl-n-above) {
-  .container > div {
+  .container-inner {
     padding-inline: var(--size-10);
+  }
+
+  .hero {
+    background-size: contain;
+    min-block-size: calc(100vh - var(--header-height) - var(--size-10));
+    padding-inline: var(--size-40);
+  }
+
+  p {
+    font-size: var(--font-size-3);
+  }
+
+  .cta-bar {
+    flex-direction: row;
+    gap: var(--size-8);
   }
 }
 </style>

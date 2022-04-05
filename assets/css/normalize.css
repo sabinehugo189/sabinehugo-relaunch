@@ -43,6 +43,10 @@
 :where(:not(:active)):focus-visible {
   outline-offset: var(--size-1);
   outline-style: solid;
+  outline-width: medium;
+}
+
+:where(a:not(.btn)):focus-visible {
   outline-width: thin;
 }
 
@@ -59,7 +63,8 @@
 }
 
 :where(h1) {
-  font-size: var(--font-size-8);
+  font-size: var(--font-size-9);
+  line-height: var(--font-lineheight-0);
   max-inline-size: var(--size-header-1);
 }
 

@@ -19,12 +19,12 @@
   display: grid;
   flex: 1 1 auto;
   grid-template-rows: var(--size-px) auto 1fr auto;
-  padding-block-start: calc(var(--size-5) - var(--size-px));
+  padding-block: calc(var(--size-5) - var(--size-px)) var(--size-5);
   position: relative;
 }
 
 @media (--xl-n-above) {
   #__nuxt {
-    padding-block-start: calc(var(--size-10) - var(--size-px));
+    padding-block: calc(var(--size-10) - var(--size-px)) var(--size-10);
   }
 }

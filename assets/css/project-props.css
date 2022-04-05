@@ -78,7 +78,13 @@
     Cantarell, Noto Sans, sans-serif;
 
   /* Font Sizes */
+  --font-size-00: 0.75rem;
+  --font-size-0: 0.875rem;
   --font-size-2: 1.125rem;
+  --font-size-5: 1.875rem;
+  --font-size-6: 2.25rem;
+  --font-size-8: 3.75rem;
+  --font-size-9: 4.5rem;
 
   /* Fluid Font Sizes */
   --font-size-fluid-0: clamp(1.125rem, 0.5vw + 1rem, 1.375rem);
@@ -134,8 +140,11 @@
   --size-80: 20rem;
   --size-96: 24rem;
 
+  /* Reading Content Sizes */
+  --size-content-0: 15ch;
+
   /* Screen Sizes */
   --size-xl: 1280px;
-  --size-xxl: 1440px;
+  --size-xxl: 1536px;
   --size-xxxl: 1920px;
 }

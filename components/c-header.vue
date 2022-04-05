@@ -1,5 +1,8 @@
 <template>
-  <header :class="{ 'is-stuck': isStuck }">
+  <header
+    ref="el"
+    :class="{ 'is-stuck': isStuck }"
+  >
     <div class="inner">
       <c-logo />
       <c-utilities :is-stuck="isStuck" />
@@ -8,6 +11,7 @@
 </template>
 
 <script setup>
+/* global useElementSize, useHeaderHeight */
 const props = defineProps({
   isStuck: {
     type: Boolean,
@@ -23,6 +27,13 @@ watch(
     isStuck.value = stuck;
   },
 );
+
+const { setHeaderHeight } = useHeaderHeight();
+
+const el = ref(null);
+const { height } = useElementSize(el);
+
+setHeaderHeight(height);
 </script>
 
 <style scoped>
@@ -32,6 +43,7 @@ header {
   padding-inline: var(--size-5);
   position: sticky;
   top: 0;
+  z-index: var(--layer-1);
 }
 
 .inner {

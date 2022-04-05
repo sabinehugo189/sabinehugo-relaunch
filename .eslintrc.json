@@ -25,10 +25,12 @@
   },
   "globals": {
     "definePageMeta": "readonly",
+    "getCurrentInstance": "readonly",
     "ref": "readonly",
+    "toRefs": "readonly",
     "useRoute": "readonly",
     "useRouter": "readonly",
-    "useIntersectionObserver": "readonly",
+    "useState": "readonly",
     "watch": "readonly"
   },
   "rules": {
