@@ -58,7 +58,7 @@ header {
 }
 
 .is-stuck > .inner {
-  background-color: hsl(var(--white-hsl) / 0.95);
+  background-color: hsl(var(--gray-1-hsl) / 0.95);
   border-end-end-radius: var(--size-5);
   border-end-start-radius: var(--size-5);
   border-start-end-radius: 0;

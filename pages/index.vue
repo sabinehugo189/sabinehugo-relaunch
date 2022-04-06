@@ -1,7 +1,7 @@
 <template>
   <c-hero />
   <NuxtLayout name="default">
-    <h2>Main</h2>
+    <c-usp />
   </NuxtLayout>
 </template>
 

@@ -157,16 +157,19 @@ address span {
   text-underline-position: under;
 }
 
+@media (--lg-n-above) {
+  footer > ul {
+    display: grid;
+    gap: var(--size-8);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (--xl-n-above) {
   footer {
     font-size: var(--font-size-3);
     gap: var(--size-16);
-    padding: var(--size-32) var(--size-40);
-  }
-
-  footer > ul {
-    flex-direction: row;
-    justify-content: space-between;
+    padding: var(--size-20);
   }
 
   address > * + *:not(:nth-child(2)) {
@@ -175,6 +178,12 @@ address span {
 
   .quality-seal {
     margin-block-start: var(--size-12);
+  }
+}
+
+@media (--xxl-n-above) {
+  footer {
+    padding: var(--size-32) var(--size-40);
   }
 }
 </style>

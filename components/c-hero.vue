@@ -99,6 +99,7 @@ h1 > small {
 }
 
 p {
+  font-size: var(--font-size-fluid-0);
   max-inline-size: var(--size-content-2);
 }
 
@@ -134,10 +135,6 @@ p {
     background-size: contain;
     min-block-size: calc(100vh - var(--header-height) - var(--size-10));
     padding-inline: var(--size-40);
-  }
-
-  p {
-    font-size: var(--font-size-3);
   }
 
   .cta-bar {

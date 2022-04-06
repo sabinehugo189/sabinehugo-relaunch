@@ -55,8 +55,7 @@
   --orange-9: hsl(28deg 83% 28%);
 
   /* White */
-  --white-hsl: 0deg 0% 100%;
-  --white: hsl(0deg 0% 100%);
+  --gray-1-hsl: 0deg 0% 97%;
 
   /**
    * Gradients
@@ -141,6 +140,7 @@
   --size-96: 24rem;
 
   /* Reading Content Sizes */
+  --size-header-0: 15ch;
   --size-content-0: 15ch;
 
   /* Screen Sizes */
