@@ -157,7 +157,7 @@ address span {
   text-underline-position: under;
 }
 
-@media (--lg-n-above) {
+@media (min-width: 1024px) {
   footer > ul {
     display: grid;
     gap: var(--size-8);
@@ -165,7 +165,7 @@ address span {
   }
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1280px) {
   footer {
     font-size: var(--font-size-3);
     gap: var(--size-16);
@@ -181,7 +181,7 @@ address span {
   }
 }
 
-@media (--xxl-n-above) {
+@media (min-width: 1536px) {
   footer {
     padding: var(--size-32) var(--size-40);
   }

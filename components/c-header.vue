@@ -66,11 +66,17 @@ header {
   box-shadow: var(--shadow-2);
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1280px) {
   header {
     padding-inline: var(--size-10);
   }
 
+  .inner {
+    padding-inline: var(--size-20);
+  }
+}
+
+@media (min-width: 1536px) {
   .inner {
     padding-inline: var(--size-40);
   }

@@ -206,7 +206,7 @@ svg {
   max-block-size: var(--size-16);
 }
 
-@media (--lg-n-above) {
+@media (min-width: 1024px) {
   header {
     flex-direction: row;
     gap: var(--size-48);
@@ -234,13 +234,13 @@ svg {
   }
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1280px) {
   .container {
     padding-inline: var(--size-20);
   }
 }
 
-@media (--xxl-n-above) {
+@media (min-width: 1536px) {
   .container {
     padding-inline: var(--size-40);
   }

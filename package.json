@@ -35,8 +35,8 @@
   },
   "homepage": "https://gitlab.wyn.rocks/sabine-hugo/landingpage",
   "lint-staged": {
-    ".{js,vue}": "npm run format:eslint",
-    "*.{css,vue}": "npm run format:stylelint"
+    ".{js,vue}": ":eslint --cache --fix",
+    "*.{css,vue}": "stylelint --cache --fix"
   },
   "scripts": {
     "dev": "nuxi dev",
@@ -53,7 +53,8 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@vueuse/nuxt": "^8.2.0",
+    "@vueuse/core": "^8.2.5",
+    "@vueuse/nuxt": "^8.2.5",
     "browserslist": "^4.20.2",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
@@ -68,9 +69,8 @@
     "lint-staged": "^12.3.7",
     "npm-run-all": "^4.1.5",
     "nuxt3": "latest",
-    "postcss-custom-media": "^8.0.0",
     "postcss-html": "^1.3.0",
-    "prettier": "2.6.1",
+    "prettier": "2.6.2",
     "stylelint": "^14.6.0",
     "stylelint-color-format": "^1.1.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -79,8 +79,6 @@
     "stylelint-order": "^5.0.0"
   },
   "dependencies": {
-    "@vueuse/components": "^8.2.0",
-    "@vueuse/core": "^8.2.0",
     "open-props": "^1.3.9"
   }
 }

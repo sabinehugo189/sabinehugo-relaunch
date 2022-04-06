@@ -14,7 +14,7 @@
   row-gap: var(--size-48);
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1280px) {
   .container {
     padding-inline: var(--size-10);
   }

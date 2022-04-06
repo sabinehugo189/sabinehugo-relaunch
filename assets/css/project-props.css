@@ -1,18 +1,3 @@
-/**
- * Custom Media Queries 
- */
-@custom-media --xl-only (1024px <= width <= 1280px);
-@custom-media --xl-n-above (width >= 1280px);
-@custom-media --xl-n-below (width <= 1280px);
-
-@custom-media --xxl-only (1280px <= width <= 1536px);
-@custom-media --xxl-n-above (width >= 1536px);
-@custom-media --xxl-n-below (width <= 1536px);
-
-@custom-media --xxxl-only (1536px <= width <= 1920px);
-@custom-media --xxxl-n-above (width >= 1920px);
-@custom-media --xxxl-n-below (width <= 1920px);
-
 :root {
   /**
    * Colors

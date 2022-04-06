@@ -16,7 +16,7 @@
     </a>
     <NuxtLink
       href="/#contact"
-      :class="{ 'is-btn': isStuck && xlNAbove }"
+      :class="{ 'is-btn': isStuck && lgNAbove }"
     >
       <svg
         aria-labelledby="emailSabineHugo"
@@ -39,7 +39,7 @@
 import { breakpointsTailwind } from '@vueuse/core';
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
-const xlNAbove = breakpoints.greater('xl');
+const lgNAbove = breakpoints.greater('lg');
 
 const props = defineProps({
   isStuck: {
@@ -105,7 +105,7 @@ button {
   display: none;
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1024px) {
   .container {
     gap: var(--size-10);
   }

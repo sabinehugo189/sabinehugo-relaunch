@@ -25,18 +25,18 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/GilroyRegular/font.woff2') format('woff2'),
-    url('assets/fonts/GilroyRegular/font.woff') format('woff');
+  src: url("~/assets/fonts/GilroyRegular/font.woff2") format("woff2"),
+    url("~/assets/fonts/GilroyRegular/font.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 800;
-  src: url('assets/fonts/GilroyExtraBold/font.woff2') format('woff2'),
-    url('assets/fonts/GilroyExtraBold/font.woff') format('woff');
+  src: url("~/assets/fonts/GilroyExtraBold/font.woff2") format("woff2"),
+    url("~/assets/fonts/GilroyExtraBold/font.woff") format("woff");
 }

@@ -113,11 +113,12 @@ p {
   align-self: flex-start;
 }
 
-@media (--lg-n-above) {
+@media (min-width: 1024px) {
   .hero {
     background-position: bottom right;
-    background-size: 65%;
+    background-size: 55%;
     justify-content: center;
+    min-block-size: calc(100vh - var(--header-height) - var(--size-5));
     padding-block: var(--size-5);
   }
 
@@ -126,20 +127,26 @@ p {
   }
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1280px) {
   .container-inner {
     padding-inline: var(--size-10);
   }
 
   .hero {
-    background-size: contain;
     min-block-size: calc(100vh - var(--header-height) - var(--size-10));
-    padding-inline: var(--size-40);
+    padding-inline: var(--size-20);
   }
 
   .cta-bar {
     flex-direction: row;
     gap: var(--size-8);
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero {
+    background-size: contain;
+    padding-inline: var(--size-40);
   }
 }
 </style>

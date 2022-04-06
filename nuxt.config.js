@@ -4,9 +4,4 @@ import { defineNuxtConfig } from 'nuxt3';
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: ['@vueuse/nuxt'],
-  postcss: {
-    plugins: {
-      'postcss-custom-media': {},
-    },
-  },
 });

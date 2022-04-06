@@ -23,7 +23,7 @@
   position: relative;
 }
 
-@media (--xl-n-above) {
+@media (min-width: 1280px) {
   #__nuxt {
     padding-block: calc(var(--size-10) - var(--size-px)) var(--size-10);
   }
