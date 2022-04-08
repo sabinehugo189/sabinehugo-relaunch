@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li>
+  <ul class="items">
+    <li class="item">
       <a
         href="#"
         class="whatsapp"
@@ -22,7 +22,7 @@
         </svg>
       </a>
     </li>
-    <li>
+    <li class="item">
       <a
         href="#"
         class="instagram"
@@ -52,7 +52,7 @@
         </svg>
       </a>
     </li>
-    <li>
+    <li class="item">
       <a
         href="#"
         class="facebook"
@@ -71,7 +71,7 @@
         </svg>
       </a>
     </li>
-    <li>
+    <li class="item">
       <a
         href="#"
         class="twitter"
@@ -94,50 +94,56 @@
 </template>
 
 <style scoped>
-ul {
+.items {
   display: flex;
   gap: var(--size-5);
   list-style: none;
   padding-inline-start: 0;
 }
 
-li {
+.item {
+  block-size: var(--size-12);
+  display: flex;
+  inline-size: var(--size-12);
   max-inline-size: none;
   padding-inline-start: 0;
 }
 
-a:link,
-a:visited {
+.item > a {
   align-items: center;
-  aspect-ratio: 1 / 1;
-  background-color: var(--gray-0);
-  block-size: var(--size-12);
+  background-color: var(--surface-1);
   border-radius: var(--radius-round);
   box-shadow: var(--shadow-2);
-  color: var(--gray-6);
+  color: var(--text-2);
   display: flex;
+  flex: 1 1 auto;
   justify-content: center;
-  outline-color: var(--gray-0);
   text-decoration: none;
 }
 
-a.whatsapp:hover {
+.item > a.whatsapp:hover {
   color: hsl(142deg 70% 49%);
 }
 
-a.instagram:hover {
+.item > a.instagram:hover {
   color: hsl(326deg 57% 48%);
 }
 
-a.facebook:hover {
+.item > a.facebook:hover {
   color: hsl(220deg 46% 48%);
 }
 
-a.twitter:hover {
+.item > a.twitter:hover {
   color: hsl(203deg 89% 53%);
 }
 
-svg {
+.item > a:focus-visible {
+  outline-color: var(--text-1);
+  outline-style: solid;
+}
+
+.item > a > svg {
+  aspect-ratio: 1 / 1;
   width: var(--size-6);
 }
 </style>

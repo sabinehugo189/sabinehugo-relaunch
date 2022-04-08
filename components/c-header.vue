@@ -38,7 +38,7 @@ setHeaderHeight(height);
 
 <style scoped>
 header {
-  color: var(--brand);
+  color: var(--text-4);
   max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   position: sticky;
@@ -48,17 +48,18 @@ header {
 
 .inner {
   align-items: center;
-  background-color: var(--gray-1);
+  background-color: var(--surface-2);
   border-start-end-radius: var(--size-5);
   border-start-start-radius: var(--size-5);
   display: flex;
   justify-content: space-between;
   padding: var(--size-5);
-  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  transition: background-color 300ms var(--ease-2),
+    border-radius 300ms var(--ease-2), box-shadow 300ms var(--ease-2);
 }
 
 .is-stuck > .inner {
-  background-color: hsl(var(--gray-1-hsl) / 0.95);
+  background-color: hsl(var(--surface-2-hsl) / 0.95);
   border-end-end-radius: var(--size-5);
   border-end-start-radius: var(--size-5);
   border-start-end-radius: 0;

@@ -1,13 +1,13 @@
 @import 'theme.css';
 
 :where(html) {
-  --scrollbar-color: var(--orange-7);
+  --scrollbar-color: var(--gray-7);
 
-  accent-color: var(--brand);
-  caret-color: var(--brand);
+  accent-color: var(--link);
+  caret-color: var(--link);
   scrollbar-color: var(--scrollbar-color) transparent;
 
-  @media (--OSlight) {
-    --scrollbar-color: var(--orange-4);
+  @media (prefers-color-scheme: light) {
+    --scrollbar-color: var(--gray-4);
   }
 }

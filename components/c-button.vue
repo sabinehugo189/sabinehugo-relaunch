@@ -1,23 +1,23 @@
 <template>
-  <button :class="[btnSize, btnType]">
+  <button :class="[btnSize, btnEmphasis]">
     <slot />
   </button>
 </template>
 
 <script setup>
 const props = defineProps({
-  size: {
+  emphasis: {
     type: String,
     default: '',
   },
-  emphasis: {
+  size: {
     type: String,
     default: '',
   },
 });
 
 const btnSize = ref(null);
-const btnType = ref(null);
+const btnEmphasis = ref(null);
 
 switch (props.size) {
   case 'small':
@@ -27,7 +27,7 @@ switch (props.size) {
 
 switch (props.emphasis) {
   case 'secondary':
-    btnType.value = 'is-secondary';
+    btnEmphasis.value = 'is-secondary';
     break;
 }
 </script>

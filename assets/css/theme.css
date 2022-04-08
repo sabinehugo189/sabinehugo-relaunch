@@ -2,11 +2,11 @@
 
 :where(html) {
   background-color: var(--surface-1);
-  color: var(--text-1);
+  color: var(--text-2);
 }
 
 :where(h1, h2, h3, h4, h5, h6, dt) {
-  color: var(--text-2);
+  color: var(--text-4);
 }
 
 :where(a[href]) {
@@ -17,6 +17,10 @@
   color: var(--link-visited);
 }
 
+:where(a[href]:active) {
+  color: var(--link-active);
+}
+
 :focus-visible {
-  outline-color: var(--link);
+  outline-color: var(--link-active);
 }

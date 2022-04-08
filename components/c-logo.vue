@@ -1,7 +1,7 @@
 <template>
   <svg
     :style="{ '--fill': fill, '--size': size }"
-    :aria-labelledby="rid"
+    :aria-labelledby="uid"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 156 25"
@@ -28,13 +28,13 @@ const props = defineProps({
 const { fill, size } = toRefs(props);
 
 // Generate random ID
-const { uid } = getCurrentInstance();
-const rid = `logoSabineHugo${uid}`;
+const { uid: rid } = getCurrentInstance();
+const uid = `logoSabineHugo${rid}`;
 </script>
 
 <style scoped>
 svg {
-  fill: var(--fill, var(--brand));
+  fill: var(--fill, var(--text-4));
   inline-size: var(--size, var(--size-40));
   stroke: none;
 }

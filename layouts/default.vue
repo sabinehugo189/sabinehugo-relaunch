@@ -4,6 +4,24 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  meta: [
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1, maximum-scale=1',
+    },
+    {
+      'http-equiv': 'X-UA-Compatible',
+      content: 'ie=edge',
+    },
+  ],
+  htmlAttrs: {
+    lang: 'de',
+  },
+});
+</script>
+
 <style scoped>
 .container {
   display: flex;

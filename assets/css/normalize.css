@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 
-* {
+:where(:not(dialog)) {
   margin: 0;
 }
 
-*:where(:not(fieldset, progress, meter)) {
+:where(:not(fieldset, progress, meter)) {
   background-origin: border-box;
   background-repeat: no-repeat;
   border-style: solid;
@@ -22,15 +22,13 @@
   font-family: var(--font-sans);
   line-height: var(--font-lineheight-3);
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
-}
 
-@media (--motionOK) {
-  :where(html) {
+  @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
 }
 
-@media (--motionOK) {
+@media (prefers-reduced-motion: no-preference) {
   :focus-visible {
     transition: outline-offset 145ms var(--ease-2);
   }
@@ -41,30 +39,21 @@
 }
 
 :where(:not(:active)):focus-visible {
-  outline-offset: var(--size-1);
-  outline-style: solid;
-  outline-width: medium;
-}
-
-:where(a:not(.btn)):focus-visible {
-  outline-width: thin;
+  outline-offset: 5px;
 }
 
 :where(body) {
-  display: flex;
-  flex-direction: column;
   min-block-size: 100%;
   scrollbar-gutter: stable both-edges;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-9);
   line-height: var(--font-lineheight-1);
 }
 
 :where(h1) {
-  font-size: var(--font-size-9);
-  line-height: var(--font-lineheight-0);
+  font-size: var(--font-size-8);
   max-inline-size: var(--size-header-1);
 }
 
@@ -76,9 +65,11 @@
 :where(h3) {
   font-size: var(--font-size-5);
 }
+
 :where(h4) {
   font-size: var(--font-size-4);
 }
+
 :where(h5) {
   font-size: var(--font-size-3);
 }
@@ -107,34 +98,16 @@
   padding-inline: var(--size-1);
 }
 
-:where(a[href]:link) {
-  color: var(--text-1);
-  text-decoration-color: var(--link);
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 3px;
-  text-underline-position: under;
+:where(a[href]) {
+  text-decoration-color: var(--indigo-2);
 }
 
 :where(a[href]:visited) {
-  color: var(--text-1);
-  text-decoration-color: var(--link-visited);
+  text-decoration-color: var(--grape-2);
 }
 
-:where(a[href]:hover) {
-  background-color: var(--link);
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.25s var(--ease-in-out-3),
-    color 0.25s var(--ease-in-out-3);
-}
-
-:where(a[href]:active) {
-  background-color: var(--link-visited);
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.25s var(--ease-in-out-3),
-    color 0.25s var(--ease-in-out-3);
+:where(a:not(:hover)) {
+  text-decoration: inherit;
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
@@ -159,7 +132,16 @@
   padding-inline: var(--size-2);
 }
 
-:where(select) {
+:where(textarea, input:not(button, button[type], input[type='button'], input[type='submit'], input[type='reset'])) {
+  background-color: var(--surface-2);
+  border-radius: var(--radius-2);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(210deg 11% 10%);
+  }
+}
+
+:where(select, textarea) {
   padding-block: var(--size-1);
   padding-inline: var(--size-2);
 }
@@ -169,8 +151,8 @@
 }
 
 :where(input[type='checkbox'], input[type='radio']) {
-  block-size: var(--size-4);
-  inline-size: var(--size-4);
+  block-size: var(--size-3);
+  inline-size: var(--size-3);
 }
 
 :where(svg) {
@@ -183,16 +165,16 @@
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 2;
 }
 
 :where(svg:not([width])) {
-  inline-size: var(--size-20);
+  inline-size: var(--size-10);
 }
 
 :where(code, kbd, samp, pre) {
   font-family: var(--font-mono);
 }
+
 :where(:not(pre) > code, kbd) {
   white-space: nowrap;
 }
@@ -222,17 +204,21 @@
 }
 
 :where(ol, ul) {
-  padding-inline-start: var(--size-12);
+  padding-inline-start: var(--size-8);
 }
+
 :where(li) {
   padding-inline-start: var(--size-2);
 }
+
 :where(li, dd, figcaption) {
   max-inline-size: var(--size-content-2);
 }
+
 :where(p) {
   max-inline-size: var(--size-content-3);
 }
+
 :where(dt, summary) {
   font-weight: var(--font-weight-7);
 }
@@ -268,10 +254,10 @@
 
 :where(blockquote) {
   display: grid;
-  gap: var(--size-4);
+  gap: var(--size-3);
   max-inline-size: var(--size-content-2);
-  padding-block: var(--size-4);
-  padding-inline: var(--size-5);
+  padding-block: var(--size-3);
+  padding-inline: var(--size-4);
 }
 
 :where(:not(blockquote) > cite) {
@@ -281,15 +267,15 @@
 :where(summary) {
   background: var(--surface-3);
   border-radius: var(--radius-2);
-  margin: calc(var(--size-2) * -1) calc(var(--size-4) * -1);
-  padding: var(--size-2) var(--size-4);
+  margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+  padding: var(--size-2) var(--size-3);
 }
 
 :where(details) {
   background: var(--surface-2);
   border-radius: var(--radius-2);
   padding-block: var(--size-2);
-  padding-inline: var(--size-4);
+  padding-inline: var(--size-3);
 }
 
 :where(details[open] > summary) {
@@ -299,6 +285,7 @@
 }
 
 :where(fieldset) {
+  border: var(--border-size-1) solid var(--surface-4);
   border-radius: var(--radius-2);
 }
 
@@ -314,4 +301,31 @@
 
 :where(abbr) {
   text-decoration-color: var(--blue-5);
+}
+
+:where(dialog) {
+  background-color: var(--surface-1);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-6);
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(dialog) {
+    background-color: var(--surface-2);
+  }
+}
+
+:where(dialog::backdrop) {
+  backdrop-filter: blur(25px);
+}
+
+:where(html:has(dialog[open])) {
+  overflow: hidden;
+}
+
+:where(menu) {
+  display: flex;
+  gap: var(--size-3);
+  padding-inline-start: 0;
 }

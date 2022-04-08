@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <a href="tel:+4925160900103">
+    <a
+      href="tel:+4925160900103"
+      class="link"
+    >
       <svg
         aria-labelledby="phoneSabineHugo"
         role="img"
@@ -16,7 +19,7 @@
     </a>
     <NuxtLink
       href="/#contact"
-      :class="{ 'is-btn': isStuck && lgNAbove }"
+      :class="[isStuck && lgNAbove ? 'btn is-small' : 'link']"
     >
       <svg
         aria-labelledby="emailSabineHugo"
@@ -64,8 +67,8 @@ watch(
   gap: var(--size-5);
 }
 
-a[href]:link,
-a[href]:visited {
+.link:link,
+.link:visited {
   align-items: center;
   color: var(--link);
   display: inline-flex;
@@ -76,29 +79,34 @@ a[href]:visited {
   text-decoration: none;
 }
 
-a[href]:hover {
+.link:hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-thickness: 3px;
   text-underline-position: under;
 }
 
-a[href]:active {
+.link:active {
   color: var(--link-visited);
 }
 
-a[href]:hover,
-a[href]:active {
+.link:hover,
+.link:active {
   background-color: transparent;
 }
 
-span {
+.link > span {
   display: none;
 }
 
 svg {
   block-size: 2ch;
   inline-size: 2ch;
+  stroke-width: 2;
+}
+
+.btn > svg {
+  display: none;
 }
 
 button {
@@ -110,47 +118,8 @@ button {
     gap: var(--size-10);
   }
 
-  span {
+  .link > span {
     display: block;
-  }
-
-  a[href].is-btn:link,
-  a[href].is-btn:visited {
-    background-color: var(--orange-5);
-    background-image: var(--gradient-19);
-    border-radius: 0 var(--radius-5) var(--radius-5) var(--radius-5);
-    color: white;
-    font-size: var(--font-size-1);
-    line-height: var(--font-lineheight-0);
-    padding: var(--size-2) var(--size-7);
-    -webkit-tap-highlight-color: transparent;
-    text-align: center;
-    text-decoration: none;
-    -webkit-touch-callout: none;
-    transition: background-color 0.5s var(--ease-3) 3s;
-    user-select: none;
-  }
-
-  a[href].is-btn:hover {
-    background-color: var(--link);
-    background-image: none;
-    transition-delay: 0s;
-    transition-duration: 0.25s;
-  }
-
-  a[href].is-btn:focus {
-    outline-width: medium;
-  }
-
-  a[href].is-btn:active {
-    background-color: var(--link-visited);
-    background-image: none;
-    transition-delay: 0s;
-    transition-duration: 0.25s;
-  }
-
-  a[href].is-btn > svg {
-    display: none;
   }
 }
 </style>

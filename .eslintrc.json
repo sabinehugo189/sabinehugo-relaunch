@@ -28,6 +28,7 @@
     "getCurrentInstance": "readonly",
     "ref": "readonly",
     "toRefs": "readonly",
+    "useHead": "readonly",
     "useRoute": "readonly",
     "useRouter": "readonly",
     "useState": "readonly",

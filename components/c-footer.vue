@@ -78,10 +78,10 @@
 }
 
 footer {
-  background-color: var(--brand);
+  background-color: var(--surface-5);
   border-end-end-radius: var(--size-5);
   border-end-start-radius: var(--size-5);
-  color: var(--gray-0);
+  color: var(--text-1);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-2);
@@ -143,10 +143,8 @@ address span {
   padding-inline-start: 0;
 }
 
-.link-list > li > a:link,
-.link-list > li > a:visited {
+.link-list > li > a {
   color: inherit;
-  outline-color: var(--gray-0);
   text-decoration: none;
 }
 
@@ -155,6 +153,11 @@ address span {
   text-decoration-style: solid;
   text-decoration-thickness: 3px;
   text-underline-position: under;
+}
+
+.link-list > li > a:focus-visible {
+  outline-color: var(--text-1);
+  outline-style: solid;
 }
 
 @media (min-width: 1024px) {

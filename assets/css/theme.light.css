@@ -1,16 +1,20 @@
 :where(html) {
-  --brand: var(--orange-6);
-
-  --link: var(--brand);
+  --link: var(--orange-6);
   --link-visited: var(--orange-7);
+  --link-active: var(--orange-9);
 
-  --text-1: var(--gray-6);
-  --text-2: var(--brand);
+  --text-1: var(--gray-0);
+  --text-2: var(--gray-6);
+  --text-3: var(--gray-8);
+  --text-4: var(--orange-6);
 
   --surface-1: var(--gray-0);
-  --surface-2: var(--gray-2);
-  --surface-3: var(--gray-3);
-  --surface-4: var(--gray-4);
+  --surface-2: var(--gray-1);
+  --surface-3: var(--gray-2);
+  --surface-4: var(--gray-3);
+  --surface-5: var(--orange-6);
+
+  --surface-2-hsl: var(--gray-1-hsl);
 
   color-scheme: light;
 }

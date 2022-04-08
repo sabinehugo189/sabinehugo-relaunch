@@ -70,7 +70,7 @@ watch(
 }
 
 .hero {
-  background-color: var(--gray-1);
+  background-color: var(--surface-2);
   background-image: url('/bg-hero.jpg');
   background-position: bottom center;
   background-size: contain;
