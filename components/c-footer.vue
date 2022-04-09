@@ -144,6 +144,7 @@ address span {
 }
 
 .link-list > li > a {
+  background-color: transparent;
   color: inherit;
   text-decoration: none;
 }

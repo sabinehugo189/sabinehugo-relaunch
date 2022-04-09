@@ -11,8 +11,14 @@
 @import 'project-props.css';
 @import 'normalize.css';
 
-@import 'utilities.css';
+/* Theme */
+@import 'theme.css';
+
+@import 'headlines.css';
+@import 'links.css';
+@import 'forms.css';
 @import 'buttons.css';
+@import 'utilities.css';
 
 /* Nuxt Root Element */
 #__nuxt {

@@ -67,8 +67,8 @@
 }
 
 /* active */
-:where(button:not([disabled]):active, button[type]:not([disabled]):active, input[type='button']:not([disabled]):active, input[type='submit']:not([disabled]):active, input[type='reset']:not([disabled]):active, .btn:not([disabled]):active) {
-  --_bg: var(--link-visited);
+:where(button:not([disabled]):active, button[type]:not([disabled]):active, input[type='button']:not([disabled]):active, input[type='submit']:not([disabled]):active, input[type='reset']:not([disabled]):active, .btn:active) {
+  --_bg: var(--link-active);
   --_bg-gradient: ;
 
   transition-delay: 0s;

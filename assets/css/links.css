@@ -1,0 +1,15 @@
+:where(a[href]:link) {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+}
+
+:where(a[href]:hover) {
+  transition: background-color 300ms var(--ease-2),
+    color 300ms var(--ease-2), text-decoration-color 300ms var(--ease-2);
+}
+
+:where(a[href]:active) {
+  transition: background-color 300ms var(--ease-2);
+}
