@@ -7,16 +7,18 @@
 /* Font definitions */
 @import 'fonts.css';
 
-/* Open Props Adjustments */
+/* Project Props */
 @import 'project-props.css';
+
+/* Open Props Normalize */
 @import 'normalize.css';
+
+/* Project Normalize */
+@import 'project-normalize.css';
 
 /* Theme */
 @import 'theme.css';
 
-@import 'headlines.css';
-@import 'links.css';
-@import 'forms.css';
 @import 'buttons.css';
 @import 'utilities.css';
 

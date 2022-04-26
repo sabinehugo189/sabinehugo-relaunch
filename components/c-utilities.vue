@@ -18,7 +18,7 @@
       <span>+49 251 60 900 103</span>
     </a>
     <NuxtLink
-      href="/#contact"
+      to="#contact"
       :class="[isStuck && lgNAbove ? 'btn is-small' : 'link']"
     >
       <svg

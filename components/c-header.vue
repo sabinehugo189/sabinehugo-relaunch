@@ -1,6 +1,7 @@
 <template>
   <header
     ref="el"
+    class="js-header"
     :class="{ 'is-stuck': isStuck }"
   >
     <div class="inner">

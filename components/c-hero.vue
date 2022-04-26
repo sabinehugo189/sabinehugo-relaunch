@@ -16,7 +16,7 @@
         </p>
         <div class="cta-bar">
           <NuxtLink
-            href="/#contact"
+            to="#contact"
             class="btn"
           >
             Jetzt Termin ausmachen

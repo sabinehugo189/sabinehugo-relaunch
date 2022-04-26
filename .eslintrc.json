@@ -24,14 +24,17 @@
     "vue/setup-compiler-macros": true
   },
   "globals": {
+    "computed": "readonly",
     "definePageMeta": "readonly",
     "getCurrentInstance": "readonly",
+    "reactive": "readonly",
     "ref": "readonly",
     "toRefs": "readonly",
     "useHead": "readonly",
     "useRoute": "readonly",
     "useRouter": "readonly",
     "useState": "readonly",
+    "useVModel": "readonly",
     "watch": "readonly"
   },
   "rules": {
