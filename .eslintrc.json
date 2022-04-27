@@ -39,6 +39,9 @@
   },
   "rules": {
     "eqeqeq": ["error", "smart"],
+    "vue/attribute-hyphenation": ["error", "always", {
+      "ignore": ["modelValue"]
+    }],
     "vue/script-setup-uses-vars": "error"
   },
   "overrides": [

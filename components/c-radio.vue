@@ -1,7 +1,8 @@
 <template>
   <label
     :for="uid"
-    class="control"
+    :class="{ 'has-error': props.error }"
+    class="field"
   >
     <input
       v-bind="$attrs"
@@ -31,6 +32,10 @@ const props = defineProps({
     type: [String, Number],
     required: true,
   },
+  error: {
+    type: String,
+    default: '',
+  },
 });
 
 const emit = defineEmits(['update:modelValue']);
@@ -38,13 +43,17 @@ const input = useVModel(props, 'modelValue', emit);
 </script>
 
 <style scoped>
-.control {
+.field {
   appearance: none;
   background-color: white;
   display: grid;
   gap: 0.5em;
   grid-template-columns: 1.5em auto;
   margin: 0;
+}
+
+.field.has-error {
+  color: var(--red-6);
 }
 
 input[type='radio'] {
@@ -60,6 +69,11 @@ input[type='radio'] {
   place-content: center;
   transform: translateY(calc((var(--border-size-2) / 2) * -1));
   width: 1.5em;
+}
+
+.has-error > input[type='radio'] {
+  border-color: var(--red-6);
+  color: var(--red-6);
 }
 
 input[type='radio']::before {

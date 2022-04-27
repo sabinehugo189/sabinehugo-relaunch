@@ -1,16 +1,29 @@
 <template>
-  <label
-    :for="uid"
-    class="control"
-  >
-    <input
-      v-bind="$attrs"
-      :id="uid"
-      v-model="input"
-      type="checkbox"
-    />
-    {{ label }}
-  </label>
+  <div class="control">
+    <label
+      :for="uid"
+      :class="{ 'has-error': props.error }"
+      class="field"
+    >
+      <input
+        v-bind="$attrs"
+        :id="uid"
+        v-model="input"
+        type="checkbox"
+        :aria-describedby="props.error ? `${uid}-error` : null"
+        :aria-invalid="props.error ? true : null"
+      />
+      {{ label }}
+    </label>
+    <p
+      v-if="props.error"
+      :id="`${uid}-error`"
+      class="message"
+      aria-live="assertive"
+    >
+      {{ props.error }}
+    </p>
+  </div>
 </template>
 
 <script setup>
@@ -25,6 +38,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  error: {
+    type: String,
+    default: '',
+  },
 });
 
 const emit = defineEmits(['update:modelValue']);
@@ -33,12 +50,22 @@ const input = useVModel(props, 'modelValue', emit);
 
 <style scoped>
 .control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-5);
+}
+
+.field {
   appearance: none;
   background-color: white;
   display: grid;
   gap: 0.5em;
   grid-template-columns: 1.5em auto;
   margin: 0;
+}
+
+.field.has-error {
+  color: var(--red-6);
 }
 
 input[type='checkbox'] {
@@ -54,6 +81,11 @@ input[type='checkbox'] {
   place-content: center;
   transform: translateY(calc((var(--border-size-2) / 2) * -1));
   width: 1.5em;
+}
+
+.has-error > input[type='checkbox'] {
+  border-color: var(--red-6);
+  color: var(--red-6);
 }
 
 input[type='checkbox']::before {
@@ -89,5 +121,15 @@ input[type='checkbox']:disabled {
   border-color: var(--gray-2);
   color: var(--gray-2);
   cursor: not-allowed;
+}
+
+.message {
+  border: var(--border-size-2) solid var(--red-6);
+  border-radius: var(--radius-2);
+  color: var(--red-6);
+  font-size: var(--font-size-1);
+  max-inline-size: 100%;
+  padding-block: calc(var(--size-4) - var(--border-size-2));
+  padding-inline: calc(var(--size-5) - var(--border-size-2));
 }
 </style>

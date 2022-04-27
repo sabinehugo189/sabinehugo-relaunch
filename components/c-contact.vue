@@ -15,78 +15,71 @@
         Sie uns eine E-Mail. Wir melden uns innerhalb eines Werktags bei Ihnen.
       </p>
     </header>
-    <form @submit.prevent="handleSubmit">
+    <form @submit="submit">
       <div class="salutation">
         <h4>Anrede</h4>
         <c-radio-group
-          v-model="details.salutation"
+          v-model="salutations"
           name="salutation"
           :options="options"
+          :error="errors.salutations"
         />
       </div>
       <div class="data">
         <h4 class="fullwidth">Meine persönlichen Daten</h4>
         <c-input
-          v-model="details.firstName"
+          v-model="fname"
           label="Vorname"
           type="text"
-          required
+          :error="errors.fname"
         />
         <c-input
-          v-model="details.lastName"
+          v-model="lname"
           label="Nachname"
           type="text"
-          required
+          :error="errors.lname"
         />
         <c-input
-          v-model="details.email"
           label="E-Mail"
           type="email"
-          required
+          :error="errors.email"
+          :modelValue="email"
+          @change="handleChange"
         />
         <c-input
-          v-model="details.phone"
+          v-model="phone"
           label="Telefonnummer (optional)"
           type="text"
+          :error="errors.phone"
         />
         <c-textarea
-          v-model="details.message"
+          v-model="message"
           label="Meine Nachricht"
           rows="5"
-          required
           class="fullwidth"
+          :error="errors.message"
         />
         <c-checkbox
-          v-model="details.callback"
+          v-model="callback"
           label="Bitte rufen Sie mich für die Terminabsprache zurück."
           class="fullwidth"
+          :error="errors.callback"
         />
         <c-checkbox
-          v-model="details.privacy"
+          v-model="privacy"
           label="Ich habe die Datenschutzerklärung gelesen und akzeptiert."
-          required
           class="fullwidth"
+          :error="errors.privacy"
         />
       </div>
       <c-button type="submit">Nachricht abschicken</c-button>
-      <pre>
-        {{ details }}
-      </pre>
     </form>
   </section>
 </template>
 
 <script setup>
-const details = reactive({
-  salutation: '',
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  message: '',
-  callback: false,
-  privacy: false,
-});
+import { useField, useForm } from 'vee-validate';
+import { object, string, boolean } from 'yup';
 
 const options = [
   { label: 'Frau', value: 'Frau' },
@@ -94,11 +87,43 @@ const options = [
   { label: 'Divers', value: 'Divers' },
 ];
 
-function handleSubmit(e) {
-  console.log('SUBMIT: ', e);
+const requiredMessage = 'Dieses Feld ist ein Pflichtfeld.';
+const emailMessage = 'Bitte geben Sie eine gültige E-Mail Adresse ein.';
 
-  return false;
-}
+const validationSchema = object({
+  salutations: string().required(requiredMessage),
+  fname: string().required(requiredMessage),
+  lname: string().required(requiredMessage),
+  email: string().email(emailMessage).required(requiredMessage),
+  phone: string(),
+  message: string().required(requiredMessage),
+  callback: boolean(),
+  privacy: boolean().oneOf([true], requiredMessage),
+});
+
+const { handleSubmit, errors } = useForm({
+  validationSchema,
+  initialValues: {
+    salutations: '',
+    callback: false,
+    privacy: false,
+  },
+});
+
+const { value: salutations } = useField('salutations');
+const { value: fname } = useField('fname');
+const { value: lname } = useField('lname');
+const { value: email, handleChange } = useField('email');
+const { value: phone } = useField('phone');
+const { value: message } = useField('message');
+const { value: callback } = useField('callback');
+const { value: privacy } = useField('privacy');
+
+const submit = handleSubmit((values, { resetForm }) => {
+  console.log('SUBMIT: ', values);
+
+  resetForm();
+});
 </script>
 
 <style scoped>
