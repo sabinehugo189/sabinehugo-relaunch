@@ -165,7 +165,7 @@ p {
 }
 
 .frame > img {
-  border-radius: var(--size-5);
+  border-radius: var(--radius-3);
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -194,7 +194,7 @@ figure {
   aspect-ratio: 1 / 1;
   background-color: var(--gray-1);
   block-size: var(--size-40);
-  border-radius: var(--size-5);
+  border-radius: var(--radius-3);
   box-shadow: var(--shadow-2);
   color: var(--gray-8);
   display: flex;

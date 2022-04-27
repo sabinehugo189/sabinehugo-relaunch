@@ -50,8 +50,8 @@ header {
 .inner {
   align-items: center;
   background-color: var(--surface-2);
-  border-start-end-radius: var(--size-5);
-  border-start-start-radius: var(--size-5);
+  border-start-end-radius: var(--radius-3);
+  border-start-start-radius: var(--radius-3);
   display: flex;
   justify-content: space-between;
   padding: var(--size-5);
@@ -61,8 +61,8 @@ header {
 
 .is-stuck > .inner {
   background-color: hsl(var(--surface-2-hsl) / 0.95);
-  border-end-end-radius: var(--size-5);
-  border-end-start-radius: var(--size-5);
+  border-end-end-radius: var(--radius-3);
+  border-end-start-radius: var(--radius-3);
   border-start-end-radius: 0;
   border-start-start-radius: 0;
   box-shadow: var(--shadow-2);
