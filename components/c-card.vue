@@ -36,7 +36,7 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  background-color: var(--surface-0);
+  background-color: var(--surface-1);
   border-radius: var(--radius-3);
   overflow: hidden;
 }
