@@ -12,6 +12,10 @@
   line-height: var(--font-lineheight-0);
 }
 
+:where(dt, summary, strong) {
+  font-weight: var(--font-weight-8);
+}
+
 :where(a[href]:link) {
   text-decoration-line: underline;
   text-decoration-style: solid;
