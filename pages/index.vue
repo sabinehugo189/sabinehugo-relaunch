@@ -57,6 +57,7 @@
         <img
           src="https://via.placeholder.com/742x809?text=image"
           alt=""
+          loading="lazy"
         />
       </div>
       <div class="content">
@@ -132,6 +133,7 @@
         <img
           src="https://via.placeholder.com/742x809?text=image"
           alt=""
+          loading="lazy"
         />
       </div>
     </c-grid>
@@ -139,6 +141,43 @@
     <c-contact-teaser
       teaser="Sie haben eine Frage zum Ablauf der Invisalign Behandlung?"
     />
+    <c-grid>
+      <div class="content">
+        <h2>
+          Dr. Sabine Hugo: European Master of Aligners (Spezialistin für
+          Alignerbehandlung)
+        </h2>
+        <p>
+          Ein schönes Lachen ist wichtig für das
+          <strong>individuelle Wohlbefinden</strong>. Das wissen besonders die,
+          deren Zahnstellung nicht optimal ist. Mit Invisalign gibt es jetzt die
+          Möglichkeit, in jedem Alter – vom Kleinkind bis ins hohe
+          Erwachsenenalter – fast jede Zahnfehlstellung auf
+          <strong>angenehme Art</strong> unauffällig zu korrigieren. Ich kann
+          Ihnen versichern: Das Tragen der transparenten, maßgefertigten Aligner
+          wird Ihnen in kürzester Zeit ganz selbstverständlich vorkommen. Gerne
+          bespreche ich mit Ihnen die gewünschten Ergebnisse der Zahnkorrektur
+          in einem <strong>unverbindlichen Erstgespräch</strong> in unserer
+          Fachpraxis für Invisalign. Freuen Sie sich auf ein schönes Lächeln und
+          mehr Selbstvertrauen!
+        </p>
+        <NuxtLink
+          to="#contact"
+          class="btn"
+        >
+          Jetzt Termin vereinbaren
+        </NuxtLink>
+      </div>
+      <div>
+        <img
+          src="/portrait.jpg"
+          width="1303"
+          height="858"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </c-grid>
     <c-contact />
   </NuxtLayout>
 </template>
