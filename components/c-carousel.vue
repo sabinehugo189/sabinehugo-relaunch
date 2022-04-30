@@ -103,7 +103,7 @@ watch(
 @media (min-width: 1280px) {
   .container {
     gap: var(--size-16);
-    padding-block: var(--size-48);
+    padding-block: var(--size-32);
   }
 }
 

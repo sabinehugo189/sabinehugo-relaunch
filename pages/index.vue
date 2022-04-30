@@ -135,6 +135,7 @@
         />
       </div>
     </c-grid>
+    <c-steps />
     <c-contact-teaser
       teaser="Sie haben eine Frage zum Ablauf der Invisalign Behandlung?"
     />
