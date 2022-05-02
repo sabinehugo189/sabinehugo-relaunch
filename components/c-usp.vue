@@ -195,7 +195,7 @@ figure {
   background-color: var(--gray-1);
   block-size: var(--size-40);
   border-radius: var(--radius-3);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-3);
   color: var(--gray-8);
   display: flex;
   inline-size: var(--size-40);

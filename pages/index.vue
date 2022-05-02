@@ -178,6 +178,7 @@
         />
       </div>
     </c-grid>
+    <c-icon-teaser />
     <c-contact />
   </NuxtLayout>
 </template>
