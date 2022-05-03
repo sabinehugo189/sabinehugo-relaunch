@@ -40,10 +40,12 @@ setHeaderHeight(height);
 <style scoped>
 header {
   color: var(--text-4);
+  margin-inline: auto;
   max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: var(--layer-1);
 }
 
