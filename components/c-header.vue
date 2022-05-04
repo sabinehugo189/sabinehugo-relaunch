@@ -2,11 +2,11 @@
   <header
     ref="el"
     class="js-header"
-    :class="{ 'is-stuck': isStuck }"
+    :class="{ 'is-stuck': props.isStuck }"
   >
     <div class="inner">
       <c-logo />
-      <c-utilities :is-stuck="isStuck" />
+      <c-utilities :is-stuck="props.isStuck" />
     </div>
   </header>
 </template>
@@ -19,15 +19,6 @@ const props = defineProps({
     default: false,
   },
 });
-
-const isStuck = ref(false);
-
-watch(
-  () => props.isStuck,
-  (stuck) => {
-    isStuck.value = stuck;
-  },
-);
 
 const { setHeaderHeight } = useHeaderHeight();
 

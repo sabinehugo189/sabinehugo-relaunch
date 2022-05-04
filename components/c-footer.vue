@@ -11,26 +11,30 @@
           <li>
             <h4>Kontakt</h4>
             <address>
+              <p class="p-note">Zahn &amp; Ästhetik</p>
               <p class="p-name">Dr Sabine Hugo</p>
               <p class="h-adr">
-                <span class="p-street-address">Straße und Hausnummer</span>
+                <span class="p-street-address">Berliner Platz 9</span>
                 <span>
-                  <span class="p-postal-code">PLZ</span>
-                  <span class="p-locality">Stadt</span>
+                  <span class="p-postal-code">97080</span>
+                  <span class="p-locality">Würzburg</span>
                 </span>
               </p>
               <p>
-                <span class="p-tel">Telefonnummer</span>
-                <span class="p-tel">Faxnummer</span>
-                <span class="u-email">E-Mail-Adresse</span>
+                <span class="p-tel">+49 931 99 147 070</span>
+                <span class="u-email">info@praxishugo.de</span>
               </p>
             </address>
           </li>
           <li>
             <h4>Öffnungszeiten</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et
+            <p class="opening-hours">
+              <span> Montag - Freitag </span>
+              <span> 07:00 - 19:00 Uhr </span>
+            </p>
+            <p class="opening-hours">
+              <span> Samstag </span>
+              <span> 09:00 - 13:00 Uhr </span>
             </p>
           </li>
           <li>
@@ -120,13 +124,18 @@ address > * {
   margin-block: 0;
 }
 
-address > * + *:not(:nth-child(2)) {
+address > p:nth-child(4) {
   margin-block-start: var(--size-8);
 }
 
 address span {
   display: flex;
   gap: 0.5em;
+}
+
+.opening-hours {
+  display: flex;
+  flex-direction: column;
 }
 
 .link-list {
@@ -176,7 +185,7 @@ address span {
     padding: var(--size-20);
   }
 
-  address > * + *:not(:nth-child(2)) {
+  address > *:nth-child(4) {
     margin-block-start: var(--size-12);
   }
 

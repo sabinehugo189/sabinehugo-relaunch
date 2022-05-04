@@ -42,11 +42,11 @@
         <video
           controls
           src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-          poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+          poster="/video.jpg"
           width="620"
         >
           <img
-            src="https://via.placeholder.com/742x809?text=image"
+            src="/video.jpg"
             alt=""
           />
         </video>
@@ -129,9 +129,11 @@
           Jetzt Termin vereinbaren
         </NuxtLink>
       </div>
-      <div>
+      <div class="image">
         <img
-          src="https://via.placeholder.com/742x809?text=image"
+          src="/invisalign-close-up.jpg"
+          width="1303"
+          height="858"
           alt=""
           loading="lazy"
         />
@@ -168,7 +170,7 @@
           Jetzt Termin vereinbaren
         </NuxtLink>
       </div>
-      <div>
+      <div class="image">
         <img
           src="/portrait.jpg"
           width="1303"
