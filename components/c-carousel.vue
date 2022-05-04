@@ -7,7 +7,7 @@
     </header>
     <Splide
       :options="options"
-      :tag="section"
+      :tag="tag"
       aria-labeledby="carouselhead"
       class="carousel"
     >
@@ -60,6 +60,8 @@ const options = reactive({
   gap: '1.25rem',
   width: 'calc(100vw - 5rem)',
 });
+
+const tag = 'section';
 
 watch(
   () => mdNAbove.value,
@@ -492,5 +494,6 @@ h2 {
   right: 0.5em;
   top: 0;
 }
+
 /* stylelint-enable selector-class-pattern */
 </style>

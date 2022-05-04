@@ -28,6 +28,9 @@
       {
         "ignoreAtRules": ["custom-media"]
       }
-    ]
+    ],
+    "value-keyword-case": ["lower", {
+      "camelCaseSvgKeywords": true
+    }]
   }
 }
