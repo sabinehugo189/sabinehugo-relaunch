@@ -54,11 +54,22 @@
     </c-grid>
     <c-grid>
       <div>
-        <img
-          src="https://via.placeholder.com/742x809?text=image"
-          alt=""
-          loading="lazy"
-        />
+        <c-image-compare>
+          <template #image-1>
+            <img
+              src="/image-compare-01.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </template>
+          <template #image-2>
+            <img
+              src="/image-compare-02.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </template>
+        </c-image-compare>
       </div>
       <div class="content">
         <h2>Effektive Zahnkorrektur. Für ein schönes Lachen.</h2>
