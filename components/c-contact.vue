@@ -17,9 +17,9 @@
     </header>
     <form
       ref="form"
+      data-netlify="true"
       name="contact"
       method="POST"
-      netlify
       @submit="submit"
     >
       <div
