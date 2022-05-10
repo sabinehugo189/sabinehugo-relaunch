@@ -4,4 +4,7 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: ['@vueuse/nuxt'],
+  typescript: {
+    shim: false,
+  },
 });
