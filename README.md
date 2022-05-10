@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/abb03ac0-fa7c-47cc-bd39-f7d05fc397c5/deploy-status)](https://app.netlify.com/sites/sabinehugo/deploys)
+
 # Invisalign Landing Page
 
 This is a landing page for Invisalign from Sabine Hugo.
