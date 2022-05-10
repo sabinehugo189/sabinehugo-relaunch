@@ -13,3 +13,7 @@
 .output
 node_modules
 nuxt.d.ts
+dist
+
+# Local Netlify folder
+.netlify
