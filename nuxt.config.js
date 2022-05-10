@@ -7,4 +7,10 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  ssr: false,
+  nitro: {
+    prerender: {
+      routes: ['/form'],
+    },
+  },
 });
