@@ -32,8 +32,6 @@ watch(
       const clippedImage = target.value.querySelector('.image-2-wrapper > img');
       const clippingSlider = target.value.querySelector('.image-compare-input');
 
-      console.log(clippedImage);
-
       // Store an animation frame so we can keep track of scheduled
       // repaints and cancel old repaints that haven't happened yet
       let animationFrame;
