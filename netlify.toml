@@ -1,12 +1,12 @@
 [build]
-  command = "npx nuxi generate"
-  publish = ".output/public"
+  command = "npm run generate"
+  publish = "dist"
 
-# [context.production]
-#   environment = { NODE_VERSION = "16.15.0", RUBY_VERSION = "2.7.1" }
+[context.production]
+  environment = { NODE_VERSION = "16.15.0", RUBY_VERSION = "2.7.1" }
 
-# [context.deploy-preview]
-#   environment = { NODE_VERSION = "16.15.0", RUBY_VERSION = "2.7.1" }
+[context.deploy-preview]
+  environment = { NODE_VERSION = "16.15.0", RUBY_VERSION = "2.7.1" }
 
 [dev]
   command = "npm run dev"
