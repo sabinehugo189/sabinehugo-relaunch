@@ -46,7 +46,7 @@
         <h4>Anrede</h4>
         <c-radio-group
           v-model="salutations"
-          name="salutation"
+          name="Anrede"
           :options="options"
           :error="errors.salutations"
         />
@@ -56,17 +56,20 @@
         <c-input
           v-model="fname"
           label="Vorname"
+          name="Vorname"
           type="text"
           :error="errors.fname"
         />
         <c-input
           v-model="lname"
           label="Nachname"
+          name="Nachname"
           type="text"
           :error="errors.lname"
         />
         <c-input
           label="E-Mail"
+          name="E-Mail"
           type="email"
           :error="errors.email"
           :modelValue="email"
@@ -75,12 +78,14 @@
         <c-input
           v-model="phone"
           label="Telefonnummer (optional)"
+          name="Telefonnummer"
           type="text"
           :error="errors.phone"
         />
         <c-textarea
           v-model="message"
           label="Meine Nachricht"
+          name="Nachricht"
           rows="5"
           class="fullwidth"
           :error="errors.message"
@@ -88,12 +93,14 @@
         <c-checkbox
           v-model="callback"
           label="Bitte rufen Sie mich für die Terminabsprache zurück."
+          name="Rückruf"
           class="fullwidth"
           :error="errors.callback"
         />
         <c-checkbox
           v-model="privacy"
           label="Ich habe die Datenschutzerklärung gelesen und akzeptiert."
+          name="Datenschutzerklärung"
           class="fullwidth"
           :error="errors.privacy"
         />
