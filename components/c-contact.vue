@@ -157,10 +157,9 @@ const { value: privacy } = useField('privacy');
 const submit = handleSubmit((_, { resetForm }) => {
   const formData = new FormData(form.value);
   const formName = `form-name=${encodeURIComponent(form.value.name)}`;
-  const subject = `subject=${encodeURIComponent('[Website] Kontaktformular:')}`;
   const urlSearchParams = new URLSearchParams(formData).toString();
 
-  const body = formName.concat('&', subject, '&', urlSearchParams);
+  const body = formName.concat('&', urlSearchParams);
 
   fetch('/', {
     method: 'POST',
