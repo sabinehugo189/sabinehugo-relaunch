@@ -7,4 +7,6 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  target: 'static',
+  ssr: false,
 });
