@@ -10,6 +10,7 @@
       v-model="input"
       :checked="modelValue === value"
       :value="value"
+      :name="name"
       type="radio"
     />
     {{ label }}
@@ -21,6 +22,10 @@ const { uid } = getCurrentInstance();
 
 const props = defineProps({
   label: {
+    type: String,
+    required: true,
+  },
+  name: {
     type: String,
     required: true,
   },
