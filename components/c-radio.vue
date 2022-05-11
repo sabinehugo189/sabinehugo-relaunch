@@ -1,15 +1,14 @@
 <template>
   <label
-    :for="uid"
     :class="{ 'has-error': props.error }"
     class="field"
   >
     <input
       v-bind="$attrs"
-      :id="uid"
       v-model="input"
       :checked="modelValue === value"
       :value="value"
+      :name="name"
       type="radio"
     />
     {{ label }}
@@ -17,10 +16,12 @@
 </template>
 
 <script setup>
-const { uid } = getCurrentInstance();
-
 const props = defineProps({
   label: {
+    type: String,
+    required: true,
+  },
+  name: {
     type: String,
     required: true,
   },

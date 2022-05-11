@@ -1,6 +1,6 @@
 <template>
   <div class="control">
-    <div class="fields">
+    <fieldset class="fields">
       <c-radio
         v-for="option in options"
         :key="option.value"
@@ -10,7 +10,7 @@
         :name="name"
         :error="error"
       />
-    </div>
+    </fieldset>
     <p
       v-if="props.error"
       :id="`${uid}-error`"
@@ -55,8 +55,10 @@ const data = useVModel(props, 'modelValue', emit);
 }
 
 .fields {
+  border: none;
   display: flex;
   gap: var(--size-5) var(--size-8);
+  padding: 0;
 }
 
 .message {
