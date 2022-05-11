@@ -15,10 +15,10 @@
   targetPort = 8080
   framework = "#custom"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self' https://api.netlify.com;"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     Content-Security-Policy = "default-src 'self' https://api.netlify.com;"
+#     X-Content-Type-Options = "nosniff"
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
