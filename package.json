@@ -41,6 +41,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "generate": "nuxi generate",
     "preview": "node .output/server/index.mjs",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint . --ext .js,.vue",
