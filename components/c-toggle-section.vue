@@ -1,5 +1,8 @@
 <template>
-  <div class="toggle-section">
+  <div
+    class="toggle-section"
+    role="region"
+  >
     <h3>
       <button
         :aria-expanded="isOpen"
