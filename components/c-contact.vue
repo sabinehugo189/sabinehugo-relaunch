@@ -154,13 +154,13 @@ const { value: message } = useField('message');
 const { value: callback } = useField('callback');
 const { value: privacy } = useField('privacy');
 
-const submit = handleSubmit((values, { resetForm }) => {
-  const body = Object.keys(values).reduce((prev, curr) => {
-    return prev.concat(
-      '&',
-      `${encodeURIComponent(curr)}=${encodeURIComponent(values[curr])}`,
-    );
-  }, `form-name=${encodeURIComponent(form.value.name)}`);
+const submit = handleSubmit((_, { resetForm }) => {
+  const formData = new FormData(form.value);
+  const formName = `form-name=${encodeURIComponent(form.value.name)}`;
+  const subject = `subject=${encodeURIComponent('[Website] Kontaktformular:')}`;
+  const urlSearchParams = new URLSearchParams(formData).toString();
+
+  const body = formName.concat('&', subject, '&', urlSearchParams);
 
   fetch('/', {
     method: 'POST',
