@@ -25,6 +25,7 @@
       <div
         v-if="notification"
         class="notification"
+        aria-live="assertive"
       >
         <div>
           <svg
