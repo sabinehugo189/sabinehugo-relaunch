@@ -3,10 +3,34 @@
     <header>
       <h2>Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign.</h2>
       <div class="frame">
-        <img
-          src="/invisalign.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            media="(min-width: 1536px)"
+            srcset="
+              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_900/v1652281328/invisalign/invisalign.jpg 900w
+            "
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_500/v1652281328/invisalign/invisalign.jpg 500w
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_3:2,q_auto,w_900/v1652281328/invisalign/invisalign.jpg 900w
+            "
+          />
+          <img
+            srcset="
+              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_3:2,q_auto,w_800/v1652281328/invisalign/invisalign.jpg 800w
+            "
+            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_900/v1652281328/invisalign/invisalign.jpg"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
       </div>
     </header>
     <ul>
@@ -164,7 +188,7 @@ p {
   flex: 1 1 auto;
 }
 
-.frame > img {
+.frame > picture > img {
   border-radius: var(--radius-3);
   height: 100%;
   object-fit: cover;

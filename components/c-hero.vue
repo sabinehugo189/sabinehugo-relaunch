@@ -4,6 +4,9 @@
       <div
         ref="el"
         class="hero"
+        style="
+          background-image: url('https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652279713/invisalign/hero.jpg');
+        "
       >
         <h1>
           Unsichtbare Zahnspange:
@@ -22,7 +25,7 @@
             Jetzt Termin ausmachen
           </NuxtLink>
           <img
-            src="/quality-seal.png"
+            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652280970/invisalign/quality-seal.png"
             width="228"
             height="138"
             alt=""
@@ -71,7 +74,6 @@ watch(
 
 .hero {
   background-color: var(--surface-2);
-  background-image: url('/bg-hero.jpg');
   background-position: bottom center;
   background-size: contain;
   display: flex;
