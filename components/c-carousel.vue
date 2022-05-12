@@ -15,28 +15,28 @@
         <c-card
           head="Ich habe in meiner Jugend keine Zahnspange getragen. Heute bereue ich das."
           body="Kein Problem! Holen Sie die erfolgreiche Korrektur Ihrer Zahnfehlstellung einfach jetzt nach. Mit Invisalign geht das besonders unauffällig."
-          img-src="/teaser-slider-01.jpg"
+          img-name="teaser-slider-01.jpg"
         />
       </SplideSlide>
       <SplideSlide>
         <c-card
           head="Ich habe in meiner Jugend eine Zahnspange getragen, aber meine Zähne haben sich mittlerweile verschoben."
           body="Mit den unsichtbaren Invisalign Zahnschienen lassen sich Zähne jederzeit in die gewünschte Position bringen. Bis ins hohe Alter!"
-          img-src="/teaser-slider-02.jpg"
+          img-name="teaser-slider-02.jpg"
         />
       </SplideSlide>
       <SplideSlide>
         <c-card
           head="Wir suchen eine Lösung für unser heranwachsendes Kind. Es ist sehr schmerzempfindlich und möchte in der Pubertät keine feste Zahnspange."
           body="Invisalign Zahnschienen sind – anders als eine klassische Zahnspange – besonders angenehm einzusetzen, zu tragen und herauszunehmen."
-          img-src="/teaser-slider-03.jpg"
+          img-name="teaser-slider-03.jpg"
         />
       </SplideSlide>
       <SplideSlide>
         <c-card
           head="Ich leide unter Parodontose. In letzter Zeit ist das Zahnfleisch zurückgegangen und meine Zähne haben sich verschoben."
           body="Mit Invisalign lassen sich Zahnfehlstellungen besonders sanft und schmerzfrei korrigieren, weil diese Korrektur ohne Brackets und Drähte auskommt."
-          img-src="/teaser-slider-04.jpg"
+          img-name="teaser-slider-04.jpg"
         />
       </SplideSlide>
     </Splide>

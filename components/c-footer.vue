@@ -48,7 +48,7 @@
             <h4>Social Media</h4>
             <c-social-bar />
             <img
-              src="/quality-seal.png"
+              src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652280970/invisalign/quality-seal.png"
               width="228"
               height="138"
               alt=""

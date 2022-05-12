@@ -42,19 +42,38 @@ watch(
   gap: var(--size-8);
 }
 
+@media (min-width: 1280px) {
+  :deep(.content) {
+    gap: var(--size-10);
+  }
+}
+
 :deep(.image) {
   display: flex;
 }
 
-:deep(.image > img) {
+:deep(.image > picture) {
+  display: flex;
+}
+
+:deep(.image > img),
+:deep(.image > picture > img) {
   border-end-end-radius: var(--radius-3);
   border-end-start-radius: var(--radius-3);
   object-fit: cover;
 }
 
 @media (min-width: 1280px) {
-  :deep(.content) {
-    gap: var(--size-10);
+  :deep(.image > img),
+  :deep(.image > picture > img) {
+    object-position: 25% 50%;
+  }
+}
+
+@media (min-width: 1536px) {
+  :deep(.image > img),
+  :deep(.image > picture > img) {
+    object-position: left center;
   }
 }
 

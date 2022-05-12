@@ -1,10 +1,19 @@
 <template>
   <div class="card">
     <div class="img">
-      <img
-        :src="imgSrc"
-        alt=""
-      />
+      <picture>
+        <source
+          media="(min-width: 1536px)"
+          :srcset="`
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,ar_1.618,f_auto,q_auto,w_500/v1652281328/invisalign/${imgName} 500w
+          `"
+        />
+        <img
+          :src="`https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_400/v1652281328/invisalign/${imgName}`"
+          alt=""
+          loading="lazy"
+        />
+      </picture>
     </div>
     <div class="text">
       <h3>
@@ -27,7 +36,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  imgSrc: {
+  imgName: {
     type: String,
     required: true,
   },
