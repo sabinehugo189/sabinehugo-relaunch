@@ -179,7 +179,7 @@
             `"
           />
           <img
-            src="`https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/invisalign-close-up.jpg`"
+            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/invisalign-close-up.jpg"
             alt="Frau in Ärztekittel in Zahnarztpraxis"
             loading="lazy"
             width="1303"
@@ -240,7 +240,7 @@
             `"
           />
           <img
-            src="`https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/portrait.jpg`"
+            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/portrait.jpg"
             alt="Frau in Ärztekittel in Zahnarztpraxis"
             loading="lazy"
             width="1303"
