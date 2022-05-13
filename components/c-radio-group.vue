@@ -1,6 +1,10 @@
 <template>
   <div class="control">
-    <fieldset class="fields">
+    <fieldset
+      :name="name"
+      class="fields"
+    >
+      <legend class="sr-only">{{ name }}</legend>
       <c-radio
         v-for="option in options"
         :key="option.value"
