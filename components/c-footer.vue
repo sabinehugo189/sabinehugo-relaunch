@@ -12,7 +12,7 @@
             <h4>Kontakt</h4>
             <address>
               <p class="p-note">Zahn &amp; Ästhetik</p>
-              <p class="p-name">Dr Sabine Hugo</p>
+              <p class="p-name">Dr. med. Sabine Hugo</p>
               <p class="h-adr">
                 <span class="p-street-address">Berliner Platz 9</span>
                 <span>
@@ -28,14 +28,21 @@
           </li>
           <li>
             <h4>Öffnungszeiten</h4>
-            <p class="opening-hours">
-              <span> Montag - Freitag </span>
-              <span> 07:00 - 19:00 Uhr </span>
-            </p>
-            <p class="opening-hours">
-              <span> Samstag </span>
-              <span> 09:00 - 13:00 Uhr </span>
-            </p>
+            <dl class="opening-hours">
+              <dt>Montag:</dt>
+              <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
+              <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
+              <dt>Dienstag:</dt>
+              <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
+              <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
+              <dt>Mittwoch:</dt>
+              <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
+              <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
+              <dt>Donnerstag:</dt>
+              <dd><time datetime="PT5H">09:00 - 14:00 Uhr</time></dd>
+              <dt>Freitag:</dt>
+              <dd><time datetime="PT4H">09:00 - 13:00 Uhr</time></dd>
+            </dl>
           </li>
           <li>
             <h4>Wichtige Informationen</h4>
@@ -134,8 +141,19 @@ address span {
 }
 
 .opening-hours {
-  display: flex;
-  flex-direction: column;
+  column-gap: var(--size-4);
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.opening-hours > dt {
+  color: var(--gray-0);
+  grid-column: 1 / 2;
+  margin: 0;
+}
+
+.opening-hours > dd {
+  grid-column: 2 / 3;
 }
 
 .link-list {
