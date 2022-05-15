@@ -178,5 +178,4 @@ textarea:not(:placeholder-shown) + label {
   position: absolute;
   width: 0;
 }
-
 </style>
