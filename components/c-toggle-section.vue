@@ -81,6 +81,8 @@ h3 > button {
   display: flex;
   gap: var(--size-8);
   justify-content: space-between;
+  padding-right: var(--size-14);
+  position: relative;
   width: 100%;
 }
 
@@ -94,6 +96,10 @@ button > span {
   flex: 0 0 auto;
   inline-size: var(--size-10);
   justify-content: center;
+  position: absolute;
+  right: 0;
+  top: var(--size-3);
+  transform: translateY(-50%);
 }
 
 button > span > svg {
