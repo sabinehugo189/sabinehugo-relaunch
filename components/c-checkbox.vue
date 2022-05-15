@@ -124,12 +124,28 @@ input[type='checkbox']:disabled {
 }
 
 .message {
+  align-self: flex-start;
+  background-color: var(--red-6);
   border: var(--border-size-2) solid var(--red-6);
   border-radius: var(--radius-2);
-  color: var(--red-6);
+  color: var(--gray-0);
   font-size: var(--font-size-1);
+  font-weight: var(--font-weight-8);
   max-inline-size: 100%;
   padding-block: calc(var(--size-4) - var(--border-size-2));
   padding-inline: calc(var(--size-5) - var(--border-size-2));
+  position: relative;
+}
+
+.message::before {
+  border: 0.75rem solid transparent;
+  border-bottom-color: var(--red-6);
+  border-top: none;
+  bottom: 100%;
+  content: '';
+  height: 0;
+  left: 1.5em;
+  position: absolute;
+  width: 0;
 }
 </style>
