@@ -10,7 +10,7 @@
         <ul>
           <li>
             <h4>Kontakt</h4>
-            <address>
+            <address class="h-card">
               <p class="p-note">Zahn &amp; Ästhetik</p>
               <p class="p-name">Dr. med. Sabine Hugo</p>
               <p class="h-adr">
