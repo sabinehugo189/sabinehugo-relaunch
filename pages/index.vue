@@ -39,23 +39,14 @@
         </NuxtLink>
       </div>
       <div>
-        <video
-          controls
-          src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-          poster="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_650/v1652350902/invisalign/video.jpg"
-          width="650"
-          preload="none"
-        >
-          <img
-            srcset="
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_650/v1652350902/invisalign/video.jpg   650w,
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_1024/v1652350902/invisalign/video.jpg 1024w
-            "
-            sizes="(max-width: 767px) 650px, 1024px"
-            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_650/v1652350902/invisalign/video.jpg"
-            alt="Zwei Frauen gucken auf einen Computerbildschirm"
-          />
-        </video>
+        <client-only>
+          <vue-vimeo-player
+            :video-id="videoId"
+            :options="options"
+            player-height="365"
+            player-width="650"
+          ></vue-vimeo-player>
+        </client-only>
       </div>
     </c-grid>
     <c-grid>
@@ -163,20 +154,20 @@
           <source
             media="(min-width: 1280px)"
             :srcset="`
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_768/v1652281328/invisalign/invisalign-close-up.jpg 768w
-            `"
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_768/v1652281328/invisalign/invisalign-close-up.jpg 768w
+          `"
           />
           <source
             media="(min-width: 1024px)"
             :srcset="`
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1280/v1652281328/invisalign/invisalign-close-up.jpg 1280w
-            `"
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1280/v1652281328/invisalign/invisalign-close-up.jpg 1280w
+          `"
           />
           <source
             media="(min-width: 768px)"
             :srcset="`
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1024/v1652281328/invisalign/invisalign-close-up.jpg 1024w
-            `"
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1024/v1652281328/invisalign/invisalign-close-up.jpg 1024w
+          `"
           />
           <img
             src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/invisalign-close-up.jpg"
@@ -224,20 +215,20 @@
           <source
             media="(min-width: 1280px)"
             :srcset="`
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_768/v1652281328/invisalign/portrait.jpg 768w
-            `"
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_768/v1652281328/invisalign/portrait.jpg 768w
+          `"
           />
           <source
             media="(min-width: 1024px)"
             :srcset="`
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1280/v1652281328/invisalign/portrait.jpg 1280w
-            `"
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1280/v1652281328/invisalign/portrait.jpg 1280w
+          `"
           />
           <source
             media="(min-width: 768px)"
             :srcset="`
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1024/v1652281328/invisalign/portrait.jpg 1024w
-            `"
+            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1024/v1652281328/invisalign/portrait.jpg 1024w
+          `"
           />
           <img
             src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/portrait.jpg"
@@ -256,6 +247,13 @@
 </template>
 
 <script setup>
+import { vueVimeoPlayer } from 'vue-vimeo-player';
+
+const videoId = '709059740';
+const options = {
+  responsive: true,
+};
+
 definePageMeta({
   layout: false,
 });
