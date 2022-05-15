@@ -72,15 +72,11 @@ const props = defineProps({
   padding: var(--size-8) var(--size-5);
 }
 
-.text :last-child {
-  margin-block-start: auto;
-}
-
 h3 {
   color: var(--link);
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-fluid-0);
   font-weight: var(--font-weight-8);
-  line-height: var(--font-lineheight-3);
+  line-height: var(--font-lineheight-2);
 }
 
 @media (min-width: 768px) {
@@ -88,7 +84,6 @@ h3 {
     max-inline-size: calc(var(--size-content-3) + (2 * var(--size-5)));
   }
 
-  h3,
   p {
     font-size: var(--font-size-3);
   }
@@ -102,11 +97,6 @@ h3 {
   .text {
     gap: var(--size-8);
     padding: var(--size-12);
-  }
-
-  h3,
-  p {
-    font-size: var(--font-size-4);
   }
 }
 </style>
