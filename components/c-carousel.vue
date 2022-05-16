@@ -10,6 +10,8 @@
       :tag="tag"
       aria-labeledby="carouselhead"
       class="carousel"
+      @splide:resized="onResized"
+      @splide:refresh="onRefresh"
     >
       <SplideSlide>
         <c-card
@@ -53,11 +55,15 @@ import { breakpointsTailwind } from '@vueuse/core';
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
 const mdNAbove = breakpoints.greater('md');
+const mdNBelow = breakpoints.smaller('md');
 const lgNAbove = breakpoints.greater('lg');
+const lgNBelow = breakpoints.smaller('lg');
 const xlNAbove = breakpoints.greater('xl');
+const xlNBelow = breakpoints.smaller('xl');
 
 const options = reactive({
   gap: '1.25rem',
+  perPage: 1,
   width: 'calc(100vw - 5rem)',
 });
 
@@ -73,10 +79,28 @@ watch(
 );
 
 watch(
+  () => mdNBelow.value,
+  (value) => {
+    if (value) {
+      options.perPage = 1;
+    }
+  },
+);
+
+watch(
   () => lgNAbove.value,
   (value) => {
     if (value) {
       options.perPage = 3;
+    }
+  },
+);
+
+watch(
+  () => lgNBelow.value,
+  (value) => {
+    if (value) {
+      options.perPage = 2;
     }
   },
 );
@@ -87,6 +111,16 @@ watch(
     if (value) {
       options.gap = '2rem';
       options.width = 'calc(80vw - 5rem)';
+    }
+  },
+);
+
+watch(
+  () => xlNBelow.value,
+  (value) => {
+    if (value) {
+      options.gap = '1.25rem';
+      options.width = 'calc(100vw - 5rem)';
     }
   },
 );
