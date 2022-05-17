@@ -142,9 +142,8 @@ h2 {
   color: var(--link);
   content: '\2714';
   display: flex;
-  flex: 0 0 auto;
-  font-size: 0.75em;
+  flex: 0 0 2em;
+  font-size: var(--font-size-0);
   justify-content: center;
-  padding: 0.75em;
 }
 </style>
