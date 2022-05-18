@@ -10,46 +10,15 @@
         <ul>
           <li>
             <h4>Kontakt</h4>
-            <address class="h-card">
-              <p class="p-note">Zahn &amp; Ästhetik</p>
-              <p class="p-name">Dr. med. Sabine Hugo</p>
-              <p class="h-adr">
-                <span class="p-street-address">Berliner Platz 9</span>
-                <span>
-                  <span class="p-postal-code">97080</span>
-                  <span class="p-locality">Würzburg</span>
-                </span>
-              </p>
-              <p>
-                <span class="p-tel">+49 931 99 147 070</span>
-                <span class="u-email">info@praxishugo.de</span>
-              </p>
-            </address>
+            <c-address-block />
           </li>
           <li>
             <h4>Öffnungszeiten</h4>
-            <dl class="opening-hours">
-              <dt>Montag:</dt>
-              <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
-              <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
-              <dt>Dienstag:</dt>
-              <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
-              <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
-              <dt>Mittwoch:</dt>
-              <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
-              <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
-              <dt>Donnerstag:</dt>
-              <dd><time datetime="PT5H">09:00 - 14:00 Uhr</time></dd>
-              <dt>Freitag:</dt>
-              <dd><time datetime="PT4H">09:00 - 13:00 Uhr</time></dd>
-            </dl>
+            <c-opening-hours />
           </li>
           <li>
             <h4>Wichtige Informationen</h4>
-            <ul class="link-list">
-              <li><a href="#">Impressum</a></li>
-              <li><a href="#">Datenschutz</a></li>
-            </ul>
+            <c-link-list />
           </li>
           <li>
             <h4>Social Media</h4>
@@ -121,73 +90,6 @@ h4 {
   color: inherit;
 }
 
-address {
-  display: flex;
-  flex-direction: column;
-  font-style: normal;
-}
-
-address > * {
-  margin-block: 0;
-}
-
-address > p:nth-child(4) {
-  margin-block-start: var(--size-8);
-}
-
-address span {
-  display: flex;
-  gap: 0.5em;
-}
-
-.opening-hours {
-  column-gap: var(--size-4);
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-.opening-hours > dt {
-  color: var(--gray-0);
-  grid-column: 1 / 2;
-  margin: 0;
-}
-
-.opening-hours > dd {
-  grid-column: 2 / 3;
-}
-
-.link-list {
-  display: flex;
-  flex-direction: column;
-  gap: normal;
-  list-style: none;
-  padding-inline-start: 0;
-}
-
-.link-list > li {
-  display: initial;
-  gap: normal;
-  padding-inline-start: 0;
-}
-
-.link-list > li > a {
-  background-color: transparent;
-  color: inherit;
-  text-decoration: none;
-}
-
-.link-list > li > a:hover {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 3px;
-  text-underline-position: under;
-}
-
-.link-list > li > a:focus-visible {
-  outline-color: var(--text-1);
-  outline-style: solid;
-}
-
 @media (min-width: 1024px) {
   footer > ul {
     display: grid;
@@ -201,10 +103,6 @@ address span {
     font-size: var(--font-size-3);
     gap: var(--size-16);
     padding: var(--size-20);
-  }
-
-  address > *:nth-child(4) {
-    margin-block-start: var(--size-12);
   }
 
   .quality-seal {

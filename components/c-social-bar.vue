@@ -21,7 +21,7 @@
     </li>
     <li class="item">
       <a
-        href="https://www.facebook.com/people/Dres-Hugo-Kollegen/100063787772791/"
+        href="https://www.facebook.com/Dr-Sabine-Hugo-104157388861474"
         class="facebook"
       >
         <svg
