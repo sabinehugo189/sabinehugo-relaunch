@@ -162,7 +162,7 @@ const submit = handleSubmit((_, { resetForm }) => {
 
   const body = formName.concat('&', urlSearchParams);
 
-  fetch('/', {
+  fetch('/contactform', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body,
