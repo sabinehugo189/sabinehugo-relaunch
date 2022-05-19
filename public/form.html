@@ -1,105 +1,98 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <title>Ein Platzhalter-Formular für Netlify</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <form 
-      data-netlify="true" 
-      name="contact" 
-      method="POST"
-    >
-      <fieldset name="Anrede">
-        <legend>Anrede</legend>
-        <label>
-          <input 
-            value="Frau" 
-            name="Anrede" 
-            type="radio" 
-          /> 
-          Frau
-        </label>
-        <label>
-          <input 
-            value="Herr" 
-            name="Anrede" 
-            type="radio" 
-          /> 
-          Herr
-        </label>
-        <label>
-          <input 
-            value="Divers" 
-            name="Anrede" 
-            type="radio" 
-          /> 
-          Divers
-        </label>
-      </fieldset>
+<form 
+  data-netlify="true" 
+  name="contact" 
+  method="POST"
+  hidden
+>
+  <fieldset name="Anrede">
+    <legend>Anrede</legend>
+    <label>
       <input 
-        name="Vorname" 
-        type="text" 
-        id="78" 
-        value="" 
-      />
-      <label for="78">
-        Vorname
-      </label>
+        type="radio" 
+        name="Anrede" 
+        value="Frau" 
+      /> 
+      Frau
+    </label>
+    <label>
       <input 
-        name="Nachname" 
-        type="text" 
-        id="79" 
-        value="" 
-      />
-      <label for="79">
-        Nachname
-      </label>
+        type="radio" 
+        name="Anrede" 
+        value="Herr" 
+      /> 
+      Herr
+    </label>
+    <label>
       <input 
-        name="E-Mail" 
-        type="email" 
-        id="80" 
-        value="" 
-      />
-      <label for="80">
-        E-Mail
-      </label>
-      <input 
-        name="Telefonnummer" 
-        type="text" id="81" 
-        placeholder="Telefonnummer (optional)" 
-        value="" 
-      />
-      <label for="81">
-        Telefonnummer (optional)
-      </label>
-      <textarea 
-        name="Nachricht" 
-        id="82"
-      ></textarea>
-      <label for="82">
-        Meine Nachricht
-      </label>
-      <label for="83">
-        <input 
-          name="Rückruf" 
-          id="83" 
-          type="checkbox" 
-        />
-        Bitte rufen Sie mich für die Terminabsprache zurück.
-      </label>
-      <label for="84">
-        <input 
-          name="Datenschutzerklärung" 
-          id="84" 
-          type="checkbox" 
-        />
-        Ich habe die Datenschutzerklärung gelesen und akzeptiert.
-      </label>
-      <button type="submit">
-        Nachricht abschicken
-      </button>
-    </form>
-  </body>
-</html>
+        type="radio" 
+        name="Anrede" 
+        value="Divers" 
+      /> 
+      Divers
+    </label>
+  </fieldset>
+  <label for="78">
+    <input 
+      type="text" 
+      name="Vorname" 
+      placeholder="Vorname"
+      id="78" 
+    />
+    Vorname
+  </label>
+  <label for="79">
+    <input 
+      type="text" 
+      name="Nachname" 
+      placeholder="Nachname"
+      id="79" 
+    />
+    Nachname
+  </label>
+  <label for="80">
+    <input 
+      type="email" 
+      name="E-Mail" 
+      placeholder="E-Mail"
+      id="80" 
+    />
+    E-Mail
+  </label>
+  <label for="81">
+    <input 
+      type="text" 
+      name="Telefonnummer" 
+      placeholder="Telefonnummer (optional)" 
+      id="81" 
+    />
+    Telefonnummer (optional)
+  </label>
+  <label for="82">
+    <textarea 
+      name="Nachricht" 
+      placeholder="Nachricht" 
+      id="82"
+      rows="5"
+    ></textarea>
+    Meine Nachricht
+  </label>
+  <label for="83">
+    <input 
+      type="checkbox" 
+      name="Rückruf" 
+      id="83" 
+    />
+    Bitte rufen Sie mich für die Terminabsprache zurück.
+  </label>
+  <label for="84">
+    <input 
+      type="checkbox" 
+      name="Datenschutzerklärung" 
+      id="84" 
+    />
+    Ich habe die Datenschutzerklärung gelesen und akzeptiert.
+  </label>
+  <button type="submit">
+    Nachricht abschicken
+  </button>
+</form>
