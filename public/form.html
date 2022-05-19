@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Ein Platzhalter-Formular für Netlify</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <form 
+      data-netlify="true" 
+      name="contact" 
+      method="POST"
+    >
+      <fieldset name="Anrede">
+        <legend>Anrede</legend>
+        <label>
+          <input 
+            value="Frau" 
+            name="Anrede" 
+            type="radio" 
+          /> 
+          Frau
+        </label>
+        <label>
+          <input 
+            value="Herr" 
+            name="Anrede" 
+            type="radio" 
+          /> 
+          Herr
+        </label>
+        <label>
+          <input 
+            value="Divers" 
+            name="Anrede" 
+            type="radio" 
+          /> 
+          Divers
+        </label>
+      </fieldset>
+      <input 
+        name="Vorname" 
+        type="text" 
+        id="78" 
+        value="" 
+      />
+      <label for="78">
+        Vorname
+      </label>
+      <input 
+        name="Nachname" 
+        type="text" 
+        id="79" 
+        value="" 
+      />
+      <label for="79">
+        Nachname
+      </label>
+      <input 
+        name="E-Mail" 
+        type="email" 
+        id="80" 
+        value="" 
+      />
+      <label for="80">
+        E-Mail
+      </label>
+      <input 
+        name="Telefonnummer" 
+        type="text" id="81" 
+        placeholder="Telefonnummer (optional)" 
+        value="" 
+      />
+      <label for="81">
+        Telefonnummer (optional)
+      </label>
+      <textarea 
+        name="Nachricht" 
+        id="82"
+      ></textarea>
+      <label for="82">
+        Meine Nachricht
+      </label>
+      <label for="83">
+        <input 
+          name="Rückruf" 
+          id="83" 
+          type="checkbox" 
+        />
+        Bitte rufen Sie mich für die Terminabsprache zurück.
+      </label>
+      <label for="84">
+        <input 
+          name="Datenschutzerklärung" 
+          id="84" 
+          type="checkbox" 
+        />
+        Ich habe die Datenschutzerklärung gelesen und akzeptiert.
+      </label>
+      <button type="submit">
+        Nachricht abschicken
+      </button>
+    </form>
+  </body>
+</html>
