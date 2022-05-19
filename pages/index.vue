@@ -45,7 +45,8 @@
             :options="options"
             player-height="365"
             player-width="650"
-          ></vue-vimeo-player>
+          >
+          </vue-vimeo-player>
         </client-only>
       </div>
     </c-grid>
@@ -53,29 +54,19 @@
       <div>
         <c-image-compare>
           <template #image-1>
-            <img
-              srcset="
-                https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_500/v1652350902/invisalign/image-compare-01.jpg   500w,
-                https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_1024/v1652350902/invisalign/image-compare-01.jpg 1024w,
-                https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_700/v1652350902/invisalign/image-compare-01.jpg   700w
-              "
-              sizes="(min-width: 1280px) 700px, (min-width: 1024px) 1024px, 100vw"
-              src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_500/v1652350902/invisalign/image-compare-01.jpg"
+            <c-image-compare-image
+              image="image-compare-01.jpg"
+              height="858"
+              width="1303"
               alt="Bild von Zähnen vor dem Tragen von Invisalign"
-              loading="lazy"
             />
           </template>
           <template #image-2>
-            <img
-              srcset="
-                https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_500/v1652350902/invisalign/image-compare-02.jpg   500w,
-                https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_1024/v1652350902/invisalign/image-compare-02.jpg 1024w,
-                https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_700/v1652350902/invisalign/image-compare-02.jpg   700w
-              "
-              sizes="(min-width: 1280px) 700px, (min-width: 1024px) 1024px, 100vw"
-              src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_500/v1652350902/invisalign/image-compare-02.jpg"
+            <c-image-compare-image
+              image="image-compare-02.jpg"
+              height="858"
+              width="1303"
               alt="Bild von Zähnen nach dem Tragen von Invisalign"
-              loading="lazy"
             />
           </template>
         </c-image-compare>
@@ -150,33 +141,12 @@
         </NuxtLink>
       </div>
       <div class="image">
-        <picture>
-          <source
-            media="(min-width: 1280px)"
-            :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_768/v1652281328/invisalign/invisalign-close-up.jpg 768w
-          `"
-          />
-          <source
-            media="(min-width: 1024px)"
-            :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1280/v1652281328/invisalign/invisalign-close-up.jpg 1280w
-          `"
-          />
-          <source
-            media="(min-width: 768px)"
-            :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1024/v1652281328/invisalign/invisalign-close-up.jpg 1024w
-          `"
-          />
-          <img
-            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/invisalign-close-up.jpg"
-            alt="Frau in Ärztekittel in Zahnarztpraxis"
-            loading="lazy"
-            width="1303"
-            height="858"
-          />
-        </picture>
+        <c-grid-picture
+          image="invisalign-close-up.jpg"
+          height="858"
+          width="1303"
+          alt="Mund mit Invisalign in Nahaufnahme"
+        />
       </div>
     </c-grid>
     <c-steps />
@@ -211,33 +181,12 @@
         </NuxtLink>
       </div>
       <div class="image">
-        <picture>
-          <source
-            media="(min-width: 1280px)"
-            :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_768/v1652281328/invisalign/portrait.jpg 768w
-          `"
-          />
-          <source
-            media="(min-width: 1024px)"
-            :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1280/v1652281328/invisalign/portrait.jpg 1280w
-          `"
-          />
-          <source
-            media="(min-width: 768px)"
-            :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,g_face,w_1024/v1652281328/invisalign/portrait.jpg 1024w
-          `"
-          />
-          <img
-            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_768/v1652281328/invisalign/portrait.jpg"
-            alt="Frau in Ärztekittel in Zahnarztpraxis"
-            loading="lazy"
-            width="1303"
-            height="858"
-          />
-        </picture>
+        <c-grid-picture
+          image="portrait.jpg"
+          height="858"
+          width="1303"
+          alt="Frau in Ärztekittel in Zahnarztpraxis"
+        />
       </div>
     </c-grid>
     <c-icon-teaser />

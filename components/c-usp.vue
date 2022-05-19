@@ -6,28 +6,21 @@
         <picture>
           <source
             media="(min-width: 1536px)"
-            srcset="
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_900/v1652281328/invisalign/invisalign.jpg 900w
-            "
+            :srcset="`${src1536} 900w`"
           />
           <source
             media="(min-width: 1024px)"
-            srcset="
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_500/v1652281328/invisalign/invisalign.jpg 500w
-            "
+            :srcset="`${src1024} 500w`"
           />
           <source
             media="(min-width: 768px)"
-            srcset="
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_3:2,q_auto,w_900/v1652281328/invisalign/invisalign.jpg 900w
-            "
+            :srcset="`${src768} 900w`"
           />
           <img
-            srcset="
-              https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_3:2,q_auto,w_800/v1652281328/invisalign/invisalign.jpg 800w
-            "
-            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,q_auto,w_900/v1652281328/invisalign/invisalign.jpg"
-            alt=""
+            :src="src"
+            :height="props.height"
+            :width="props.width"
+            :alt="props.alt"
             loading="lazy"
           />
         </picture>
@@ -148,6 +141,82 @@
     </ul>
   </section>
 </template>
+
+<script setup>
+import { buildImageUrl } from 'cloudinary-build-url';
+
+const props = defineProps({
+  image: {
+    type: String,
+    default: 'invisalign.jpg',
+  },
+  alt: {
+    type: String,
+    default: '',
+  },
+  height: {
+    type: String,
+    default: '600',
+  },
+  width: {
+    type: String,
+    default: '900',
+  },
+});
+
+const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.image}`;
+const cloudName = 'zahn-und-sthetik';
+const resize = { type: 'scale' };
+
+const src = buildImageUrl(url, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      width: 900,
+    },
+  },
+});
+
+const src768 = buildImageUrl(url, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      aspectRatio: '3:2',
+      width: 900,
+    },
+  },
+});
+
+const src1024 = buildImageUrl(url, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      width: 500,
+    },
+  },
+});
+
+const src1536 = buildImageUrl(url, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      width: 900,
+    },
+  },
+});
+</script>
 
 <style scoped>
 .container {
