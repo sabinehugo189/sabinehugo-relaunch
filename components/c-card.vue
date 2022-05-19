@@ -4,13 +4,13 @@
       <picture>
         <source
           media="(min-width: 1536px)"
-          :srcset="`
-            https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,ar_1.618,f_auto,q_auto,w_500/v1652281328/invisalign/${imgName} 500w
-          `"
+          :srcset="`${src500} 500w`"
         />
         <img
-          :src="`https://res.cloudinary.com/zahn-und-sthetik/image/upload/c_fill,f_auto,ar_1.618,q_auto,w_400/v1652281328/invisalign/${imgName}`"
-          alt=""
+          :src="src"
+          :height="props.imgHeight"
+          :width="props.imgWidth"
+          :alt="props.imgAlt"
           loading="lazy"
         />
       </picture>
@@ -27,6 +27,8 @@
 </template>
 
 <script setup>
+import { buildImageUrl } from 'cloudinary-build-url';
+
 const props = defineProps({
   head: {
     type: String,
@@ -39,6 +41,46 @@ const props = defineProps({
   imgName: {
     type: String,
     required: true,
+  },
+  imgAlt: {
+    type: String,
+    default: '',
+  },
+  imgHeight: {
+    type: String,
+    default: '',
+  },
+  imgWidth: {
+    type: String,
+    default: '',
+  },
+});
+
+const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.imgName}`;
+const cloudName = 'zahn-und-sthetik';
+const resize = { type: 'scale', aspectRatio: '1.618' };
+
+const src = buildImageUrl(url, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      width: 400,
+    },
+  },
+});
+
+const src500 = buildImageUrl(url, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      width: 500,
+    },
   },
 });
 </script>
