@@ -44,18 +44,3 @@
 
 @import 'buttons.css';
 @import 'utilities.css';
-
-/* Nuxt Root Element */
-#__nuxt {
-  display: grid;
-  flex: 1 1 auto;
-  grid-template-rows: var(--size-px) auto 1fr auto;
-  padding-block: calc(var(--size-5) - var(--size-px)) var(--size-5);
-  position: relative;
-}
-
-@media (min-width: 1280px) {
-  #__nuxt {
-    padding-block: calc(var(--size-10) - var(--size-px)) var(--size-10);
-  }
-}
