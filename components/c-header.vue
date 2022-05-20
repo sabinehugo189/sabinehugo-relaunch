@@ -5,7 +5,12 @@
     :class="{ 'is-stuck': headerIsSticky }"
   >
     <div class="header-inner">
-      <c-logo />
+      <NuxtLink
+        to="/"
+        class="logo"
+      >
+        <c-logo />
+      </NuxtLink>
       <c-utilities />
     </div>
   </header>
@@ -53,6 +58,10 @@ header {
   border-start-end-radius: 0;
   border-start-start-radius: 0;
   box-shadow: var(--shadow-2);
+}
+
+.logo:hover {
+  background-color: var(--surface-2);
 }
 
 @media (min-width: 1280px) {

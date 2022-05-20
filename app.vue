@@ -6,7 +6,9 @@
     ></div>
     <c-header />
     <main>
-      <NuxtPage />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </main>
     <c-footer />
   </div>
@@ -15,9 +17,25 @@
 <script setup>
 /* global useHeaderIsSticky */
 
-const target = ref(null);
+useHead({
+  meta: [
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1.0',
+    },
+    {
+      'http-equiv': 'X-UA-Compatible',
+      content: 'ie=edge',
+    },
+  ],
+  title: 'Website von Sabine Hugo',
+  htmlAttrs: {
+    lang: 'de',
+  },
+});
 
 const { setHeaderIsSticky } = useHeaderIsSticky();
+const target = ref(null);
 
 useIntersectionObserver(target, ([{ isIntersecting }]) => {
   setHeaderIsSticky(!isIntersecting);

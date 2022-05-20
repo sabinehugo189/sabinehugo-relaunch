@@ -1,27 +1,10 @@
 <template>
-  <div class="container">
-    <slot />
+  <div>
+    <div class="container">
+      <slot />
+    </div>
   </div>
 </template>
-
-<script setup>
-useHead({
-  meta: [
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1.0',
-    },
-    {
-      'http-equiv': 'X-UA-Compatible',
-      content: 'ie=edge',
-    },
-  ],
-  title: 'Website von Sabine Hugo',
-  htmlAttrs: {
-    lang: 'de',
-  },
-});
-</script>
 
 <style scoped>
 .container {
