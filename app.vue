@@ -4,7 +4,7 @@
       ref="target"
       class="sentinel"
     ></div>
-    <c-header :is-stuck="isHidden" />
+    <c-header />
     <main>
       <NuxtPage />
     </main>
@@ -13,11 +13,14 @@
 </template>
 
 <script setup>
+/* global useHeaderIsSticky */
+
 const target = ref(null);
-const isHidden = ref(false);
+
+const { setHeaderIsSticky } = useHeaderIsSticky();
 
 useIntersectionObserver(target, ([{ isIntersecting }]) => {
-  isHidden.value = !isIntersecting;
+  setHeaderIsSticky(!isIntersecting);
 });
 </script>
 

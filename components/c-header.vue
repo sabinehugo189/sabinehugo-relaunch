@@ -2,25 +2,19 @@
   <header
     ref="el"
     class="js-header"
-    :class="{ 'is-stuck': props.isStuck }"
+    :class="{ 'is-stuck': headerIsSticky }"
   >
     <div class="inner">
       <c-logo />
-      <c-utilities :is-stuck="props.isStuck" />
+      <c-utilities />
     </div>
   </header>
 </template>
 
 <script setup>
-/* global useElementSize, useHeaderHeight */
-const props = defineProps({
-  isStuck: {
-    type: Boolean,
-    default: false,
-  },
-});
-
+/* global useElementSize, useHeaderHeight, useHeaderIsSticky */
 const { setHeaderHeight } = useHeaderHeight();
+const { headerIsSticky } = useHeaderIsSticky();
 
 const el = ref(null);
 const { height } = useElementSize(el);
