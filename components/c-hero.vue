@@ -2,9 +2,7 @@
   <div
     ref="el"
     class="hero"
-    style="
-      background-image: url('https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652279713/invisalign/hero.jpg');
-    "
+    :style="`background-image: url('${url}');`"
   >
     <h1>
       Unsichtbare Zahnspange:
@@ -23,7 +21,7 @@
         Jetzt Termin ausmachen
       </NuxtLink>
       <img
-        src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652280970/invisalign/quality-seal.png"
+        :src="src"
         width="228"
         height="138"
         alt=""
@@ -34,6 +32,35 @@
 
 <script setup>
 /* global useHeaderHeight, useCssVar */
+
+import { buildImageUrl } from 'cloudinary-build-url';
+
+const urlPart =
+  'https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/';
+const cloudName = 'zahn-und-sthetik';
+const resize = { type: 'scale' };
+
+const url = buildImageUrl(`${urlPart}hero.jpg`, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
+  },
+});
+
+const src = buildImageUrl(`${urlPart}quality-seal.png`, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
+  },
+});
 
 const el = ref(null);
 const { headerHeight } = useHeaderHeight();
