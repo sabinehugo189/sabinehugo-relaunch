@@ -6,7 +6,7 @@
   >
     <div class="header-inner">
       <NuxtLink
-        to="/"
+        to="/#top"
         class="logo"
       >
         <c-logo />

@@ -4,6 +4,10 @@
       ref="target"
       class="sentinel"
     ></div>
+    <a
+      id="top"
+      name="top"
+    />
     <c-header />
     <main>
       <NuxtLayout>
