@@ -4,7 +4,7 @@
     class="js-header"
     :class="{ 'is-stuck': headerIsSticky }"
   >
-    <div class="inner">
+    <div class="header-inner">
       <c-logo />
       <c-utilities />
     </div>
@@ -34,7 +34,7 @@ header {
   z-index: var(--layer-1);
 }
 
-.inner {
+.header-inner {
   align-items: center;
   background-color: var(--surface-2);
   border-start-end-radius: var(--radius-3);
@@ -46,7 +46,7 @@ header {
     border-radius 300ms var(--ease-2), box-shadow 300ms var(--ease-2);
 }
 
-.is-stuck > .inner {
+.is-stuck > .header-inner {
   background-color: hsl(var(--surface-2-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
   border-end-start-radius: var(--radius-3);
@@ -60,13 +60,13 @@ header {
     padding-inline: var(--size-10);
   }
 
-  .inner {
+  .header-inner {
     padding-inline: var(--size-20);
   }
 }
 
 @media (min-width: 1536px) {
-  .inner {
+  .header-inner {
     padding-inline: var(--size-40);
   }
 }
