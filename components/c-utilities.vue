@@ -18,7 +18,7 @@
       <span>+49 931 99 147 070</span>
     </a>
     <NuxtLink
-      to="#contact"
+      to="/#contact"
       :class="[headerIsSticky && lgNAbove ? 'btn is-small' : 'link']"
     >
       <svg

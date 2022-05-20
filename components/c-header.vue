@@ -2,7 +2,7 @@
   <header
     ref="el"
     class="js-header"
-    :class="{ 'is-stuck': headerIsSticky }"
+    :class="{ 'is-stuck': headerIsSticky, 'is-home': headerIsHome }"
   >
     <div class="header-inner">
       <NuxtLink
@@ -18,6 +18,10 @@
 
 <script setup>
 /* global useElementSize, useHeaderHeight, useHeaderIsSticky */
+
+const route = useRoute();
+const headerIsHome = ref(route.meta.layout === 'home');
+
 const { setHeaderHeight } = useHeaderHeight();
 const { headerIsSticky } = useHeaderIsSticky();
 
@@ -25,6 +29,13 @@ const el = ref(null);
 const { height } = useElementSize(el);
 
 setHeaderHeight(height);
+
+watch(
+  () => route.meta.layout,
+  (value) => {
+    headerIsHome.value = value === 'home';
+  },
+);
 </script>
 
 <style scoped>
@@ -41,7 +52,7 @@ header {
 
 .header-inner {
   align-items: center;
-  background-color: var(--surface-2);
+  background-color: var(--surface-1);
   border-start-end-radius: var(--radius-3);
   border-start-start-radius: var(--radius-3);
   display: flex;
@@ -52,7 +63,7 @@ header {
 }
 
 .is-stuck > .header-inner {
-  background-color: hsl(var(--surface-2-hsl) / 0.95);
+  background-color: hsl(var(--surface-1-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
   border-end-start-radius: var(--radius-3);
   border-start-end-radius: 0;
@@ -60,8 +71,16 @@ header {
   box-shadow: var(--shadow-2);
 }
 
-.logo:hover {
+.is-home > .header-inner {
   background-color: var(--surface-2);
+}
+
+.is-stuck.is-home > .header-inner {
+  background-color: hsl(var(--surface-2-hsl) / 0.95);
+}
+
+.logo:hover {
+  background-color: transparent;
 }
 
 @media (min-width: 1280px) {

@@ -14,6 +14,7 @@
   --surface-4: var(--gray-3);
   --surface-5: var(--orange-6);
 
+  --surface-1-hsl: var(--gray-0-hsl);
   --surface-2-hsl: var(--gray-1-hsl);
 
   color-scheme: light;
