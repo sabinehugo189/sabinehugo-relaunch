@@ -327,3 +327,7 @@
   gap: var(--size-3);
   padding-inline-start: 0;
 }
+
+:where([hidden]) {
+  display: none !important;
+}

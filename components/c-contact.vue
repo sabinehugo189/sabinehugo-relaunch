@@ -23,7 +23,7 @@
       netlify-honeypot="bot-field"
       @submit="submit"
     >
-      <div class="hidden">
+      <div hidden>
         <label>
           Don’t fill this out if you're human:
           <input name="bot-field" />
