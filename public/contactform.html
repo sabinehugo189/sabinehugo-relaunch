@@ -2,8 +2,15 @@
   data-netlify="true" 
   name="contact" 
   method="POST"
+  netlify-honeypot="bot-field"
   hidden
 >
+  <div class="hidden">
+    <label>
+      Don’t fill this out if you're human:
+      <input name="bot-field" />
+    </label>
+  </div>
   <fieldset name="Anrede">
     <legend>Anrede</legend>
     <label><input type="radio" name="Anrede" value="Frau" />Frau</label>

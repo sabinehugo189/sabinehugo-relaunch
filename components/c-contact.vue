@@ -20,8 +20,15 @@
       data-netlify="true"
       name="contact"
       method="POST"
+      netlify-honeypot="bot-field"
       @submit="submit"
     >
+      <div class="hidden">
+        <label>
+          Don’t fill this out if you're human:
+          <input name="bot-field" />
+        </label>
+      </div>
       <div class="salutation">
         <h4>Anrede</h4>
         <c-radio-group
