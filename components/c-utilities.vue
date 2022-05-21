@@ -18,8 +18,8 @@
       <span>+49 931 99 147 070</span>
     </a>
     <NuxtLink
-      to="#contact"
-      :class="[isStuck && lgNAbove ? 'btn is-small' : 'link']"
+      to="/#contact"
+      :class="[headerIsSticky && lgNAbove ? 'btn is-small' : 'link']"
     >
       <svg
         aria-labelledby="emailSabineHugo"
@@ -38,27 +38,12 @@
 </template>
 
 <script setup>
-/* global useBreakpoints */
+/* global useBreakpoints, useHeaderIsSticky */
 import { breakpointsTailwind } from '@vueuse/core';
+const { headerIsSticky } = useHeaderIsSticky();
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
 const lgNAbove = breakpoints.greater('lg');
-
-const props = defineProps({
-  isStuck: {
-    type: Boolean,
-    default: false,
-  },
-});
-
-const isStuck = ref(false);
-
-watch(
-  () => props.isStuck,
-  (stuck) => {
-    isStuck.value = stuck;
-  },
-);
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <ul class="link-list">
-    <li><a href="#">Impressum</a></li>
-    <li><a href="#">Datenschutz</a></li>
+    <li><NuxtLink to="/imprint#top">Impressum</NuxtLink></li>
+    <li><NuxtLink to="/privacy#top">Datenschutz</NuxtLink></li>
   </ul>
 </template>
 

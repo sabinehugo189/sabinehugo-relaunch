@@ -1,44 +1,66 @@
 <template>
-  <div class="container">
-    <div class="container-inner">
-      <div
-        ref="el"
-        class="hero"
-        style="
-          background-image: url('https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652279713/invisalign/hero.jpg');
-        "
+  <div
+    ref="el"
+    class="hero"
+    :style="`background-image: url('${url}');`"
+  >
+    <h1>
+      Unsichtbare Zahnspange:
+      <small>Mehr Selbstvertrauen durch gerade Zähne.</small>
+    </h1>
+    <p>
+      Sie sind unzufrieden mit Ihrer Zahnstellung? Mit den unsichtbaren
+      Zahnschienen von Invisalign ist auch im Erwachsenenalter eine erfolgreiche
+      Behandlung einer Fehlstellung möglich.
+    </p>
+    <div class="cta-bar">
+      <NuxtLink
+        to="#contact"
+        class="btn"
       >
-        <h1>
-          Unsichtbare Zahnspange:
-          <small>Mehr Selbstvertrauen durch gerade Zähne.</small>
-        </h1>
-        <p>
-          Sie sind unzufrieden mit Ihrer Zahnstellung? Mit den unsichtbaren
-          Zahnschienen von Invisalign ist auch im Erwachsenenalter eine
-          erfolgreiche Behandlung einer Fehlstellung möglich.
-        </p>
-        <div class="cta-bar">
-          <NuxtLink
-            to="#contact"
-            class="btn"
-          >
-            Jetzt Termin ausmachen
-          </NuxtLink>
-          <img
-            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652280970/invisalign/quality-seal.png"
-            width="228"
-            height="138"
-            alt=""
-          />
-        </div>
-      </div>
+        Jetzt Termin ausmachen
+      </NuxtLink>
+      <img
+        :src="src"
+        width="228"
+        height="138"
+        alt=""
+      />
     </div>
-    <div class="shaded-edge"></div>
   </div>
 </template>
 
 <script setup>
 /* global useHeaderHeight, useCssVar */
+
+import { buildImageUrl } from 'cloudinary-build-url';
+
+const urlPart =
+  'https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/';
+const cloudName = 'zahn-und-sthetik';
+const resize = { type: 'scale' };
+
+const url = buildImageUrl(`${urlPart}hero.jpg`, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
+  },
+});
+
+const src = buildImageUrl(`${urlPart}quality-seal.png`, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
+  },
+});
 
 const el = ref(null);
 const { headerHeight } = useHeaderHeight();
@@ -54,24 +76,6 @@ watch(
 </script>
 
 <style scoped>
-.container {
-  margin-block-end: var(--size-48);
-  position: relative;
-}
-
-.container-inner {
-  margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
-  padding-inline: var(--size-5);
-}
-
-.shaded-edge {
-  box-shadow: inset 0 -0.5em 0.5em -0.5em hsl(0deg 0% 0% / 0.1);
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
 .hero {
   background-color: var(--surface-2);
   background-position: bottom center;
@@ -130,10 +134,6 @@ p {
 }
 
 @media (min-width: 1280px) {
-  .container-inner {
-    padding-inline: var(--size-10);
-  }
-
   .hero {
     min-block-size: calc(100vh - var(--header-height) - var(--size-10));
     padding-inline: var(--size-20);

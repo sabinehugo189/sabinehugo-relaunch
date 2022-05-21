@@ -1,41 +1,32 @@
 <template>
-  <div class="container">
-    <slot />
+  <div class="wrapper">
+    <div class="container">
+      <slot />
+    </div>
   </div>
 </template>
 
-<script setup>
-useHead({
-  meta: [
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1.0',
-    },
-    {
-      'http-equiv': 'X-UA-Compatible',
-      content: 'ie=edge',
-    },
-  ],
-  title: 'Website von Sabine Hugo',
-  htmlAttrs: {
-    lang: 'de',
-  },
-});
-</script>
-
 <style scoped>
+.wrapper {
+  padding-block-start: var(--size-20);
+  padding-inline: var(--size-5);
+}
+
 .container {
   display: flex;
   flex-direction: column;
+  gap: var(--size-10);
   margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
-  padding-inline: var(--size-5);
-  row-gap: var(--size-48);
+  max-inline-size: var(--size-xxl);
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .wrapper {
     padding-inline: var(--size-10);
+  }
+
+  .container {
+    gap: var(--size-40);
   }
 }
 </style>
