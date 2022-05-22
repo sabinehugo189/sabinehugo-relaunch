@@ -1,19 +1,9 @@
 [build]
-  command = "npm run build"
   publish = "dist"
+  command = "npm run build"
 
-# [context.production]
-#   environment = { NODE_VERSION = "16.15.0", RUBY_VERSION = "2.7.1" }
-
-# [context.deploy-preview]
-#   environment = { NODE_VERSION = "16.15.0", RUBY_VERSION = "2.7.1" }
-
-[dev]
-  command = "npm run dev"
-  publish = "build"
-  port = 3000
-  targetPort = 8080
-  framework = "#custom"
+[context.production]
+  environment = { NODE_VERSION = "16.15.0" }
 
 # [[headers]]
 #   for = "/*"
