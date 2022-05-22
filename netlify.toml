@@ -8,10 +8,10 @@
 [context.production]
   environment = { NODE_VERSION = "16.15.0" }
 
-# [[headers]]
-#   for = "/*"
-#   [headers.values]
-#     Content-Security-Policy = "default-src 'self' https://api.netlify.com;"
-#     X-Content-Type-Options = "nosniff"
-#     X-Frame-Options = "DENY"
-#     X-XSS-Protection = "1; mode=block"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = '''
+    default-src 'none';'''
