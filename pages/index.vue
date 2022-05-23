@@ -36,15 +36,7 @@
       </NuxtLink>
     </div>
     <div>
-      <client-only>
-        <vue-vimeo-player
-          :video-id="videoId"
-          :options="options"
-          player-height="365"
-          player-width="650"
-        >
-        </vue-vimeo-player>
-      </client-only>
+      <c-vimeo-player video-id="709059740" />
     </div>
   </c-grid>
   <c-grid>
@@ -190,13 +182,6 @@
 </template>
 
 <script setup>
-import { vueVimeoPlayer } from 'vue-vimeo-player';
-
-const videoId = '709059740';
-const options = {
-  responsive: true,
-};
-
 definePageMeta({
   layout: 'home',
 });
