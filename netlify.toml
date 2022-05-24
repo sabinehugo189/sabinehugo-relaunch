@@ -8,8 +8,6 @@
 [context.production]
   environment = { NODE_VERSION = "16.15.0" }
 
-Basic-Auth = "wyn-admin:9cEZPSZQ2NVLrf"
-
 # [[headers]]
 #   for = "/*"
 #   [headers.values]
