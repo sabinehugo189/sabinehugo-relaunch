@@ -99,6 +99,10 @@ h4 {
 }
 
 @media (min-width: 1280px) {
+  .container-inner {
+    padding-inline: var(--size-10);
+  }
+
   footer {
     font-size: var(--font-size-3);
     gap: var(--size-16);

@@ -83,6 +83,7 @@ watch(
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
+  margin-inline: calc(var(--size-5) * -1);
   padding-block: var(--size-16) var(--size-5);
   padding-inline: var(--size-5);
 }
@@ -135,6 +136,7 @@ p {
 
 @media (min-width: 1280px) {
   .hero {
+    margin-inline: 0;
     min-block-size: calc(100vh - var(--header-height) - var(--size-10));
     padding-inline: var(--size-20);
   }

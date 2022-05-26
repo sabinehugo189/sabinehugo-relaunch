@@ -8,16 +8,16 @@
 
 <style scoped>
 .wrapper {
-  padding-block-start: var(--size-20);
-  padding-inline: var(--size-5);
+  padding: var(--size-20) var(--size-5) 0;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: var(--size-10);
   margin-inline: auto;
   max-inline-size: var(--size-xxl);
+  padding-inline: var(--size-5);
+  row-gap: var(--size-10);
 }
 
 @media (min-width: 1280px) {
@@ -26,7 +26,8 @@
   }
 
   .container {
-    gap: var(--size-40);
+    padding-inline: 0;
+    row-gap: var(--size-40);
   }
 }
 </style>

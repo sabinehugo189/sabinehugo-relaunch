@@ -72,6 +72,8 @@ const lgNAbove = breakpoints.greater('lg');
 const lgNBelow = breakpoints.smaller('lg');
 const xlNAbove = breakpoints.greater('xl');
 const xlNBelow = breakpoints.smaller('xl');
+const xxlNAbove = breakpoints.greater('2xl');
+const xxlNBelow = breakpoints.smaller('2xl');
 
 const options = reactive({
   gap: '1.25rem',
@@ -122,7 +124,7 @@ watch(
   (value) => {
     if (value) {
       options.gap = '2rem';
-      options.width = 'calc(80vw - 5rem)';
+      options.width = 'calc(100vw - 15rem)';
     }
   },
 );
@@ -136,6 +138,24 @@ watch(
     }
   },
 );
+
+watch(
+  () => xxlNAbove.value,
+  (value) => {
+    if (value) {
+      options.width = 'calc(100vw - 25rem)';
+    }
+  },
+);
+
+watch(
+  () => xxlNBelow.value,
+  (value) => {
+    if (value) {
+      options.width = 'calc(100vw - 15rem)';
+    }
+  },
+);
 </script>
 
 <style scoped>
@@ -145,12 +165,14 @@ watch(
   display: flex;
   flex-direction: column;
   gap: var(--size-12);
+  margin-inline: calc(var(--size-5) * -1);
   padding-block: var(--size-20);
 }
 
 @media (min-width: 1280px) {
   .container {
     gap: var(--size-16);
+    margin-inline: 0;
     padding-block: var(--size-32);
   }
 }
@@ -540,6 +562,5 @@ h2 {
   right: 0.5em;
   top: 0;
 }
-
 /* stylelint-enable selector-class-pattern */
 </style>

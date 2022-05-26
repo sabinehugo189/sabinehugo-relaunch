@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <div class="container container-wrapper">
-      <div class="container-inner">
+    <div class="wrapper-inner">
+      <div class="container">
         <c-hero />
       </div>
       <div class="shaded-edge"></div>
@@ -14,27 +14,30 @@
 
 <style scoped>
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--size-48);
+  padding-inline: var(--size-5);
 }
 
-.container,
-.container-inner {
+.wrapper > * {
+  margin-block: 0;
+}
+
+.wrapper > * + * {
+  margin-block-start: var(--size-48);
+}
+
+.wrapper-inner {
+  margin-inline: calc(var(--size-5) * -1);
+  padding-inline: var(--size-5);
+  position: relative;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   row-gap: var(--size-48);
-}
-
-.container-wrapper {
-  display: block;
-  margin-inline: unset;
-  max-inline-size: unset;
-  padding-inline: unset;
-  position: relative;
 }
 
 .shaded-edge {
@@ -45,13 +48,17 @@
 }
 
 @media (min-width: 1280px) {
-  .container,
-  .container-inner {
+  .wrapper {
     padding-inline: var(--size-10);
   }
 
-  .container-wrapper {
-    padding-inline: unset;
+  .wrapper-inner {
+    margin-inline: calc(var(--size-10) * -1);
+    padding-inline: var(--size-10);
+  }
+
+  .container {
+    padding-inline: 0;
   }
 }
 </style>

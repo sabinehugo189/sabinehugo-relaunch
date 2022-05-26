@@ -1,7 +1,7 @@
 <template>
   <section
     ref="target"
-    class="container"
+    class="grid"
   >
     <slot></slot>
   </section>
@@ -22,17 +22,22 @@ watch(
 </script>
 
 <style scoped>
-.container {
+.grid {
   display: grid;
   gap: var(--size-10);
-  margin-inline: auto;
-  max-inline-size: var(--size-xxl);
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .grid {
     gap: var(--size-40);
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding-inline: var(--size-20);
+  }
+}
+
+@media (min-width: 1536px) {
+  .grid {
+    padding-inline: var(--size-40);
   }
 }
 
