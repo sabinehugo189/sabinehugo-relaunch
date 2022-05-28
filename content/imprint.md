@@ -1,3 +1,8 @@
+---
+title: 'Title of the page'
+description: 'meta description of the page'
+---
+
 ## Impressum
 
 ### Dr. med. Sabine Hugo

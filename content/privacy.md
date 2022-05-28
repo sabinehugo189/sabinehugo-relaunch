@@ -1,3 +1,8 @@
+---
+title: 'Title of the page'
+description: 'meta description of the page'
+---
+
 ## Datenschutz
 
 ### 1. Datenschutz auf einen Blick

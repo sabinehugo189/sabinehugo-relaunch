@@ -1,3 +1,8 @@
+---
+title: 'Title of the page'
+description: 'meta description of the page'
+---
+
 ::c-usp
 ---
 title: Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.
