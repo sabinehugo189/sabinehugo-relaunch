@@ -97,6 +97,50 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 :::
 ::
 
+::c-carousel
+---
+title: Ist eine Invisalign® Zahnschiene die richtige Lösung für mich? 
+cards: {
+  card-01: {
+    id: 'card01',
+    head: 'Ich habe in meiner Jugend keine Zahnspange getragen. Heute bereue ich das.',
+    body: 'Kein Problem! Holen Sie die erfolgreiche Korrektur Ihrer Zahnfehlstellung einfach jetzt nach. Mit Invisalign geht das besonders unauffällig.',
+    imgName: 'teaser-slider-01.jpg',
+    imgAlt: 'Kopf von einem Mädchen mit offenem Mund und schiefen Zähnen',
+    imgHeight: '309',
+    imgWidth: '500',
+  },
+  card-02: {
+    id: 'card02',
+    head: 'Ich habe in meiner Jugend eine Zahnspange getragen, aber meine Zähne haben sich mittlerweile verschoben.',
+    body: 'Mit den unsichtbaren Invisalign Zahnschienen lassen sich Zähne jederzeit in die gewünschte Position bringen. Bis ins hohe Alter!',
+    imgName: 'teaser-slider-02.jpg',
+    imgAlt: 'Nahaufnahme vom offenen Mund einer Frau mit schiefen Zähnen',
+    imgHeight: '309',
+    imgWidth: '500',
+  },
+  card-03: {
+    id: 'card03',
+    head: 'Wir suchen eine Lösung für unser heranwachsendes Kind. Es ist sehr schmerzempfindlich und möchte in der Pubertät keine feste Zahnspange.',
+    body: 'Invisalign Zahnschienen sind – anders als eine klassische Zahnspange – besonders angenehm einzusetzen, zu tragen und herauszunehmen.',
+    imgName: 'teaser-slider-03.jpg',
+    imgAlt: 'Junge mit Brille, der sich eine Invisalign Zahnschiene einsetzt',
+    imgHeight: '309',
+    imgWidth: '500',
+  },
+  card-04: {
+    id: 'card04',
+    head: 'Ich leide unter Parodontose. In letzter Zeit ist das Zahnfleisch zurückgegangen und meine Zähne haben sich verschoben.',
+    body: 'Mit Invisalign lassen sich Zahnfehlstellungen besonders sanft und schmerzfrei korrigieren, weil diese Korrektur ohne Brackets und Drähte auskommt.',
+    imgName: 'teaser-slider-04.jpg',
+    imgAlt: 'Nahaufnahme vom offenen Mund eines Mannes mit Parodontose',
+    imgHeight: '309',
+    imgWidth: '500',
+  },
+}
+---
+::
+
 ::c-contact-teaser
 ---
 label: Jetzt Termin vereinbaren
