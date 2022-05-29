@@ -1,21 +1,20 @@
 <template>
   <section class="container">
     <p>
-      {{ props.teaser }} Gerne berate ich Sie ausführlich. Machen Sie heute noch
-      einen Termin in unserer Fachpraxis für Invisalign in Würzburg aus.
+      <Markdown unwrap="p" />
     </p>
     <NuxtLink
       to="#contact"
       class="btn"
     >
-      Jetzt Termin vereinbaren
+      {{ props.label }}
     </NuxtLink>
   </section>
 </template>
 
 <script setup>
 const props = defineProps({
-  teaser: {
+  label: {
     type: String,
     required: true,
   },

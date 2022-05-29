@@ -96,3 +96,30 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 </svg>
 :::
 ::
+
+::c-contact-teaser
+---
+label: Jetzt Termin vereinbaren
+---
+Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
+Sie heute noch einen Termin in unserer Fachpraxis für Invisalign in Würzburg
+aus.
+::
+
+::c-contact-teaser
+---
+label: Jetzt Termin vereinbaren
+---
+Sie interessieren sich für eine Behandlung mit Invisalign? Gerne berate ich Sie
+ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
+Invisalign in Würzburg aus.
+::
+
+::c-contact-teaser
+---
+label: Jetzt Termin vereinbaren
+---
+Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich Sie
+ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
+Invisalign in Würzburg aus.
+::
