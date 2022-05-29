@@ -1,23 +1,30 @@
-.prose > div {
+.prose > div[excerpt] {
   display: flex;
   flex-direction: column;
+}
+
+.prose.is-full-page > div[excerpt] {
   row-gap: var(--size-10);
 }
 
-.prose > div > h2 {
+.prose.is-components > div[excerpt] {
+  row-gap: var(--size-48);
+}
+
+.prose > div[excerpt] > h2 {
   font-size: var(--font-size-fluid-3);
 }
 
-.prose > div > h3 {
+.prose > div[excerpt] > h3 {
   font-size: var(--font-size-fluid-2);
   margin-block-start: var(--size-10);
 }
 
-.prose > div > h4 {
+.prose > div[excerpt] > h4 {
   font-size: var(--font-size-fluid-1);
 }
 
-.prose > div > h4 + p,
-.prose > div > h4 + ul {
+.prose > div[excerpt] > h4 + p,
+.prose > div[excerpt] > h4 + ul {
   margin-block-start: calc(var(--size-10) * -1);
 }
