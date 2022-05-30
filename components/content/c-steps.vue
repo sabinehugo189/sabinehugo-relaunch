@@ -112,14 +112,14 @@ h2 {
   }
 }
 
-.step>h3 {
+.step > h3 {
   align-items: center;
   display: flex;
   font-size: var(--font-size-4);
   gap: var(--size-4);
 }
 
-.step>h3::before {
+.step > h3::before {
   align-items: center;
   block-size: var(--size-16);
   border-radius: var(--radius-round);
@@ -131,20 +131,20 @@ h2 {
   justify-content: center;
 }
 
-.step>ul {
+.step > ul {
   display: grid;
   gap: var(--size-4);
   list-style: none;
   padding-inline-start: 0;
 }
 
-.step>ul>li {
+.step > ul > li {
   display: flex;
   gap: var(--size-3);
   padding-inline-start: 0;
 }
 
-.step>ul>li::before {
+.step > ul > li::before {
   align-items: center;
   align-self: flex-start;
   aspect-ratio: 1 / 1;
