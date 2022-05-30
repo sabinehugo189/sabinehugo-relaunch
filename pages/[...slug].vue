@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-if="mounted"
-    class="prose"
-    :class="[proseModifier]"
-  >
+  <div v-if="mounted">
     <ContentDoc />
   </div>
 </template>
@@ -13,20 +9,9 @@ definePageMeta({
   layout: 'home',
 });
 
-const proseModifier = ref('');
 const mounted = useMounted();
 const route = useRoute();
 const [slug = 'home'] = route.params.slug;
-
-switch (slug) {
-  case 'imprint':
-  case 'privacy':
-    proseModifier.value = 'is-full-page';
-    break;
-  default:
-    proseModifier.value = 'is-components';
-    break;
-}
 
 watch(
   () => mounted.value,
@@ -37,3 +22,11 @@ watch(
   },
 );
 </script>
+
+<style scoped>
+:deep(div[excerpt]) {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--size-48);
+}
+</style>

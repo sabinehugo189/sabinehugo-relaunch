@@ -3,6 +3,7 @@ title: 'Title of the page'
 description: 'meta description of the page'
 ---
 
+::c-prose
 ## Datenschutz
 
 ### 1. Datenschutz auf einen Blick
@@ -244,3 +245,4 @@ Ihrem Browser ein Opt-Out-Cookie hinterlegt, der verhindert, dass Matomo
 Nutzungsdaten speichert. Wenn Sie Ihre Cookies löschen, hat dies zur Folge, dass
 auch das Matomo Opt-Out-Cookie gelöscht wird. Das Opt-Out muss bei einem
 erneuten Besuch unserer Seite wieder aktiviert werden.
+::

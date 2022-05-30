@@ -97,6 +97,15 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 :::
 ::
 
+::c-contact-teaser
+---
+label: Jetzt Termin vereinbaren
+---
+Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
+Sie heute noch einen Termin in unserer Fachpraxis für Invisalign in Würzburg
+aus.
+::
+
 ::c-carousel
 ---
 title: Ist eine Invisalign® Zahnschiene die richtige Lösung für mich? 
@@ -145,18 +154,157 @@ cards: {
 ---
 label: Jetzt Termin vereinbaren
 ---
-Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
-Sie heute noch einen Termin in unserer Fachpraxis für Invisalign in Würzburg
-aus.
+Sie interessieren sich für eine Behandlung mit Invisalign? Gerne berate ich Sie
+ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
+Invisalign in Würzburg aus.
+::
+
+::c-grid
+:::c-prose
+## Invisalign® Die unauffällige Zahnbegradigung.
+
+Kaum ein Mensch ist von Natur aus mit einer **perfekten Zahnstellung** gesegnet.
+Viele Menschen tragen daher als Heranwachsende klassische Zahnspangen. Nicht
+alle sind zu einem späteren Zeitpunkt im Leben mit dem **Ergebnis der
+kieferorthopädischen Behandlung** in der Jugend zufrieden. Zudem sind Zähne
+immer in Bewegung – bis ins hohe Alter! Für geradere Zähne und ein schöneres
+Lächeln biete ich in meiner Fachpraxis in Würzburg eine Behandlung mit
+Invisalign Zahnschienen an. Die **transparenten Aligner** von Invisalign sind
+aufgrund ihrer **ästhetischen Unauffälligkeit** eine attraktive Alternative zu
+einer ästhetisch wenig überzeugenden festsitzenden Zahnspange. Zudem sind
+Invisalign Kunststoffschienen nur 0,7 mm dünn und sehr angenehm zu tragen. Für
+ein **optimales Ergebnis** hinsichtlich **Ästhetik** und **Funktion** können sie
+ohne Weiteres Tag und Nacht bis zu 22 Stunden getragen werden. Herausgenommen
+werden Invisalign Zahnschienen in der Regel nur zum Essen und Zähneputzen.
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
+
+#right
+:::c-vimeo-player
+---
+video-id: 709059740
+---
+:::
+::
+
+::c-grid
+:::c-image-compare
+---
+images: {
+  image01: {
+    name: 'image-compare-01.jpg',
+    height: '858',
+    width: '1303',
+    alt: 'Bild von Zähnen vor dem Tragen von Invisalign',
+  },
+  image02: {
+    name: 'image-compare-02.jpg',
+    height: '858',
+    width: '1303',
+    alt: 'Bild von Zähnen nach dem Tragen von Invisalign',
+  },
+}
+alt: Wählen Sie aus wie viel Prozent des verdeckten Bildes angezeigt werden soll
+---
+:::
+
+#right
+:::c-prose
+## Effektive Zahnkorrektur. Für ein schönes Lachen.
+
+Eine Invisalign Behandlung dauert zwischen **3 Monaten in leichten Fällen** und
+**ca. 2 Jahren bei komplizierten Zahnfehlstellungen**. Ein Großteil der
+Behandlungen kann nach maximal 1 Jahr abgeschlossen werden. Das ideale Ergebnis
+hinsichtlich Ästhetik und Funktion wird bei Behandlungsbeginn auf Basis eines
+**3D Scans** und einer **digitalen Planung** festgelegt. Um eine Vorstellung zu
+bekommen, wie das angestrebte Ergebnis aussehen könnte, bieten wir in unserer
+Fachpraxis für Invisalign den Service, mittels einer 3D Simulation die
+korrigierte Zahnstellung virtuell darzustellen.
+
+Auf der Grundlage der Scans wird ein **Set von Alignern** angefertigt, von denen
+die erste Schiene in der Praxis eingesetzt wird. Weitere 4-6 Schienen werden
+ausgehändigt. Der Fortschritt der Behandlung wird jeweils alle 6-8 Wochen
+kontrolliert. Zur Unterstützung der Zahnbewegungen werden kleine zahnfarbene
+Keramikknöpfchen, sogenannte "Attachments", an einigen Zähnen aufgebracht.
+
+Sind die **gewünschten Resultate** erreicht, wird zum Erhalt der neuen
+Zahnstellung eine **individuelle Halteschiene** für die Nacht angefertigt oder
+ein **Retainer** im Bereich der Frontzähne eingeklebt. Ist das Ergebnis noch
+nicht zufriedenstellend, kann mit einem Refinement und kostenfreien neuen
+Alignern nachgearbeitet werden.
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
+::
+
+::c-grid
+:::c-prose
+## Neueste Technologien für das gewünschte Ergebnis.
+
+Für ein optimales Ergebnis kommt bei einer kieferorthopädischen Behandlung mit
+Invisalign die neueste Technik zur Anwendung. So hat die Firma Align Technologie
+mit dem **I-Tero-Scanner** einen Intraoralscanner entwickelt, der einen
+**digitalen 3D-Abdruck der Zähne** erstellt. Die computergestützte Abformung
+ersetzt die oftmals als unangenehm erlebte Abdrucknahme mit Abdruckmasse und
+Löffel. Mithilfe einer "**Outcome-Simulation**" kann bereits beim ersten
+Beratungstermin die angestrebte perfekte Zahnstellung dargestellt werden. So
+erhalten Sie bereits zu diesem frühen Zeitpunkt eine Vorstellung des möglichen
+Endergebnisses.
+
+In unserer Fachpraxis für Invisalign kommt der moderne I-Tero-Scanner auch bei
+der Abformung für die Herstellung von Kronen, Brücken und Inlays zum Einsatz.
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
+
+#right
+:::c-grid-picture
+---
+imgSrc: invisalign-close-up.jpg
+imgHeight: 858
+imgWidth: 1303
+imgAlt: Mund mit Invisalign in Nahaufnahme
+---
+:::
 ::
 
 ::c-contact-teaser
 ---
 label: Jetzt Termin vereinbaren
 ---
-Sie interessieren sich für eine Behandlung mit Invisalign? Gerne berate ich Sie
+Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich Sie
 ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
 Invisalign in Würzburg aus.
+::
+
+::c-grid
+:::c-prose
+
+## Dr. Sabine Hugo: European Master of Aligners (Spezialistin für Alignerbehandlung)
+
+Ein schönes Lachen ist wichtig für das **individuelle Wohlbefinden**. Das wissen
+besonders die, deren Zahnstellung nicht optimal ist. Mit Invisalign gibt es
+jetzt die Möglichkeit, in jedem Alter – vom Kleinkind bis ins hohe
+Erwachsenenalter – fast jede Zahnfehlstellung auf **angenehme Art** unauffällig
+zu korrigieren. Ich kann Ihnen versichern: Das Tragen der transparenten,
+maßgefertigten Aligner wird Ihnen in kürzester Zeit ganz selbstverständlich
+vorkommen. Gerne bespreche ich mit Ihnen die gewünschten Ergebnisse der
+Zahnkorrektur in einem **unverbindlichen Erstgespräch** in unserer Fachpraxis
+für Invisalign. Freuen Sie sich auf ein schönes Lächeln und
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
+
+#right
+:::c-grid-picture
+---
+imgSrc: portrait.jpg 
+imgHeight: 858
+imgWidth: 1303
+imgAlt: Frau in Ärztekittel in Zahnarztpraxis 
+---
+:::
 ::
 
 ::c-contact-teaser

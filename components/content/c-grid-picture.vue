@@ -14,9 +14,9 @@
     />
     <img
       :src="src"
-      :height="props.height"
-      :width="props.width"
-      :alt="props.alt"
+      :height="props.imgHeight"
+      :width="props.imgWidth"
+      :alt="props.imgAlt"
       loading="lazy"
     />
   </picture>
@@ -26,25 +26,25 @@
 import { buildImageUrl } from 'cloudinary-build-url';
 
 const props = defineProps({
-  image: {
+  imgSrc: {
     type: String,
     required: true,
   },
-  alt: {
+  imgHeight: {
     type: String,
     default: '',
   },
-  height: {
+  imgWidth: {
     type: String,
     default: '',
   },
-  width: {
+  imgAlt: {
     type: String,
     default: '',
   },
 });
 
-const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.image}`;
+const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.imgSrc}`;
 const cloudName = 'zahn-und-sthetik';
 const resize = { type: 'scale' };
 
@@ -96,3 +96,22 @@ const src1280 = buildImageUrl(url, {
   },
 });
 </script>
+
+<style scoped>
+picture {
+  display: flex;
+}
+
+picture > img {
+  border-end-end-radius: var(--radius-3);
+  border-end-start-radius: var(--radius-3);
+  object-fit: cover;
+}
+
+@media (min-width: 1280px) {
+  picture {
+    inset: 0;
+    position: absolute;
+  }
+}
+</style>
