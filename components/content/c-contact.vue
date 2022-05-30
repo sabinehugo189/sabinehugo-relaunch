@@ -1,19 +1,12 @@
 <template>
-  <section>
+  <section class="container">
     <a
       id="contact"
       name="contact"
     />
     <header>
-      <h3>
-        Sie interessieren sich für eine Behandlung mit Invisalign Zahnschienen?
-      </h3>
-      <p>
-        Machen Sie jetzt einen Termin zu einem Beratungsgespräch aus. Gemeinsam
-        besprechen wir das gewünschte Ergebnis. Freuen Sie sich auf ein
-        schöneres Lächeln! Rufen Sie an unter +49 931 99 147 070 oder schicken
-        Sie uns eine E-Mail. Wir melden uns innerhalb eines Werktags bei Ihnen.
-      </p>
+      <h3>{{ props.title }}</h3>
+      <p>{{ props.description }}</p>
     </header>
     <form
       ref="form"
@@ -121,6 +114,17 @@
 import { useField, useForm } from 'vee-validate';
 import { object, string, boolean } from 'yup';
 
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+});
+
 const form = ref(null);
 const notification = ref(false);
 
@@ -184,12 +188,17 @@ const submit = handleSubmit((_, { resetForm }) => {
 </script>
 
 <style scoped>
-section {
+.container {
   display: flex;
   flex-direction: column;
   gap: var(--size-10);
   margin-inline: auto;
   max-inline-size: var(--size-lg);
+  position: relative;
+}
+
+#contact {
+  position: absolute;
 }
 
 header {
