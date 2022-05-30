@@ -1,25 +1,8 @@
 <template>
   <section class="container">
-    <p>
-      <Markdown unwrap="p" />
-    </p>
-    <NuxtLink
-      to="#contact"
-      class="btn"
-    >
-      {{ props.label }}
-    </NuxtLink>
+    <Markdown />
   </section>
 </template>
-
-<script setup>
-const props = defineProps({
-  label: {
-    type: String,
-    required: true,
-  },
-});
-</script>
 
 <style scoped>
 .container {

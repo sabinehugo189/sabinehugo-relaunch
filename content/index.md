@@ -97,13 +97,16 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 :::
 ::
 
-::c-contact-teaser
----
-label: Jetzt Termin vereinbaren
----
-Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
-Sie heute noch einen Termin in unserer Fachpraxis für Invisalign in Würzburg
-aus.
+::c-teaser
+:::c-prose
+<p class="lead">
+  Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
+  Sie heute noch einen Termin in unserer Fachpraxis für Invisalign in Würzburg
+  aus.
+</p>
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
 ::
 
 ::c-carousel
@@ -150,13 +153,16 @@ cards: {
 ---
 ::
 
-::c-contact-teaser
----
-label: Jetzt Termin vereinbaren
----
-Sie interessieren sich für eine Behandlung mit Invisalign? Gerne berate ich Sie
-ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
-Invisalign in Würzburg aus.
+::c-teaser
+:::c-prose
+<p class="lead">
+  Sie interessieren sich für eine Behandlung mit Invisalign? Gerne berate ich
+  Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
+  Invisalign in Würzburg aus.
+</p>
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
 ::
 
 ::c-grid
@@ -269,13 +275,16 @@ imgAlt: Mund mit Invisalign in Nahaufnahme
 :::
 ::
 
-::c-contact-teaser
----
-label: Jetzt Termin vereinbaren
----
-Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich Sie
-ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
-Invisalign in Würzburg aus.
+::c-teaser
+:::c-prose
+<p class="lead">
+  Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich
+  Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
+  Invisalign in Würzburg aus.
+</p>
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
 ::
 
 ::c-grid
@@ -307,11 +316,14 @@ imgAlt: Frau in Ärztekittel in Zahnarztpraxis
 :::
 ::
 
-::c-contact-teaser
----
-label: Jetzt Termin vereinbaren
----
-Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich Sie
-ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
-Invisalign in Würzburg aus.
+::c-teaser
+:::c-prose
+<p class="lead">
+  Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich
+  Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
+  Invisalign in Würzburg aus.
+</p>
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
 ::
