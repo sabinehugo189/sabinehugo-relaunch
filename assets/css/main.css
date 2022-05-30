@@ -45,8 +45,3 @@
 @import 'buttons.css';
 @import 'utilities.css';
 @import 'prose.css';
-
-/* Nuxt Wrapper */
-#__nuxt {
-  overflow: hidden;
-}
