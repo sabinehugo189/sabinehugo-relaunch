@@ -62,6 +62,10 @@ useIntersectionObserver(target, ([{ isIntersecting }]) => {
   height: var(--size-px);
 }
 
+#top {
+  position: absolute;
+}
+
 .root {
   display: grid;
   grid-template-rows: auto 1fr auto;
