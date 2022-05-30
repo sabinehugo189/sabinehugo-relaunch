@@ -14,8 +14,8 @@
       @splide:refresh="onRefresh"
     >
       <SplideSlide
-        v-for="card in cards"
-        :key="card.id"
+        v-for="(card, index) in cards"
+        :key="`card-${uid}-${index}`"
       >
         <c-card
           :head="card.head"
@@ -58,6 +58,8 @@ const xlNAbove = breakpoints.greater('xl');
 const xlNBelow = breakpoints.smaller('xl');
 const xxlNAbove = breakpoints.greater('2xl');
 const xxlNBelow = breakpoints.smaller('2xl');
+
+const { uid } = getCurrentInstance();
 
 const options = reactive({
   gap: '1.25rem',

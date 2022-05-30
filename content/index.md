@@ -114,7 +114,6 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 title: Ist eine Invisalign® Zahnschiene die richtige Lösung für mich? 
 cards: {
   card-01: {
-    id: 'card01',
     head: 'Ich habe in meiner Jugend keine Zahnspange getragen. Heute bereue ich das.',
     body: 'Kein Problem! Holen Sie die erfolgreiche Korrektur Ihrer Zahnfehlstellung einfach jetzt nach. Mit Invisalign geht das besonders unauffällig.',
     imgName: 'teaser-slider-01.jpg',
@@ -123,7 +122,6 @@ cards: {
     imgWidth: '500',
   },
   card-02: {
-    id: 'card02',
     head: 'Ich habe in meiner Jugend eine Zahnspange getragen, aber meine Zähne haben sich mittlerweile verschoben.',
     body: 'Mit den unsichtbaren Invisalign Zahnschienen lassen sich Zähne jederzeit in die gewünschte Position bringen. Bis ins hohe Alter!',
     imgName: 'teaser-slider-02.jpg',
@@ -132,7 +130,6 @@ cards: {
     imgWidth: '500',
   },
   card-03: {
-    id: 'card03',
     head: 'Wir suchen eine Lösung für unser heranwachsendes Kind. Es ist sehr schmerzempfindlich und möchte in der Pubertät keine feste Zahnspange.',
     body: 'Invisalign Zahnschienen sind – anders als eine klassische Zahnspange – besonders angenehm einzusetzen, zu tragen und herauszunehmen.',
     imgName: 'teaser-slider-03.jpg',
@@ -141,7 +138,6 @@ cards: {
     imgWidth: '500',
   },
   card-04: {
-    id: 'card04',
     head: 'Ich leide unter Parodontose. In letzter Zeit ist das Zahnfleisch zurückgegangen und meine Zähne haben sich verschoben.',
     body: 'Mit Invisalign lassen sich Zahnfehlstellungen besonders sanft und schmerzfrei korrigieren, weil diese Korrektur ohne Brackets und Drähte auskommt.',
     imgName: 'teaser-slider-04.jpg',
@@ -273,6 +269,41 @@ imgWidth: 1303
 imgAlt: Mund mit Invisalign in Nahaufnahme
 ---
 :::
+::
+
+::c-steps
+---
+title: In 3 Schritten zum strahlenden Lächeln.
+steps: {
+  step01: {
+    title: 'Beginn',
+    items: {
+      item01: 'Ausführliches Beratungsgespräch mit Dr. Sabine Hugo',
+      item02: 'Anfertigung 3D-Scan, Röntgenbilder und Fotos',
+      item03: 'Erstellung eines Behandlungsplans',
+      item04: 'Anbringung der Attachments und Einsetzen der ersten Schiene',
+    },
+  },
+  step02: {
+    title: 'Behandlung',
+    items: {
+      item01: 'Tragen der Zahnschienen bis zu 22 Stunden am Tag',
+      item02: 'Einfache Reinigung mit lauwarmem Wasser',
+      item03: 'Eigenständige Auswechslung der Aligner alle 1 bis 2 Wochen',
+      item04: 'Kontrolltermine alle 4 bis 8 Wochen in der Praxis',
+    },
+  },
+  step03: {
+    title: 'Ergebnis',
+    items: {
+      item01: 'Erreichen der gewünschten Resultate',
+      item02: 'Gründliche Überprüfung des Ergebnisses',
+      item03: 'ggf. Refinement (Feinkorrektur) für ein besseres Ergebnis',
+      item04: 'Anfertigung einer Halteschiene oder eines Retainers',
+    },
+  },
+}
+---
 ::
 
 ::c-teaser
