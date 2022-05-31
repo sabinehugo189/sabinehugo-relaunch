@@ -427,6 +427,45 @@ caption: Wurzelkanalbehandlung
 :::
 ::
 
+::c-faq
+---
+title: Das werden wir häufig gefragt 
+questions: {
+  section01: {
+    question: 'Übernimmt die Krankenkasse die Invisalign Behandlung?',
+    answer: {
+      part01: 'Eine kieferorthopädische Behandlung mit Invisalign wird nicht von den gesetzlichen Krankenkassen übernommen. Sie ist eine reine Privatleistung. Bei Privatversicherten, deren Versicherung eine kieferorthopädische Behandlung inkludiert, werden die Kosten in der Regel erstattet.',
+    },
+  },
+  section02: {
+    question: 'Welche Vorteile hat eine Behandlung mit Invisalign Zahnschienen gegenüber einer festsitzenden Zahnspange?',
+    answer: {
+      part01: 'Eine Behandlung mit Invisalign Zahnschienen hat viele Vorteile gegenüber einer festen Metall-Zahnspange. So ist das Einsetzen und die Anpassung einer klassischen Zahnspange sehr viel zeitaufwendiger als die maßgeschneiderte Anfertigung der Aligner. Außerdem besteht eine festsitzende Metall-Zahnspange aus Brackets und Drähten, die zu Irritationen der Schleimhaut und zu erheblichen Schmerzen führen können. Eine klassische Zahnspange wird zudem in der Regel als unästhetisch wahrgenommen – im Jugendalter wie im Erwachsenenalter.',
+      part02: 'Aligner von Invisalign sind im Vergleich zur klassischen Metall-Zahnspange leicht einzusetzen, herauszunehmen und zu reinigen. Diese Möglichkeit wird von vielen Patientinnen und Patienten als sehr hygienisch erlebt. Außerdem sind Invisalign Aligner aus transparentem SmartTrack Material gefertigt und nahezu unsichtbar. Die Aligner werden zudem an die individuelle Zahnfleischform und die Zähne angepasst. Sie fallen dadurch besonders wenig auf.',
+    },
+  },
+  section03: {
+    question: 'Wie lange dauert eine Zahnkorrektur mit Invisalign?',
+    answer: {
+      part01: 'Eine Mehrheit der Patientinnen und Patienten erreichen innerhalb 1 Jahres das gewünschte Resultat. Mitunter – bei leichteren Fällen – sind 3 Monate für die Behandlung ausreichend. Bei komplizierten Fehlstellungen lassen sich in der Regel innerhalb von 2 Jahren gute Ergebnisse erzielen. Die Fortschritte der Behandlung werden alle 4 bis 8 Wochen bei individuellen Kontrollterminen in der Praxis überprüft.',
+    },
+  },
+  section04: {
+    question: 'Kann jede Zahnärztin oder jeder Zahnärztin eine Invisalign Behandlung durchführen?',
+    answer: {
+      part01: 'Damit eine Zahnärztin oder ein Zahnarzt eine Zahnkorrektur mit Invisalign anbieten kann, muss eine spezielle Fortbildung durchlaufen werden.',
+    },
+  },
+  section05: {
+    question: 'Bekomme ich mit der Invisalign Behandlung garantiert geradere Zähne?',
+    answer: {
+      part01: 'So wie jedes Lächeln einzigartig ist, ist auch jede Zahnstellung einzigartig. Aus diesem Grund beginnt die Invisalign Behandlung mit einem Beratungsgespräch, in dem wir gemeinsam besprechen, welche Ergebnisse Sie sich von Invisalign für Ihr Lachen wünschen und wie wir diese umsetzen können. In der Regel lassen sich sehr gute Resultate erzielen – auch bei komplizierten Zahnfehlstellungen.',
+    },
+  },
+}
+---
+::
+
 ::c-contact
 ---
 title: Sie interessieren sich für eine Behandlung mit Invisalign Zahnschienen?
