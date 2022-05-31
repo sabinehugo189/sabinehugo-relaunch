@@ -41,8 +41,6 @@ watch(
 <style scoped>
 header {
   color: var(--text-4);
-  margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   position: sticky;
   top: 0;
@@ -57,6 +55,8 @@ header {
   border-start-start-radius: var(--radius-3);
   display: flex;
   justify-content: space-between;
+  margin-inline: auto;
+  max-inline-size: var(--size-xxxl);
   padding: var(--size-5);
   transition: background-color 300ms var(--ease-2),
     border-radius 300ms var(--ease-2), box-shadow 300ms var(--ease-2);
