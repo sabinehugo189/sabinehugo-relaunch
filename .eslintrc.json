@@ -30,6 +30,7 @@
     "reactive": "readonly",
     "ref": "readonly",
     "toRefs": "readonly",
+    "useAsyncData": "readonly",
     "useHead": "readonly",
     "useIntersectionObserver": "readonly",
     "useMounted": "readonly",

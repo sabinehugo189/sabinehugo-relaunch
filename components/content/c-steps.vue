@@ -1,39 +1,42 @@
 <template>
   <section class="container">
     <header>
-      <h2>In 3 Schritten zum strahlenden Lächeln.</h2>
+      <h2>{{ props.title }}</h2>
     </header>
     <ol class="steps">
-      <li class="step">
-        <h3>Beginn</h3>
+      <li
+        v-for="(step, index) in steps"
+        :key="`step-${uid}-${index}`"
+        class="step"
+      >
+        <h3>{{ step.title }}</h3>
         <ul>
-          <li>Ausführliches Beratungsgespräch mit Dr. Sabine Hugo</li>
-          <li>Anfertigung 3D-Scan, Röntgenbilder und Fotos</li>
-          <li>Erstellung eines Behandlungsplans</li>
-          <li>Anbringung der Attachments und Einsetzen der ersten Schiene</li>
-        </ul>
-      </li>
-      <li class="step">
-        <h3>Behandlung</h3>
-        <ul>
-          <li>Tragen der Zahnschienen bis zu 22 Stunden am Tag</li>
-          <li>Einfache Reinigung mit lauwarmem Wasser</li>
-          <li>Eigenständige Auswechslung der Aligner alle 1 bis 2 Wochen</li>
-          <li>Kontrolltermine alle 4 bis 8 Wochen in der Praxis</li>
-        </ul>
-      </li>
-      <li class="step">
-        <h3>Ergebnis</h3>
-        <ul>
-          <li>Erreichen der gewünschten Resultate</li>
-          <li>Gründliche Überprüfung des Ergebnisses</li>
-          <li>ggf. Refinement (Feinkorrektur) für ein besseres Ergebnis</li>
-          <li>Anfertigung einer Halteschiene oder eines Retainers</li>
+          <li
+            v-for="(item, idx) in step.items"
+            :key="`item-${uid}-${index}-${idx}`"
+          >
+            {{ item }}
+          </li>
         </ul>
       </li>
     </ol>
   </section>
 </template>
+
+<script setup>
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  steps: {
+    type: Object,
+    required: true,
+  },
+});
+
+const { uid } = getCurrentInstance();
+</script>
 
 <style scoped>
 .container {

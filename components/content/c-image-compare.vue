@@ -3,14 +3,22 @@
     ref="target"
     class="image-compare"
   >
-    <slot name="image-1" />
-    <span class="image-2-wrapper">
-      <slot name="image-2" />
+    <c-image-compare-image
+      :image="props.images.image01.name"
+      :height="props.images.image01.height"
+      :width="props.images.image01.width"
+      :alt="props.images.image01.alt"
+    />
+    <span class="image-02-wrapper">
+      <c-image-compare-image
+        :image="props.images.image02.name"
+        :height="props.images.image02.height"
+        :width="props.images.image02.width"
+        :alt="props.images.image02.alt"
+      />
     </span>
     <label class="image-compare-label">
-      <span class="visually-hidden">
-        Select what percentage of the bottom image to show
-      </span>
+      <span class="visually-hidden">{{ props.alt }}</span>
       <input
         type="range"
         min="0"
@@ -22,6 +30,17 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  images: {
+    type: Object,
+    required: true,
+  },
+  alt: {
+    type: String,
+    default: '',
+  },
+});
+
 const isMounted = useMounted();
 const target = ref(null);
 
@@ -29,7 +48,10 @@ watch(
   () => isMounted.value,
   (mounted) => {
     if (mounted) {
-      const clippedImage = target.value.querySelector('.image-2-wrapper > img');
+      const clippedImage = target.value.querySelector(
+        '.image-02-wrapper > img',
+      );
+
       const clippingSlider = target.value.querySelector('.image-compare-input');
 
       // Store an animation frame so we can keep track of scheduled
@@ -68,14 +90,14 @@ watch(
   object-fit: cover;
 }
 
-.image-2-wrapper {
+.image-02-wrapper {
   display: flex;
   filter: drop-shadow(-4px 0 0 hsl(0deg 0% 100%));
   inset: 0;
   position: absolute;
 }
 
-:deep(.image-2-wrapper > img) {
+:deep(.image-02-wrapper > img) {
   --exposure: 50%;
 
   clip-path: polygon(

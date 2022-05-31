@@ -5,20 +5,16 @@
     :style="`background-image: url('${url}');`"
   >
     <h1>
-      Unsichtbare Zahnspange:
-      <small>Mehr Selbstvertrauen durch gerade Zähne.</small>
+      {{ data.title }}
+      <small>{{ data.subtitle }}</small>
     </h1>
-    <p>
-      Sie sind unzufrieden mit Ihrer Zahnstellung? Mit den unsichtbaren
-      Zahnschienen von Invisalign ist auch im Erwachsenenalter eine erfolgreiche
-      Behandlung einer Fehlstellung möglich.
-    </p>
+    <p>{{ data.description }}</p>
     <div class="cta-bar">
       <NuxtLink
         to="#contact"
         class="btn"
       >
-        Jetzt Termin ausmachen
+        {{ data.label }}
       </NuxtLink>
       <img
         :src="src"
@@ -31,7 +27,7 @@
 </template>
 
 <script setup>
-/* global useHeaderHeight, useCssVar */
+/* global queryContent, useHeaderHeight, useCssVar */
 
 import { buildImageUrl } from 'cloudinary-build-url';
 
@@ -60,6 +56,12 @@ const src = buildImageUrl(`${urlPart}quality-seal.png`, {
       ...resize,
     },
   },
+});
+
+const { data } = await useAsyncData('hero', () => {
+  return queryContent('/')
+    .only(['title', 'subtitle', 'description', 'label'])
+    .findOne();
 });
 
 const el = ref(null);
@@ -125,7 +127,7 @@ p {
     background-position: bottom right;
     background-size: 55%;
     justify-content: center;
-    min-block-size: calc(100vh - var(--header-height) - var(--size-5));
+    min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-5));
     padding-block: var(--size-5);
   }
 
@@ -137,7 +139,7 @@ p {
 @media (min-width: 1280px) {
   .hero {
     margin-inline: 0;
-    min-block-size: calc(100vh - var(--header-height) - var(--size-10));
+    min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-10));
     padding-inline: var(--size-20);
   }
 

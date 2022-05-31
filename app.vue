@@ -36,6 +36,16 @@ useHead({
   htmlAttrs: {
     lang: 'de',
   },
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://hello.myfonts.net',
+    },
+    {
+      rel: 'dns-prefatch',
+      href: 'https://hello.myfonts.net',
+    },
+  ],
 });
 
 const { setHeaderIsSticky } = useHeaderIsSticky();
@@ -50,6 +60,10 @@ useIntersectionObserver(target, ([{ isIntersecting }]) => {
 .sentinel {
   background-color: transparent;
   height: var(--size-px);
+}
+
+#top {
+  position: absolute;
 }
 
 .root {
