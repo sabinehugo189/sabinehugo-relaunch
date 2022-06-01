@@ -24,7 +24,7 @@
             <h4>Social Media</h4>
             <c-social-bar />
             <img
-              src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/f_auto/v1652280970/invisalign/quality-seal.png"
+              :src="src"
               width="228"
               height="138"
               alt=""
@@ -37,6 +37,26 @@
     <div class="shaded-edge"></div>
   </div>
 </template>
+
+<script setup>
+import { buildImageUrl } from 'cloudinary-build-url';
+
+const urlPart =
+  'https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/';
+const cloudName = 'zahn-und-sthetik';
+const resize = { type: 'scale' };
+
+const src = buildImageUrl(`${urlPart}quality-seal.png`, {
+  cloud: {
+    cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
+  },
+});
+</script>
 
 <style scoped>
 .container {
