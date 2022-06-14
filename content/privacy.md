@@ -1,6 +1,6 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
+title: 'Datenschutz | Praxis Dr. Hugo'
+description: 'Erfahren Sie alles zum Datenschutz der Praxis Dr. Hugo. ✆ Terminvereinbarungen für Zahngesundheit & Ästhetik.'
 ---
 
 ::c-prose
