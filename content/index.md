@@ -1,6 +1,6 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
+title: 'Invisalign® - unsichtbare Zahnspange | Praxis Dr. Hugo'
+description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbare Zahnspangen. ✆ Jetzt Termin für Ihre Invisalign-Behandlung vereinbaren!'
 ---
 
 ::c-usp
