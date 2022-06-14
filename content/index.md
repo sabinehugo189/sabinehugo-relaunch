@@ -12,7 +12,7 @@ title: Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.
 :::c-usp-item
 ---
 title: Exzellente Ästhetik
-description: Effektive Zahnstellungskorrektur mit transparenten Alignern.
+description: Effektive Zahnstellungskorrektur mit unsichtbarer Zahnspange.
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" fill="currentColor">
   <path
@@ -101,7 +101,7 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 :::c-prose
 <p class="lead">
   Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
-  Sie heute noch einen Termin in unserer Fachpraxis für Invisalign in Würzburg
+  Sie heute noch einen Termin in unserer Fachpraxis für Invisalign® in Würzburg
   aus.
 </p>
 
@@ -111,19 +111,19 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 
 ::c-carousel
 ---
-title: Ist eine Invisalign® Zahnschiene die richtige Lösung für mich? 
+title: Ist eine Invisalign® Zahnspange die richtige Lösung für mich? 
 cards: {
   card-01: {
-    head: 'Ich habe in meiner Jugend keine Zahnspange getragen. Heute bereue ich das.',
-    body: 'Kein Problem! Holen Sie die erfolgreiche Korrektur Ihrer Zahnfehlstellung einfach jetzt nach. Mit Invisalign geht das besonders unauffällig.',
+    head: 'Ich habe als Jugendliche keine Spange getragen. Heute bereue ich das.',
+    body: 'Kein Problem! Holen Sie die erfolgreiche Korrektur Ihrer Fehlstellung einfach jetzt durch eine unsichtbare Zahnspange nach. Mit Invisalign® geht das besonders unauffällig.',
     imgName: 'teaser-slider-01.jpg',
     imgAlt: 'Kopf von einem Mädchen mit offenem Mund und schiefen Zähnen',
     imgHeight: '309',
     imgWidth: '500',
   },
   card-02: {
-    head: 'Ich habe in meiner Jugend eine Zahnspange getragen, aber meine Zähne haben sich mittlerweile verschoben.',
-    body: 'Mit den unsichtbaren Invisalign Zahnschienen lassen sich Zähne jederzeit in die gewünschte Position bringen. Bis ins hohe Alter!',
+    head: 'Ich habe als Jugendlicher eine Zahnspange getragen, aber meine Zähne haben sich mittlerweile verschoben.',
+    body: 'Mit den transparenten Invisalign® Zahnschienen lassen sich Zähne jederzeit in die gewünschte Position bringen. Bis ins hohe Alter!',
     imgName: 'teaser-slider-02.jpg',
     imgAlt: 'Nahaufnahme vom offenen Mund einer Frau mit schiefen Zähnen',
     imgHeight: '309',
@@ -131,7 +131,7 @@ cards: {
   },
   card-03: {
     head: 'Wir suchen eine Lösung für unser heranwachsendes Kind. Es ist sehr schmerzempfindlich und möchte in der Pubertät keine feste Zahnspange.',
-    body: 'Invisalign Zahnschienen sind – anders als eine klassische Zahnspange – besonders angenehm einzusetzen, zu tragen und herauszunehmen.',
+    body: 'Invisalign® Zahnschienen sind – anders als eine feste Zahnspange – besonders angenehm einzusetzen, zu tragen und herauszunehmen.',
     imgName: 'teaser-slider-03.jpg',
     imgAlt: 'Junge mit Brille, der sich eine Invisalign Zahnschiene einsetzt',
     imgHeight: '309',
@@ -139,7 +139,7 @@ cards: {
   },
   card-04: {
     head: 'Ich leide unter Parodontose. In letzter Zeit ist das Zahnfleisch zurückgegangen und meine Zähne haben sich verschoben.',
-    body: 'Mit Invisalign lassen sich Zahnfehlstellungen besonders sanft und schmerzfrei korrigieren, weil diese Korrektur ohne Brackets und Drähte auskommt.',
+    body: 'Mit den Zahnspangen von Invisalign® lassen sich Fehlstellungen besonders sanft und schmerzfrei korrigieren, weil diese Form der Korrektur ohne Brackets und Drähte auskommt. ',
     imgName: 'teaser-slider-04.jpg',
     imgAlt: 'Nahaufnahme vom offenen Mund eines Mannes mit Parodontose',
     imgHeight: '309',
@@ -152,9 +152,9 @@ cards: {
 ::c-teaser
 :::c-prose
 <p class="lead">
-  Sie interessieren sich für eine Behandlung mit Invisalign? Gerne berate ich
+  Sie interessieren sich für eine Behandlung mit Invisalign®? Gerne berate ich
   Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
-  Invisalign in Würzburg aus.
+  Invisalign® in Würzburg aus.
 </p>
 
 [Jetzt Termin vereinbaren](#contact){.btn}
@@ -166,18 +166,19 @@ cards: {
 ## Invisalign® Die unauffällige Zahnbegradigung.
 
 Kaum ein Mensch ist von Natur aus mit einer **perfekten Zahnstellung** gesegnet.
-Viele Menschen tragen daher als Heranwachsende klassische Zahnspangen. Nicht
+Viele Menschen tragen daher als Heranwachsende feste Zahnspangen. Nicht
 alle sind zu einem späteren Zeitpunkt im Leben mit dem **Ergebnis der
 kieferorthopädischen Behandlung** in der Jugend zufrieden. Zudem sind Zähne
 immer in Bewegung – bis ins hohe Alter! Für geradere Zähne und ein schöneres
-Lächeln biete ich in meiner Fachpraxis in Würzburg eine Behandlung mit
-Invisalign Zahnschienen an. Die **transparenten Aligner** von Invisalign sind
-aufgrund ihrer **ästhetischen Unauffälligkeit** eine attraktive Alternative zu
+Lächeln biete ich in meiner Fachpraxis für Invisalign® in Würzburg eine 
+Behandlung mit Invisalign® Zahnschienen - unsichtbaren Zahnspangen - an. 
+Die **durchsichtigen Aligner** von Invisalign® sind aufgrund ihrer 
+**ästhetischen Unauffälligkeit** eine attraktive Alternative zu
 einer ästhetisch wenig überzeugenden festsitzenden Zahnspange. Zudem sind
-Invisalign Kunststoffschienen nur 0,7 mm dünn und sehr angenehm zu tragen. Für
-ein **optimales Ergebnis** hinsichtlich **Ästhetik** und **Funktion** können sie
+Invisalign® Kunststoffschienen nur 0,7 mm dünn und sehr angenehm zu tragen. Für
+ein **optimales Ergebnis** hinsichtlich **Ästhetik** und **Funktion** können Sie
 ohne Weiteres Tag und Nacht bis zu 22 Stunden getragen werden. Herausgenommen
-werden Invisalign Zahnschienen in der Regel nur zum Essen und Zähneputzen.
+werden Invisalign® Zahnschienen in der Regel nur zum Essen und Zähneputzen.
 
 [Jetzt Termin vereinbaren](#contact){.btn}
 :::
@@ -215,26 +216,28 @@ alt: Wählen Sie aus wie viel Prozent des verdeckten Bildes angezeigt werden sol
 :::c-prose
 ## Effektive Zahnkorrektur. Für ein schönes Lachen.
 
-Eine Invisalign Behandlung dauert zwischen **3 Monaten in leichten Fällen** und
-**ca. 2 Jahren bei komplizierten Zahnfehlstellungen**. Ein Großteil der
-Behandlungen kann nach maximal 1 Jahr abgeschlossen werden. Das ideale Ergebnis
+Eine kieferorthopädische Behandlung mit Invisalign® Zahnspangen dauert 
+zwischen **3 Monaten in leichten Fällen** und **ca. 2 Jahren bei 
+komplizierten Fehlstellungen**. Ein Großteil der Korrekturen kann nach 
+einer Behandlungsdauer von maximal 1 Jahr abgeschlossen werden. Das ideale Ergebnis
 hinsichtlich Ästhetik und Funktion wird bei Behandlungsbeginn auf Basis eines
 **3D Scans** und einer **digitalen Planung** festgelegt. Um eine Vorstellung zu
 bekommen, wie das angestrebte Ergebnis aussehen könnte, bieten wir in unserer
-Fachpraxis für Invisalign den Service, mittels einer 3D Simulation die
+Fachpraxis für Invisalign® in Würzburg den Service, mittels einer 3D Simulation die
 korrigierte Zahnstellung virtuell darzustellen.
 
-Auf der Grundlage der Scans wird ein **Set von Alignern** angefertigt, von denen
-die erste Schiene in der Praxis eingesetzt wird. Weitere 4-6 Schienen werden
-ausgehändigt. Der Fortschritt der Behandlung wird jeweils alle 6-8 Wochen
-kontrolliert. Zur Unterstützung der Zahnbewegungen werden kleine zahnfarbene
-Keramikknöpfchen, sogenannte "Attachments", an einigen Zähnen aufgebracht.
+Auf der Grundlage der Scans der Zähne wird ein **Set von Alignern** hergestellt, 
+von denen die erste Schiene in der Praxis eingesetzt wird. Weitere 4-6 Zahnschienen 
+werden ausgehändigt. Der Fortschritt der Behandlung mit den unsichtbaren Zahnspangen 
+wird jeweils alle 6-8 Wochen kontrolliert. Zur Unterstützung der Zahnbewegungen werden 
+während der Behandlungsdauer kleine zahnfarbene Keramikknöpfchen, sogenannte "Attachments", 
+an einigen Zähnen aufgebracht.
 
-Sind die **gewünschten Resultate** erreicht, wird zum Erhalt der neuen
-Zahnstellung eine **individuelle Halteschiene** für die Nacht angefertigt oder
-ein **Retainer** im Bereich der Frontzähne eingeklebt. Ist das Ergebnis noch
-nicht zufriedenstellend, kann mit einem Refinement und kostenfreien neuen
-Alignern nachgearbeitet werden.
+Sind die **gewünschten Resultate** durch die unsichtbaren Zahnspangen erreicht, 
+wird zum Erhalt der neuen Zahnstellung eine **individuelle Halteschiene** für 
+die Nacht angefertigt oder ein **Retainer** im Bereich der Frontzähne eingeklebt. 
+Ist das Ergebnis der Therapie noch nicht zufriedenstellend, kann mit einem Refinement 
+und kostenfreien neuen Invisalign® Schienen nachgearbeitet werden.
 
 [Jetzt Termin vereinbaren](#contact){.btn}
 :::
@@ -245,7 +248,7 @@ Alignern nachgearbeitet werden.
 ## Neueste Technologien für das gewünschte Ergebnis.
 
 Für ein optimales Ergebnis kommt bei einer kieferorthopädischen Behandlung mit
-Invisalign die neueste Technik zur Anwendung. So hat die Firma Align Technologie
+Invisalign® die neueste Technik zur Anwendung. So hat die Firma Align Technologie
 mit dem **I-Tero-Scanner** einen Intraoralscanner entwickelt, der einen
 **digitalen 3D-Abdruck der Zähne** erstellt. Die computergestützte Abformung
 ersetzt die oftmals als unangenehm erlebte Abdrucknahme mit Abdruckmasse und
@@ -254,7 +257,7 @@ Beratungstermin die angestrebte perfekte Zahnstellung dargestellt werden. So
 erhalten Sie bereits zu diesem frühen Zeitpunkt eine Vorstellung des möglichen
 Endergebnisses.
 
-In unserer Fachpraxis für Invisalign kommt der moderne I-Tero-Scanner auch bei
+In unserer Fachpraxis für Invisalign® in Würzburg kommt der moderne I-Tero-Scanner auch bei
 der Abformung für die Herstellung von Kronen, Brücken und Inlays zum Einsatz.
 
 [Jetzt Termin vereinbaren](#contact){.btn}
@@ -279,7 +282,7 @@ steps: {
     title: 'Beginn',
     items: {
       item01: 'Ausführliches Beratungsgespräch mit Dr. Sabine Hugo',
-      item02: 'Anfertigung 3D-Scan, Röntgenbilder und Fotos',
+      item02: 'Anfertigung 3D-Scans (optischer Abdruck), Fotos und Röntgenaufnahme',
       item03: 'Erstellung eines Behandlungsplans',
       item04: 'Anbringung der Attachments und Einsetzen der ersten Schiene',
     },
@@ -309,9 +312,9 @@ steps: {
 ::c-teaser
 :::c-prose
 <p class="lead">
-  Sie haben eine Frage zum Ablauf der Invisalign Behandlung? Gerne berate ich
+  Sie haben eine Frage zum Ablauf der Invisalign® Behandlung? Gerne berate ich
   Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
-  Invisalign in Würzburg aus.
+  Invisalign® in Würzburg aus.
 </p>
 
 [Jetzt Termin vereinbaren](#contact){.btn}
@@ -324,14 +327,15 @@ steps: {
 ## Dr. Sabine Hugo: European Master of Aligners (Spezialistin für Alignerbehandlung)
 
 Ein schönes Lachen ist wichtig für das **individuelle Wohlbefinden**. Das wissen
-besonders die, deren Zahnstellung nicht optimal ist. Mit Invisalign gibt es
-jetzt die Möglichkeit, in jedem Alter – vom Kleinkind bis ins hohe
+besonders die, deren Zahnstellung nicht optimal ist. Mit den unsichtbaren Zahnspangen 
+von Invisalign® gibt es jetzt die Möglichkeit, in jedem Alter – vom Kleinkind bis ins hohe
 Erwachsenenalter – fast jede Zahnfehlstellung auf **angenehme Art** unauffällig
 zu korrigieren. Ich kann Ihnen versichern: Das Tragen der transparenten,
 maßgefertigten Aligner wird Ihnen in kürzester Zeit ganz selbstverständlich
-vorkommen. Gerne bespreche ich mit Ihnen die gewünschten Ergebnisse der
-Zahnkorrektur in einem **unverbindlichen Erstgespräch** in unserer Fachpraxis
-für Invisalign. Freuen Sie sich auf ein schönes Lächeln und
+vorkommen. Gerne bespreche ich mit Ihnen die Invisalign® Methode und die 
+gewünschten Ergebnisse der Zahnkorrektur in einem **unverbindlichen Erstgespräch** 
+in unserer Fachpraxis für Invisalign®. 
+Freuen Sie sich auf ein schönes Lächeln und mehr Selbstvertrauen!
 
 [Jetzt Termin vereinbaren](#contact){.btn}
 :::
@@ -434,32 +438,32 @@ questions: {
   section01: {
     question: 'Übernimmt die Krankenkasse die Invisalign Behandlung?',
     answer: {
-      part01: 'Eine kieferorthopädische Behandlung mit Invisalign wird nicht von den gesetzlichen Krankenkassen übernommen. Sie ist eine reine Privatleistung. Bei Privatversicherten, deren Versicherung eine kieferorthopädische Behandlung inkludiert, werden die Kosten in der Regel erstattet.',
+      part01: 'Eine kieferorthopädische Behandlung mit den unsichtbaren Zahnspangen von Invisalign® wird bisher nicht von den gesetzlichen Krankenkassen übernommen. Sie ist eine reine Privatleistung. Bei Privatversicherten werden die Kosten für die unsichtbare Zahnspangen in der Regel erstattet, sofern die kieferorthopädische Behandlung inkludiert ist.',
     },
   },
   section02: {
-    question: 'Welche Vorteile hat eine Behandlung mit Invisalign Zahnschienen gegenüber einer festsitzenden Zahnspange?',
+    question: 'Welche Vorteile hat eine Behandlung mit Invisalign® Zahnschienen gegenüber einer festen Zahnspange?',
     answer: {
-      part01: 'Eine Behandlung mit Invisalign Zahnschienen hat viele Vorteile gegenüber einer festen Metall-Zahnspange. So ist das Einsetzen und die Anpassung einer klassischen Zahnspange sehr viel zeitaufwendiger als die maßgeschneiderte Anfertigung der Aligner. Außerdem besteht eine festsitzende Metall-Zahnspange aus Brackets und Drähten, die zu Irritationen der Schleimhaut und zu erheblichen Schmerzen führen können. Eine klassische Zahnspange wird zudem in der Regel als unästhetisch wahrgenommen – im Jugendalter wie im Erwachsenenalter.',
-      part02: 'Aligner von Invisalign sind im Vergleich zur klassischen Metall-Zahnspange leicht einzusetzen, herauszunehmen und zu reinigen. Diese Möglichkeit wird von vielen Patientinnen und Patienten als sehr hygienisch erlebt. Außerdem sind Invisalign Aligner aus transparentem SmartTrack Material gefertigt und nahezu unsichtbar. Die Aligner werden zudem an die individuelle Zahnfleischform und die Zähne angepasst. Sie fallen dadurch besonders wenig auf.',
+      part01: 'Eine Behandlung mit Invisalign® Zahnschienen hat viele Vorteile gegenüber einer festen Metall-Zahnspange. So ist das Einsetzen und die Anpassung einer klassischen Zahnspange sehr viel zeitaufwändiger als die maßgeschneiderte Anfertigung der Aligner. Außerdem besteht eine feste Metall-Zahnspange aus Brackets und Drähten, die zu Irritationen der Schleimhaut und zu erheblichen Schmerzen führen können. Eine klassische Zahnspange wird zudem in der Regel als unästhetisch wahrgenommen – im Jugendalter wie im Erwachsenenalter.',
+      part02: 'Die unsichtbaren Zahnspangen von Invisalign® sind im Vergleich zur klassischen Metall-Zahnspange leicht einzusetzen, herauszunehmen und zu reinigen. Diese Möglichkeit wird von vielen Patientinnen und Patienten als sehr hygienisch erlebt. Außerdem sind Invisalign® Aligner aus SmartTrack Material gefertigt und nahezu unsichtbar. Die Aligner werden zudem an die individuelle Zahnfleischform und die Zähne angepasst. Sie fallen dadurch besonders wenig auf.',
     },
   },
   section03: {
-    question: 'Wie lange dauert eine Zahnkorrektur mit Invisalign?',
+    question: 'Wie lange dauert eine Zahnkorrektur mit Invisalign®?',
     answer: {
-      part01: 'Eine Mehrheit der Patientinnen und Patienten erreichen innerhalb 1 Jahres das gewünschte Resultat. Mitunter – bei leichteren Fällen – sind 3 Monate für die Behandlung ausreichend. Bei komplizierten Fehlstellungen lassen sich in der Regel innerhalb von 2 Jahren gute Ergebnisse erzielen. Die Fortschritte der Behandlung werden alle 4 bis 8 Wochen bei individuellen Kontrollterminen in der Praxis überprüft.',
+      part01: 'Eine Mehrheit der Patientinnen und Patienten erreicht innerhalb 1 Jahres das gewünschte Resultat. Mitunter – bei leichteren Fällen – ist bereits eine Behandlungsdauer von 3 Monaten für die Korrektur ausreichend. Bei komplizierten Fehlstellungen lassen sich in der Regel innerhalb von 2 Jahren gute Ergebnisse mit den unsichtbaren Zahnspangen erzielen. Die Fortschritte der Behandlung werden alle 4 bis 8 Wochen bei individuellen Kontrollterminen in der Praxis überprüft.',
     },
   },
   section04: {
-    question: 'Kann jede Zahnärztin oder jeder Zahnärztin eine Invisalign Behandlung durchführen?',
+    question: 'Kann jede Zahnärztin oder jeder Zahnärztin eine Invisalign® Behandlung durchführen?',
     answer: {
-      part01: 'Damit eine Zahnärztin oder ein Zahnarzt eine Zahnkorrektur mit Invisalign anbieten kann, muss eine spezielle Fortbildung durchlaufen werden.',
+      part01: 'Damit eine Zahnärztin oder ein Zahnarzt eine Zahnkorrektur mit Invisalign® anbieten kann, muss eine spezielle Fortbildung durchlaufen werden. Außerdem sollte die Zahnärztin oder der Zahnarzt über fundierte kieferorthopädische Kenntnisse verfügen und große Erfahrung im Umgang mit Invisalign® haben.',
     },
   },
   section05: {
-    question: 'Bekomme ich mit der Invisalign Behandlung garantiert geradere Zähne?',
+    question: 'Bekomme ich mit der Invisalign® Behandlung garantiert gerade Zähne?',
     answer: {
-      part01: 'So wie jedes Lächeln einzigartig ist, ist auch jede Zahnstellung einzigartig. Aus diesem Grund beginnt die Invisalign Behandlung mit einem Beratungsgespräch, in dem wir gemeinsam besprechen, welche Ergebnisse Sie sich von Invisalign für Ihr Lachen wünschen und wie wir diese umsetzen können. In der Regel lassen sich sehr gute Resultate erzielen – auch bei komplizierten Zahnfehlstellungen.',
+      part01: 'So wie jedes Lächeln einzigartig ist, ist auch jede Zahnstellung einzigartig. Aus diesem Grund beginnt die Invisalign® Behandlung mit einem Beratungsgespräch, in dem wir gemeinsam besprechen, welche Ergebnisse Sie sich von den unsichtbaren Spangen von Invisalign® für Ihr Lachen wünschen und wie wir diese umsetzen können. In der Regel lassen sich mit Invisalign® sehr gute Resultate erzielen – auch bei komplizierten Fehlstellungen.',
     },
   },
 }
@@ -468,7 +472,7 @@ questions: {
 
 ::c-contact
 ---
-title: Sie interessieren sich für eine Behandlung mit Invisalign Zahnschienen?
+title: Sie interessieren sich für eine Behandlung mit Invisalign® Zahnschienen?
 description: Machen Sie jetzt einen Termin zu einem Beratungsgespräch aus. Gemeinsam besprechen wir das gewünschte Ergebnis. Freuen Sie sich auf ein schöneres Lächeln! Rufen Sie an unter +49 931 99 147 070 oder schicken Sie uns eine E-Mail. Wir melden uns innerhalb eines Werktags bei Ihnen.
 ---
 ::
