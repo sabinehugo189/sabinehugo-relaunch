@@ -245,4 +245,22 @@ Ihrem Browser ein Opt-Out-Cookie hinterlegt, der verhindert, dass Matomo
 Nutzungsdaten speichert. Wenn Sie Ihre Cookies löschen, hat dies zur Folge, dass
 auch das Matomo Opt-Out-Cookie gelöscht wird. Das Opt-Out muss bei einem
 erneuten Besuch unserer Seite wieder aktiviert werden.
+
+#### matelso GmbH
+
+Diese Webseite benutzt einen Dienst der matelso GmbH, Stuttgart. Wenn Sie auf
+einer von matelso für uns geschalteten Rufnummer anrufen, werden Informationen
+zu dem Telefonat in einen von uns verwendeten Webanalysedienst (z.B. Google
+Analytics) übertragen.
+
+matelso liest ferner von unserem Analysedienst gesetzte Cookies oder andere
+Parameter der von Ihnen besuchten Internetseite aus, zum Beispiel referrer,
+document path, remote user agent. Die entsprechenden Informationen werden gemäß
+unseren Weisungen von matelso verarbeitet und auf Servern in der EU gespeichert.
+
+Nähere Informationen finden Sie auf: https://matelso.com/de/privacy-statement.
+Sie können die Speicherung von Cookies durch eine entsprechende Einstellung
+Ihrer Browsersoftware verhindern; wir weisen Sie jedoch darauf hin, dass Sie in
+diesem Fall ggf. nicht sämtliche Funktionen dieser Webseite vollumfänglich
+werden nutzen können.
 ::
