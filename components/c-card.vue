@@ -88,7 +88,8 @@ const src500 = buildImageUrl(url, {
 <style scoped>
 .card {
   background-color: var(--surface-1);
-  border-radius: var(--radius-3);
+  border-bottom-left-radius: var(--radius-3);
+  border-bottom-right-radius: var(--radius-3);
   overflow: hidden;
 }
 
@@ -117,7 +118,7 @@ const src500 = buildImageUrl(url, {
 h3 {
   color: var(--link);
   font-size: var(--font-size-fluid-0);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-5);
   line-height: var(--font-lineheight-2);
 }
 

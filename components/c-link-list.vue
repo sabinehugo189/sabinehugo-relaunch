@@ -9,6 +9,7 @@
 .link-list {
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size-3);
   gap: normal;
   list-style: none;
   padding-inline-start: 0;

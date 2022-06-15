@@ -1,19 +1,25 @@
+:where(html) {
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-3);
+  line-height: var(--font-lineheight-2);
+}
+
 :where(:not(:active)):focus-visible {
   outline-style: solid;
   outline-width: 3px;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-4);
+  letter-spacing: var(--font-letterspacing-0);
 }
 
 :where(h1) {
-  font-size: var(--font-size-9);
   line-height: var(--font-lineheight-0);
 }
 
 :where(dt, summary, strong) {
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-5);
 }
 
 :where(a[href]:link) {

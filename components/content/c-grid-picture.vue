@@ -107,11 +107,4 @@ picture > img {
   border-end-start-radius: var(--radius-3);
   object-fit: cover;
 }
-
-@media (min-width: 1280px) {
-  picture {
-    inset: 0;
-    position: absolute;
-  }
-}
 </style>

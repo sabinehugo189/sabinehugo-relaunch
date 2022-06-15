@@ -36,16 +36,10 @@ useHead({
   htmlAttrs: {
     lang: 'de',
   },
-  link: [
-    {
-      rel: 'preconnect',
-      href: 'https://hello.myfonts.net',
-    },
-    {
-      rel: 'dns-prefatch',
-      href: 'https://hello.myfonts.net',
-    },
-  ],
+  link: {
+    rel: 'icon',
+    href: 'favicon.svg',
+  },
 });
 
 const { setHeaderIsSticky } = useHeaderIsSticky();

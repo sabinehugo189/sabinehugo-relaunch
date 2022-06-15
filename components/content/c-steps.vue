@@ -97,11 +97,12 @@ h2 {
 
 .step {
   background-color: var(--surface-1);
-  border-radius: var(--radius-3);
+  border-bottom-left-radius: var(--radius-3);
+  border-bottom-right-radius: var(--radius-3);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-1);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-5);
   gap: var(--size-12);
   padding: var(--size-8) var(--size-5);
 }
@@ -116,6 +117,7 @@ h2 {
   align-items: center;
   display: flex;
   font-size: var(--font-size-4);
+  font-weight: var(--font-weight-5);
   gap: var(--size-4);
 }
 

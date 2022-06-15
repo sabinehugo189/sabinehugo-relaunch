@@ -15,10 +15,6 @@
   gap: var(--size-8);
 }
 
-.grid > div {
-  position: relative;
-}
-
 @media (min-width: 1280px) {
   .grid {
     gap: var(--size-10) var(--size-40);

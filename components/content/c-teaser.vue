@@ -18,7 +18,7 @@
 p {
   color: var(--link);
   font-size: var(--font-size-fluid-1);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-3);
   line-height: var(--font-lineheight-1);
 }
 </style>

@@ -191,6 +191,7 @@ const submit = handleSubmit((_, { resetForm }) => {
 .container {
   display: flex;
   flex-direction: column;
+  font-weight: var(--font-weight-3);
   gap: var(--size-10);
   margin-inline: auto;
   max-inline-size: var(--size-lg);
@@ -222,7 +223,6 @@ form {
 
 .notification {
   background-color: var(--green-6);
-  border-radius: var(--radius-3);
   color: var(--gray-0);
   display: flex;
   gap: var(--size-8);
@@ -254,6 +254,7 @@ form {
 }
 
 h4 {
+  font-size: var(--font-size-fluid-1);
   margin-block-end: var(--size-3);
 }
 
