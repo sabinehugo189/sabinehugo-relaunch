@@ -7,12 +7,13 @@
   --text-2: var(--gray-6);
   --text-3: var(--gray-8);
   --text-4: var(--orange-6);
+  --text-5: var(--gray-warm-5);
 
   --surface-1: var(--gray-0);
   --surface-2: var(--gray-1);
   --surface-3: var(--gray-2);
   --surface-4: var(--gray-3);
-  --surface-5: var(--orange-6);
+  --surface-5: var(--gray-warm-5);
 
   --surface-1-hsl: var(--gray-0-hsl);
   --surface-2-hsl: var(--gray-1-hsl);

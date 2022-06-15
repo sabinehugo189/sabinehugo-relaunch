@@ -72,7 +72,7 @@ const data = useVModel(props, 'modelValue', emit);
   border-radius: var(--radius-2);
   color: var(--gray-0);
   font-size: var(--font-size-1);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-4);
   max-inline-size: 100%;
   padding-block: calc(var(--size-4) - var(--border-size-2));
   padding-inline: calc(var(--size-5) - var(--border-size-2));

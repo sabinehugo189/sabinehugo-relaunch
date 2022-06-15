@@ -142,7 +142,6 @@ input::placeholder {
 div:focus-within > input,
 input:not(:placeholder-shown) {
   color: var(--gray-8);
-  font-weight: var(--font-weight-8);
   padding-block: calc(var(--size-6) - var(--border-size-2))
     calc(var(--size-2) - var(--border-size-2));
 }
@@ -162,7 +161,7 @@ input:not(:placeholder-shown) + label {
   border-radius: var(--radius-2);
   color: var(--gray-0);
   font-size: var(--font-size-1);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-4);
   max-inline-size: 100%;
   padding-block: calc(var(--size-4) - var(--border-size-2));
   padding-inline: calc(var(--size-5) - var(--border-size-2));

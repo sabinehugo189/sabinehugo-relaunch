@@ -34,7 +34,7 @@ figure {
 figcaption {
   color: var(--text-4);
   font-size: var(--font-size-4);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-5);
   line-height: var(--font-lineheight-1);
 }
 

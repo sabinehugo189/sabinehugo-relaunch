@@ -2,11 +2,7 @@
   <div class="container">
     <div class="container-inner">
       <footer>
-        <c-logo
-          fill="hsl(0deg 0% 98%)"
-          size="14rem"
-          foo="baz"
-        />
+        <c-logo fill="hsl(0deg 0% 98%)" />
         <ul>
           <li>
             <h4>Kontakt</h4>
@@ -108,6 +104,7 @@ footer > ul > li {
 
 h4 {
   color: inherit;
+  font-weight: var(--font-weight-5);
 }
 
 @media (min-width: 1024px) {

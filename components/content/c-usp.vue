@@ -142,6 +142,8 @@ header {
 
 h2 {
   font-size: var(--font-size-fluid-3);
+  font-weight: var(--font-weight-3);
+  line-height: var(--font-lineheight-0);
   max-inline-size: var(--size-header-1);
 }
 
@@ -151,7 +153,6 @@ h2 {
 }
 
 .frame > picture > img {
-  border-radius: var(--radius-3);
   height: 100%;
   object-fit: cover;
   width: 100%;

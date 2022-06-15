@@ -20,6 +20,7 @@
 .opening-hours {
   column-gap: var(--size-4);
   display: grid;
+  font-size: var(--font-size-3);
   grid-template-columns: auto 1fr;
 }
 

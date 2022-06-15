@@ -81,7 +81,6 @@ input[type='radio']::before {
   /* stylelint-disable-next-line */
   background-color: CanvasText;
   border-radius: var(--radius-round);
-  /* stylelint-disable-next-line */
   box-shadow: inset 1em 1em currentColor;
   content: '';
   height: 0.65em;

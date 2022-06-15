@@ -19,6 +19,18 @@
   --gray-0-hsl: 0deg 0% 100%;
   --gray-1-hsl: 0deg 0% 97%;
 
+  /* Gray Warm */
+  --gray-warm-0: hsl(60deg 6% 97%);
+  --gray-warm-1: hsl(36deg 9% 89%);
+  --gray-warm-2: hsl(33deg 10% 78%);
+  --gray-warm-3: hsl(34deg 9% 64%);
+  --gray-warm-4: hsl(35deg 8% 50%);
+  --gray-warm-5: hsl(37deg 9% 40%);
+  --gray-warm-6: hsl(40deg 9% 32%);
+  --gray-warm-7: hsl(38deg 8% 26%);
+  --gray-warm-8: hsl(33deg 8% 22%);
+  --gray-warm-9: hsl(34deg 7% 19%);
+
   /* Red */
   --red-0: hsl(0deg 100% 97%);
   --red-1: hsl(0deg 100% 93%);
@@ -32,16 +44,16 @@
   --red-9: hsl(0deg 87% 31%);
 
   /* Orange */
-  --orange-0: hsl(47deg 100% 96%);
-  --orange-1: hsl(48deg 100% 91%);
-  --orange-2: hsl(46deg 100% 82%);
-  --orange-3: hsl(44deg 100% 71%);
-  --orange-4: hsl(41deg 100% 60%);
-  --orange-5: hsl(38deg 100% 52%);
-  --orange-6: hsl(33deg 100% 49%);
-  --orange-7: hsl(31deg 98% 40%);
-  --orange-8: hsl(28deg 87% 34%);
-  --orange-9: hsl(28deg 83% 28%);
+  --orange-0: hsl(41deg 100% 96%);
+  --orange-1: hsl(44deg 100% 91%);
+  --orange-2: hsl(40deg 100% 83%);
+  --orange-3: hsl(39deg 100% 72%);
+  --orange-4: hsl(35deg 100% 60%);
+  --orange-5: hsl(32deg 100% 53%);
+  --orange-6: hsl(28deg 98% 47%);
+  --orange-7: hsl(25deg 95% 40%);
+  --orange-8: hsl(23deg 85% 34%);
+  --orange-9: hsl(23deg 80% 28%);
 
   /**
    * Gradients
@@ -60,7 +72,7 @@
 
   /* Font Families */
   /* stylelint-disable value-keyword-case */
-  --font-sans: Gilroy, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+  --font-sans: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
     Cantarell, Noto Sans, sans-serif;
   /* stylelint-enable value-keyword-case */
 
@@ -75,10 +87,13 @@
 
   /* Fluid Font Sizes */
   --font-size-fluid-0: clamp(1.125rem, 0.5vw + 1rem, 1.375rem);
-  --font-size-fluid-1: clamp(1.5rem, 1.2vw + 1rem, 1.75rem);
+  --font-size-fluid-1: clamp(1.375rem, 1.2vw + 1rem, 1.75rem);
   --font-size-fluid-2: clamp(1.75rem, 1.8vw + 1rem, 2.375rem);
   --font-size-fluid-3: clamp(1.75rem, 2vw + 1rem, 2.875rem);
   --font-size-fluid-4: clamp(2.625rem, 3vw + 1.5rem, 4.625rem);
+
+  /* Letter Spacing */
+  --font-letterspacing-0: -0.02em;
 
   /* Line Height */
   --font-lineheight-0: 1;

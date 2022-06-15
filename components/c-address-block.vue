@@ -30,11 +30,16 @@
 address {
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size-3);
   font-style: normal;
 }
 
 address > * {
   margin-block: 0;
+}
+
+address > p {
+  font-size: inherit;
 }
 
 address > p:nth-child(4) {

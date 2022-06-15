@@ -24,8 +24,9 @@
   border-radius: 0 var(--radius-5) var(--radius-5) var(--radius-5);
   color: var(--_text);
   display: inline-flex;
+  font-optical-sizing: auto;
   font-size: var(--_size);
-  font-weight: var(--font-weight-8);
+  font-weight: var(--font-weight-5);
   gap: var(--size-2);
   justify-content: center;
   line-height: var(--font-lineheight-0);
@@ -34,6 +35,7 @@
   -webkit-tap-highlight-color: transparent;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   -webkit-touch-callout: none;
   transition: background-color 0.5s var(--ease-3) 3s;
   user-select: none;

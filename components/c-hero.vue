@@ -101,10 +101,12 @@ h1 {
   font-size: var(--font-size-fluid-4);
   gap: var(--size-5);
   max-inline-size: var(--size-content-0);
+  text-transform: uppercase;
 }
 
 h1 > small {
   font-size: var(--font-size-fluid-3);
+  text-transform: none;
 }
 
 p {
