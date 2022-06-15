@@ -1,6 +1,6 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
+title: 'Datenschutz | Praxis Dr. Hugo'
+description: 'Erfahren Sie alles zum Datenschutz der Praxis Dr. Hugo. ✆ Terminvereinbarungen für Zahngesundheit & Ästhetik.'
 ---
 
 ::c-prose
@@ -107,7 +107,7 @@ Aufsichtsbehörde in datenschutzrechtlichen Fragen ist der
 Landesdatenschutzbeauftragte des Bundeslandes, in dem unser Unternehmen
 seinen Sitz hat. Eine Liste der Datenschutzbeauftragten sowie deren
 Kontaktdaten können folgendem Link entnommen werden:  
-[https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_linksnode.html](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_linksnode.html).
+[https://www.bfdi.bund.de/DE/Service/Anschriften/anschriften_node.html](https://www.bfdi.bund.de/DE/Service/Anschriften/anschriften_node.html).
 
 #### Recht auf Datenübertragbarkeit
 

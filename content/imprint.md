@@ -1,6 +1,6 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
+title: 'Impressum | Praxis Dr. Hugo'
+description: 'Besuchen Sie das Impressum der Praxis Dr. Hugo. ✆ Terminvereinbarungen für Zahngesundheit & Ästhetik.'
 ---
 
 ::c-prose
