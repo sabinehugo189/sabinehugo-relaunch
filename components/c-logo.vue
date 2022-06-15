@@ -101,8 +101,14 @@ const uid = `logoSabineHugo${rid}`;
 <style scoped>
 svg {
   fill: var(--fill, var(--text-4));
-  inline-size: var(--size, var(--size-64));
+  inline-size: var(--size, var(--size-40));
   stroke: none;
+}
+
+@media (min-width: 1280px) {
+  svg {
+    inline-size: var(--size, var(--size-64));
+  }
 }
 
 .claim {
