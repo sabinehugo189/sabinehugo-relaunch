@@ -35,9 +35,6 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 /* eslint-disable-next-line import/no-unresolved */
 import '@splidejs/vue-splide/css/core';
 
-/* global useBreakpoints */
-import { breakpointsTailwind } from '@vueuse/core';
-
 const props = defineProps({
   title: {
     type: String,
@@ -49,99 +46,29 @@ const props = defineProps({
   },
 });
 
-const breakpoints = useBreakpoints(breakpointsTailwind);
-const mdNAbove = breakpoints.greater('md');
-const mdNBelow = breakpoints.smaller('md');
-const lgNAbove = breakpoints.greater('lg');
-const lgNBelow = breakpoints.smaller('lg');
-const xlNAbove = breakpoints.greater('xl');
-const xlNBelow = breakpoints.smaller('xl');
-const xxlNAbove = breakpoints.greater('2xl');
-const xxlNBelow = breakpoints.smaller('2xl');
-
 const { uid } = getCurrentInstance();
 
 const options = reactive({
-  gap: '1.25rem',
-  perPage: 1,
-  width: 'calc(100vw - 5rem)',
+  gap: '2rem',
+  perMove: 1,
+  perPage: 3,
+  width: 'calc(100vw - 25rem)',
+  breakpoints: {
+    768: {
+      perPage: 1,
+    },
+    1024: {
+      perPage: 2,
+    },
+    1280: {
+      gap: '1.25rem',
+      width: 'calc(100vw - 5rem)',
+    },
+    1536: {
+      width: 'calc(100vw - 15rem)',
+    },
+  },
 });
-
-const tag = 'section';
-
-watch(
-  () => mdNAbove.value,
-  (value) => {
-    if (value) {
-      options.perPage = 2;
-    }
-  },
-);
-
-watch(
-  () => mdNBelow.value,
-  (value) => {
-    if (value) {
-      options.perPage = 1;
-    }
-  },
-);
-
-watch(
-  () => lgNAbove.value,
-  (value) => {
-    if (value) {
-      options.perPage = 3;
-    }
-  },
-);
-
-watch(
-  () => lgNBelow.value,
-  (value) => {
-    if (value) {
-      options.perPage = 2;
-    }
-  },
-);
-
-watch(
-  () => xlNAbove.value,
-  (value) => {
-    if (value) {
-      options.gap = '2rem';
-      options.width = 'calc(100vw - 15rem)';
-    }
-  },
-);
-
-watch(
-  () => xlNBelow.value,
-  (value) => {
-    if (value) {
-      options.gap = '1.25rem';
-      options.width = 'calc(100vw - 5rem)';
-    }
-  },
-);
-
-watch(
-  () => xxlNAbove.value,
-  (value) => {
-    if (value) {
-      options.width = 'calc(100vw - 25rem)';
-    }
-  },
-);
-
-watch(
-  () => xxlNBelow.value,
-  (value) => {
-    if (value) {
-      options.width = 'calc(100vw - 15rem)';
-    }
-  },
-);
 </script>
 
 <style scoped>
