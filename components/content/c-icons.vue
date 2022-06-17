@@ -15,8 +15,12 @@
   gap: var(--size-5);
   justify-content: center;
   list-style: none;
-  margin-inline: auto;
+  margin-inline: calc(var(--size-5) * -1);
   max-inline-size: var(--size-xxl);
+  padding-inline-start: 0;
+}
+
+.icons > li {
   padding-inline-start: 0;
 }
 
@@ -30,6 +34,7 @@
 @media (min-width: 1280px) {
   .icons {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin-inline: auto;
   }
 }
 </style>
