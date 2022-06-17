@@ -1,6 +1,7 @@
 .prose {
   display: flex;
   flex-direction: column;
+  hyphens: auto;
   row-gap: var(--size-8);
 }
 
