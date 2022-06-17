@@ -181,6 +181,11 @@ const submit = handleSubmit((_, { resetForm }) => {
     .then(() => {
       notification.value = true;
 
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'kontaktformular',
+      });
+
       return resetForm();
     })
     .catch((error) => console.error('Es ist ein Fehler aufgetreten: ', error));
