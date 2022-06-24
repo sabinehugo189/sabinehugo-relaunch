@@ -60,6 +60,7 @@ const src = buildImageUrl(`${urlPart}quality-seal.png`, {
 
 const { data } = await useAsyncData('hero', () => {
   return queryContent('/')
+    .where({ _partial: true })
     .only(['title', 'subtitle', 'description', 'label'])
     .findOne();
 });
