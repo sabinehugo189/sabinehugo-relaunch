@@ -4,15 +4,13 @@
     class="js-header"
     :class="{ 'is-stuck': headerIsSticky, 'is-home': headerIsHome }"
   >
-    <div class="header-inner">
-      <NuxtLink
-        to="/#top"
-        class="logo"
-      >
-        <c-logo />
-      </NuxtLink>
-      <c-utilities />
-    </div>
+    <NuxtLink
+      to="/#top"
+      class="logo"
+    >
+      <c-logo />
+    </NuxtLink>
+    <c-utilities />
   </header>
 </template>
 
@@ -40,42 +38,34 @@ watch(
 
 <style scoped>
 header {
+  align-items: center;
+  background-color: var(--surface-1);
   color: var(--text-4);
-  padding-inline: var(--size-5);
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding-block: var(--size-3);
+  padding-inline: var(--size-10);
   position: sticky;
+  right: 0;
   top: 0;
-  width: 100%;
+  transition: background-color 300ms var(--ease-2),
+    border-radius 300ms var(--ease-2), box-shadow 300ms var(--ease-2);
   z-index: var(--layer-1);
 }
 
-.header-inner {
-  align-items: center;
-  background-color: var(--surface-1);
-  border-start-end-radius: var(--radius-3);
-  border-start-start-radius: var(--radius-3);
-  display: flex;
-  justify-content: space-between;
-  margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
-  padding: var(--size-5);
-  transition: background-color 300ms var(--ease-2),
-    border-radius 300ms var(--ease-2), box-shadow 300ms var(--ease-2);
-}
-
-.is-stuck > .header-inner {
+.is-stuck {
   background-color: hsl(var(--surface-1-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
   border-end-start-radius: var(--radius-3);
-  border-start-end-radius: 0;
-  border-start-start-radius: 0;
   box-shadow: var(--shadow-2);
 }
 
-.is-home > .header-inner {
+.is-home {
   background-color: var(--surface-2);
 }
 
-.is-stuck.is-home > .header-inner {
+.is-stuck.is-home {
   background-color: hsl(var(--surface-2-hsl) / 0.95);
 }
 
@@ -83,19 +73,21 @@ header {
   background-color: transparent;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   header {
     padding-inline: var(--size-10);
   }
+}
 
-  .header-inner {
-    padding-inline: var(--size-20);
+@media (min-width: 1280px) {
+  header {
+    padding-inline: var(--size-30);
   }
 }
 
 @media (min-width: 1536px) {
-  .header-inner {
-    padding-inline: var(--size-40);
+  header {
+    padding-inline: var(--size-50);
   }
 }
 </style>

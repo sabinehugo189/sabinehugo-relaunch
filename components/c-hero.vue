@@ -85,9 +85,9 @@ watch(
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
-  margin-inline: calc(var(--size-5) * -1);
-  padding-block: var(--size-16) var(--size-5);
-  padding-inline: var(--size-5);
+  margin-inline: calc(var(--size-10) * -1);
+  padding-block: var(--size-11) var(--size-5);
+  padding-inline: var(--size-10);
 }
 
 .hero::after {
@@ -130,7 +130,7 @@ p {
     background-size: 55%;
     justify-content: center;
     min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-5));
-    padding-block: var(--size-5);
+    padding-block-start: var(--size-5);
   }
 
   .hero::after {
@@ -140,9 +140,8 @@ p {
 
 @media (min-width: 1280px) {
   .hero {
-    margin-inline: 0;
     min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-10));
-    padding-inline: var(--size-20);
+    padding-inline: var(--size-30);
   }
 
   .cta-bar {
@@ -154,7 +153,7 @@ p {
 @media (min-width: 1536px) {
   .hero {
     background-size: contain;
-    padding-inline: var(--size-40);
+    padding-inline: var(--size-50);
   }
 }
 </style>
