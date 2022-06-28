@@ -7,11 +7,8 @@
     </header>
     <Splide
       :options="options"
-      :tag="tag"
       aria-labeledby="carouselhead"
       class="carousel"
-      @splide:resized="onResized"
-      @splide:refresh="onRefresh"
     >
       <SplideSlide
         v-for="(card, index) in cards"

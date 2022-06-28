@@ -5,15 +5,15 @@ description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbar
 
 ::c-usp
 ---
-title: Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.
-imgName: invisalign.jpg 
+title: 'Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.'
+imgName: 'invisalign.jpg' 
 ---
 
 #item-01
 :::c-usp-item
 ---
-title: Exzellente Ästhetik
-description: Effektive Zahnstellungskorrektur mit unsichtbarer Zahnspange.
+title: 'Exzellente Ästhetik'
+description: 'Effektive Zahnstellungskorrektur mit unsichtbarer Zahnspange.'
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" fill="currentColor">
   <path
@@ -31,8 +31,8 @@ description: Effektive Zahnstellungskorrektur mit unsichtbarer Zahnspange.
 #item-02
 :::c-usp-item
 ---
-title: Hoher Tragekomfort
-description: Sehr angenehmes Tragefühl durch nur 0,7 mm dünnes Material.
+title: 'Hoher Tragekomfort'
+description: 'Sehr angenehmes Tragefühl durch nur 0,7 mm dünnes Material.'
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 75" fill="currentColor">
   <path
@@ -50,8 +50,8 @@ description: Sehr angenehmes Tragefühl durch nur 0,7 mm dünnes Material.
 #item-03
 :::c-usp-item
 ---
-title: 3D-Scan-Technologie
-description: Komfortabler digitaler Zahnabdruck statt Abdruck mit Löffel.
+title: '3D-Scan-Technologie'
+description: 'Komfortabler digitaler Zahnabdruck statt Abdruck mit Löffel.'
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 75" fill="currentColor">
   <path
@@ -72,8 +72,8 @@ description: Komfortabler digitaler Zahnabdruck statt Abdruck mit Löffel.
 #item-04
 :::c-usp-item
 ---
-title: Exzellentes Ergebnis 
-description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
+title: 'Exzellentes Ergebnis '
+description: 'Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.'
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 75" fill="currentColor">
   <path
@@ -112,7 +112,7 @@ description: Alle 4 bis 8 Wochen Kontrolltermine für das gewünschte Ergebnis.
 
 ::c-carousel
 ---
-title: Ist eine Invisalign® Zahnspange die richtige Lösung für mich? 
+title: 'Ist eine Invisalign® Zahnspange die richtige Lösung für mich?'
 cards: {
   card-01: {
     head: 'Ich habe als Jugendliche keine Spange getragen. Heute bereue ich das.',
@@ -187,7 +187,7 @@ werden Invisalign® Zahnschienen in der Regel nur zum Essen und Zähneputzen.
 #right
 :::c-vimeo-player
 ---
-video-id: 709059740
+video-id: '709059740'
 ---
 :::
 ::
@@ -209,7 +209,7 @@ images: {
     alt: 'Bild von Zähnen nach dem Tragen von Invisalign',
   },
 }
-alt: Wählen Sie aus wie viel Prozent des verdeckten Bildes angezeigt werden soll
+alt: 'Wählen Sie aus wie viel Prozent des verdeckten Bildes angezeigt werden soll'
 ---
 :::
 
@@ -267,17 +267,17 @@ der Abformung für die Herstellung von Kronen, Brücken und Inlays zum Einsatz.
 #right
 :::c-grid-picture
 ---
-imgSrc: invisalign-close-up.jpg
-imgHeight: 858
-imgWidth: 1303
-imgAlt: Mund mit Invisalign in Nahaufnahme
+imgSrc: 'invisalign-close-up.jpg'
+imgHeight: '858'
+imgWidth: '1303'
+imgAlt: 'Mund mit Invisalign in Nahaufnahme'
 ---
 :::
 ::
 
 ::c-steps
 ---
-title: In 3 Schritten zum strahlenden Lächeln.
+title: 'In 3 Schritten zum strahlenden Lächeln.'
 steps: {
   step01: {
     title: 'Beginn',
@@ -324,7 +324,6 @@ steps: {
 
 ::c-grid
 :::c-prose
-
 ## Dr. Sabine Hugo: European Master of Aligners (Spezialistin für Alignerbehandlung)
 
 Ein schönes Lachen ist wichtig für das **individuelle Wohlbefinden**. Das wissen
@@ -344,10 +343,10 @@ Freuen Sie sich auf ein schönes Lächeln und mehr Selbstvertrauen!
 #right
 :::c-grid-picture
 ---
-imgSrc: portrait.jpg 
-imgHeight: 858
-imgWidth: 1303
-imgAlt: Frau in Ärztekittel in Zahnarztpraxis 
+imgSrc: 'portrait.jpg' 
+imgHeight: '858'
+imgWidth: '1303'
+imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
 ---
 :::
 ::
@@ -356,7 +355,7 @@ imgAlt: Frau in Ärztekittel in Zahnarztpraxis
 #icon-01
 :::c-icon
 ---
-caption: Prophylaxe 
+caption: 'Prophylaxe' 
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
   <path
@@ -371,7 +370,7 @@ caption: Prophylaxe
 #icon-02
 :::c-icon
 ---
-caption: Parodontologie 
+caption: 'Parodontologie' 
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
   <path
@@ -395,7 +394,7 @@ caption: Parodontologie
 #icon-03
 :::c-icon
 ---
-caption: Bleaching 
+caption: 'Bleaching' 
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
   <path
@@ -410,7 +409,7 @@ caption: Bleaching
 #icon-04
 :::c-icon
 ---
-caption: Wurzelkanalbehandlung 
+caption: 'Wurzelkanalbehandlung' 
 ---
 <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
   <path
@@ -434,7 +433,7 @@ caption: Wurzelkanalbehandlung
 
 ::c-faq
 ---
-title: Das werden wir häufig gefragt 
+title: 'Das werden wir häufig gefragt' 
 questions: {
   section01: {
     question: 'Übernimmt die Krankenkasse die Invisalign Behandlung?',
