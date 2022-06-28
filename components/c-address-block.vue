@@ -55,7 +55,10 @@
 /* global queryContent */
 
 const { data } = await useAsyncData('address', () => {
-  return queryContent('_address').only(['h-cards']).findOne();
+  return queryContent('_address')
+    .where({ _partial: true })
+    .only(['h-cards'])
+    .findOne();
 });
 </script>
 

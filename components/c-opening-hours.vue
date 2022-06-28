@@ -21,7 +21,10 @@
 /* global queryContent */
 
 const { data } = await useAsyncData('opening-hours', () => {
-  return queryContent('_opening-hours').only(['opening-hours']).findOne();
+  return queryContent('_opening-hours')
+    .where({ _partial: true })
+    .only(['opening-hours'])
+    .findOne();
 });
 </script>
 
