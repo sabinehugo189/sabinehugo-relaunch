@@ -1,20 +1,29 @@
 <template>
   <dl class="opening-hours">
-    <dt>Montag:</dt>
-    <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
-    <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
-    <dt>Dienstag:</dt>
-    <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
-    <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
-    <dt>Mittwoch:</dt>
-    <dd><time datetime="PT4H30M">08:30 - 13:00 Uhr</time></dd>
-    <dd><time datetime="PT4H">14:00 - 18:00 Uhr</time></dd>
-    <dt>Donnerstag:</dt>
-    <dd><time datetime="PT5H">09:00 - 14:00 Uhr</time></dd>
-    <dt>Freitag:</dt>
-    <dd><time datetime="PT4H">09:00 - 13:00 Uhr</time></dd>
+    <template
+      v-for="hours in data['opening-hours']"
+      :key="hours.id"
+    >
+      <dt>{{ hours.day }}:</dt>
+      <template
+        v-for="time in hours.time"
+        :key="time.id"
+      >
+        <dd>
+          <time :datetime="time.datetime">{{ time.label }}</time>
+        </dd>
+      </template>
+    </template>
   </dl>
 </template>
+
+<script setup>
+/* global queryContent */
+
+const { data } = await useAsyncData('opening-hours', () => {
+  return queryContent('_opening-hours').only(['opening-hours']).findOne();
+});
+</script>
 
 <style scoped>
 .opening-hours {

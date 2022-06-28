@@ -1,0 +1,74 @@
+{
+  "opening-hours": [
+    {
+      "id": "monday-01",
+      "day": "Montag",
+      "time": [
+        {
+          "id": "monday-01-time-01",
+          "datetime": "PT4H30M",
+          "label": "08:30 - 13:00 Uhr"
+        },
+        {
+          "id": "monday-01-time-02",
+          "datetime": "PT4H",
+          "label": "14:00 - 18:00 Uhr"
+        }
+      ]
+    },
+    {
+      "id": "tuesday-02",
+      "day": "Dienstag",
+      "time": [
+        {
+          "id": "tuesday-02-time-01",
+          "datetime": "PT4H30M",
+          "label": "08:30 - 13:00 Uhr"
+        },
+        {
+          "id": "tuesday-02-time-02",
+          "datetime": "PT4H",
+          "label": "14:00 - 18:00 Uhr"
+        }
+      ]
+    },
+    {
+      "id": "wednesday-03",
+      "day": "Mittwoch",
+      "time": [
+        {
+          "id": "wednesday-03-time-01",
+          "datetime": "PT4H30M",
+          "label": "08:30 - 13:00 Uhr"
+        },
+        {
+          "id": "wednesday-03-time-02",
+          "datetime": "PT4H",
+          "label": "14:00 - 18:00 Uhr"
+        }
+      ]
+    },
+    {
+      "id": "thursday-04",
+      "day": "Donnerstag",
+      "time": [
+        {
+          "id": "thursday-04-time-01",
+          "datetime": "PT5H",
+          "label": "09:00 - 14:00 Uhr"
+        }
+      ]
+    },
+    {
+      "id": "friday-05",
+      "day": "Freitag",
+      "time": [
+        {
+          "id": "friday-05-time-01",
+          "datetime": "PT4H",
+          "label": "09:00 - 13:00 Uhr"
+        }
+      ]
+    }
+  ]
+}
