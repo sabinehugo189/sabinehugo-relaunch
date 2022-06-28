@@ -45,7 +45,7 @@ const props = defineProps({
   },
   imgName: {
     type: String,
-    default: 'invisalign.jpg',
+    required: true,
   },
   imgAlt: {
     type: String,
