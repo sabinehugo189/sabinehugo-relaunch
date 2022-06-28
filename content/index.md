@@ -5,7 +5,7 @@ description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbar
 
 ::c-usp
 ---
-title: Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.
+title: Ein schöneres Lächeln ist total überbewertet.
 ---
 
 #item-01
