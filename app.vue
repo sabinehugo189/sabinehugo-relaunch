@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <div
-      ref="target"
+      ref="sentinel"
       class="sentinel"
     ></div>
     <a
@@ -43,33 +43,34 @@ useHead({
 });
 
 const { setHeaderIsSticky } = useHeaderIsSticky();
-const target = ref(null);
+const sentinel = ref(null);
 
-useIntersectionObserver(target, ([{ isIntersecting }]) => {
+useIntersectionObserver(sentinel, ([{ isIntersecting }]) => {
   setHeaderIsSticky(!isIntersecting);
 });
 </script>
 
 <style scoped>
+.root {
+  display: grid;
+  grid-template-rows: var(--size-7) auto 1fr auto;
+  position: relative;
+}
+
 .sentinel {
-  background-color: transparent;
-  height: var(--size-px);
+  background-color: var(--surface-2);
+  display: flex;
 }
 
 #top {
+  left: 0;
   position: absolute;
-}
-
-.root {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  padding-block: calc(var(--size-5) - var(--size-px)) var(--size-5);
-  position: relative;
+  top: 0;
 }
 
 @media (min-width: 1280px) {
   .root {
-    padding-block: calc(var(--size-10) - var(--size-px)) var(--size-10);
+    grid-template-rows: var(--size-16) auto 1fr auto;
   }
 }
 </style>
