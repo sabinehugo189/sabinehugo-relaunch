@@ -63,7 +63,6 @@ const src = buildImageUrl(`${urlPart}quality-seal.png`, {
 .container-inner {
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
-  padding-inline: var(--size-5);
 }
 
 .shaded-edge {
@@ -75,8 +74,6 @@ const src = buildImageUrl(`${urlPart}quality-seal.png`, {
 
 footer {
   background-color: var(--surface-5);
-  border-end-end-radius: var(--size-5);
-  border-end-start-radius: var(--size-5);
   color: var(--text-1);
   display: flex;
   flex-direction: column;
@@ -84,7 +81,7 @@ footer {
   gap: var(--size-12);
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
-  padding: var(--size-20) var(--size-5);
+  padding: var(--size-20) var(--size-10);
 }
 
 footer > ul {
@@ -116,14 +113,10 @@ h4 {
 }
 
 @media (min-width: 1280px) {
-  .container-inner {
-    padding-inline: var(--size-10);
-  }
-
   footer {
     font-size: var(--font-size-3);
     gap: var(--size-16);
-    padding: var(--size-20);
+    padding: var(--size-20) var(--size-30);
   }
 
   .quality-seal {
@@ -133,7 +126,7 @@ h4 {
 
 @media (min-width: 1536px) {
   footer {
-    padding: var(--size-32) var(--size-40);
+    padding: var(--size-32) var(--size-50);
   }
 }
 </style>
