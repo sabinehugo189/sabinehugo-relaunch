@@ -6,6 +6,7 @@ description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbar
 ::c-usp
 ---
 title: Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.
+imgName: invisalign.jpg 
 ---
 
 #item-01
