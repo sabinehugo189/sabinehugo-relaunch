@@ -58,7 +58,6 @@ useIntersectionObserver(sentinel, ([{ isIntersecting }]) => {
 }
 
 .sentinel {
-  background-color: var(--surface-2);
   display: flex;
 }
 

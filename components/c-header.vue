@@ -1,6 +1,6 @@
 <template>
   <header
-    ref="el"
+    ref="header"
     class="js-header"
     :class="{ 'is-stuck': headerIsSticky, 'is-home': headerIsHome }"
   >
@@ -23,10 +23,10 @@ const headerIsHome = ref(route.meta.layout === 'home');
 const { setHeaderHeight } = useHeaderHeight();
 const { headerIsSticky } = useHeaderIsSticky();
 
-const el = ref(null);
-const { height } = useElementSize(el);
+const header = ref(null);
+const { height: headerHeight } = useElementSize(header);
 
-setHeaderHeight(height);
+setHeaderHeight(headerHeight);
 
 watch(
   () => route.meta.layout,
@@ -54,6 +54,16 @@ header {
   z-index: var(--layer-1);
 }
 
+header::before {
+  background-color: var(--surface-1);
+  content: '';
+  height: var(--size-7);
+  left: 0;
+  position: absolute;
+  top: calc(var(--size-7) * -1);
+  width: 100%;
+}
+
 .is-stuck {
   background-color: hsl(var(--surface-1-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
@@ -61,7 +71,8 @@ header {
   box-shadow: var(--shadow-2);
 }
 
-.is-home {
+.is-home,
+.is-home::before {
   background-color: var(--surface-2);
 }
 
@@ -82,6 +93,11 @@ header {
 @media (min-width: 1280px) {
   header {
     padding-inline: var(--size-30);
+  }
+
+  header::before {
+    height: var(--size-16);
+    top: calc(var(--size-16) * -1);
   }
 }
 
