@@ -1,12 +1,12 @@
 export function useHeaderIsSticky() {
-  const headerIsSticky = useState('headerIsSticky', () => 0);
+  const getHeaderIsSticky = useState('headerIsSticky', () => false);
 
-  function setHeaderIsSticky(sticky) {
-    headerIsSticky.value = sticky;
+  function setHeaderIsSticky(isSticky) {
+    getHeaderIsSticky.value = isSticky;
   }
 
   return {
-    headerIsSticky,
+    getHeaderIsSticky,
     setHeaderIsSticky,
   };
 }

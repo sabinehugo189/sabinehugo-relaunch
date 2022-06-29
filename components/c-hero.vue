@@ -66,12 +66,12 @@ const { data } = await useAsyncData('hero', () => {
 });
 
 const el = ref(null);
-const { headerHeight } = useHeaderHeight();
+const { getHeaderHeight } = useHeaderHeight();
 
 const height = useCssVar('--header-height', el);
 
 watch(
-  () => headerHeight.value,
+  () => getHeaderHeight.value,
   (hh) => {
     height.value = `${parseInt(hh)}px`;
   },

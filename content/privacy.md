@@ -1,6 +1,8 @@
 ---
 title: 'Datenschutz | Praxis Dr. Hugo'
 description: 'Erfahren Sie alles zum Datenschutz der Praxis Dr. Hugo. ✆ Terminvereinbarungen für Zahngesundheit & Ästhetik.'
+label: 'Datenschutz'
+navigation: false
 ---
 
 ::c-prose

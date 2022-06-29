@@ -1,12 +1,12 @@
 export function useHeaderHeight() {
-  const headerHeight = useState('headerHeight', () => 0);
+  const getHeaderHeight = useState('headerHeight', () => 0);
 
   function setHeaderHeight(height) {
-    headerHeight.value = height;
+    getHeaderHeight.value = height;
   }
 
   return {
-    headerHeight,
+    getHeaderHeight,
     setHeaderHeight,
   };
 }
