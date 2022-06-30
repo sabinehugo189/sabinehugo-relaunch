@@ -17,7 +17,15 @@ watch(
   () => mounted.value,
   (mounted) => {
     if (mounted) {
-      route.meta.layout = slug === 'home' ? 'home' : 'default';
+      switch (slug) {
+        case 'home':
+          route.meta.layout = 'home';
+          break;
+
+        default:
+          route.meta.layout = 'default';
+          break;
+      }
     }
   },
 );

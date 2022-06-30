@@ -3,7 +3,7 @@
     ref="header"
     class="js-header"
     :class="{
-      'is-home': isHome,
+      'is-plain': isPlain,
       'is-menu': getMenuIsVisible,
       'is-sticky': getHeaderIsSticky,
     }"
@@ -84,7 +84,24 @@ const { data: navigation } = await useAsyncData('navigation', () => {
 });
 
 const route = useRoute();
-const isHome = ref(route.meta.layout === 'home');
+const [slug = 'home'] = route.params.slug;
+const isPlain = ref(slug === 'imprint' || slug === 'privacy' ? true : false);
+
+watch(
+  () => route.params.slug,
+  ([slug]) => {
+    switch (slug) {
+      case 'imprint':
+      case 'privacy':
+        isPlain.value = true;
+        break;
+
+      default:
+        isPlain.value = false;
+        break;
+    }
+  },
+);
 
 const { setHeaderHeight } = useHeaderHeight();
 const { getHeaderIsSticky } = useHeaderIsSticky();
@@ -105,19 +122,12 @@ const toggleMenuVisibility = () => {
 
   setMenuIsVisible(!getMenuIsVisible.value);
 };
-
-watch(
-  () => route.meta.layout,
-  (value) => {
-    isHome.value = value === 'home';
-  },
-);
 </script>
 
 <style scoped>
 header {
   align-items: center;
-  background-color: var(--surface-1);
+  background-color: var(--surface-2);
   color: var(--text-4);
   display: flex;
   justify-content: space-between;
@@ -133,7 +143,7 @@ header {
 }
 
 header::before {
-  background-color: var(--surface-1);
+  background-color: var(--surface-2);
   content: '';
   height: var(--size-7);
   left: 0;
@@ -147,19 +157,19 @@ header.is-menu > .nav-bar :deep(svg > path) {
 }
 
 .is-sticky {
-  background-color: hsl(var(--surface-1-hsl) / 0.95);
+  background-color: hsl(var(--surface-2-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
   border-end-start-radius: var(--radius-3);
   box-shadow: var(--shadow-2);
 }
 
-.is-home,
-.is-home::before {
-  background-color: var(--surface-2);
+.is-plain,
+.is-plain::before {
+  background-color: var(--surface-1);
 }
 
-.is-sticky.is-home {
-  background-color: hsl(var(--surface-2-hsl) / 0.95);
+.is-sticky.is-plain {
+  background-color: hsl(var(--surface-1-hsl) / 0.95);
 }
 
 .is-menu {
