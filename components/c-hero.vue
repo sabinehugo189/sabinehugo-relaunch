@@ -1,6 +1,6 @@
 <template>
   <div
-    ref="el"
+    ref="hero"
     class="hero"
     :style="`background-image: url('${url}');`"
   >
@@ -65,15 +65,15 @@ const { data } = await useAsyncData('hero', () => {
     .findOne();
 });
 
-const el = ref(null);
+const hero = ref(null);
 const { getHeaderHeight } = useHeaderHeight();
 
-const height = useCssVar('--header-height', el);
+const cvHeaderHeight = useCssVar('--header-height', hero);
 
 watch(
   () => getHeaderHeight.value,
-  (hh) => {
-    height.value = `${parseInt(hh)}px`;
+  (headerHeight) => {
+    cvHeaderHeight.value = `${parseInt(headerHeight)}px`;
   },
 );
 </script>

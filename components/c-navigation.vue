@@ -9,7 +9,7 @@
     >
       <NuxtLink
         :to="item._path"
-        @click="onClick"
+        @click="closeMenu"
       >
         {{ item.label }}
       </NuxtLink>
@@ -34,8 +34,9 @@ defineProps({
 
 const { getMenuIsVisible, setMenuIsVisible } = useMenuIsVisible();
 
-const onClick = () => {
+const closeMenu = () => {
   if (getMenuIsVisible.value) {
+    document.body.removeAttribute('style');
     setMenuIsVisible(!getMenuIsVisible.value);
   }
 };
