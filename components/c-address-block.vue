@@ -1,50 +1,35 @@
 <template>
   <div class="addresses">
-    <address
-      v-for="hcard in data['h-cards']"
-      :key="hcard.id"
-      class="h-card"
-    >
-      <p
-        v-if="hcard['p-note']"
-        class="p-note"
-      >
-        {{ hcard['p-note'] }}
+    <address class="h-card">
+      <p>
+        <span>
+          <span class="p-honorific-prefix">
+            {{ data['p-honorific-prefix'] }}
+          </span>
+          <span class="p-name">
+            {{ data['p-name'] }}
+          </span>
+        </span>
       </p>
-      <p
-        v-if="hcard['p-name']"
-        class="p-name"
-      >
-        {{ hcard['p-name'] }}
-      </p>
-      <p
-        v-if="hcard['h-adr']"
-        class="h-adr"
-      >
+      <p class="p-adr h-adr">
         <span class="p-street-address">
-          {{ hcard['h-adr']['p-street-address'] }}
+          {{ data['h-adr']['p-street-address'] }}
         </span>
         <span>
           <span class="p-postal-code">
-            {{ hcard['h-adr']['p-postal-code'] }}
+            {{ data['h-adr']['p-postal-code'] }}
           </span>
           <span class="p-locality">
-            {{ hcard['h-adr']['p-locality'] }}
+            {{ data['h-adr']['p-locality'] }}
           </span>
         </span>
       </p>
-      <p v-if="hcard['p-tel'] || hcard['u-email']">
-        <span
-          v-if="hcard['p-tel']"
-          class="p-tel"
-        >
-          {{ hcard['p-tel'] }}
+      <p>
+        <span class="p-tel">
+          {{ data['p-tel'] }}
         </span>
-        <span
-          v-if="hcard['u-email']"
-          class="u-email"
-        >
-          {{ hcard['u-email'] }}
+        <span class="u-email">
+          {{ data['u-email'] }}
         </span>
       </p>
     </address>
@@ -55,9 +40,16 @@
 /* global queryContent */
 
 const { data } = await useAsyncData('address', () => {
-  return queryContent('_address')
+  return queryContent('_h-card')
     .where({ _partial: true })
-    .only(['h-cards'])
+    .only([
+      'p-note',
+      'p-honorific-prefix',
+      'p-name',
+      'h-adr',
+      'p-tel',
+      'u-email',
+    ])
     .findOne();
 });
 </script>
@@ -84,17 +76,17 @@ address > p {
   font-size: inherit;
 }
 
-address > p:nth-child(4) {
+address > p:nth-child(3) {
   margin-block-start: var(--size-4);
 }
 
-address span {
+address > p > span {
   display: flex;
   gap: 0.5em;
 }
 
 @media (min-width: 1280px) {
-  address > *:nth-child(4) {
+  address > *:nth-child(3) {
     margin-block-start: var(--size-12);
   }
 }

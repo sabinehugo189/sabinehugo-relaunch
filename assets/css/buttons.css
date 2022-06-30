@@ -77,6 +77,31 @@
   transition-duration: 0.25s;
 }
 
+/* secondary */
+:where(button.is-secondary, button[type].is-secondary, input[type='button'].is-secondary, input[type='submit'].is-secondary, input[type='reset'].is-secondary, .btn.is-secondary) {
+  --_bg: transparent;
+  --_bg-gradient: none;
+  --_text: var(--orange-6);
+
+  border: 2px solid var(--orange-6);
+  border-radius: var(--radius-5) var(--radius-5) var(--radius-5) var(--radius-5);
+  transition: border-color 0.5s var(--ease-3) 3s, color 0.5s var(--ease-3) 3s;
+}
+
+
+:where(button.is-secondary:not([disabled]:active):hover, button.is-secondary[type]:not([disabled]:active):hover, input[type='button.is-secondary']:not([disabled]:active):hover, input[type='submit']:not([disabled]:active):hover, input[type='reset']:not([disabled]:active):hover, .btn:not(:active):hover) {
+  border-color: var(--orange-9);
+  transition-delay: 0s;
+  transition-duration: 0.25s;
+}
+
+:where(button.is-secondary:not([disabled]):active, button.is-secondary[type]:not([disabled]):active, input[type='button.is-secondary']:not([disabled]):active, input[type='submit']:not([disabled]):active, input[type='reset']:not([disabled]):active, .btn:active) {
+  border-color: var(--orange-9);
+  color: var(--orange-9);
+  transition-delay: 0s;
+  transition-duration: 0.25s;
+}
+
 /* small */
 :where(button.is-small, button[type].is-small, input[type='button'].is-small, input[type='submit'].is-small, input[type='reset'].is-small, .btn.is-small) {
   --_padding: var(--size-2) var(--size-7);

@@ -1,0 +1,13 @@
+{
+  "p-honorific-prefix": "Dr. med.",
+  "p-name": "Sabine Hugo",
+  "h-adr": {
+    "p-street-address": "Berliner Platz 9",
+    "p-postal-code": "97080",
+    "p-locality": "Würzburg"
+  },
+  "p-tel": "+49 931 99 147 070",
+  "u-email": "info@praxishugo.de",
+  "u-photo": "https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1656607893/invisalign/u-photo.png",
+  "p-note": "European Master of Aligners (Spezialistin für Alignerbehandung)"
+}
