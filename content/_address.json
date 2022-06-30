@@ -11,15 +11,6 @@
       },
       "p-tel": "+49 931 99 147 070",
       "u-email": "info@praxishugo.de"
-    },
-    {
-      "id": "97421",
-      "p-name": "Hugo & Kollegen",
-      "h-adr": {
-        "p-street-address": "Am Zeughaus 40",
-        "p-postal-code": "97421",
-        "p-locality": "Schweinfurt"
-      }
     }
   ]
 }
