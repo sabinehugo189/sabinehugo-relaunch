@@ -11,6 +11,7 @@
     <NuxtLink
       to="/#top"
       class="logo"
+      @click="closeMenu"
     >
       <c-logo
         v-if="getMenuIsVisible"
@@ -111,6 +112,13 @@ const header = ref(null);
 const { height: headerHeight } = useElementSize(header);
 
 setHeaderHeight(headerHeight);
+
+const closeMenu = () => {
+  if (getMenuIsVisible.value) {
+    document.body.removeAttribute('style');
+    setMenuIsVisible(!getMenuIsVisible.value);
+  }
+};
 
 const toggleMenuVisibility = () => {
   if (getMenuIsVisible.value) {
