@@ -11,7 +11,7 @@
           </span>
         </span>
       </p>
-      <p class="h-adr">
+      <p class="p-adr h-adr">
         <span class="p-street-address">
           {{ data['h-adr']['p-street-address'] }}
         </span>
