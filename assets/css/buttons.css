@@ -83,6 +83,18 @@
   --_size: var(--font-size-1);
 }
 
+/* link */
+:where(button.is-link, button[type].is-link, input[type='button'].is-link, input[type='submit'].is-link, input[type='reset'].is-link, .btn.is-link) {
+  --_bg: transparent;
+  --_bg-gradient: none;
+  --_accent: var(--orange-6);
+  --_padding: 0;
+  --_text: var(--orange-6);
+
+  border-radius: 0;
+  text-transform: none;
+}
+
 /* icons */
 :where(button > svg, button[type] > svg, input[type='button']
     > svg, input[type='submit'] > svg, input[type='reset'] > svg, .btn > svg) {

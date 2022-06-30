@@ -1,6 +1,8 @@
 ---
 title: 'Impressum | Praxis Dr. Hugo'
 description: 'Besuchen Sie das Impressum der Praxis Dr. Hugo. ✆ Terminvereinbarungen für Zahngesundheit & Ästhetik.'
+label: 'Impressum'
+navigation: false
 ---
 
 ::c-prose

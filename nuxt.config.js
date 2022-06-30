@@ -37,4 +37,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  content: { navigation: { fields: ['label'] } },
 });

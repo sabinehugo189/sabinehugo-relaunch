@@ -216,7 +216,7 @@ h2 {
 :deep(.splide__track--fade > .splide__list > .splide__slide.is-active) {
   opacity: 1;
   position: relative;
-  z-index: 1;
+  z-index: var(--layer-1);
 }
 
 :deep(.splide--rtl) {
@@ -242,7 +242,7 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: var(--layer-1);
 }
 
 @media (min-width: 1280px) {
@@ -316,7 +316,7 @@ h2 {
   pointer-events: none;
   position: absolute;
   right: 0;
-  z-index: 1;
+  z-index: var(--layer-1);
 }
 
 :deep(.splide__pagination li) {
@@ -343,7 +343,7 @@ h2 {
 :deep(.splide__pagination__page.is-active) {
   background: var(--link);
   transform: scale(1.4);
-  z-index: 1;
+  z-index: var(--layer-1);
 }
 
 :deep(.splide__pagination__page:hover) {

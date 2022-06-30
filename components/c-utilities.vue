@@ -2,7 +2,7 @@
   <div class="container">
     <a
       href="tel:+4993199147070"
-      class="link"
+      class="link link-phone"
     >
       <svg
         aria-labelledby="phoneSabineHugo"
@@ -19,7 +19,9 @@
     </a>
     <NuxtLink
       to="/#contact"
-      :class="[headerIsSticky && lgNAbove ? 'btn is-small' : 'link']"
+      :class="[
+        getHeaderIsSticky && xxxlNAbove ? 'btn is-small' : 'link link-contact',
+      ]"
     >
       <svg
         aria-labelledby="emailSabineHugo"
@@ -39,11 +41,14 @@
 
 <script setup>
 /* global useBreakpoints, useHeaderIsSticky */
-import { breakpointsTailwind } from '@vueuse/core';
-const { headerIsSticky } = useHeaderIsSticky();
 
-const breakpoints = useBreakpoints(breakpointsTailwind);
-const lgNAbove = breakpoints.greater('lg');
+const { getHeaderIsSticky } = useHeaderIsSticky();
+
+const breakpoints = useBreakpoints({
+  '3xl': 1920,
+});
+
+const xxxlNAbove = breakpoints.greater('3xl');
 </script>
 
 <style scoped>
@@ -59,7 +64,7 @@ const lgNAbove = breakpoints.greater('lg');
   display: inline-flex;
   font-optical-sizing: auto;
   font-size: var(--font-size-2);
-  font-weight: var(--font-weight-5);
+  font-weight: var(--font-weight-4);
   gap: var(--size-2);
   justify-content: center;
   text-decoration: none;
@@ -100,11 +105,17 @@ button {
 }
 
 @media (min-width: 1024px) {
+  .link-phone > span {
+    display: block;
+  }
+}
+
+@media (min-width: 1920px) {
   .container {
     gap: var(--size-10);
   }
 
-  .link > span {
+  .link-contact > span {
     display: block;
   }
 }
