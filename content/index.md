@@ -1,8 +1,43 @@
 ---
-title: 'Invisalign® - unsichtbare Zahnspange | Praxis Dr. Hugo'
-description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbare Zahnspangen. ✆ Jetzt Termin für Ihre Invisalign®-Behandlung vereinbaren!'
+title: 'Zahnarztpraxis in Würzburg | Praxis Dr. Hugo'
+description: 'Ihre Zahnarztpraxis in der Würzburger Innenstadt ★ Zahnbehandlungen ★ Dermatologische Ästhetik und mehr ★ Hier informieren und Termin vereinbaren!'
 label: 'Invisalign®'
 ---
+
+
+Ihr neuer Zahnarzt in Würzburg: Für schöne Zähne und mehr Wohlbefinden
+
+
+
+::c-grid
+:::c-prose
+## Dr. Sabine Hugo: European Master of Aligners (Spezialistin für Alignerbehandlung)
+
+Ein schönes Lachen ist wichtig für das **individuelle Wohlbefinden**. Das wissen
+besonders die, deren Zahnstellung nicht optimal ist. Mit den unsichtbaren Zahnspangen 
+von Invisalign® gibt es jetzt die Möglichkeit, in jedem Alter – vom Kleinkind bis ins hohe
+Erwachsenenalter – fast jede Zahnfehlstellung auf **angenehme Art** unauffällig
+zu korrigieren. Ich kann Ihnen versichern: Das Tragen der transparenten,
+maßgefertigten Aligner wird Ihnen in kürzester Zeit ganz selbstverständlich
+vorkommen. Gerne bespreche ich mit Ihnen die Invisalign® Methode und die 
+gewünschten Ergebnisse der Zahnkorrektur in einem **unverbindlichen Erstgespräch** 
+in unserer Fachpraxis für Invisalign®. 
+Freuen Sie sich auf ein schönes Lächeln und mehr Selbstvertrauen!
+
+[Jetzt Termin vereinbaren](#contact){.btn}
+:::
+
+#rightu
+:::c-grid-picture
+---
+imgSrc: 'portrait.jpg' 
+imgHeight: '858'
+imgWidth: '1303'
+imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
+---
+:::
+::
+
 
 ::c-usp
 ---
