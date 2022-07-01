@@ -13,7 +13,7 @@ Ich freue mich auf Sie! Ihre Dr. med Sabine Hugo
 #right
 :::c-grid-picture
 ---
-imgSrc: 'welcome.png' 
+imgSrc: 'welcome.jpg' 
 imgHeight: '858'
 imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
@@ -130,7 +130,7 @@ Schöne, gesunde Zähne helfen uns, unbeschwert und offen zu lachen und geben un
 #left
 :::c-grid-picture
 ---
-imgSrc: 'philosophy.png' 
+imgSrc: 'philosophy.jpg' 
 imgHeight: '858'
 imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
@@ -146,7 +146,7 @@ In den letzten Jahren habe ich mein Behandlungsspektrum aus klassisch zahnmedizi
 #right
 :::c-grid-picture
 ---
-imgSrc: 'more.png' 
+imgSrc: 'more.jpg' 
 imgHeight: '858'
 imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
