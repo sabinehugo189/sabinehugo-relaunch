@@ -132,10 +132,3 @@ caption: 'medizinisches Peeling'
 </svg>
 :::
 ::
-
-::c-contact-tiles
----
-title: 'So erreichen Sie uns'
-link: ''
----
-::
