@@ -4,11 +4,6 @@ description: 'Ihre Zahnarztpraxis in der Würzburger Innenstadt ★ Zahnbehandlu
 label: 'Invisalign®'
 ---
 
-
-Ihr neuer Zahnarzt in Würzburg: Für schöne Zähne und mehr Wohlbefinden
-
-
-
 ::c-grid
 #left
 :::c-grid-picture
@@ -19,16 +14,12 @@ imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
 ---
 :::
-
 :::c-prose
 ## Herzlich Willkommen in meiner Praxis!
-
 Ob Sie einen neuen Zahnarzt in Würzburg für die Grundversorgung benötigen, eine Zahnbegradigung mittels unsichtbarer Zahnschienen (Aligner) wünschen oder auf der Suche nach einem Arzt für ästhetische Medizin und mehr individuelles Wohlbefinden sind – in meiner Zahnarztpraxis und Arztpraxis am Rande der Würzburger Innenstadt bieten wir Ihnen vielfältige zahnmedizinische und ästhetisch-medizinische Behandlungen. Aufgrund meiner 2-fachen Approbation in Medizin und Zahnmedizin sowie zahlreicher medizinischer und zahnmedizinischer Weiterbildungen bin ich in der Lage, Sie mit modernster Technik und nach neuesten wissenschaftlichen Erkenntnissen ganzheitlich und umfassend zu behandeln. Wir nehmen Sie mit Ihren Sorgen und Ängsten ernst und sind für Sie da! 
 Ich freue mich auf Sie! Ihre Dr. med Sabine Hugo 
 :::
 ::
-
-## So erreichen Sie uns
 
 ::c-contact-tiles
 ---
@@ -38,7 +29,6 @@ link: ''
 ::
 
 ## Unsere Leistungen für Ihre Zahngesundheit! 
-
 ::c-icons
 #icon-01
 :::c-icon
