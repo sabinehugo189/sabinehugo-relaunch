@@ -59,9 +59,6 @@ const options = reactive({
     },
     1280: {
       gap: '1.25rem',
-      width: 'calc(100vw - 5rem)',
-    },
-    1536: {
       width: 'calc(100vw - 15rem)',
     },
   },
@@ -71,19 +68,26 @@ const options = reactive({
 <style scoped>
 .container {
   background-color: var(--surface-2);
-  border-radius: var(--radius-3);
   display: flex;
   flex-direction: column;
-  gap: var(--size-12);
-  margin-inline: calc(var(--size-5) * -1);
+  gap: var(--size-10);
+  margin-inline: calc(var(--size-10) * -1);
   padding-block: var(--size-20);
+  padding-inline: var(--size-10);
 }
 
 @media (min-width: 1280px) {
   .container {
+    padding-inline: var(--size-30);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
     gap: var(--size-16);
-    margin-inline: 0;
-    padding-block: var(--size-32);
+    margin-inline: calc(var(--size-10) * -1);
+    padding-block: var(--size-30);
+    padding-inline: var(--size-50);
   }
 }
 
@@ -94,6 +98,12 @@ header {
   gap: var(--size-8);
   padding-inline: var(--size-5);
   text-align: center;
+}
+
+@media (min-width: 1280px) {
+  header {
+    padding-inline: 0;
+  }
 }
 
 h2 {
@@ -281,6 +291,12 @@ h2 {
 
 @media (min-width: 1280px) {
   :deep(.splide__arrow--prev) {
+    left: calc(var(--size-24) * -1);
+  }
+}
+
+@media (min-width: 1536px) {
+  :deep(.splide__arrow--prev) {
     left: calc(var(--size-32) * -1);
   }
 }
@@ -294,6 +310,12 @@ h2 {
 }
 
 @media (min-width: 1280px) {
+  :deep(.splide__arrow--next) {
+    right: calc(var(--size-24) * -1);
+  }
+}
+
+@media (min-width: 1536px) {
   :deep(.splide__arrow--next) {
     right: calc(var(--size-32) * -1);
   }
