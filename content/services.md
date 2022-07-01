@@ -8,12 +8,10 @@ label: 'Leistungen'
 ---
 title: 'Leistungen'
 description: 'Schöne Zähne und frisches Aussehen tragen maßgeblich zum Wohlempfinden bei. Wir helfen Ihnen, Ihr strahlendes Lachen zu erhalten – jetzt und in Zukunft!'
-'img-name': 'hero.jpg'
+'img-name': 'hero-leistungen.png'
 ---
 ::
-
 ## Unsere Leistungen für Ihre Zahngesundheit! 
-
 ::c-icons
 #icon-01
 :::c-icon
@@ -21,7 +19,6 @@ description: 'Schöne Zähne und frisches Aussehen tragen maßgeblich zum Wohlem
 caption: 'Alignerbehandlung'
 ---
 :::
-
 #icon-02
 :::c-icon
 ---
