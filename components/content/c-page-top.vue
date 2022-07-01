@@ -1,5 +1,5 @@
 <template>
-  <div
+  <section
     class="page-top"
     :style="`background-image: url('${imgSrc}');`"
   >
@@ -8,7 +8,7 @@
     </h1>
     <p>{{ props.description }}</p>
     <div class="shaded-edge"></div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -64,6 +64,34 @@ const imgSrc = buildImageUrl(url, {
   content: '';
 }
 
+@media (min-width: 1024px) {
+  .page-top {
+    background-position: bottom right;
+    background-size: 25%;
+    justify-content: center;
+    min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-5));
+    padding-block-start: var(--size-5);
+  }
+
+  .page-top::after {
+    content: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-top {
+    min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-10));
+    padding-inline: var(--size-30);
+  }
+}
+
+@media (min-width: 1536px) {
+  .page-top {
+    background-size: contain;
+    padding-inline: var(--size-50);
+  }
+}
+
 h1 {
   display: flex;
   flex-direction: column;
@@ -83,35 +111,5 @@ p {
   inset: 0;
   pointer-events: none;
   position: absolute;
-}
-
-@media (min-width: 1024px) {
-  .page-top {
-    background-position: bottom right;
-    background-size: 25%;
-    justify-content: center;
-    min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-5));
-    padding-block-start: var(--size-5);
-  }
-
-  .page-top::after {
-    content: none;
-  }
-}
-
-@media (min-width: 1280px) {
-  .page-top {
-    margin-inline: calc(var(--size-30) * -1);
-    min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-10));
-    padding-inline: var(--size-30);
-  }
-}
-
-@media (min-width: 1536px) {
-  .page-top {
-    background-size: contain;
-    margin-inline: calc(var(--size-50) * -1);
-    padding-inline: var(--size-50);
-  }
 }
 </style>

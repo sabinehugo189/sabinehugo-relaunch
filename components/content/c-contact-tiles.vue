@@ -211,7 +211,6 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
 
 @media (min-width: 1280px) {
   .container {
-    margin-inline: calc(var(--size-30) * -1);
     padding-inline: var(--size-30);
   }
 }
@@ -219,7 +218,6 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
 @media (min-width: 1536px) {
   .container {
     gap: var(--size-16);
-    margin-inline: calc(var(--size-50) * -1);
     padding-block: var(--size-30);
     padding-inline: var(--size-50);
   }
