@@ -41,25 +41,25 @@ const { uid } = getCurrentInstance();
 <style scoped>
 .container {
   background-color: var(--surface-2);
-  border-radius: var(--radius-3);
   display: flex;
   flex-direction: column;
   gap: var(--size-10);
-  margin-inline: calc(var(--size-5) * -1);
-  padding: var(--size-20) var(--size-5);
+  margin-inline: calc(var(--size-10) * -1);
+  padding-block: var(--size-20);
+  padding-inline: var(--size-10);
 }
 
 @media (min-width: 1280px) {
   .container {
-    gap: var(--size-16);
-    margin-inline: 0;
-    padding: var(--size-32) var(--size-20);
+    padding: var(--size-32) var(--size-30);
   }
 }
 
 @media (min-width: 1536px) {
   .container {
-    padding-inline: var(--size-40);
+    gap: var(--size-16);
+    padding-block: var(--size-30);
+    padding-inline: var(--size-50);
   }
 }
 
