@@ -5,7 +5,12 @@ label: 'Invisalign®'
 ---
 
 ::c-grid
-#left
+:::c-prose
+## Herzlich Willkommen in meiner Praxis!
+Ob Sie einen neuen Zahnarzt in Würzburg für die Grundversorgung benötigen, eine Zahnbegradigung mittels unsichtbarer Zahnschienen (Aligner) wünschen oder auf der Suche nach einem Arzt für ästhetische Medizin und mehr individuelles Wohlbefinden sind – in meiner Zahnarztpraxis und Arztpraxis am Rande der Würzburger Innenstadt bieten wir Ihnen vielfältige zahnmedizinische und ästhetisch-medizinische Behandlungen. Aufgrund meiner 2-fachen Approbation in Medizin und Zahnmedizin sowie zahlreicher medizinischer und zahnmedizinischer Weiterbildungen bin ich in der Lage, Sie mit modernster Technik und nach neuesten wissenschaftlichen Erkenntnissen ganzheitlich und umfassend zu behandeln. Wir nehmen Sie mit Ihren Sorgen und Ängsten ernst und sind für Sie da! 
+Ich freue mich auf Sie! Ihre Dr. med Sabine Hugo 
+:::
+#right
 :::c-grid-picture
 ---
 imgSrc: 'portrait.jpg' 
@@ -13,11 +18,6 @@ imgHeight: '858'
 imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
 ---
-:::
-:::c-prose
-## Herzlich Willkommen in meiner Praxis!
-Ob Sie einen neuen Zahnarzt in Würzburg für die Grundversorgung benötigen, eine Zahnbegradigung mittels unsichtbarer Zahnschienen (Aligner) wünschen oder auf der Suche nach einem Arzt für ästhetische Medizin und mehr individuelles Wohlbefinden sind – in meiner Zahnarztpraxis und Arztpraxis am Rande der Würzburger Innenstadt bieten wir Ihnen vielfältige zahnmedizinische und ästhetisch-medizinische Behandlungen. Aufgrund meiner 2-fachen Approbation in Medizin und Zahnmedizin sowie zahlreicher medizinischer und zahnmedizinischer Weiterbildungen bin ich in der Lage, Sie mit modernster Technik und nach neuesten wissenschaftlichen Erkenntnissen ganzheitlich und umfassend zu behandeln. Wir nehmen Sie mit Ihren Sorgen und Ängsten ernst und sind für Sie da! 
-Ich freue mich auf Sie! Ihre Dr. med Sabine Hugo 
 :::
 ::
 
@@ -139,7 +139,11 @@ imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis'
 ::
 
 ::c-grid
-#left
+:::c-prose
+## Ästhetisches Wohlbefinden
+In den letzten Jahren habe ich mein Behandlungsspektrum aus klassisch zahnmedizinischen und kieferorthopädischen Leistungen kontinuierlich um Behandlungen erweitert, die den Wunsch meiner Patienten nach schönen Zähnen und einem frischen, jüngeren Aussehen in den Mittelpunkt stellen. Patienten, die unzufrieden mit der Zahnstellung sind und sich eine Begradigung der Zähne wünschen, kann ich als Zahnarzt in Würzburg unter anderem eine Therapie mit ästhetisch unauffälligen Zahnschienen (Alignern) anbieten. Ist durch eine langjährige Fehlstellung bereits Zahnsubstanz verloren gegangen, das Zahnfleisch zurückgegangen oder der Zahn „kürzer“ geworden, kann schon eine einfache Komposite- oder keramische Füllung eine Lösung sein. In jedem Fall ist für das Erreichen des gewünschten Ergebnisses ein Gesamtkonzept wichtig. Wie das gewünschte Ergebnis und das Behandlungskonzept in Ihrem Fall aussehen könnten, bespreche ich gerne mit Ihnen in einem persönlichen Gespräch.
+:::
+#right
 :::c-grid-picture
 ---
 imgSrc: 'portrait.jpg' 
@@ -147,10 +151,6 @@ imgHeight: '858'
 imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
 ---
-:::
-:::c-prose
-## Ästhetisches Wohlbefinden 
-In den letzten Jahren habe ich mein Behandlungsspektrum aus klassisch zahnmedizinischen und kieferorthopädischen Leistungen kontinuierlich um Behandlungen erweitert, die den Wunsch meiner Patienten nach schönen Zähnen und einem frischen, jüngeren Aussehen in den Mittelpunkt stellen. Patienten, die unzufrieden mit der Zahnstellung sind und sich eine Begradigung der Zähne wünschen, kann ich als Zahnarzt in Würzburg unter anderem eine Therapie mit ästhetisch unauffälligen Zahnschienen (Alignern) anbieten. Ist durch eine langjährige Fehlstellung bereits Zahnsubstanz verloren gegangen, das Zahnfleisch zurückgegangen oder der Zahn „kürzer“ geworden, kann schon eine einfache Komposite- oder keramische Füllung eine Lösung sein. In jedem Fall ist für das Erreichen des gewünschten Ergebnisses ein Gesamtkonzept wichtig. Wie das gewünschte Ergebnis und das Behandlungskonzept in Ihrem Fall aussehen könnten, bespreche ich gerne mit Ihnen in einem persönlichen Gespräch.
 :::
 ::
 
