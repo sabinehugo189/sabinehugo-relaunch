@@ -37,6 +37,8 @@ watch(
 .wrapper {
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
+  max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   row-gap: var(--size-48);
 }
@@ -48,8 +50,6 @@ watch(
 .container {
   display: flex;
   flex-direction: column;
-  margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   row-gap: var(--size-48);
 }
