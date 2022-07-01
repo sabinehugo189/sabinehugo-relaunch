@@ -35,7 +35,10 @@ watch(
 
 <style scoped>
 .wrapper {
+  display: flex;
+  flex-direction: column;
   padding-inline: var(--size-5);
+  row-gap: var(--size-48);
 }
 
 .wrapper.is-plain {
@@ -53,17 +56,11 @@ watch(
 
 @media (min-width: 1280px) {
   .wrapper {
-    padding-inline: var(--size-30);
+    padding-inline: var(--size-10);
   }
 
   .container {
     padding-inline: 0;
-  }
-}
-
-@media (min-width: 1536px) {
-  .wrapper {
-    padding-inline: var(--size-50);
   }
 }
 </style>

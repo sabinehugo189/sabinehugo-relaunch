@@ -1,4 +1,5 @@
 {
+  "u-photo": "u-photo.png",
   "p-honorific-prefix": "Dr. med.",
   "p-name": "Sabine Hugo",
   "h-adr": {
@@ -8,6 +9,9 @@
   },
   "p-tel": "+49 931 99 147 070",
   "u-email": "info@praxishugo.de",
-  "u-photo": "https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1656607893/invisalign/u-photo.png",
+  "h-geo": {
+    "p-latitude": "49.79919284770046",
+    "p-longitude": "9.942599202341837"
+  },
   "p-note": "European Master of Aligners (Spezialistin für Alignerbehandung)"
 }

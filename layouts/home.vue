@@ -14,21 +14,23 @@
 
 <style scoped>
 .wrapper {
+  display: flex;
+  flex-direction: column;
   padding-inline: var(--size-5);
-}
-
-.wrapper > * {
-  margin-block: 0;
-}
-
-.wrapper > * + * {
-  margin-block-start: var(--size-48);
+  row-gap: var(--size-48);
 }
 
 .wrapper-inner {
   margin-inline: calc(var(--size-5) * -1);
   padding-inline: var(--size-5);
   position: relative;
+}
+
+.shaded-edge {
+  box-shadow: inset 0 -0.5em 0.5em -0.5em hsl(0deg 0% 0% / 0.1);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .container {
@@ -38,13 +40,6 @@
   max-inline-size: var(--size-xxxl);
   padding-inline: var(--size-5);
   row-gap: var(--size-48);
-}
-
-.shaded-edge {
-  box-shadow: inset 0 -0.5em 0.5em -0.5em hsl(0deg 0% 0% / 0.1);
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
 }
 
 @media (min-width: 1280px) {
