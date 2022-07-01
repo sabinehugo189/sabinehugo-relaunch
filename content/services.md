@@ -100,11 +100,8 @@ caption: 'HiFU'
 :::
 ::
 
-#usps 
+ ## Von Anfang an gut aufgehoben
 ::c-usp
-
-## Von Anfang an gut aufgehoben
-
 #item-01
 :::c-usp-item
 ---
@@ -147,8 +144,6 @@ title: 'Barrierefreiheit'
 ---
 :::
 ::
-
-## So erreichen Sie uns
 
 ::c-contact-tiles
 ---
