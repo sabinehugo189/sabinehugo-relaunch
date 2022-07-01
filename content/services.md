@@ -1,6 +1,6 @@
 ---
-title: 'Leistungen | Praxis Dr. Hugo'
-description: ''
+title: 'Leistungen rund um Zahn & Ästhetik | Praxis Dr. Hugo'
+description: 'Entdecken Sie die Leistungen der Praxis Dr. Hugo ★ Zahnbehandlungen ★ Invisalign ★ Dermatologische Ästhetik und mehr.'
 label: 'Leistungen'
 ---
 
@@ -13,7 +13,6 @@ description: 'Schöne Zähne und frisches Aussehen tragen maßgeblich zum Wohlem
 ::
 
 ## Unsere Leistungen für Ihre Zahngesundheit! 
-
 
 ::c-icons
 #icon-01
@@ -50,6 +49,7 @@ caption: 'Komplettsanierung'
 caption: 'Bleaching'
 ---
 :::
+:: 
 
 
 ## Unsere Leistungen für mehr Wohlbefinden und Ästhetik!
@@ -98,57 +98,55 @@ caption: 'medizinisches Peeling'
 caption: 'HiFU'
 ---
 :::
-
+::
 
 #usps 
 ::c-usp
----
-title: 'Von Anfang an gut aufgehoben !'
-imgName: 'invisalign.jpg' 
----
+
+## Von Anfang an gut aufgehoben
 
 #item-01
-:::c-icons-item
+:::c-usp-item
 ---
 title: 'Helle Räume zum Wohlfühlen'
 ---
 :::
 
 #item-02
-:::c-icons-item
+:::c-usp-item
 ---
 title: 'Ausführliche, ehrliche Beratung'
 ---
 :::
 
 #item-03
-:::c-icons-item
+:::c-usp-item
 ---
 title: 'Modernste medizinische und zahnmedizinische Technik'
 ---
 :::
 
 #item-04
-:::c-icons-item
+:::c-usp-item
 ---
 title: 'Praxiseigene Parkplätze vor der Tür'
 ---
 :::
 
 #item-05
-:::c-icons-item
+:::c-usp-item
 ---
 title: 'Gute Verkehrsanbindung und Erreichbarkeit'
 ---
 :::
 
-
 #item-06
-:::c-icons-item
+:::c-usp-item
 ---
 title: 'Barrierefreiheit'
 ---
 :::
+::
 
 ## So erreichen Sie uns
 
@@ -158,3 +156,4 @@ title: 'So erreichen Sie uns'
 link: ''
 ---
 ::
+
