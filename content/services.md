@@ -154,9 +154,7 @@ title: 'Barrierefreiheit'
 
 ::c-contact-tiles
 ---
-title: 'Dr. med Sabine Hugo'
-link: 'https://www.google.com/maps'
----
-::
+title: 'So erreichen Sie uns'
+link: ''
 ---
 ::
