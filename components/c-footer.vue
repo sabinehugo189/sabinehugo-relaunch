@@ -57,7 +57,10 @@ const src = buildImageUrl(`${urlPart}quality-seal.png`, {
 <style scoped>
 .container {
   margin-block-start: var(--size-48);
+  margin-inline: auto;
+  max-inline-size: var(--size-xxxl);
   position: relative;
+  width: 100%;
 }
 
 .container-inner {

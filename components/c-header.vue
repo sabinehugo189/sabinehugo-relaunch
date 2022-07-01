@@ -139,14 +139,15 @@ header {
   color: var(--text-4);
   display: flex;
   justify-content: space-between;
-  left: 0;
+  margin-inline: auto;
+  max-inline-size: var(--size-xxxl);
   padding-block: var(--size-3);
   padding-inline: var(--size-10);
   position: sticky;
-  right: 0;
   top: 0;
   transition: background-color 300ms var(--ease-2),
     border-radius 300ms var(--ease-2), box-shadow 300ms var(--ease-2);
+  width: 100%;
   z-index: var(--layer-2);
 }
 
