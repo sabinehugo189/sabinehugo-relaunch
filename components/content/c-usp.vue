@@ -6,18 +6,18 @@
         <picture>
           <source
             media="(min-width: 1536px)"
-            :srcset="`${imgSrc1536} 900w`"
+            :srcset="`${srcset1536} 900w`"
           />
           <source
             media="(min-width: 1024px)"
-            :srcset="`${imgSrc1024} 500w`"
+            :srcset="`${srcset1024} 500w`"
           />
           <source
             media="(min-width: 768px)"
-            :srcset="`${imgSrc768} 900w`"
+            :srcset="`${srcset768} 900w`"
           />
           <img
-            :src="imgSrc"
+            :src="src"
             :height="props.imgHeight"
             :width="props.imgWidth"
             :alt="props.imgAlt"
@@ -36,6 +36,8 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
 import { buildImageUrl } from 'cloudinary-build-url';
 
 const props = defineProps({
@@ -61,13 +63,17 @@ const props = defineProps({
   },
 });
 
-const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.imgName}`;
-const cloudName = 'zahn-und-sthetik';
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale' };
 
-const imgSrc = buildImageUrl(url, {
+const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -77,9 +83,9 @@ const imgSrc = buildImageUrl(url, {
   },
 });
 
-const imgSrc768 = buildImageUrl(url, {
+const srcset768 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -90,9 +96,9 @@ const imgSrc768 = buildImageUrl(url, {
   },
 });
 
-const imgSrc1024 = buildImageUrl(url, {
+const srcset1024 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -102,9 +108,9 @@ const imgSrc1024 = buildImageUrl(url, {
   },
 });
 
-const imgSrc1536 = buildImageUrl(url, {
+const srcset1536 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {

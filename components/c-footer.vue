@@ -35,16 +35,21 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
 import { buildImageUrl } from 'cloudinary-build-url';
 
-const urlPart =
-  'https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/';
-const cloudName = 'zahn-und-sthetik';
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale' };
 
-const src = buildImageUrl(`${urlPart}quality-seal.png`, {
+const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
