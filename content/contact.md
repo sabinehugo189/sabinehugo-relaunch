@@ -7,7 +7,7 @@ label: 'Kontakt'
 ---
 title: 'Kontakt'
 description: 'Sie haben eine Frage oder ein Anliegen? Melden Sie sich! In unserer Würzburger Praxis steht Ihr Wohlergehen im Mittelpunkt.'
-'img-name': 'hero-contact.png'
+'img-name': 'hero-kontakt.png'
 ---
 ::
 ::c-contact
