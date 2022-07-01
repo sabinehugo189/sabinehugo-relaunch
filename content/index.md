@@ -28,8 +28,8 @@ link: ''
 ---
 ::
 
-## Unsere Leistungen für Ihre Zahngesundheit! 
 ::c-icons
+title: Unsere Leistungen für Ihre Zahngesundheit!
 #icon-01
 :::c-icon
 ---
@@ -81,9 +81,8 @@ caption: 'Komplettsanierung'
 </svg>
 :: 
 
-## Unsere Leistungen für mehr Wohlbefinden und Ästhetik!
-
 ::c-icons
+title: Unsere Leistungen für mehr Wohlbefinden und Ästhetik!
 #icon-01
 :::c-icon
 ---
@@ -151,9 +150,11 @@ caption: 'medizinisches Peeling'
 ::
 
 ::c-grid
+:::c-prose
 ## Sie wünschen sich eine Beratung oder eine Behandlung?
-### Gerne bin ich für Sie da und beantworte Ihre Fragen in einem unverbindlichen persönlichen Beratungsgespräch. Wir sind telefonisch erreichbar unter: +49 931 99 147 070 oder per E-Mail unter info@praxishugo.de
+Gerne bin ich für Sie da und beantworte Ihre Fragen in einem unverbindlichen persönlichen Beratungsgespräch. Wir sind telefonisch erreichbar unter: +49 931 99 147 070 oder per E-Mail unter info@praxishugo.de
 [Jetzt Termin vereinbaren](#contact){.btn}
+:::
 ::
 
 ::c-grid
