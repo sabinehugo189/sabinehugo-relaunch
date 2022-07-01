@@ -12,7 +12,6 @@ description: 'Schöne Zähne und frisches Aussehen tragen maßgeblich zum Wohlem
 ---
 ::
 
-
 ::c-icons
 title: Unsere Leistungen für Ihre Zahngesundheit! 
 #icon-01
@@ -65,7 +64,6 @@ caption: 'Komplettsanierung'
 </g>
 </svg>
 :: 
-
 
 ::c-icons
 title: Unsere Leistungen für mehr Wohlbefinden und Ästhetik!
@@ -135,46 +133,9 @@ caption: 'medizinisches Peeling'
 :::
 ::
 
-
-::c-usp
-title: Von Anfang an gut aufgehoben
-#item-01
-:::c-usp-item
----
-title: 'Helle Räume zum Wohlfühlen'
----
-
-:::
-
-#item-02
-:::c-usp-item
----
-title: 'Ausführliche, ehrliche Beratung'
----
-
-:::
-
-#item-03
-:::c-usp-item
----
-title: 'Modernste medizinische und zahnmedizinische Technik'
----
-
-:::
-
-#item-04
-:::c-usp-item
----
-title: 'Praxiseigene Parkplätze vor der Tür'
----
-
-:::
-
-
 ::c-contact-tiles
 ---
 title: 'So erreichen Sie uns'
 link: ''
 ---
 ::
-
