@@ -27,18 +27,28 @@
 </template>
 
 <script setup>
-/* global queryContent, useHeaderHeight, useCssVar */
+/* global queryContent, useHeaderHeight, useCloudinary, useCssVar */
 
 import { buildImageUrl } from 'cloudinary-build-url';
 
-const urlPart =
-  'https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/';
-const cloudName = 'zahn-und-sthetik';
+const props = defineProps({
+  imgName: {
+    type: String,
+    default: 'hero.jpg',
+  },
+});
+
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale' };
 
-const url = buildImageUrl(`${urlPart}hero.jpg`, {
+const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -47,9 +57,9 @@ const url = buildImageUrl(`${urlPart}hero.jpg`, {
   },
 });
 
-const src = buildImageUrl(`${urlPart}quality-seal.png`, {
+const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {

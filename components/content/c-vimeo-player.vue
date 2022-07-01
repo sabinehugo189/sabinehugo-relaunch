@@ -31,6 +31,8 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
 import { buildImageUrl } from 'cloudinary-build-url';
 import { vueVimeoPlayer } from 'vue-vimeo-player';
 
@@ -38,6 +40,10 @@ const props = defineProps({
   videoId: {
     type: String,
     required: true,
+  },
+  poster: {
+    type: String,
+    default: 'poster.jpg',
   },
 });
 
@@ -59,14 +65,17 @@ const onReady = () => {
   ready.value = true;
 };
 
-const url =
-  'https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/video.jpg';
-const cloudName = 'zahn-und-sthetik';
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale', aspectRatio: '1.618' };
 
-const src = buildImageUrl(url, {
+const src = buildImageUrl(`${imageUrl}/${props.poster}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -76,9 +85,9 @@ const src = buildImageUrl(url, {
   },
 });
 
-const src550 = buildImageUrl(url, {
+const src550 = buildImageUrl(`${imageUrl}/${props.poster}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -88,9 +97,9 @@ const src550 = buildImageUrl(url, {
   },
 });
 
-const src850 = buildImageUrl(url, {
+const src850 = buildImageUrl(`${imageUrl}/${props.poster}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {

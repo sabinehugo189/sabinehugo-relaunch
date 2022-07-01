@@ -15,6 +15,8 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
 import { buildImageUrl } from 'cloudinary-build-url';
 
 const props = defineProps({
@@ -36,13 +38,17 @@ const props = defineProps({
   },
 });
 
-const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.image}`;
-const cloudName = 'zahn-und-sthetik';
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale', aspectRatio: '1.618' };
 
-const src = buildImageUrl(url, {
+const src = buildImageUrl(`${imageUrl}/${props.image}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -52,9 +58,9 @@ const src = buildImageUrl(url, {
   },
 });
 
-const src500 = buildImageUrl(url, {
+const src500 = buildImageUrl(`${imageUrl}/${props.image}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -64,9 +70,9 @@ const src500 = buildImageUrl(url, {
   },
 });
 
-const src700 = buildImageUrl(url, {
+const src700 = buildImageUrl(`${imageUrl}/${props.image}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -76,9 +82,9 @@ const src700 = buildImageUrl(url, {
   },
 });
 
-const src1024 = buildImageUrl(url, {
+const src1024 = buildImageUrl(`${imageUrl}/${props.image}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {

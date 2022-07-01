@@ -1,7 +1,7 @@
 <template>
   <section
     class="page-top"
-    :style="`background-image: url('${imgSrc}');`"
+    :style="`background-image: url('${url}');`"
   >
     <h1>
       {{ props.title }}
@@ -12,6 +12,8 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
 import { buildImageUrl } from 'cloudinary-build-url';
 
 const props = defineProps({
@@ -29,13 +31,17 @@ const props = defineProps({
   },
 });
 
-const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.imgName}`;
-const cloudName = 'zahn-und-sthetik';
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale' };
 
-const imgSrc = buildImageUrl(url, {
+const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
