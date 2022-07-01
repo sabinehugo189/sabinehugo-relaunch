@@ -56,6 +56,7 @@ const options = reactive({
     },
     1024: {
       perPage: 2,
+      width: 'calc(100vw - 5rem)',
     },
     1280: {
       gap: '1.25rem',
@@ -85,7 +86,6 @@ const options = reactive({
 @media (min-width: 1536px) {
   .container {
     gap: var(--size-16);
-    margin-inline: calc(var(--size-10) * -1);
     padding-block: var(--size-30);
     padding-inline: var(--size-50);
   }
