@@ -2,15 +2,15 @@
   <picture>
     <source
       media="(min-width: 1280px)"
-      :srcset="`${src1280} 768w`"
+      :srcset="`${srcset1280} 768w`"
     />
     <source
       media="(min-width: 1024px)"
-      :srcset="`${src1024} 1280w`"
+      :srcset="`${srcset1024} 1280w`"
     />
     <source
       media="(min-width: 768px)"
-      :srcset="`${src768} 1024w`"
+      :srcset="`${srcset768} 1024w`"
     />
     <img
       :src="src"
@@ -23,6 +23,8 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
 import { buildImageUrl } from 'cloudinary-build-url';
 
 const props = defineProps({
@@ -44,13 +46,17 @@ const props = defineProps({
   },
 });
 
-const url = `https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1652359235/invisalign/${props.imgSrc}`;
-const cloudName = 'zahn-und-sthetik';
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
 const resize = { type: 'scale' };
 
-const src = buildImageUrl(url, {
+const src = buildImageUrl(`${imageUrl}/${props.imgSrc}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -60,9 +66,9 @@ const src = buildImageUrl(url, {
   },
 });
 
-const src768 = buildImageUrl(url, {
+const srcset768 = buildImageUrl(`${imageUrl}/${props.imgSrc}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -72,9 +78,9 @@ const src768 = buildImageUrl(url, {
   },
 });
 
-const src1024 = buildImageUrl(url, {
+const srcset1024 = buildImageUrl(`${imageUrl}/${props.imgSrc}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
@@ -84,9 +90,9 @@ const src1024 = buildImageUrl(url, {
   },
 });
 
-const src1280 = buildImageUrl(url, {
+const srcset1280 = buildImageUrl(`${imageUrl}/${props.imgSrc}`, {
   cloud: {
-    cloudName,
+    cloudName: cloudinary.value.cloudName,
   },
   transformations: {
     resize: {
