@@ -7,7 +7,7 @@
       <li class="tile">
         <figure class="head">
           <img
-            src="https://res.cloudinary.com/zahn-und-sthetik/image/upload/v1656607893/invisalign/u-photo.png"
+            :src="src"
             :alt="data['p-name']"
             height="100"
             width="100"
@@ -147,7 +147,9 @@
 </template>
 
 <script setup>
-/* global queryContent */
+/* global queryContent, useCloudinary */
+
+import { buildImageUrl } from 'cloudinary-build-url';
 
 const props = defineProps({
   title: {
@@ -160,19 +162,39 @@ const props = defineProps({
   },
 });
 
-const { data } = await useAsyncData('address', () => {
+const { data } = await useAsyncData('hcard', () => {
   return queryContent('_h-card')
     .where({ _partial: true })
     .only([
-      'p-note',
+      'u-photo',
       'p-honorific-prefix',
       'p-name',
       'h-adr',
       'p-tel',
       'u-email',
-      'u-photo',
+      'p-note',
     ])
     .findOne();
+});
+
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
+const resize = { type: 'scale' };
+
+const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
+  cloud: {
+    cloudName: cloudinary.value.cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+      width: 100,
+    },
+  },
 });
 </script>
 
