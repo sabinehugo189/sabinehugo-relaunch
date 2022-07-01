@@ -158,11 +158,7 @@ Gerne bin ich für Sie da und beantworte Ihre Fragen in einem unverbindlichen pe
 ::
 
 ::c-grid
-:::c-prose
-## Mein Behandlungskonzept in Würzburg 
-Schöne, gesunde Zähne helfen uns, unbeschwert und offen zu lachen und geben uns mehr Selbstbewusstsein. Die moderne Zahnmedizin hat sich weit über klassische Behandlungen wie Kariestherapie durch konservierende und prophetische Einlagefüllungen oder prosthetischen Zahnersatz hinaus entwickelt. In den letzten Jahren hat die Prophylaxe – die professionelle Zahnreinigung und Behandlung des Zahnfleischs (Parodontologie) – an Bedeutung gewonnen, um Zähne und Zahnfleisch langfristig gesund zu halten und Erkrankungen vorzubeugen. Dank modernster Verfahren wie der Wurzelbehandlung mit rotierenden Feilen können heute selbst stark zerstörte Zähne erfolgreich gerettet werden. Verloren gegangene Zähne lassen sich mittels moderner Implantologie ersetzen. In unserer Zahnarztpraxis in Würzburg unterstützen wir Sie mit modernsten Methoden dabei, Ihre Zahngesundheit zu erhalten oder zu verbessern und jetzt und in Zukunft unbeschwert und offen zu lachen. Sprechen Sie mich an!
-:::
-#right
+#left
 :::c-grid-picture
 ---
 imgSrc: 'philosophy.jpg' 
@@ -170,6 +166,10 @@ imgHeight: '858'
 imgWidth: '1303'
 imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
 ---
+:::
+:::c-prose
+## Mein Behandlungskonzept in Würzburg 
+Schöne, gesunde Zähne helfen uns, unbeschwert und offen zu lachen und geben uns mehr Selbstbewusstsein. Die moderne Zahnmedizin hat sich weit über klassische Behandlungen wie Kariestherapie durch konservierende und prophetische Einlagefüllungen oder prosthetischen Zahnersatz hinaus entwickelt. In den letzten Jahren hat die Prophylaxe – die professionelle Zahnreinigung und Behandlung des Zahnfleischs (Parodontologie) – an Bedeutung gewonnen, um Zähne und Zahnfleisch langfristig gesund zu halten und Erkrankungen vorzubeugen. Dank modernster Verfahren wie der Wurzelbehandlung mit rotierenden Feilen können heute selbst stark zerstörte Zähne erfolgreich gerettet werden. Verloren gegangene Zähne lassen sich mittels moderner Implantologie ersetzen. In unserer Zahnarztpraxis in Würzburg unterstützen wir Sie mit modernsten Methoden dabei, Ihre Zahngesundheit zu erhalten oder zu verbessern und jetzt und in Zukunft unbeschwert und offen zu lachen. Sprechen Sie mich an!
 :::
 ::
 
