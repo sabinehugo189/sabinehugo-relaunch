@@ -1,15 +1,47 @@
 <template>
   <figure>
-    <Markdown unwrap="p" />
-    <figcaption>{{ props.caption }}</figcaption>
+    <img
+      :src="src"
+      :alt="caption"
+      width="100"
+      height="100"
+    />
+    <figcaption>{{ caption }}</figcaption>
   </figure>
 </template>
 
 <script setup>
+/* global useCloudinary */
+
+import { buildImageUrl } from 'cloudinary-build-url';
+
 const props = defineProps({
   caption: {
     type: String,
     required: true,
+  },
+  iconName: {
+    type: String,
+    required: true,
+  },
+});
+
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
+const resize = { type: 'scale' };
+
+const src = buildImageUrl(`${imageUrl}/icons/${props.iconName}`, {
+  cloud: {
+    cloudName: cloudinary.value.cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
   },
 });
 </script>
@@ -38,21 +70,26 @@ figcaption {
   line-height: var(--font-lineheight-1);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   figure {
     aspect-ratio: 1 / 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  figure {
     gap: var(--size-10);
   }
 }
 
-:deep(svg) {
+img {
   inline-size: auto;
-  max-block-size: var(--size-16);
+  max-block-size: var(--size-20);
 }
 
-@media (min-width: 1024px) {
-  :deep(svg) {
-    max-block-size: var(--size-28);
+@media (min-width: 768px) {
+  img {
+    max-block-size: var(--size-24);
   }
 }
 </style>
