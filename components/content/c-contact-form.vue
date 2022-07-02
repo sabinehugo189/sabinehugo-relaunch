@@ -4,9 +4,9 @@
       id="contact"
       name="contact"
     />
-    <header>
-      <h3>{{ props.title }}</h3>
-      <p>{{ props.description }}</p>
+    <header v-if="title || description">
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
     </header>
     <form
       ref="form"
@@ -114,14 +114,14 @@
 import { useField, useForm } from 'vee-validate';
 import { object, string, boolean } from 'yup';
 
-const props = defineProps({
+defineProps({
   title: {
     type: String,
-    required: true,
+    default: '',
   },
   description: {
     type: String,
-    required: true,
+    default: '',
   },
 });
 
@@ -201,9 +201,16 @@ const submit = handleSubmit((_, { resetForm }) => {
   margin-inline: auto;
   max-inline-size: var(--size-lg);
   position: relative;
+  width: 100%;
 }
 
-#contact {
+@media (min-width: 1536px) {
+  .container {
+    gap: var(--size-16);
+  }
+}
+
+.container > a[name='contact'] {
   position: absolute;
 }
 
@@ -211,6 +218,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
+}
+
+@media (min-width: 768px) {
+  header {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 h3 {
@@ -258,21 +272,7 @@ form {
   gap: var(--size-5) var(--size-8);
 }
 
-h4 {
-  font-size: var(--font-size-fluid-1);
-  margin-block-end: var(--size-3);
-}
-
-button {
-  justify-self: center;
-}
-
 @media (min-width: 768px) {
-  header {
-    align-items: center;
-    text-align: center;
-  }
-
   .data {
     grid-template-columns: repeat(2, [col] 1fr);
   }
@@ -280,5 +280,14 @@ button {
   .fullwidth {
     grid-column: col / span 2;
   }
+}
+
+h4 {
+  font-size: var(--font-size-fluid-1);
+  margin-block-end: var(--size-3);
+}
+
+button {
+  justify-self: center;
 }
 </style>
