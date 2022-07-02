@@ -1,122 +1,47 @@
 <template>
   <section class="container">
-    <header>
-      <h2>{{ title }}</h2>
+    <header
+      v-if="title"
+      :class="{ 'is-reversed': isReversed, 'is-imageless': isImageless }"
+    >
+      <h2 class="headline">{{ title }}</h2>
       <div class="frame">
-        <picture>
-          <source
-            media="(min-width: 1536px)"
-            :srcset="`${srcset1536} 900w`"
-          />
-          <source
-            media="(min-width: 1024px)"
-            :srcset="`${srcset1024} 500w`"
-          />
-          <source
-            media="(min-width: 768px)"
-            :srcset="`${srcset768} 900w`"
-          />
-          <img
-            :src="src"
-            :height="props.imgHeight"
-            :width="props.imgWidth"
-            :alt="props.imgAlt"
-            loading="lazy"
-          />
-        </picture>
+        <Markdown />
       </div>
     </header>
-    <ul>
-      <li><slot name="item-01" /></li>
-      <li><slot name="item-02" /></li>
-      <li><slot name="item-03" /></li>
-      <li><slot name="item-04" /></li>
+    <ul class="items">
+      <li
+        v-for="(item, index) in items"
+        :key="`item-${uid}-${index}`"
+        class="item"
+      >
+        <c-usp-item
+          :description="item.description"
+          :icon-name="item.iconName"
+          :title="item.title"
+        />
+      </li>
     </ul>
   </section>
 </template>
 
 <script setup>
-/* global useCloudinary */
-
-import { buildImageUrl } from 'cloudinary-build-url';
-
-const props = defineProps({
+defineProps({
+  isImageless: {
+    type: Boolean,
+    default: false,
+  },
+  isReversed: {
+    type: Boolean,
+    default: false,
+  },
+  items: {
+    type: Object,
+    required: true,
+  },
   title: {
     type: String,
-    required: true,
-  },
-  imgName: {
-    type: String,
-    required: true,
-  },
-  imgAlt: {
-    type: String,
     default: '',
-  },
-  imgHeight: {
-    type: String,
-    default: '600',
-  },
-  imgWidth: {
-    type: String,
-    default: '900',
-  },
-});
-
-const cloudinary = useCloudinary();
-
-const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
-  return acc.concat(`/${cur}`);
-});
-
-const resize = { type: 'scale' };
-
-const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
-  cloud: {
-    cloudName: cloudinary.value.cloudName,
-  },
-  transformations: {
-    resize: {
-      ...resize,
-      width: 900,
-    },
-  },
-});
-
-const srcset768 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
-  cloud: {
-    cloudName: cloudinary.value.cloudName,
-  },
-  transformations: {
-    resize: {
-      ...resize,
-      aspectRatio: '3:2',
-      width: 900,
-    },
-  },
-});
-
-const srcset1024 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
-  cloud: {
-    cloudName: cloudinary.value.cloudName,
-  },
-  transformations: {
-    resize: {
-      ...resize,
-      width: 500,
-    },
-  },
-});
-
-const srcset1536 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
-  cloud: {
-    cloudName: cloudinary.value.cloudName,
-  },
-  transformations: {
-    resize: {
-      ...resize,
-      width: 900,
-    },
   },
 });
 </script>
@@ -125,11 +50,18 @@ const srcset1536 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
 .container {
   display: flex;
   flex-direction: column;
-  gap: var(--size-20);
+  gap: var(--size-16);
+}
+
+@media (min-width: 768px) {
+  .container {
+    gap: var(--size-20);
+  }
 }
 
 @media (min-width: 1280px) {
   .container {
+    gap: var(--size-24);
     padding-inline: var(--size-20);
   }
 }
@@ -143,56 +75,108 @@ const srcset1536 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
 header {
   display: flex;
   flex-direction: column;
+}
+
+header:not(.is-imageless) {
+  display: grid;
+  flex-direction: unset;
   gap: var(--size-10);
 }
 
-h2 {
+.headline {
   font-size: var(--font-size-fluid-3);
-  font-weight: var(--font-weight-3);
-  line-height: var(--font-lineheight-0);
-  max-inline-size: var(--size-header-1);
 }
 
-.frame {
-  aspect-ratio: 3 / 2;
-  flex: 1 1 auto;
+header.is-imageless > .frame {
+  display: none;
 }
 
-.frame > picture > img {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
+@media (min-width: 768px) {
+  header {
+    align-items: center;
+    text-align: center;
+  }
+
+  header:not(.is-imageless) {
+    align-items: unset;
+    gap: var(--size-4);
+    grid-template-columns: repeat(2, 1fr);
+    text-align: unset;
+  }
+
+  header:not(.is-imageless).is-reversed > .frame {
+    order: -1;
+  }
 }
 
-ul {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+@media (min-width: 1280px) {
+  header:not(.is-imageless) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  header:not(.is-imageless) > .headline {
+    grid-column: 1 / 5;
+  }
+
+  header:not(.is-imageless).is-reversed > .headline {
+    grid-column: 7 / -1;
+  }
+
+  header:not(.is-imageless) > .frame {
+    grid-column: 6 / -1;
+  }
+
+  header:not(.is-imageless).is-reversed > .frame {
+    grid-column: 1 / 6;
+  }
+}
+
+@media (min-width: 1536px) {
+  header:not(.is-imageless) {
+    gap: var(--size-8);
+  }
+
+  header:not(.is-imageless) > .headline {
+    grid-column: 1 / 4;
+  }
+
+  header:not(.is-imageless).is-reversed > .headline {
+    grid-column: 8 / -1;
+  }
+
+  header:not(.is-imageless) > .frame {
+    grid-column: 5 / -1;
+  }
+
+  header:not(.is-imageless).is-reversed > .frame {
+    grid-column: 1 / 7;
+  }
+}
+
+.items {
+  display: grid;
   gap: var(--size-16);
   list-style: none;
   padding-inline-start: 0;
 }
 
+@media (min-width: 768px) {
+  .items {
+    gap: var(--size-16) var(--size-4);
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    justify-content: center;
+  }
+}
+
 @media (min-width: 1024px) {
-  header {
-    flex-direction: row;
-    gap: var(--size-48);
-    justify-content: space-between;
+  .items {
+    gap: var(--size-5);
   }
+}
 
-  h2 {
-    max-inline-size: var(--size-header-0);
-    padding-block: var(--size-6);
-  }
-
-  .frame {
-    aspect-ratio: 5 / 1;
-  }
-
-  ul {
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
+@media (min-width: 1536px) {
+  .items {
+    gap: var(--size-8);
   }
 }
 </style>

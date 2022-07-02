@@ -1,7 +1,12 @@
 <template>
   <div class="item">
     <figure>
-      <Markdown unwrap="p" />
+      <img
+        :src="src"
+        :alt="title"
+        width="100"
+        height="100"
+      />
     </figure>
     <h3>{{ props.title }}</h3>
     <p>{{ props.description }}</p>
@@ -9,6 +14,10 @@
 </template>
 
 <script setup>
+/* global useCloudinary */
+
+import { buildImageUrl } from 'cloudinary-build-url';
+
 const props = defineProps({
   title: {
     type: String,
@@ -17,6 +26,29 @@ const props = defineProps({
   description: {
     type: String,
     required: true,
+  },
+  iconName: {
+    type: String,
+    required: true,
+  },
+});
+
+const cloudinary = useCloudinary();
+
+const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
+  return acc.concat(`/${cur}`);
+});
+
+const resize = { type: 'scale' };
+
+const src = buildImageUrl(`${imageUrl}/icons/${props.iconName}`, {
+  cloud: {
+    cloudName: cloudinary.value.cloudName,
+  },
+  transformations: {
+    resize: {
+      ...resize,
+    },
   },
 });
 </script>
@@ -51,9 +83,15 @@ figure {
   justify-content: center;
 }
 
-:deep(svg) {
-  inline-size: var(--size-16);
-  max-block-size: var(--size-16);
+img {
+  inline-size: auto;
+  max-block-size: var(--size-20);
+}
+
+@media (min-width: 768px) {
+  img {
+    max-block-size: var(--size-24);
+  }
 }
 
 h3 {
