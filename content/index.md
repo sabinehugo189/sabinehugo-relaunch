@@ -134,7 +134,7 @@ title: 'Unsere Leistungen für mehr Wohlbefinden und Ästhetik!'
   99 147 070 oder per E-Mail unter info@praxishugo.de
 </p>
 
-[Jetzt Termin vereinbaren](#contact){.btn}
+[Jetzt Termin vereinbaren](/contact/#contact){.btn}
 :::
 
 #header
