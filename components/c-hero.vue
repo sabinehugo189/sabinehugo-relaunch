@@ -31,11 +31,11 @@
 
 import { buildImageUrl } from 'cloudinary-build-url';
 
-const props = defineProps({
-  imgName: {
-    type: String,
-    default: 'hero.jpg',
-  },
+const { data } = await useAsyncData('hero', () => {
+  return queryContent('_hero')
+    .where({ _partial: true })
+    .only(['image', 'title', 'subtitle', 'description', 'label'])
+    .findOne();
 });
 
 const cloudinary = useCloudinary();
@@ -46,7 +46,7 @@ const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
 
 const resize = { type: 'scale' };
 
-const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
+const url = buildImageUrl(`${imageUrl}/${data.value.image}`, {
   cloud: {
     cloudName: cloudinary.value.cloudName,
   },
@@ -66,13 +66,6 @@ const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
       ...resize,
     },
   },
-});
-
-const { data } = await useAsyncData('hero', () => {
-  return queryContent('_hero')
-    .where({ _partial: true })
-    .only(['title', 'subtitle', 'description', 'label'])
-    .findOne();
 });
 
 const hero = ref(null);
