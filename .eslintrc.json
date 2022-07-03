@@ -38,7 +38,8 @@
     "useRouter": "readonly",
     "useState": "readonly",
     "useVModel": "readonly",
-    "watch": "readonly"
+    "watch": "readonly",
+    "watchEffect": "readonly"
   },
   "rules": {
     "eqeqeq": ["error", "smart"],

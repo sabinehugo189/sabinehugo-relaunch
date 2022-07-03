@@ -1,113 +1,103 @@
 <template>
-  <section class="container">
-    <a
-      id="contact"
-      name="contact"
-    />
-    <header v-if="title || description">
-      <h3>{{ title }}</h3>
-      <p>{{ description }}</p>
-    </header>
-    <form
-      ref="form"
-      data-netlify="true"
-      name="contact"
-      method="POST"
-      netlify-honeypot="bot-field"
-      @submit="submit"
+  <form
+    ref="form"
+    data-netlify="true"
+    name="contact"
+    method="POST"
+    netlify-honeypot="bot-field"
+    @submit="submit"
+  >
+    <div hidden>
+      <label>
+        Don’t fill this out if you're human:
+        <input name="bot-field" />
+      </label>
+    </div>
+    <div class="salutation">
+      <h4>Anrede</h4>
+      <c-radio-group
+        v-model="salutations"
+        name="Anrede"
+        :options="options"
+        :error="errors.salutations"
+      />
+    </div>
+    <div class="data">
+      <h4 class="fullwidth">Meine persönlichen Daten</h4>
+      <c-input
+        v-model="fname"
+        label="Vorname"
+        name="Vorname"
+        type="text"
+        :error="errors.fname"
+      />
+      <c-input
+        v-model="lname"
+        label="Nachname"
+        name="Nachname"
+        type="text"
+        :error="errors.lname"
+      />
+      <c-input
+        label="E-Mail"
+        name="E-Mail"
+        type="email"
+        :error="errors.email"
+        :modelValue="email"
+        @change="handleChange"
+      />
+      <c-input
+        v-model="phone"
+        label="Telefonnummer (optional)"
+        name="Telefonnummer"
+        type="text"
+        :error="errors.phone"
+      />
+      <c-textarea
+        v-model="message"
+        label="Meine Nachricht"
+        name="Nachricht"
+        rows="5"
+        class="fullwidth"
+        :error="errors.message"
+      />
+      <c-checkbox
+        v-model="callback"
+        label="Bitte rufen Sie mich für die Terminabsprache zurück."
+        name="Rückruf"
+        class="fullwidth"
+        :error="errors.callback"
+      />
+      <c-checkbox
+        v-model="privacy"
+        label="Ich habe die Datenschutzerklärung gelesen und akzeptiert."
+        name="Datenschutzerklärung"
+        class="fullwidth"
+        :error="errors.privacy"
+      />
+    </div>
+    <c-button type="submit">Nachricht abschicken</c-button>
+    <div
+      v-if="notification"
+      class="notification"
+      aria-live="assertive"
     >
-      <div hidden>
-        <label>
-          Don’t fill this out if you're human:
-          <input name="bot-field" />
-        </label>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
+          />
+        </svg>
       </div>
-      <div class="salutation">
-        <h4>Anrede</h4>
-        <c-radio-group
-          v-model="salutations"
-          name="Anrede"
-          :options="options"
-          :error="errors.salutations"
-        />
+      <div>
+        <h4>Vielen Dank für Ihre Nachricht</h4>
+        <p>Wir werden uns schnellstmöglich bei Ihnen zurück melden.</p>
       </div>
-      <div class="data">
-        <h4 class="fullwidth">Meine persönlichen Daten</h4>
-        <c-input
-          v-model="fname"
-          label="Vorname"
-          name="Vorname"
-          type="text"
-          :error="errors.fname"
-        />
-        <c-input
-          v-model="lname"
-          label="Nachname"
-          name="Nachname"
-          type="text"
-          :error="errors.lname"
-        />
-        <c-input
-          label="E-Mail"
-          name="E-Mail"
-          type="email"
-          :error="errors.email"
-          :modelValue="email"
-          @change="handleChange"
-        />
-        <c-input
-          v-model="phone"
-          label="Telefonnummer (optional)"
-          name="Telefonnummer"
-          type="text"
-          :error="errors.phone"
-        />
-        <c-textarea
-          v-model="message"
-          label="Meine Nachricht"
-          name="Nachricht"
-          rows="5"
-          class="fullwidth"
-          :error="errors.message"
-        />
-        <c-checkbox
-          v-model="callback"
-          label="Bitte rufen Sie mich für die Terminabsprache zurück."
-          name="Rückruf"
-          class="fullwidth"
-          :error="errors.callback"
-        />
-        <c-checkbox
-          v-model="privacy"
-          label="Ich habe die Datenschutzerklärung gelesen und akzeptiert."
-          name="Datenschutzerklärung"
-          class="fullwidth"
-          :error="errors.privacy"
-        />
-      </div>
-      <c-button type="submit">Nachricht abschicken</c-button>
-      <div
-        v-if="notification"
-        class="notification"
-        aria-live="assertive"
-      >
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
-            />
-          </svg>
-        </div>
-        <div>
-          <h4>Vielen Dank für Ihre Nachricht</h4>
-          <p>Wir werden uns schnellstmöglich bei Ihnen zurück melden.</p>
-        </div>
-      </div>
-    </form>
-  </section>
+    </div>
+  </form>
 </template>
 
 <script setup>
@@ -193,48 +183,6 @@ const submit = handleSubmit((_, { resetForm }) => {
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  font-weight: var(--font-weight-3);
-  gap: var(--size-10);
-  margin-inline: auto;
-  max-inline-size: var(--size-lg);
-  position: relative;
-  width: 100%;
-}
-
-@media (min-width: 1536px) {
-  .container {
-    gap: var(--size-16);
-  }
-}
-
-.container > a[name='contact'] {
-  position: absolute;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-8);
-}
-
-@media (min-width: 768px) {
-  header {
-    align-items: center;
-    text-align: center;
-  }
-}
-
-h3 {
-  font-size: var(--font-size-fluid-3);
-}
-
-p {
-  font-size: var(--font-size-fluid-0);
-}
-
 form {
   display: grid;
   gap: var(--size-16);

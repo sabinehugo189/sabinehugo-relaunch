@@ -1,10 +1,11 @@
 <template>
-  <header>
+  <header :style="[align ? align : '']">
     <component
       :is="titleTag"
       class="headline"
-      >{{ title }}</component
     >
+      {{ title }}
+    </component>
     <p
       v-if="description"
       class="paragraph"
@@ -15,7 +16,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -28,22 +29,46 @@ defineProps({
     type: String,
     default: '',
   },
+  textAlign: {
+    type: String,
+    default: 'start',
+  },
+});
+
+const align = computed(() => {
+  let align;
+
+  switch (props.textAlign) {
+    case 'center':
+      align = 'center';
+      break;
+    case 'left':
+      align = 'flex-start';
+      break;
+    case 'right':
+      align = 'flex-end';
+      break;
+    default:
+      align = 'normal';
+  }
+
+  return props.textAlign
+    ? `--align: ${align}; --text-align: ${props.textAlign};`
+    : '';
 });
 </script>
 
 <style scoped>
 header {
-  align-items: center;
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
-  text-align: center;
 }
 
 @media (min-width: 768px) {
   header {
-    align-items: center;
-    text-align: center;
+    align-items: var(--align);
+    text-align: var(--text-align);
   }
 }
 

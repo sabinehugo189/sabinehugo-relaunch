@@ -130,7 +130,7 @@
           </span>
         </p>
         <NuxtLink
-          :to="props.link"
+          :to="link"
           target="_blank"
           class="btn is-secondary is-small"
         >
@@ -146,11 +146,7 @@
 
 import { buildImageUrl } from 'cloudinary-build-url';
 
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
+defineProps({
   link: {
     type: String,
     required: true,

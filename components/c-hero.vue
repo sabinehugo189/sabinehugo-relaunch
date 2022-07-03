@@ -80,12 +80,10 @@ const { getHeaderHeight } = useHeaderHeight();
 
 const cvHeaderHeight = useCssVar('--header-height', hero);
 
-watch(
-  () => getHeaderHeight.value,
-  (headerHeight) => {
-    cvHeaderHeight.value = `${parseInt(headerHeight)}px`;
-  },
-);
+watchEffect(() => {
+  const headerHeight = parseInt(getHeaderHeight.value);
+  cvHeaderHeight.value = `${headerHeight}px`;
+});
 </script>
 
 <style scoped>
@@ -140,7 +138,7 @@ p {
     background-position: bottom right;
     background-size: 55%;
     justify-content: center;
-    min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-5));
+    min-block-size: calc(100vh - var(--header-height, 68px) - var(--size-5));
     padding-block-start: var(--size-5);
   }
 

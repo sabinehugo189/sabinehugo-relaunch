@@ -46,7 +46,6 @@ const input = useVModel(props, 'modelValue', emit);
 <style scoped>
 .field {
   appearance: none;
-  background-color: white;
   display: grid;
   gap: 0.5em;
   grid-template-columns: 1.5em auto;
