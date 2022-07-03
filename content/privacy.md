@@ -5,7 +5,8 @@ label: 'Datenschutz'
 navigation: false
 ---
 
-::c-prose
+::c-section
+:::c-prose
 ## Datenschutz
 
 ### 1. Datenschutz auf einen Blick
@@ -265,4 +266,5 @@ Sie können die Speicherung von Cookies durch eine entsprechende Einstellung
 Ihrer Browsersoftware verhindern; wir weisen Sie jedoch darauf hin, dass Sie in
 diesem Fall ggf. nicht sämtliche Funktionen dieser Webseite vollumfänglich
 werden nutzen können.
+:::
 ::

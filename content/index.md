@@ -3,9 +3,9 @@ title: 'Invisalign® - unsichtbare Zahnspange | Praxis Dr. Hugo'
 description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbare Zahnspangen. ✆ Jetzt Termin für Ihre Invisalign®-Behandlung vereinbaren!'
 ---
 
-::c-usp
+::c-section
+:::c-usp
 ---
-title: 'Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.'
 items: [
   {
     iconName: 'aesthetic',
@@ -29,15 +29,31 @@ items: [
   },
 ]
 ---
-:::c-usp-picture
+:::
+
+#header
+:::c-section-header-alt
+---
+title: 'Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.'
+---
+
+::::c-section-header-picture
 ---
 imgName: 'invisalign.jpg' 
 ---
+::::
 :::
 ::
 
-::c-teaser
+::c-section
+---
+'max-inline-size': 'md'
+---
+
 :::c-prose
+---
+'text-align': 'center'
+---
 <p class="lead">
   Sie wünschen sich ein schönes Lachen? Gerne berate ich Sie ausführlich. Machen
   Sie heute noch einen Termin in unserer Fachpraxis für Invisalign® in Würzburg
@@ -48,9 +64,13 @@ imgName: 'invisalign.jpg'
 :::
 ::
 
-::c-carousel
+::c-section
 ---
-title: 'Ist eine Invisalign® Zahnspange die richtige Lösung für mich?'
+'is-fullbleed': true
+---
+
+:::c-carousel
+---
 cards: {
   card-01: {
     head: 'Ich habe als Jugendliche keine Spange getragen. Heute bereue ich das.',
@@ -86,10 +106,26 @@ cards: {
   },
 }
 ---
+:::
+
+#header
+:::c-section-header
+---
+'text-align': 'center'
+title: 'Ist eine Invisalign® Zahnspange die richtige Lösung für mich?'
+---
+:::
 ::
 
-::c-teaser
+::c-section
+---
+'max-inline-size': 'md'
+---
+
 :::c-prose
+---
+'text-align': 'center'
+---
 <p class="lead">
   Sie interessieren sich für eine Behandlung mit Invisalign®? Gerne berate ich
   Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
@@ -213,9 +249,13 @@ imgAlt: 'Mund mit Invisalign in Nahaufnahme'
 :::
 ::
 
-::c-steps
+::c-section
 ---
-title: 'In 3 Schritten zum strahlenden Lächeln.'
+'is-fullbleed': true
+---
+
+:::c-steps
+---
 steps: {
   step01: {
     title: 'Beginn',
@@ -246,10 +286,26 @@ steps: {
   },
 }
 ---
+:::
+
+#header
+:::c-section-header
+---
+'text-align': 'center'
+title: 'In 3 Schritten zum strahlenden Lächeln.'
+---
+:::
 ::
 
-::c-teaser
+::c-section
+---
+'max-inline-size': 'md'
+---
+
 :::c-prose
+---
+'text-align': 'center'
+---
 <p class="lead">
   Sie haben eine Frage zum Ablauf der Invisalign® Behandlung? Gerne berate ich
   Sie ausführlich. Machen Sie heute noch einen Termin in unserer Fachpraxis für
@@ -289,7 +345,8 @@ imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis'
 :::
 ::
 
-::c-icons
+::c-section
+:::c-icons
 ---
 icons: [
   {
@@ -310,11 +367,17 @@ icons: [
   },
 ]
 ---
+:::
 ::
 
-::c-faq
+::c-section
 ---
-title: 'Das werden wir häufig gefragt' 
+'is-fullbleed': true
+'max-inline-size': 'md'
+---
+
+:::c-faq
+---
 questions: {
   section01: {
     question: 'Übernimmt die Krankenkasse die Invisalign Behandlung?',
@@ -349,11 +412,30 @@ questions: {
   },
 }
 ---
+:::
+
+#header
+:::c-section-header
+---
+title: 'Das werden wir häufig gefragt' 
+---
+:::
 ::
 
-::c-contact-form
+::c-section
 ---
+anchor: 'contact' 
+'max-inline-size': 'lg'
+---
+:::c-contact-form
+:::
+
+#header
+:::c-section-header
+---
+'text-align': 'center'
 title: Sie interessieren sich für eine Behandlung mit Invisalign® Zahnschienen?
 description: Machen Sie jetzt einen Termin zu einem Beratungsgespräch aus. Gemeinsam besprechen wir das gewünschte Ergebnis. Freuen Sie sich auf ein schöneres Lächeln! Rufen Sie an unter +49 931 99 147 070 oder schicken Sie uns eine E-Mail. Wir melden uns innerhalb eines Werktags bei Ihnen.
 ---
+:::
 ::

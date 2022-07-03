@@ -5,7 +5,8 @@ label: 'Impressum'
 navigation: false
 ---
 
-::c-prose
+::c-section
+:::c-prose
 ## Impressum
 
 ### Dr. med. Sabine Hugo
@@ -92,4 +93,5 @@ die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als
 solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung
 aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
 von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+:::
 ::

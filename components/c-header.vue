@@ -63,7 +63,6 @@
   queryContent,
   fetchContentNavigation,
   useBreakpoints,
-  useElementSize,
   useHeaderHeight,
   useHeaderIsSticky
   useMenuIsVisible
@@ -108,10 +107,17 @@ const { setHeaderHeight } = useHeaderHeight();
 const { getHeaderIsSticky } = useHeaderIsSticky();
 const { getMenuIsVisible, setMenuIsVisible } = useMenuIsVisible();
 
+const isMounted = useMounted();
 const header = ref(null);
-const { height: headerHeight } = useElementSize(header);
 
-setHeaderHeight(headerHeight);
+watch(
+  () => isMounted.value,
+  (mounted) => {
+    if (mounted) {
+      setHeaderHeight(header.value.offsetHeight);
+    }
+  },
+);
 
 const closeMenu = () => {
   if (getMenuIsVisible.value) {

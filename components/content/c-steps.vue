@@ -1,34 +1,25 @@
 <template>
-  <section class="container">
-    <header>
-      <h2>{{ props.title }}</h2>
-    </header>
-    <ol class="steps">
-      <li
-        v-for="(step, index) in steps"
-        :key="`step-${uid}-${index}`"
-        class="step"
-      >
-        <h3>{{ step.title }}</h3>
-        <ul>
-          <li
-            v-for="(item, idx) in step.items"
-            :key="`item-${uid}-${index}-${idx}`"
-          >
-            {{ item }}
-          </li>
-        </ul>
-      </li>
-    </ol>
-  </section>
+  <ol class="steps">
+    <li
+      v-for="(step, index) in steps"
+      :key="`step-${uid}-${index}`"
+      class="step"
+    >
+      <h3>{{ step.title }}</h3>
+      <ul>
+        <li
+          v-for="(item, idx) in step.items"
+          :key="`item-${uid}-${index}-${idx}`"
+        >
+          {{ item }}
+        </li>
+      </ul>
+    </li>
+  </ol>
 </template>
 
 <script setup>
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
+defineProps({
   steps: {
     type: Object,
     required: true,

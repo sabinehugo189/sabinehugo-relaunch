@@ -1,30 +1,23 @@
 <template>
-  <section class="container">
-    <header>
-      <h2 id="carouselhead">
-        {{ props.title }}
-      </h2>
-    </header>
-    <Splide
-      :options="options"
-      aria-labeledby="carouselhead"
-      class="carousel"
+  <Splide
+    :options="options"
+    aria-labeledby="carouselhead"
+    class="carousel"
+  >
+    <SplideSlide
+      v-for="(card, index) in cards"
+      :key="`card-${uid}-${index}`"
     >
-      <SplideSlide
-        v-for="(card, index) in cards"
-        :key="`card-${uid}-${index}`"
-      >
-        <c-card
-          :head="card.head"
-          :body="card.body"
-          :img-name="card.imgName"
-          :img-alt="card.imgAlt"
-          :img-height="card.imgHeight"
-          :img-width="card.imgWidth"
-        />
-      </SplideSlide>
-    </Splide>
-  </section>
+      <c-card
+        :head="card.head"
+        :body="card.body"
+        :img-name="card.imgName"
+        :img-alt="card.imgAlt"
+        :img-height="card.imgHeight"
+        :img-width="card.imgWidth"
+      />
+    </SplideSlide>
+  </Splide>
 </template>
 
 <script setup>
@@ -32,11 +25,7 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 /* eslint-disable-next-line import/no-unresolved */
 import '@splidejs/vue-splide/css/core';
 
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
+defineProps({
   cards: {
     type: Object,
     required: true,

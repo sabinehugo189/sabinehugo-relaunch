@@ -71,7 +71,7 @@ function toggleOpen() {
 h3 {
   color: var(--gray-6);
   font-size: var(--font-size-3);
-  max-inline-size: var(--size-content-3);
+  max-inline-size: none;
 }
 
 h3 > button {
