@@ -3,9 +3,9 @@ title: 'Invisalign® - unsichtbare Zahnspange | Praxis Dr. Hugo'
 description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbare Zahnspangen. ✆ Jetzt Termin für Ihre Invisalign®-Behandlung vereinbaren!'
 ---
 
-::c-usp
+::c-section
+:::c-usp
 ---
-title: 'Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.'
 items: [
   {
     iconName: 'aesthetic',
@@ -29,10 +29,19 @@ items: [
   },
 ]
 ---
-:::c-usp-picture
+:::
+
+#header
+:::c-section-header-alt
+---
+title: 'Ein schöneres Lächeln in wenigen Monaten. Mit Invisalign®.'
+---
+
+::::c-section-header-picture
 ---
 imgName: 'invisalign.jpg' 
 ---
+::::
 :::
 ::
 
