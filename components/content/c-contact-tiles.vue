@@ -131,6 +131,7 @@
         </p>
         <NuxtLink
           :to="link"
+          download=""
           target="_blank"
           class="btn is-secondary is-small"
         >
