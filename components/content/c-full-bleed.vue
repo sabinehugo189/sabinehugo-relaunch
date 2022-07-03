@@ -1,18 +1,11 @@
 <template>
   <section class="container">
-    <header v-if="title">
-      <component
-        :is="titleTag"
-        class="headline"
-        >{{ title }}</component
-      >
-      <p
-        v-if="description"
-        class="paragraph"
-      >
-        {{ description }}
-      </p>
-    </header>
+    <c-component-header
+      v-if="title"
+      :title="title"
+      :title-tag="titleTag"
+      :description="description"
+    />
     <Markdown />
   </section>
 </template>
