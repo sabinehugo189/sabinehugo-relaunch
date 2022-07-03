@@ -89,6 +89,8 @@ const size = computed(() => {
 }
 
 a.anchor {
+  left: 0;
   position: absolute;
+  top: 0;
 }
 </style>

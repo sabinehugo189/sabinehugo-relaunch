@@ -11,7 +11,7 @@
     <p>{{ data.description }}</p>
     <div class="cta-bar">
       <NuxtLink
-        to="#contact"
+        :to="data.link"
         class="btn"
       >
         {{ data.label }}
@@ -34,7 +34,7 @@ import { buildImageUrl } from 'cloudinary-build-url';
 const { data } = await useAsyncData('hero', () => {
   return queryContent('_hero')
     .where({ _partial: true })
-    .only(['image', 'title', 'subtitle', 'description', 'label'])
+    .only(['image', 'title', 'subtitle', 'description', 'label', 'link'])
     .findOne();
 });
 
