@@ -421,8 +421,7 @@ link: '/anfahrt.pdf'
 :::c-section-header
 ---
 'text-align': 'center'
-title: 'Sie interessieren sich für eine Behandlung mit Invisalign® Zahnschienen?
-description: Machen Sie jetzt einen Termin zu einem Beratungsgespräch aus. Gemeinsam besprechen wir das gewünschte Ergebnis. Freuen Sie sich auf ein schöneres Lächeln! Rufen Sie an unter +49 931 99 147 070 oder schicken Sie uns eine E-Mail. Wir melden uns innerhalb eines Werktags bei Ihnen.'
+title: 'Sie interessieren sich für eine Behandlung mit Invisalign® Zahnschienen?'
 ---
 :::
 ::
