@@ -58,7 +58,7 @@ title: 'So erreichen Sie uns'
 ---
 icons: [
   {
-    iconName: 'parodontologie',
+    iconName: 'invisalign2_oujmvy',
     caption: 'Alignerbehandlung',
   },
   {
@@ -66,7 +66,7 @@ icons: [
     caption: 'Keramischer Zahnersatz',
   },
   {
-    iconName: 'keramischer-zahnersatz',
+    iconName: 'frontzahngestaltung_y6nxva',
     caption: 'Frontzahngestaltung',
   },
   {
@@ -81,7 +81,7 @@ icons: [
 :::c-section-header
 ---
 'text-align': 'center'
-title: 'Unsere Leistungen für Ihre Zahngesundheit!'
+title: 'Unsere Leistungen für Ihre Zahngesundheit'
 ---
 :::
 
@@ -91,7 +91,7 @@ title: 'Unsere Leistungen für Ihre Zahngesundheit!'
 ---
 icons: [
   {
-    iconName: 'parodontologie',
+    iconName: 'laserbehandlungen',
     caption: 'Laserbehandlungen',
   },
   {
@@ -110,11 +110,12 @@ icons: [
 ---
 :::
 
+
 #header
 :::c-section-header
 ---
 'text-align': 'center'
-title: 'Unsere Leistungen für mehr Wohlbefinden und Ästhetik!'
+title: 'Unsere Leistungen für mehr Wohlbefinden und Ästhetik'
 ---
 :::
 ::
