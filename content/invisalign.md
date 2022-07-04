@@ -355,31 +355,6 @@ imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis'
 ::
 
 ::c-section
-:::c-icons
----
-icons: [
-  {
-    iconName: 'prophylaxe',
-    caption: 'Prophylaxe',
-  },
-  {
-    iconName: 'parodontologie',
-    caption: 'Parodontologie',
-  },
-  {
-    iconName: 'bleaching',
-    caption: 'Bleaching',
-  },
-  {
-    iconName: 'wurzelkanalbehandlung',
-    caption: 'Wurzelkanalbehandlung',
-  },
-]
----
-:::
-::
-
-::c-section
 ---
 'is-fullbleed': true
 'max-inline-size': 'md'
@@ -436,8 +411,6 @@ title: 'Das werden wir häufig gefragt'
 anchor: 'contact' 
 'max-inline-size': 'lg'
 ---
-:::c-contact-form
-:::
 
 #header
 :::c-section-header
@@ -445,6 +418,12 @@ anchor: 'contact'
 'text-align': 'center'
 title: Sie interessieren sich für eine Behandlung mit Invisalign® Zahnschienen?
 description: Machen Sie jetzt einen Termin zu einem Beratungsgespräch aus. Gemeinsam besprechen wir das gewünschte Ergebnis. Freuen Sie sich auf ein schöneres Lächeln! Rufen Sie an unter +49 931 99 147 070 oder schicken Sie uns eine E-Mail. Wir melden uns innerhalb eines Werktags bei Ihnen.
+---
+:::
+
+:::c-contact-tiles
+---
+link: '/anfahrt.pdf'
 ---
 :::
 ::
