@@ -1,38 +1,44 @@
 <template>
-  <div v-if="mounted">
+  <main
+    :class="{
+      'is-plain': getPageIsPlain,
+    }"
+  >
     <ContentDoc />
-  </div>
+  </main>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'home',
-});
+/* global usePageIsPlain */
 
-const mounted = useMounted();
-const route = useRoute();
-const [slug = 'home'] = route.params.slug;
-
-watch(
-  () => mounted.value,
-  (mounted) => {
-    if (mounted) {
-      switch (slug) {
-        case 'home':
-          route.meta.layout = 'home';
-          break;
-
-        default:
-          route.meta.layout = 'default';
-          break;
-      }
-    }
-  },
-);
+const { getPageIsPlain } = usePageIsPlain();
 </script>
 
 <style scoped>
-:deep(div[excerpt]) {
+main {
+  margin-inline: auto;
+  max-inline-size: var(--size-xxxl);
+  padding-inline: var(--size-10);
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  main {
+    padding-inline: var(--size-30);
+  }
+}
+
+@media (min-width: 1536px) {
+  main {
+    padding-inline: var(--size-50);
+  }
+}
+
+main.is-plain {
+  padding-block-start: var(--size-16);
+}
+
+main > :deep(div) {
   display: flex;
   flex-direction: column;
   row-gap: var(--size-48);

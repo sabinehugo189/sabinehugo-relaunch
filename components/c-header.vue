@@ -3,8 +3,8 @@
     ref="header"
     class="js-header"
     :class="{
-      'is-plain': isPlain,
       'is-menu': getMenuIsVisible,
+      'is-plain': getPageIsPlain,
       'is-sticky': getHeaderIsSticky,
     }"
   >
@@ -60,12 +60,12 @@
 <script setup>
 /*
   global
-  queryContent,
   fetchContentNavigation,
   useBreakpoints,
   useHeaderHeight,
   useHeaderIsSticky
-  useMenuIsVisible
+  useMenuIsVisible,
+  usePageIsPlain
  */
 
 const breakpoints = useBreakpoints({
@@ -76,36 +76,13 @@ const mdNBelow = breakpoints.smaller('md');
 const mdNAbove = breakpoints.greater('md');
 
 const { data: navigation } = await useAsyncData('navigation', () => {
-  const contentQuery = queryContent().where({
-    _path: { $in: ['/services', '/practice', '/team', '/contact'] },
-  });
-
-  return fetchContentNavigation(contentQuery);
+  return fetchContentNavigation();
 });
-
-const route = useRoute();
-const [slug = 'home'] = route.params.slug;
-const isPlain = ref(slug === 'imprint' || slug === 'privacy' ? true : false);
-
-watch(
-  () => route.params.slug,
-  ([slug]) => {
-    switch (slug) {
-      case 'imprint':
-      case 'privacy':
-        isPlain.value = true;
-        break;
-
-      default:
-        isPlain.value = false;
-        break;
-    }
-  },
-);
 
 const { setHeaderHeight } = useHeaderHeight();
 const { getHeaderIsSticky } = useHeaderIsSticky();
 const { getMenuIsVisible, setMenuIsVisible } = useMenuIsVisible();
+const { getPageIsPlain } = usePageIsPlain();
 
 const isMounted = useMounted();
 const header = ref(null);
@@ -236,10 +213,6 @@ header.is-menu > .nav-bar :deep(svg > path) {
 }
 
 @media (min-width: 768px) {
-  header {
-    padding-inline: var(--size-10);
-  }
-
   .nav-bar {
     column-gap: var(--size-10);
   }
