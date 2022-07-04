@@ -54,7 +54,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@nuxt/content": "^2.0.0",
+    "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@splidejs/vue-splide": "^0.6.7",
     "@vueuse/core": "^8.2.5",
     "@vueuse/nuxt": "^8.2.5",

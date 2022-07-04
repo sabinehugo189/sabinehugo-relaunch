@@ -9,23 +9,36 @@
       name="top"
     />
     <c-header />
-    <main>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </main>
+    <NuxtPage />
     <c-footer />
   </div>
 </template>
 
 <script setup>
-/* global useHeaderIsSticky */
+/* global useHeaderIsSticky, usePageIsPlain */
 
 const { setHeaderIsSticky } = useHeaderIsSticky();
 const sentinel = ref(null);
 
 useIntersectionObserver(sentinel, ([{ isIntersecting }]) => {
   setHeaderIsSticky(!isIntersecting);
+});
+
+const route = useRoute();
+const { setPageIsPlain } = usePageIsPlain();
+
+watchEffect(() => {
+  const [slug = 'home'] = route.params.slug;
+
+  switch (slug) {
+    case 'imprint':
+    case 'privacy':
+      setPageIsPlain(true);
+      break;
+    default:
+      setPageIsPlain(false);
+      break;
+  }
 });
 </script>
 

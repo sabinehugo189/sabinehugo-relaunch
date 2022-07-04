@@ -19,13 +19,6 @@
   .grid {
     gap: var(--size-10) var(--size-40);
     grid-template-columns: 1fr 1fr;
-    padding-inline: var(--size-20);
-  }
-}
-
-@media (min-width: 1536px) {
-  .grid {
-    padding-inline: var(--size-40);
   }
 }
 </style>

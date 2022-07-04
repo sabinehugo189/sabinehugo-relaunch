@@ -94,6 +94,20 @@ const closeMenu = () => {
   background-color: transparent;
 }
 
+.navigation > li a.router-link-active {
+  cursor: auto;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+}
+
+@media (min-width: 768px) {
+  .navigation > li a.router-link-active {
+    color: var(--text-5);
+  }
+}
+
 @media (min-width: 1920px) {
   .navigation {
     column-gap: var(--size-10);

@@ -1,7 +1,19 @@
 ---
 title: 'Invisalign® - unsichtbare Zahnspange | Praxis Dr. Hugo'
 description: 'Sind Ihre Zähne gerade? ★ Informieren Sie sich über unsichtbare Zahnspangen. ✆ Jetzt Termin für Ihre Invisalign®-Behandlung vereinbaren!'
+navigation: false
 ---
+
+::c-hero
+---
+title: 'Unsichtbare Zahnspange:'
+subtitle: 'Mehr Selbstvertrauen durch gerade Zähne.'
+description: 'Sie sind unzufrieden mit Ihrer Zahnstellung? Mit den unsichtbaren Zahnschienen von Invisalign® ist auch im Erwachsenenalter eine erfolgreiche Behandlung einer Fehlstellung möglich. '
+label: 'Jetzt Termin ausmachen'
+link: '/#contact'
+image: 'hero-invisalign.jpg'
+---
+::
 
 ::c-section
 :::c-usp
