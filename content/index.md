@@ -110,6 +110,12 @@ icons: [
 ---
 :::
 
+:::c-prose
+---
+'text-align': 'center'
+---
+[Alle Leistungen](/services){.btn}
+:::
 
 #header
 :::c-section-header
