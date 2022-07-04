@@ -77,6 +77,13 @@ icons: [
 ---
 :::
 
+:::c-prose
+---
+'text-align': 'center'
+---
+[Alle Leistungen für Ihre Zahngesundheit](/services/#top){.btn}
+:::
+
 #header
 :::c-section-header
 ---
@@ -114,7 +121,7 @@ icons: [
 ---
 'text-align': 'center'
 ---
-[Alle Leistungen](/services){.btn}
+[Alle Leistungen für mehr Ästhetik](/services/#top){.btn}
 :::
 
 #header
