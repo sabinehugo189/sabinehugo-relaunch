@@ -86,6 +86,7 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
 
 @media (min-width: 1280px) {
   .page-top {
+    margin-inline: calc(var(--size-30) * -1);
     min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-10));
     padding-inline: var(--size-30);
   }
@@ -94,6 +95,7 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
 @media (min-width: 1536px) {
   .page-top {
     background-size: contain;
+    margin-inline: calc(var(--size-50) * -1);
     padding-inline: var(--size-50);
   }
 }

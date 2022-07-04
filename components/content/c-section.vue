@@ -61,24 +61,19 @@ const size = computed(() => {
   margin-inline: auto;
   max-inline-size: var(--max-inline-size, 100%);
   row-gap: var(--size-10);
+  width: 100%;
 }
 
 @media (min-width: 1280px) {
-  .container {
-    padding-inline: var(--size-20);
-  }
-
   .container.is-fullbleed {
+    margin-inline: calc(var(--size-30) * -1);
     padding-inline: var(--size-30);
   }
 }
 
 @media (min-width: 1536px) {
-  .container {
-    padding-inline: var(--size-40);
-  }
-
   .container.is-fullbleed {
+    margin-inline: calc(var(--size-50) * -1);
     padding-block: var(--size-30);
     padding-inline: var(--size-50);
   }

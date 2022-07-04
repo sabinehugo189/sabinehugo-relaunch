@@ -5,16 +5,16 @@
     :style="`background-image: url('${url}');`"
   >
     <h1>
-      {{ data.title }}
-      <small>{{ data.subtitle }}</small>
+      {{ title }}
+      <small>{{ subtitle }}</small>
     </h1>
-    <p>{{ data.description }}</p>
+    <p>{{ description }}</p>
     <div class="cta-bar">
       <NuxtLink
-        :to="data.link"
+        :to="link"
         class="btn"
       >
-        {{ data.label }}
+        {{ label }}
       </NuxtLink>
       <img
         :src="src"
@@ -27,15 +27,35 @@
 </template>
 
 <script setup>
-/* global queryContent, useHeaderHeight, useCloudinary, useCssVar */
+/* global useHeaderHeight, useCloudinary, useCssVar */
 
 import { buildImageUrl } from 'cloudinary-build-url';
 
-const { data } = await useAsyncData('hero', () => {
-  return queryContent('_hero')
-    .where({ _partial: true })
-    .only(['image', 'title', 'subtitle', 'description', 'label', 'link'])
-    .findOne();
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  subtitle: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  label: {
+    type: String,
+    required: true,
+  },
+  link: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
 });
 
 const cloudinary = useCloudinary();
@@ -46,7 +66,7 @@ const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
 
 const resize = { type: 'scale' };
 
-const url = buildImageUrl(`${imageUrl}/${data.value.image}`, {
+const url = buildImageUrl(`${imageUrl}/${props.image}`, {
   cloud: {
     cloudName: cloudinary.value.cloudName,
   },
@@ -143,6 +163,7 @@ p {
 @media (min-width: 1280px) {
   .hero {
     background-size: 45%;
+    margin-inline: calc(var(--size-30) * -1);
     min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-10));
     padding-inline: var(--size-30);
   }
@@ -156,6 +177,7 @@ p {
 @media (min-width: 1536px) {
   .hero {
     background-size: contain;
+    margin-inline: calc(var(--size-50) * -1);
     padding-inline: var(--size-50);
   }
 }
