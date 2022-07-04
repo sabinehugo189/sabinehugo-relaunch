@@ -142,6 +142,7 @@ p {
 
 @media (min-width: 1280px) {
   .hero {
+    background-size: 45%;
     min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-10));
     padding-inline: var(--size-30);
   }

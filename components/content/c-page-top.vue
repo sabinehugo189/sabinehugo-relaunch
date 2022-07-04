@@ -66,14 +66,14 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
 }
 
 .page-top::after {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1.618 / 1;
   content: '';
 }
 
 @media (min-width: 1024px) {
   .page-top {
     background-position: bottom right;
-    background-size: 25%;
+    background-size: 45%;
     justify-content: center;
     min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-5));
     padding-block-start: var(--size-5);
