@@ -2,7 +2,7 @@
   <ul class="items">
     <li
       v-for="(item, index) in items"
-      :key="`item-${uid}-${index}`"
+      :key="`item-${index}`"
       class="item"
     >
       <c-usp-item
