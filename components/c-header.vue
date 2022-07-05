@@ -1,9 +1,7 @@
 <template>
   <header
-    ref="header"
-    class="js-header"
+    ref="target"
     :class="{
-      'is-menu': getMenuIsVisible,
       'is-plain': getPageIsPlain,
       'is-sticky': getHeaderIsSticky,
     }"
@@ -11,73 +9,20 @@
     <NuxtLink
       to="/"
       class="logo"
-      @click="closeMenu"
     >
-      <c-logo
-        v-if="getMenuIsVisible"
-        fill="hsl(0deg 0% 98%)"
-        :size="size"
-      />
-      <c-logo
-        v-else
-        :size="size"
-      />
+      <c-logo :size="logoSize" />
     </NuxtLink>
-    <div class="nav-bar">
-      <nav v-if="mdNAbove && navigation.length">
-        <c-navigation :navigation-tree="navigation" />
+    <div class="navigation">
+      <nav v-if="navigation.length">
+        <c-menu :navigation-tree="navigation" />
       </nav>
       <c-utilities />
-      <button
-        v-if="mdNBelow && navigation.length"
-        class="is-link"
-        @click="toggleMenuVisibility"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            v-if="getMenuIsVisible"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-          <path
-            v-if="!getMenuIsVisible"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
     </div>
-    <nav v-if="mdNBelow && getMenuIsVisible">
-      <c-navigation :navigation-tree="navigation" />
-    </nav>
   </header>
 </template>
 
 <script setup>
-/*
-  global
-  fetchContentNavigation,
-  useBreakpoints,
-  useHeaderHeight,
-  useHeaderIsSticky
-  useMenuIsVisible,
-  usePageIsPlain
- */
-
-const breakpoints = useBreakpoints({
-  md: 768,
-});
-
-const mdNBelow = breakpoints.smaller('md');
-const mdNAbove = breakpoints.greater('md');
+/* global fetchContentNavigation, useHeaderHeight, useHeaderIsSticky usePageIsPlain */
 
 const { data: navigation } = await useAsyncData('navigation', () => {
   return fetchContentNavigation();
@@ -85,43 +30,19 @@ const { data: navigation } = await useAsyncData('navigation', () => {
 
 const { setHeaderHeight } = useHeaderHeight();
 const { getHeaderIsSticky } = useHeaderIsSticky();
-const { getMenuIsVisible, setMenuIsVisible } = useMenuIsVisible();
 const { getPageIsPlain } = usePageIsPlain();
 
 const isMounted = useMounted();
-const header = ref(null);
-const size = ref('2.5rem');
-
-watch(
-  () => isMounted.value,
-  (mounted) => {
-    if (mounted) {
-      setHeaderHeight(header.value.offsetHeight);
-    }
-  },
-);
+const logoSize = ref(null);
+const target = ref(null);
 
 watchEffect(() => {
-  size.value = getHeaderIsSticky.value ? '2rem' : '2.5rem';
+  logoSize.value = getHeaderIsSticky.value ? '2rem' : '2.5rem';
+
+  if (isMounted.value) {
+    setHeaderHeight(target.value.offsetHeight);
+  }
 });
-
-const closeMenu = () => {
-  if (getMenuIsVisible.value) {
-    document.body.removeAttribute('style');
-    setMenuIsVisible(!getMenuIsVisible.value);
-  }
-};
-
-const toggleMenuVisibility = () => {
-  if (getMenuIsVisible.value) {
-    document.body.removeAttribute('style');
-  } else {
-    document.body.style.height = '100vh';
-    document.body.style['overflow-y'] = 'hidden';
-  }
-
-  setMenuIsVisible(!getMenuIsVisible.value);
-};
 </script>
 
 <style scoped>
@@ -153,10 +74,6 @@ header::before {
   width: 100%;
 }
 
-header.is-menu > .nav-bar :deep(svg > path) {
-  stroke: var(--text-1);
-}
-
 .is-sticky {
   background-color: hsl(var(--surface-2-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
@@ -173,61 +90,19 @@ header.is-menu > .nav-bar :deep(svg > path) {
   background-color: hsl(var(--surface-1-hsl) / 0.95);
 }
 
-.is-menu {
-  align-items: flex-start;
-  background-color: var(--surface-5);
-  color: var(--text-1);
-  display: grid;
-  grid-template: min-content auto / auto 1fr;
-  grid-template-areas:
-    'logo navbar'
-    'navigation navigation';
-  inset: 0;
-  padding-block-start: var(--size-10);
-  position: fixed;
-  row-gap: var(--size-20);
-}
-
-.is-menu.is-sticky {
-  background-color: var(--surface-5);
-  padding-block-start: var(--size-3);
-}
-
-.is-menu > .logo {
-  grid-area: logo;
-}
-
-.is-menu > .nav-bar {
-  grid-area: navbar;
-  justify-content: flex-end;
-}
-
-.is-menu > nav {
-  grid-area: navigation;
-}
-
 .logo:hover {
   background-color: transparent;
 }
 
-.nav-bar {
+.navigation {
   align-items: center;
   column-gap: var(--size-5);
   display: flex;
 }
 
-.nav-bar > nav {
-  display: flex;
-  order: 1;
-}
-
 @media (min-width: 768px) {
-  .nav-bar {
+  .navigation {
     column-gap: var(--size-10);
-  }
-
-  .nav-bar > nav {
-    order: 0;
   }
 }
 
@@ -247,7 +122,7 @@ header.is-menu > .nav-bar :deep(svg > path) {
     padding-inline: var(--size-50);
   }
 
-  .nav-bar {
+  .navigation {
     column-gap: var(--size-24);
   }
 }
