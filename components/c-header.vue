@@ -16,8 +16,12 @@
       <c-logo
         v-if="getMenuIsVisible"
         fill="hsl(0deg 0% 98%)"
+        :size="size"
       />
-      <c-logo v-else />
+      <c-logo
+        v-else
+        :size="size"
+      />
     </NuxtLink>
     <div class="nav-bar">
       <nav v-if="mdNAbove && navigation.length">
@@ -86,6 +90,7 @@ const { getPageIsPlain } = usePageIsPlain();
 
 const isMounted = useMounted();
 const header = ref(null);
+const size = ref('2.5rem');
 
 watch(
   () => isMounted.value,
@@ -95,6 +100,10 @@ watch(
     }
   },
 );
+
+watchEffect(() => {
+  size.value = getHeaderIsSticky.value ? '2rem' : '2.5rem';
+});
 
 const closeMenu = () => {
   if (getMenuIsVisible.value) {
