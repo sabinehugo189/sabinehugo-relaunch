@@ -23,6 +23,7 @@
         alt=""
       />
     </div>
+    <div class="shaded-edge"></div>
   </div>
 </template>
 
@@ -110,6 +111,7 @@ watchEffect(() => {
   margin-inline: calc(var(--size-10) * -1);
   padding-block: var(--size-11) var(--size-5);
   padding-inline: var(--size-10);
+  position: relative;
 }
 
 .hero::after {
@@ -180,5 +182,12 @@ p {
     margin-inline: calc(var(--size-50) * -1);
     padding-inline: var(--size-50);
   }
+}
+
+.shaded-edge {
+  box-shadow: inset 0 -0.5em 0.5em -0.5em hsl(0deg 0% 0% / 0.1);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 </style>
