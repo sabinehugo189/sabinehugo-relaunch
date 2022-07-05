@@ -10,7 +10,7 @@ subtitle: 'Für schöne Zähne und mehr Wohlbefinden'
 description: 'Sie benötigen eine zahnärztliche oder kieferorthopädische Leistung oder wünschen sich eine ästhetisch-medizinische Anwendung? In meiner Würzburger Zahnarztpraxis und Arztpraxis berate ich Sie ausführlich zu Behandlungsoptionen.'
 label: 'Jetzt Termin vereinbaren'
 link: '/contact/#contact'
-image: 'hero-frontpage.png'
+image: 'hero-frontpage-2.png'
 ---
 ::
 
