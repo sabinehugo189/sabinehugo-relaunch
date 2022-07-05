@@ -117,6 +117,8 @@ watchEffect(() => {
 .hero::after {
   aspect-ratio: 1 / 1;
   content: '';
+  margin-block-end: calc(var(--size-5) * -1);
+  margin-inline: calc(var(--size-10) * -1);
 }
 
 h1 {
