@@ -4,10 +4,6 @@
       ref="sentinel"
       class="sentinel"
     ></div>
-    <a
-      id="top"
-      name="top"
-    />
     <c-header />
     <NuxtPage />
     <c-footer />
@@ -51,12 +47,6 @@ watchEffect(() => {
 
 .sentinel {
   display: flex;
-}
-
-#top {
-  left: 0;
-  position: absolute;
-  top: 0;
 }
 
 @media (min-width: 1280px) {

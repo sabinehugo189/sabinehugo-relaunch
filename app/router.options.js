@@ -12,6 +12,11 @@ export default {
             behavior: 'smooth',
           });
         }, 250);
+      } else {
+        resolve({
+          top: 0,
+          behavior: 'smooth',
+        });
       }
     });
   },

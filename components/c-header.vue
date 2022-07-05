@@ -9,7 +9,7 @@
     }"
   >
     <NuxtLink
-      to="/#top"
+      to="/"
       class="logo"
       @click="closeMenu"
     >
