@@ -1,37 +1,33 @@
 <template>
-  <div class="container">
-    <div class="container-inner">
-      <footer>
-        <c-logo fill="hsl(0deg 0% 98%)" />
-        <ul>
-          <li>
-            <h4>Kontakt</h4>
-            <c-address-block />
-          </li>
-          <li>
-            <h4>Öffnungszeiten</h4>
-            <c-opening-hours />
-          </li>
-          <li>
-            <h4>Wichtige Informationen</h4>
-            <c-link-list />
-          </li>
-          <li>
-            <h4>Social Media</h4>
-            <c-social-bar />
-            <img
-              :src="src"
-              width="228"
-              height="138"
-              alt=""
-              class="quality-seal"
-            />
-          </li>
-        </ul>
-      </footer>
-    </div>
+  <footer>
+    <c-logo fill="hsl(0deg 0% 98%)" />
+    <ul>
+      <li>
+        <h4>Kontakt</h4>
+        <c-address-block />
+      </li>
+      <li>
+        <h4>Öffnungszeiten</h4>
+        <c-opening-hours />
+      </li>
+      <li>
+        <h4>Wichtige Informationen</h4>
+        <c-link-list />
+      </li>
+      <li>
+        <h4>Social Media</h4>
+        <c-social-bar />
+        <img
+          :src="src"
+          width="228"
+          height="138"
+          alt=""
+          class="quality-seal"
+        />
+      </li>
+    </ul>
     <div class="shaded-edge"></div>
-  </div>
+  </footer>
 </template>
 
 <script setup>
@@ -60,17 +56,19 @@ const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
 </script>
 
 <style scoped>
-.container {
+footer {
+  background-color: var(--surface-5);
+  color: var(--text-1);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-2);
+  gap: var(--size-12);
   margin-block-start: var(--size-48);
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
+  padding: var(--size-20) var(--size-10);
   position: relative;
   width: 100%;
-}
-
-.container-inner {
-  margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
 }
 
 .shaded-edge {
@@ -80,27 +78,18 @@ const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
   position: absolute;
 }
 
-footer {
-  background-color: var(--surface-5);
-  color: var(--text-1);
-  display: flex;
-  flex-direction: column;
-  font-size: var(--font-size-2);
-  gap: var(--size-12);
-  margin-inline: auto;
-  max-inline-size: var(--size-xxxl);
-  padding: var(--size-20) var(--size-10);
+footer > :deep(svg) {
+  align-self: flex-start;
 }
 
-footer > ul {
-  display: flex;
-  flex-direction: column;
+ul {
+  display: grid;
   gap: var(--size-16);
   list-style: none;
   padding-inline-start: 0;
 }
 
-footer > ul > li {
+li {
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
@@ -113,8 +102,7 @@ h4 {
 }
 
 @media (min-width: 1024px) {
-  footer > ul {
-    display: grid;
+  ul {
     gap: var(--size-8);
     grid-template-columns: repeat(4, 1fr);
   }
@@ -125,10 +113,6 @@ h4 {
     font-size: var(--font-size-3);
     gap: var(--size-16);
     padding: var(--size-20) var(--size-30);
-  }
-
-  .quality-seal {
-    margin-block-start: var(--size-12);
   }
 }
 
