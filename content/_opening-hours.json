@@ -2,12 +2,12 @@
   "opening-hours": [
     {
       "id": "monday-01",
-      "day": "Mo – Mi",
+      "day": "Mo – Di",
       "time": [
         {
           "id": "monday-01-time-01",
           "datetime": "PT4H30M",
-          "label": "08:30 - 13:00 Uhr"
+          "label": "08:00 - 13:00 Uhr"
         },
         {
           "id": "monday-01-time-02",
@@ -17,13 +17,24 @@
       ]
     },
     {
+        "id": "wednesday-03",
+        "day": "Mi",
+        "time": [
+          {
+            "id": "wednesday-03-time-01",
+            "datetime": "PT4H30M",
+            "label": "08:30 - 15:00 Uhr"
+          }
+        ]
+      },
+    {
       "id": "thursday-04",
       "day": "Do",
       "time": [
         {
           "id": "thursday-04-time-01",
           "datetime": "PT5H",
-          "label": "09:00 - 14:00 Uhr"
+          "label": "09:00 - 16:00 Uhr"
         }
       ]
     },
@@ -34,7 +45,7 @@
         {
           "id": "friday-05-time-01",
           "datetime": "PT4H",
-          "label": "09:00 - 13:00 Uhr"
+          "label": "08:00 - 13:00 Uhr"
         }
       ]
     }
