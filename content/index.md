@@ -1,6 +1,7 @@
 ---
 title: 'Zahnarztpraxis in Würzburg | Praxis Dr. Hugo'
 description: 'Ihre Zahnarztpraxis in der Würzburger Innenstadt ★ Zahnbehandlungen ★ Dermatologische Ästhetik und mehr ★ Hier informieren und Termin vereinbaren!'
+navigation: false
 ---
 
 ::c-hero
