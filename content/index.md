@@ -93,7 +93,7 @@ icons: [
 ---
 'text-align': 'center'
 ---
-[Alle Leistungen für Ihre Zahngesundheit](/services){.btn}
+[Alle Leistungen für Ihre Zahngesundheit](/leistungen/services){.btn}
 :::
 
 #header
@@ -133,7 +133,7 @@ icons: [
 ---
 'text-align': 'center'
 ---
-[Alle Leistungen für mehr Ästhetik](/services){.btn}
+[Alle Leistungen für mehr Ästhetik](/leistungen/services){.btn}
 :::
 
 #header
