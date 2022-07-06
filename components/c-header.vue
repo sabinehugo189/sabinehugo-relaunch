@@ -13,16 +13,31 @@
       <c-logo :size="logoSize" />
     </NuxtLink>
     <div class="navigation">
-      <nav v-if="navigation.length">
-        <c-menu :navigation-tree="navigation" />
+      <nav v-if="navigation.length && lgNAbove">
+        <c-navigation :navigation-tree="navigation" />
       </nav>
       <c-utilities />
+      <nav v-if="navigation.length && lgNBelow">
+        <c-menu>
+          <c-navigation :navigation-tree="navigation" />
+        </c-menu>
+      </nav>
     </div>
   </header>
 </template>
 
 <script setup>
-/* global fetchContentNavigation, useHeaderHeight, useHeaderIsSticky usePageIsPlain */
+/* global fetchContentNavigation, useBreakpoints, useHeaderHeight, 
+          useHeaderIsSticky usePageIsPlain */
+
+const breakpoints = useBreakpoints({
+  md: 768,
+  lg: 1024,
+});
+
+const mdNBelow = breakpoints.smaller('md');
+const lgNBelow = breakpoints.smaller('lg');
+const lgNAbove = breakpoints.greater('lg');
 
 const { data: navigation } = await useAsyncData('navigation', () => {
   return fetchContentNavigation();
@@ -37,7 +52,11 @@ const logoSize = ref(null);
 const target = ref(null);
 
 watchEffect(() => {
-  logoSize.value = getHeaderIsSticky.value ? '2rem' : '2.5rem';
+  logoSize.value = getHeaderIsSticky.value
+    ? '2rem'
+    : mdNBelow.value
+    ? '2rem'
+    : '2.5rem';
 
   if (isMounted.value) {
     setHeaderHeight(target.value.offsetHeight);
@@ -55,7 +74,7 @@ header {
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
   padding-block: var(--size-3);
-  padding-inline: var(--size-10);
+  padding-inline: var(--size-5);
   position: sticky;
   top: 0;
   transition: background-color 300ms var(--ease-2),
@@ -90,8 +109,8 @@ header::before {
   background-color: hsl(var(--surface-1-hsl) / 0.95);
 }
 
-.logo:hover {
-  background-color: transparent;
+.logo {
+  background-color: transparent !important;
 }
 
 .navigation {
@@ -100,7 +119,17 @@ header::before {
   display: flex;
 }
 
+.navigation > nav {
+  display: flex;
+}
+
 @media (min-width: 768px) {
+  header {
+    padding-inline: var(--size-10);
+  }
+}
+
+@media (min-width: 1024px) {
   .navigation {
     column-gap: var(--size-10);
   }

@@ -36,3 +36,8 @@
   animation-duration: 0.7s, 1s;
   opacity: 0;
 }
+
+.scrollstop {
+  block-size: 100vh;
+  overflow-y: hidden;
+}
