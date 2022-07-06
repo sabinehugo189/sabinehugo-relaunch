@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   fill: {
     type: String,
     default: null,
@@ -91,8 +91,6 @@ const props = defineProps({
   },
 });
 
-const { fill, size } = toRefs(props);
-
 // Generate random ID
 const { uid: rid } = getCurrentInstance();
 const uid = `logoSabineHugo${rid}`;
@@ -100,14 +98,15 @@ const uid = `logoSabineHugo${rid}`;
 
 <style scoped>
 svg {
+  block-size: var(--size, var(--size-8));
   fill: var(--fill, var(--text-4));
-  inline-size: var(--size, var(--size-40));
+  inline-size: auto;
   stroke: none;
 }
 
 @media (min-width: 1280px) {
   svg {
-    inline-size: var(--size, var(--size-64));
+    block-size: var(--size, var(--size-10));
   }
 }
 

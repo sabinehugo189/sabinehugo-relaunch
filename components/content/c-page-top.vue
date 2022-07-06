@@ -59,15 +59,22 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
-  margin-inline: calc(var(--size-10) * -1);
+  margin-inline: calc(var(--size-5) * -1);
   padding-block: var(--size-16) var(--size-8);
-  padding-inline: var(--size-10);
+  padding-inline: var(--size-5);
   position: relative;
 }
 
 .page-top::after {
   aspect-ratio: 1.618 / 1;
   content: '';
+}
+
+@media (min-width: 768px) {
+  .page-top {
+    margin-inline: calc(var(--size-10) * -1);
+    padding-inline: var(--size-10);
+  }
 }
 
 @media (min-width: 1024px) {

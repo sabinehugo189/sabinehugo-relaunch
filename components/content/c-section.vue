@@ -49,9 +49,9 @@ const size = computed(() => {
 
 .container.is-fullbleed {
   background-color: var(--surface-2);
-  margin-inline: calc(var(--size-10) * -1);
+  margin-inline: calc(var(--size-5) * -1);
   padding-block: var(--size-20);
-  padding-inline: var(--size-10);
+  padding-inline: var(--size-5);
 }
 
 .inner {
@@ -62,6 +62,13 @@ const size = computed(() => {
   max-inline-size: var(--max-inline-size, 100%);
   row-gap: var(--size-10);
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container.is-fullbleed {
+    margin-inline: calc(var(--size-10) * -1);
+    padding-inline: var(--size-10);
+  }
 }
 
 @media (min-width: 1280px) {

@@ -108,9 +108,9 @@ watchEffect(() => {
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
-  margin-inline: calc(var(--size-10) * -1);
+  margin-inline: calc(var(--size-5) * -1);
   padding-block: var(--size-11) var(--size-5);
-  padding-inline: var(--size-10);
+  padding-inline: var(--size-5);
   position: relative;
 }
 
@@ -118,7 +118,7 @@ watchEffect(() => {
   aspect-ratio: 1 / 1;
   content: '';
   margin-block-end: calc(var(--size-5) * -1);
-  margin-inline: calc(var(--size-10) * -1);
+  margin-inline: calc(var(--size-5) * -1);
 }
 
 h1 {
@@ -148,6 +148,17 @@ p {
 
 .cta-bar > a {
   align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin-inline: calc(var(--size-10) * -1);
+    padding-inline: var(--size-10);
+  }
+
+  .hero::after {
+    margin-inline: calc(var(--size-10) * -1);
+  }
 }
 
 @media (min-width: 1024px) {

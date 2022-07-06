@@ -22,6 +22,7 @@
       :class="[
         getHeaderIsSticky && xxxlNAbove ? 'btn is-small' : 'link link-contact',
       ]"
+      @click="onClick"
     >
       <svg
         aria-labelledby="emailSabineHugo"
@@ -40,15 +41,23 @@
 </template>
 
 <script setup>
-/* global useBreakpoints, useHeaderIsSticky */
+/* global useBreakpoints, useHeaderIsSticky useMenuIsOpen */
 
 const { getHeaderIsSticky } = useHeaderIsSticky();
+const { getMenuIsOpen, setMenuIsOpen } = useMenuIsOpen();
 
 const breakpoints = useBreakpoints({
   '3xl': 1920,
 });
 
 const xxxlNAbove = breakpoints.greater('3xl');
+
+function onClick() {
+  if (getMenuIsOpen.value) {
+    document.body.classList.remove('scrollstop');
+    setMenuIsOpen(!getMenuIsOpen.value);
+  }
+}
 </script>
 
 <style scoped>
