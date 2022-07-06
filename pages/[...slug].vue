@@ -18,8 +18,14 @@ const { getPageIsPlain } = usePageIsPlain();
 main {
   margin-inline: auto;
   max-inline-size: var(--size-xxxl);
-  padding-inline: var(--size-10);
+  padding-inline: var(--size-5);
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-inline: var(--size-10);
+  }
 }
 
 @media (min-width: 1280px) {

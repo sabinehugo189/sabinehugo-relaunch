@@ -113,10 +113,11 @@
   --_bg: transparent;
   --_bg-gradient: none;
   --_accent: var(--orange-6);
-  --_padding: 0;
+  --_padding: var(--size-2);
   --_text: var(--orange-6);
 
   border-radius: 0;
+  margin: calc(var(--size-2) * -1);
   text-transform: none;
 }
 
