@@ -7,8 +7,8 @@ navigation: false
 ::c-hero
 ---
 title: 'Ihr neuer Zahnarzt in Würzburg:'
-subtitle: 'Für schöne Zähne und mehr Wohlbefinden'
-description: 'Sie benötigen eine zahnärztliche oder kieferorthopädische Leistung oder wünschen sich eine ästhetisch-medizinische Anwendung? In meiner Würzburger Zahnarztpraxis und Arztpraxis berate ich Sie ausführlich zu Behandlungsoptionen.'
+subtitle: 'Für gesunde und schöne Zähne und medizinischer Ästhetik.'
+description: 'Sie wünschen sich gesunde und schöne Zähne oder eine ästhetische Gesichtsbehandlung in entspannter Atmosphäre? In unserer Würzburger Zahnarzt- und Arztpraxis berate ich Sie gerne ausführlich zu Behandlungsoptionen.'
 label: 'Jetzt Termin vereinbaren'
 link: '/contact/#contact'
 image: 'hero-frontpage-2_umuel5.png'
@@ -27,7 +27,7 @@ imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis'
 
 #right
 :::c-prose
-## Herzlich Willkommen in meiner Praxis!
+## Herzlich Willkommen in unserer Praxis!
 
 Ob Sie einen neuen Zahnarzt in Würzburg für die Grundversorgung benötigen, eine
 Zahnbegradigung mittels unsichtbarer Zahnschienen (Aligner) wünschen oder auf
@@ -167,7 +167,7 @@ title: 'Unsere Leistungen für mehr Wohlbefinden und Ästhetik'
 :::c-section-header
 ---
 'text-align': 'center'
-title: 'Sie wünschen sich eine Beratung oder eine Behandlung?'
+title: Sie suchen einen Zahnarzt in Würzburg für zahnmedizinische Behandlungen auf dem neuesten technischen Niveau?'
 ---
 :::
 ::
