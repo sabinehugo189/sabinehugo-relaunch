@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <a
-      href="tel:+4993199147070"
+      :href="`tel:${data['p-tel'].replace(/\s/g, '')}`"
       class="link link-phone"
     >
       <svg
@@ -15,7 +15,7 @@
           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
         />
       </svg>
-      <span>+49 931 99 147 070</span>
+      <span>{{ data['p-tel'] }}</span>
     </a>
     <NuxtLink
       to="/contact/#contact"
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-/* global useBreakpoints, useHeaderIsSticky useMenuIsOpen */
+/* global queryContent ,useBreakpoints, useHeaderIsSticky, useMenuIsOpen */
 
 const { getHeaderIsSticky } = useHeaderIsSticky();
 const { getMenuIsOpen, setMenuIsOpen } = useMenuIsOpen();
@@ -58,6 +58,13 @@ function onClick() {
     setMenuIsOpen(!getMenuIsOpen.value);
   }
 }
+
+const { data } = await useAsyncData('address', () => {
+  return queryContent('_h-card')
+    .where({ _partial: true })
+    .only(['p-tel'])
+    .findOne();
+});
 </script>
 
 <style scoped>
