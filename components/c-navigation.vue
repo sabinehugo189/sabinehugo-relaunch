@@ -32,7 +32,7 @@
       </button>
       <NuxtLink
         v-else
-        :to="item._path"
+        :to="`${item._path}/`"
         :tabindex="isSubmenu ? '-1' : null"
         :role="isSubmenu ? 'menuitem' : null"
         :class="{ 'is-menuitem': isSubmenu }"
