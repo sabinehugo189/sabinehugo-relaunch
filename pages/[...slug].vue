@@ -9,9 +9,21 @@
 </template>
 
 <script setup>
-/* global usePageIsPlain */
+/* global usePageIsPlain, useSabineHugo */
 
 const { getPageIsPlain } = usePageIsPlain();
+
+const sh = useSabineHugo();
+const route = useRoute();
+
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      content: `${sh.value.protocol}://${sh.value.hostname}${route.path}`,
+    },
+  ],
+});
 </script>
 
 <style scoped>
