@@ -8,3 +8,12 @@ export const useCloudinary = () => {
     };
   });
 };
+
+export const useSabineHugo = () => {
+  return useState('sabine-hugo', () => {
+    return {
+      protocol: 'https',
+      hostname: 'www.praxishugo.de',
+    };
+  });
+};
