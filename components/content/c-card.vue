@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="img">
+    <figure>
       <picture>
         <source
           media="(min-width: 1536px)"
@@ -14,7 +14,7 @@
           loading="lazy"
         />
       </picture>
-    </div>
+    </figure>
     <div class="text">
       <h3>
         {{ props.head }}
@@ -40,7 +40,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  imgName: {
+  imgSrc: {
     type: String,
     required: true,
   },
@@ -50,11 +50,11 @@ const props = defineProps({
   },
   imgHeight: {
     type: String,
-    default: '',
+    default: '309',
   },
   imgWidth: {
     type: String,
-    default: '',
+    default: '500',
   },
 });
 
@@ -66,7 +66,7 @@ const imageUrl = Object.values(cloudinary.value).reduce((acc, cur) => {
 
 const resize = { type: 'scale', aspectRatio: '1.618' };
 
-const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
+const src = buildImageUrl(`${imageUrl}/${props.imgSrc}`, {
   cloud: {
     cloudName: cloudinary.value.cloudName,
   },
@@ -78,7 +78,7 @@ const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   },
 });
 
-const src500 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
+const src500 = buildImageUrl(`${imageUrl}/${props.imgSrc}`, {
   cloud: {
     cloudName: cloudinary.value.cloudName,
   },
@@ -105,11 +105,11 @@ const src500 = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   flex-direction: column;
 }
 
-.img {
+figure {
   aspect-ratio: 1.618 / 1;
 }
 
-.img > img {
+figure > img {
   height: 100%;
   object-fit: cover;
   width: 100%;

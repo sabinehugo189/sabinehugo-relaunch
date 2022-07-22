@@ -16,12 +16,10 @@ image: 'hero-frontpage-2_umuel5.png'
 ::
 
 ::c-grid
-:::c-grid-picture
+:::c-image
 ---
-imgSrc: 'welcome.jpg' 
-imgHeight: '858'
-imgWidth: '1303'
-imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
+name: 'welcome.jpg'
+alt: '5 Frauen in Ärztekitteln in Zahnarztpraxis'
 ---
 :::
 
@@ -194,23 +192,19 @@ unbeschwert und offen zu lachen. Sprechen Sie mich an!
 :::
 
 #right
-:::c-grid-picture
+:::c-image
 ---
-imgSrc: 'philosophy.jpg' 
-imgHeight: '858'
-imgWidth: '1303'
-imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
+name: 'philosophy.jpg'
+alt: 'Zahnarztpraxis mit Patient in Behandlungsstuhl und Zahnärztin mit 2 Zahnarzthelferinnen'
 ---
 :::
 ::
 
 ::c-grid
-:::c-grid-picture
+:::c-image
 ---
-imgSrc: 'more.jpg' 
-imgHeight: '858'
-imgWidth: '1303'
-imgAlt: 'Frau in Ärztekittel in Zahnarztpraxis' 
+name: 'more.jpg'
+alt: 'Zahnärzting im Gespräch mit Patientin im Behandlungsstuhl'
 ---
 :::
 
