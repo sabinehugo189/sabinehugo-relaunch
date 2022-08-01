@@ -2,9 +2,6 @@
   publish = "dist"
   command = "npm run build"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
 [context.production]
   environment = { NODE_VERSION = "16.15.0" }
 
