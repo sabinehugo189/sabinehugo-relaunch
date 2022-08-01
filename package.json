@@ -39,10 +39,10 @@
     "*.{css,vue}": "stylelint --cache --fix"
   },
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "generate": "nuxi generate",
-    "preview": "node .output/server/index.mjs",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint . --ext .js,.vue",
     "lint:stylelint": "stylelint \"**/*.{css,vue}\"",
