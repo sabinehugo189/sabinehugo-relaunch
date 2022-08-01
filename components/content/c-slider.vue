@@ -87,7 +87,7 @@ const options = reactive({
   flex-shrink: 0;
   list-style-type: none !important;
   margin: 0;
-  max-inline-size: initial;
+  max-inline-size: none;
   padding-inline-start: 0;
   position: relative;
   -webkit-tap-highlight-color: transparent;
