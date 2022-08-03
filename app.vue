@@ -13,7 +13,9 @@
 <script setup>
 /* global useHeaderIsSticky, usePageIsPlain */
 
+const isMounted = useMounted();
 const { setHeaderIsSticky } = useHeaderIsSticky();
+
 const sentinel = ref(null);
 
 useIntersectionObserver(sentinel, ([{ isIntersecting }]) => {
@@ -36,6 +38,26 @@ watchEffect(() => {
       break;
   }
 });
+
+watch(
+  () => isMounted.value,
+  (mounted) => {
+    if (mounted) {
+      const externalScript = document.createElement('script');
+
+      externalScript.setAttribute('id', 'CookieDeclaration');
+
+      externalScript.setAttribute(
+        'src',
+        'https://consent.cookiebot.com/a19ea317-f1ca-447c-889e-9d8b4465037a/cd.js',
+      );
+
+      externalScript.setAttribute('async', 'async');
+
+      document.body.appendChild(externalScript);
+    }
+  },
+);
 </script>
 
 <style scoped>
