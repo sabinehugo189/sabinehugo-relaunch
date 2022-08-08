@@ -268,3 +268,10 @@ diesem Fall ggf. nicht sämtliche Funktionen dieser Webseite vollumfänglich
 werden nutzen können.
 :::
 ::
+
+<script
+  id="CookieDeclaration" 
+  src="https://consent.cookiebot.com/a19ea317-f1ca-447c-889e-9d8b4465037a/cd.js"
+  type="text/javascript"
+  async
+></script>
