@@ -55,7 +55,6 @@ Die durchsichtigen Aligner von Invisalign® sind aufgrund ihrer
 zu einer ästhetisch wenig überzeugenden festsitzenden Zahnspange.
 
 [Mehr erfahren](/leistungen/invisalign){.btn}
-:::
 
 :::
 
