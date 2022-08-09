@@ -43,6 +43,31 @@ Ich freue mich auf Sie! Ihre Dr. med Sabine Hugo
 :::
 ::
 
+::c-grid
+:::c-prose
+## INVISALIGN®
+
+Sie sind unzufrieden mit Ihrer Zahnstellung? 
+Mit den unsichtbaren Zahnschienen von Invisalign® ist auch 
+im Erwachsenenalter eine erfolgreiche Behandlung einer Fehlstellung möglich.
+Die durchsichtigen Aligner von Invisalign® sind aufgrund ihrer 
+ästhetischen Unauffälligkeit eine attraktive Alternative 
+zu einer ästhetisch wenig überzeugenden festsitzenden Zahnspange.
+
+[Mehr erfahren](/leistungen/invisalign){.btn}
+:::
+
+:::
+
+#right
+:::c-image
+---
+name: 'invisalign-close-up.jpg'
+alt: 'Mund mit Invisalign in Nahaufnahme'
+---
+:::
+::
+
 ::c-section
 ---
 'is-fullbleed': true
