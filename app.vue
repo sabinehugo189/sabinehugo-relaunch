@@ -14,6 +14,7 @@
 /* global useHeaderIsSticky, usePageIsPlain */
 
 const { setHeaderIsSticky } = useHeaderIsSticky();
+
 const sentinel = ref(null);
 
 useIntersectionObserver(sentinel, ([{ isIntersecting }]) => {

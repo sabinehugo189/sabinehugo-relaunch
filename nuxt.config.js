@@ -2,11 +2,6 @@ import { defineNuxtConfig } from 'nuxt';
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css'],
-  modules: ['@nuxt/content', '@vueuse/nuxt'],
-  typescript: {
-    shim: false,
-  },
   app: {
     head: {
       meta: [
@@ -31,6 +26,12 @@ export default defineNuxtConfig({
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','${process.env.GOOGLE_TM_ID}');`,
         },
+        {
+          id: 'Cookiebot',
+          src: 'https://consent.cookiebot.com/uc.js',
+          'data-cbid': 'a19ea317-f1ca-447c-889e-9d8b4465037a',
+          'data-blockingmode': 'auto',
+        },
       ],
       htmlAttrs: {
         lang: 'de',
@@ -38,4 +39,18 @@ export default defineNuxtConfig({
     },
   },
   content: { navigation: { fields: ['label'] } },
+  css: ['~/assets/css/main.css'],
+  modules: ['@nuxt/content', '@vueuse/nuxt'],
+  typescript: {
+    shim: false,
+  },
+  hooks: {
+    'vite:extendConfig'(config, { isServer }) {
+      if (isServer) {
+        // Workaround for netlify issue
+        // https://github.com/nuxt/framework/issues/6204
+        config.build.rollupOptions.output.inlineDynamicImports = true;
+      }
+    },
+  },
 });
