@@ -18,8 +18,8 @@ image: 'hero-frontpage-2_umuel5.png'
 ::c-grid
 :::c-image
 ---
-name: 'welcome.jpg'
-alt: '5 Frauen in Ärztekitteln in Zahnarztpraxis'
+name: 'welcome-2.jpg'
+alt: 'Blick auf Empfang und Wartezimmer der Praxis'
 ---
 :::
 
