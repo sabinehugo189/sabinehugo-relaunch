@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         {
           id: 'Cookiebot',
           src: 'https://consent.cookiebot.com/uc.js',
-          'data-cbid': 'a19ea317-f1ca-447c-889e-9d8b4465037a',
+          'data-cbid': process.env.COOKIEBOT_ID,
           'data-blockingmode': 'auto',
         },
       ],
