@@ -14,10 +14,12 @@ export default defineNuxtConfig({
           content: 'ie=edge',
         },
       ],
-      link: {
-        rel: 'icon',
-        href: 'favicon.svg',
-      },
+      link: [
+        {
+          rel: 'icon',
+          href: 'favicon.svg',
+        },
+      ],
       script: [
         {
           children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
