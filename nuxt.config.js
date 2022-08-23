@@ -14,10 +14,12 @@ export default defineNuxtConfig({
           content: 'ie=edge',
         },
       ],
-      link: {
-        rel: 'icon',
-        href: 'favicon.svg',
-      },
+      link: [
+        {
+          rel: 'icon',
+          href: 'favicon.svg',
+        },
+      ],
       script: [
         {
           children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -29,7 +31,7 @@ export default defineNuxtConfig({
         {
           id: 'Cookiebot',
           src: 'https://consent.cookiebot.com/uc.js',
-          'data-cbid': 'a19ea317-f1ca-447c-889e-9d8b4465037a',
+          'data-cbid': process.env.COOKIEBOT_ID,
           'data-blockingmode': 'auto',
         },
       ],
