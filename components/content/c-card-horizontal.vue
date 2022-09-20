@@ -126,7 +126,6 @@ const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   .head > img {
     border-end-start-radius: var(--radius-3);
     height: 100%;
-    max-inline-size: initial;
     object-fit: cover;
     object-position: center;
     width: 100%;
