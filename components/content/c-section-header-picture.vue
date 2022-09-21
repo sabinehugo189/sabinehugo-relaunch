@@ -52,10 +52,11 @@ const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   },
   transformations: {
     resize: {
-      ...resize,
       aspectRatio: '1.618',
+      type: 'fill',
       width: 768,
     },
+    gravity: 'auto:subject',
   },
 });
 

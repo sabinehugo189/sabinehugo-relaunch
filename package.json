@@ -55,7 +55,7 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@nuxt/content": "^2.1.1",
-    "@splidejs/vue-splide": "^0.6.10",
+    "@splidejs/vue-splide": "^0.6.11",
     "@vueuse/core": "^9.2.0",
     "@vueuse/nuxt": "^9.2.0",
     "browserslist": "^4.21.4",
@@ -83,8 +83,8 @@
   },
   "dependencies": {
     "cloudinary-build-url": "^0.2.4",
-    "open-props": "^1.4.15",
-    "vee-validate": "^4.6.8",
+    "open-props": "^1.4.16",
+    "vee-validate": "^4.6.9",
     "vue-vimeo-player": "^1.1.2",
     "yup": "^0.32.11"
   }
