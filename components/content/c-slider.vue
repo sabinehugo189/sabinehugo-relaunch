@@ -48,7 +48,7 @@ const options = reactive({
     transform: rotate(0);
   }
 
-  to {
+  100% {
     transform: rotate(1turn);
   }
 }
