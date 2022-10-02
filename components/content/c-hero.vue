@@ -1,8 +1,7 @@
 <template>
   <div
-    ref="hero"
     class="hero"
-    :style="`background-image: url('${url}');`"
+    :style="`background-image: linear-gradient(${gradient}), url('${url}');`"
   >
     <h1>
       {{ title }}
@@ -28,7 +27,7 @@
 </template>
 
 <script setup>
-/* global useHeaderHeight, useCloudinary, useCssVar */
+/* global useCloudinary */
 
 import { buildImageUrl } from 'cloudinary-build-url';
 
@@ -89,39 +88,30 @@ const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
   },
 });
 
-const hero = ref(null);
-const { getHeaderHeight } = useHeaderHeight();
-
-const cvHeaderHeight = useCssVar('--header-height', hero);
-
-watchEffect(() => {
-  const headerHeight = parseInt(getHeaderHeight.value);
-  cvHeaderHeight.value = `${headerHeight}px`;
-});
+const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
 </script>
 
 <style scoped>
 .hero {
+  background-attachment: fixed;
   background-color: var(--surface-2);
-  background-position: bottom center;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
+  justify-content: center;
+  margin-block-start: calc((var(--size-14) + var(--size-7)) * -1);
   margin-inline: calc(var(--size-5) * -1);
-  padding-block: var(--size-11) var(--size-5);
+  min-block-size: 100vh;
+  padding-block-end: var(--size-7);
+  padding-block-start: calc(var(--size-14) + var(--size-7) * 2);
   padding-inline: var(--size-5);
   position: relative;
 }
 
-.hero::after {
-  aspect-ratio: 1 / 1;
-  content: '';
-  margin-block-end: calc(var(--size-5) * -1);
-  margin-inline: calc(var(--size-5) * -1);
-}
-
 h1 {
+  color: var(--gray-0);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-fluid-4);
@@ -136,6 +126,7 @@ h1 > small {
 }
 
 p {
+  color: var(--gray-0);
   font-size: var(--font-size-fluid-0);
   max-inline-size: var(--size-content-2);
 }
@@ -152,34 +143,19 @@ p {
 
 @media (min-width: 768px) {
   .hero {
+    margin-block-start: calc((var(--size-16) + var(--size-7)) * -1);
     margin-inline: calc(var(--size-10) * -1);
+    padding-block-start: calc(var(--size-16) + var(--size-7) * 2);
     padding-inline: var(--size-10);
-  }
-
-  .hero::after {
-    margin-inline: calc(var(--size-10) * -1);
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    background-position: bottom right;
-    background-size: 55%;
-    justify-content: center;
-    min-block-size: calc(100vh - var(--header-height, 68px) - var(--size-5));
-    padding-block-start: var(--size-5);
-  }
-
-  .hero::after {
-    content: none;
   }
 }
 
 @media (min-width: 1280px) {
   .hero {
-    background-size: 45%;
+    margin-block-start: calc((var(--size-16) + var(--size-16)) * -1);
     margin-inline: calc(var(--size-30) * -1);
-    min-block-size: calc(100vh - var(--header-height, 67px) - var(--size-10));
+    padding-block-end: var(--size-16);
+    padding-block-start: calc(var(--size-16) * 3);
     padding-inline: var(--size-30);
   }
 
@@ -191,7 +167,6 @@ p {
 
 @media (min-width: 1536px) {
   .hero {
-    background-size: contain;
     margin-inline: calc(var(--size-50) * -1);
     padding-inline: var(--size-50);
   }
