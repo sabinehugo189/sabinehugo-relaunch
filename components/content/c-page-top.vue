@@ -1,7 +1,7 @@
 <template>
   <section
     class="page-top"
-    :style="`background-image: url('${url}');`"
+    :style="`background-image: linear-gradient(${gradient}), url('${url}');`"
   >
     <h1>
       {{ props.title }}
@@ -49,65 +49,30 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
     },
   },
 });
+
+const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
 </script>
 
 <style scoped>
 .page-top {
+  background-attachment: fixed;
   background-color: var(--surface-2);
-  background-position: bottom center;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
+  margin-block-start: calc((var(--size-14) + var(--size-7)) * -1);
   margin-inline: calc(var(--size-5) * -1);
-  padding-block: var(--size-16) var(--size-8);
+  min-block-size: calc(100vh / 3);
+  padding-block-end: var(--size-7);
+  padding-block-start: calc(var(--size-14) + var(--size-7) * 2);
   padding-inline: var(--size-5);
   position: relative;
 }
 
-.page-top::after {
-  aspect-ratio: 1.618 / 1;
-  content: '';
-}
-
-@media (min-width: 768px) {
-  .page-top {
-    margin-inline: calc(var(--size-10) * -1);
-    padding-inline: var(--size-10);
-  }
-}
-
-@media (min-width: 1024px) {
-  .page-top {
-    background-position: bottom right;
-    background-size: 45%;
-    justify-content: center;
-    min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-5));
-    padding-block-start: var(--size-5);
-  }
-
-  .page-top::after {
-    content: none;
-  }
-}
-
-@media (min-width: 1280px) {
-  .page-top {
-    margin-inline: calc(var(--size-30) * -1);
-    min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-10));
-    padding-inline: var(--size-30);
-  }
-}
-
-@media (min-width: 1536px) {
-  .page-top {
-    background-size: contain;
-    margin-inline: calc(var(--size-50) * -1);
-    padding-inline: var(--size-50);
-  }
-}
-
 h1 {
+  color: var(--gray-0);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-fluid-3);
@@ -117,8 +82,35 @@ h1 {
 }
 
 p {
+  color: var(--gray-0);
   font-size: var(--font-size-fluid-0);
   max-inline-size: var(--size-content-2);
+}
+
+@media (min-width: 768px) {
+  .page-top {
+    margin-block-start: calc((var(--size-16) + var(--size-7)) * -1);
+    margin-inline: calc(var(--size-10) * -1);
+    padding-block-start: calc(var(--size-16) + var(--size-7) * 2);
+    padding-inline: var(--size-10);
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-top {
+    margin-block-start: calc((var(--size-16) + var(--size-16)) * -1);
+    margin-inline: calc(var(--size-30) * -1);
+    padding-block-end: var(--size-16);
+    padding-block-start: calc(var(--size-16) * 3);
+    padding-inline: var(--size-30);
+  }
+}
+
+@media (min-width: 1536px) {
+  .page-top {
+    margin-inline: calc(var(--size-50) * -1);
+    padding-inline: var(--size-50);
+  }
 }
 
 .shaded-edge {
