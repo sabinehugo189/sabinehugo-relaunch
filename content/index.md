@@ -11,7 +11,7 @@ subtitle: 'Für gesunde und schöne Zähne und medizinische Ästhetik.'
 description: 'Sie wünschen sich gesunde und schöne Zähne oder eine ästhetische Gesichtsbehandlung in entspannter Atmosphäre? In unserer Würzburger Zahnarzt- und Arztpraxis berate ich Sie gerne ausführlich zu Behandlungsoptionen.'
 label: 'Jetzt Termin vereinbaren'
 link: '/contact/#contact'
-image: 'hero-frontpage-2_umuel5.png'
+image: 'hero-frontpage-full.jpg'
 ---
 ::
 
