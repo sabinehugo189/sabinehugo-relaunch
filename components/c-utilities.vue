@@ -1,5 +1,8 @@
 <template>
-  <div class="container">
+  <div
+    class="container"
+    :class="{ 'is-stuck': isSticky }"
+  >
     <a
       :href="`tel:${data['p-tel'].replace(/\s/g, '')}`"
       class="link link-phone"
@@ -43,6 +46,13 @@
 <script setup>
 /* global queryContent ,useBreakpoints, useHeaderIsSticky, useMenuIsOpen */
 
+defineProps({
+  isSticky: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const { getHeaderIsSticky } = useHeaderIsSticky();
 const { getMenuIsOpen, setMenuIsOpen } = useMenuIsOpen();
 
@@ -76,7 +86,7 @@ const { data } = await useAsyncData('utilities', () => {
 .link:link,
 .link:visited {
   align-items: center;
-  color: var(--link);
+  color: var(--text-1);
   display: inline-flex;
   font-optical-sizing: auto;
   font-size: var(--font-size-2);
@@ -84,6 +94,11 @@ const { data } = await useAsyncData('utilities', () => {
   gap: var(--size-2);
   justify-content: center;
   text-decoration: none;
+}
+
+.is-stuck .link:link,
+.is-stuck .link:visited {
+  color: var(--link);
 }
 
 .link:hover {
