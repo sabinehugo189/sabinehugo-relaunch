@@ -3,7 +3,10 @@
     :ref="submenuRef"
     :hidden="isSubmenu"
     :role="isSubmenu ? 'menu' : null"
-    :class="{ 'is-submenu': isSubmenu }"
+    :class="{
+      'is-submenu': isSubmenu,
+      'is-stuck': isSticky,
+    }"
   >
     <li
       v-for="(item, index) in navigationTree"
@@ -57,6 +60,10 @@ defineProps({
   navigationTree: {
     type: Array,
     default: () => [],
+  },
+  isSticky: {
+    type: Boolean,
+    default: false,
   },
   isSubmenu: {
     type: Boolean,
@@ -255,16 +262,21 @@ button[aria-expanded='true'] > svg {
 
 @media (min-width: 1024px) {
   ul {
-    color: var(--text-5);
+    color: var(--text-1);
     flex-direction: row;
     font-size: var(--font-size-2);
   }
 
+  ul.is-stuck {
+    color: var(--text-5);
+  }
+
   ul.is-submenu {
-    background-color: var(--surface-1);
+    background-color: hsl(var(--surface-2-hsl) / 0.95);
     border-end-end-radius: var(--radius-3);
     border-end-start-radius: var(--radius-3);
     box-shadow: var(--shadow-2);
+    color: var(--text-5);
     flex-direction: column;
     left: 0;
     margin-inline-start: calc(var(--size-8) * -1);
