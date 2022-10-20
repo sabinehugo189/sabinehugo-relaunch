@@ -162,7 +162,7 @@ icons: [
 :::c-section-header
 ---
 'text-align': 'center'
-title: 'Unsere Leistungen für mehr Wohlbefinden und Ästhetik'
+title: 'Unsere Leistungen der ästhetischen Medizin und medizinischen Kosmetik'
 ---
 :::
 ::
