@@ -77,16 +77,18 @@ alt: 'Frau wird mit Byonik Laser behandelt'
 
 #right
 :::c-prose
-## Rosige Zeiten für unsere Haut
+## Dr. med. Sabine Hugo in der GALA
 
-Dr. med. Sabine Hugo in der GALA über Byonik:
-Der BYONIK Laser ist ein essentieller Bestandteil unserer Anti-Aging 
-Behandlungen. Wir sehen bei unseren Patienten bereits nach 
-den ersten Behandlungen ein verfeinertes, frischeres Hautbild. 
-Dieser Soforteffekt begeistert unsere Patienten und führt zu 
-einer sehr hohen Zufriedenheit.
+Rosige Zeiten für unsere Haut. Der BYONIK Laser ist ein 
+essentieller Bestandteil unserer Anti-Aging Behandlungen. 
+Wir sehen bei unseren Patienten bereits nach den ersten 
+Behandlungen ein verfeinertes, frischeres Hautbild. 
+Dieser Soforteffekt begeistert unsere Patienten und 
+führt zu einer sehr hohen Zufriedenheit.
 
-[Mehr lesen](/gala-artikel.pdf){.btn}
+[Mehr lesen](/gala-artikel-pdf.pdf){.btn}
+
+[Mehr erfahren zu Byonik Laser](/leistungen/byoniklaser/){.btn}
 :::
 ::
 
