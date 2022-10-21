@@ -86,6 +86,9 @@ Behandlungen ein verfeinertes, frischeres Hautbild.
 Dieser Soforteffekt begeistert unsere Patienten und 
 führt zu einer sehr hohen Zufriedenheit.
 
+Hinweis: Wir haben unseren Standort gewechselt und sind
+nun in unseren neuen Räumen in Würzburg für Sie da!
+
 [Mehr lesen](/gala-artikel-pdf.pdf){.btn}
 
 [Mehr erfahren zu Byonik Laser](/leistungen/byoniklaser/){.btn}
