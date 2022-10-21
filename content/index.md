@@ -67,6 +67,34 @@ alt: 'Mund mit Invisalign in Nahaufnahme'
 :::
 ::
 
+::c-grid
+:::c-image
+---
+name: 'gala-artikel.jpg'
+alt: 'Frau wird mit Byonik Laser behandelt'
+---
+:::
+
+#right
+:::c-prose
+## Dr. med. Sabine Hugo in der GALA
+
+Rosige Zeiten für unsere Haut. Der BYONIK Laser ist ein 
+essentieller Bestandteil unserer Anti-Aging Behandlungen. 
+Wir sehen bei unseren Patienten bereits nach den ersten 
+Behandlungen ein verfeinertes, frischeres Hautbild. 
+Dieser Soforteffekt begeistert unsere Patienten und 
+führt zu einer sehr hohen Zufriedenheit.
+
+Hinweis: Wir haben unseren Standort gewechselt und sind
+nun in unseren neuen Räumen in Würzburg für Sie da!
+
+[Mehr lesen](/gala-artikel.pdf){.btn}
+
+[Mehr erfahren zu Byonik Laser](/leistungen/byoniklaser/){.btn}
+:::
+::
+
 ::c-section
 ---
 'is-fullbleed': true
@@ -162,7 +190,7 @@ icons: [
 :::c-section-header
 ---
 'text-align': 'center'
-title: 'Unsere Leistungen für mehr Wohlbefinden und Ästhetik'
+title: 'Unsere Leistungen der ästhetischen Medizin und medizinischen Kosmetik'
 ---
 :::
 ::
