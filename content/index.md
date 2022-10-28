@@ -22,15 +22,15 @@ image: 'hero-frontpage-2_umuel5.png'
 title: 'SMILE DAY am 25.11.2022'
 ---
 
+:::c-prose
+Besuchen Sie uns in unserer Fachpraxis für Invisalign® in Würzburg und erhalten Sie eine unverbindliche Beratung inkl. 3D Scan des Status Quo und Simulation möglicher Ergebnisse!
+:::
+
 ::::c-section-header-picture
 ---
 imgName: 'smile-day-teaser.jpg' 
 ---
 ::::
-:::
-
-:::c-prose
-Besuchen Sie uns in unserer Fachpraxis für Invisalign® in Würzburg und erhalten Sie eine unverbindliche Beratung inkl. 3D Scan des Status Quo und Simulation möglicher Ergebnisse!
 :::
 ::
 
