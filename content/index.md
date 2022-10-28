@@ -30,8 +30,8 @@ imgName: 'smile-day-teaser.jpg'
 :::
 
 :::c-prose
-Unverbindliche Invisalign Beratung inkl. 3D Scan des Status Quo 
-und Simulation möglicher Ergebnisse!
+Unverbindliche Invisalign Beratung inkl. 3D Scan<br> 
+des Status Quo und Simulation möglicher Ergebnisse!
 :::
 
 ::
