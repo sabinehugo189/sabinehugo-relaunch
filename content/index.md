@@ -15,6 +15,27 @@ image: 'hero-frontpage-2_umuel5.png'
 ---
 ::
 
+::c-section
+#header
+:::c-section-header-alt
+---
+title: 'SMILE DAY am 25.11.2022 in unserer Fachpraxis für Invisalign®'
+---
+
+::::c-section-header-picture
+---
+imgName: 'smile-day-teaser.jpg' 
+---
+::::
+:::
+
+:::c-prose
+Unverbindliche Invisalign Beratung inkl. 3D Scan<br> 
+des Status Quo und Simulation möglicher Ergebnisse!
+:::
+
+::
+
 ::c-grid
 :::c-image
 ---
