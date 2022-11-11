@@ -19,7 +19,7 @@ image: 'hero-frontpage-2_umuel5.png'
 #header
 :::c-section-header-alt
 ---
-title: 'SMILE DAY am 25.11.2022 in unserer Fachpraxis für Invisalign®'
+title: 'SMILE DAY am 24.11.2022 in unserer Fachpraxis für Invisalign®'
 ---
 
 ::::c-section-header-picture
