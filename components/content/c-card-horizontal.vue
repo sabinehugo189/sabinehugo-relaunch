@@ -1,13 +1,13 @@
 <template>
   <div class="card">
-    <figure>
+    <div class="head">
       <img
         :src="src"
         :width="imgWidth"
         :height="imgHeight"
         alt=""
       />
-    </figure>
+    </div>
     <div class="body">
       <slot></slot>
     </div>
@@ -64,11 +64,8 @@ const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   display: grid;
 }
 
-figure > img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
+.head > img {
+  max-inline-size: 100%;
 }
 
 .body {
@@ -122,12 +119,16 @@ figure > img {
     grid-template-columns: repeat(8, 1fr);
   }
 
-  figure {
+  .head {
     grid-column: 1 / 4;
   }
 
-  figure > img {
+  .head > img {
     border-end-start-radius: var(--radius-3);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
   }
 
   .body {
