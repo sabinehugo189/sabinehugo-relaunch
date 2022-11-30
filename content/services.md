@@ -1,7 +1,7 @@
 ---
 title: 'Leistungen rund um Zahn & Ästhetik | Praxis Dr. Hugo'
 description: 'Entdecken Sie die Leistungen der Praxis Dr. Hugo ★ Zahnbehandlungen ★ Invisalign ★ Dermatologische Ästhetik und mehr.'
-label: 'Übersicht'
+navigation: false
 ---
 
 ::c-page-top
