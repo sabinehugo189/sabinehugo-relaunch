@@ -59,7 +59,7 @@ function onClick() {
   }
 }
 
-const { data } = await useAsyncData('address', () => {
+const { data } = await useAsyncData('utilities', () => {
   return queryContent('_h-card')
     .where({ _partial: true })
     .only(['p-tel'])
