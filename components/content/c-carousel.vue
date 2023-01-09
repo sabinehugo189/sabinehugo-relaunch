@@ -403,10 +403,9 @@ h2 {
     border: 3px solid hsl(196deg 100% 50%);
   }
 
-  :deep(.splide.is-focus-in
-      .splide__track
-      > .splide__list
-      > .splide__slide:focus) {
+  :deep(
+      .splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus
+    ) {
     border-color: hsl(196deg 100% 50%);
   }
 }
