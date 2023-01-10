@@ -111,12 +111,15 @@ const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
 }
 
 h1 {
+  background: var(--gradient-hero);
+  border-radius: var(--radius-3);
   color: var(--gray-0);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-fluid-4);
   gap: var(--size-5);
   max-inline-size: var(--size-content-0);
+  padding: var(--size-10);
   text-transform: uppercase;
 }
 
