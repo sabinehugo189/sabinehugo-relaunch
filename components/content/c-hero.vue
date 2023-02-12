@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="hero"
     class="hero"
     :style="`background-image: linear-gradient(${gradient}), url('${url}');`"
   >
@@ -30,6 +31,7 @@
 /* global useCloudinary */
 
 import { buildImageUrl } from 'cloudinary-build-url';
+import { useMediaQuery } from '@vueuse/core';
 
 const props = defineProps({
   title: {
@@ -89,6 +91,32 @@ const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
 });
 
 const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
+
+const isMounted = useMounted();
+const hero = ref(null);
+const isPortraitOrientation = useMediaQuery('(orientation: portrait)');
+
+watch(
+  () => isMounted.value,
+  (mounted) => {
+    if (mounted) {
+      document.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+
+        const maxBackgroundSize = 120;
+        const backgroundSize = scrollY / (maxBackgroundSize - 100);
+
+        const value = parseInt(100 + backgroundSize * 0.4);
+
+        if (value <= maxBackgroundSize) {
+          hero.value.style.backgroundSize = isPortraitOrientation.value
+            ? `auto ${value}%`
+            : `${value}% auto`;
+        }
+      });
+    }
+  },
+);
 </script>
 
 <style scoped>
@@ -96,7 +124,8 @@ const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
   background-attachment: fixed;
   background-color: var(--surface-2);
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
@@ -108,6 +137,12 @@ const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
   padding-block-start: calc(var(--size-14) + var(--size-7) * 2);
   padding-inline: var(--size-5);
   position: relative;
+}
+
+@media (orientation: portrait) {
+  .hero {
+    background-size: auto 100%;
+  }
 }
 
 h1 {
