@@ -4,31 +4,36 @@
     class="hero"
     :style="`background-image: linear-gradient(${gradient}), url('${url}');`"
   >
-    <h1>
-      {{ title }}
-      <small>{{ subtitle }}</small>
-    </h1>
-    <p>{{ description }}</p>
-    <div class="cta-bar">
-      <NuxtLink
-        :to="link"
-        class="btn"
-      >
-        {{ label }}
-      </NuxtLink>
-      <img
-        :src="src"
-        width="228"
-        height="138"
-        alt=""
-      />
+    <div
+      ref="container"
+      class="container"
+    >
+      <h1>
+        {{ title }}
+        <small>{{ subtitle }}</small>
+      </h1>
+      <p>{{ description }}</p>
+      <div class="cta-bar">
+        <NuxtLink
+          :to="link"
+          class="btn"
+        >
+          {{ label }}
+        </NuxtLink>
+        <img
+          :src="src"
+          width="228"
+          height="138"
+          alt=""
+        />
+      </div>
     </div>
     <div class="shaded-edge"></div>
   </div>
 </template>
 
 <script setup>
-/* global useCloudinary */
+/* global useCloudinary, onMounted, onUnmounted */
 
 import { buildImageUrl } from 'cloudinary-build-url';
 import { useMediaQuery } from '@vueuse/core';
@@ -92,31 +97,48 @@ const src = buildImageUrl(`${imageUrl}/quality-seal.png`, {
 
 const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
 
-const isMounted = useMounted();
 const hero = ref(null);
+const container = ref(null);
 const isPortraitOrientation = useMediaQuery('(orientation: portrait)');
 
-watch(
-  () => isMounted.value,
-  (mounted) => {
-    if (mounted) {
-      document.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
+function handleScroll() {
+  // Get the vertically scrolled pixels
+  const scrollY = window.scrollY;
+  // Get the viewport height
+  const viewportHeight = window.innerHeight * 0.01;
+  // Get how much percent of the viewport height is scrolled out of view
+  const viewportHeightOutOfView = parseInt(scrollY / viewportHeight);
+  // Set the max background size increase in percent
+  const maxBackgroundSizeIncrease = 20;
+  // Get the background size increase in relation to how much the viewport
+  // is scrolled vertically
+  const backgroundSizeIncrease = parseInt(
+    viewportHeightOutOfView * (maxBackgroundSizeIncrease / 100),
+  );
+  // Set the background size
+  const backgroundSize = 100 + backgroundSizeIncrease;
+  // Get the opacity in relation to how much the viewport is scrolled
+  // vertically
+  const opacityDecrease = viewportHeightOutOfView / 100;
+  // Set the opacity
+  const opacity = 1 - opacityDecrease.toFixed(1);
 
-        const maxBackgroundSize = 120;
-        const backgroundSize = scrollY / (maxBackgroundSize - 100);
+  if (viewportHeightOutOfView <= 100) {
+    hero.value.style.backgroundSize = isPortraitOrientation.value
+      ? `auto ${backgroundSize}%`
+      : `${backgroundSize}% auto`;
 
-        const value = parseInt(100 + backgroundSize * 0.4);
+    container.value.style.opacity = opacity;
+  }
+}
 
-        if (value <= maxBackgroundSize) {
-          hero.value.style.backgroundSize = isPortraitOrientation.value
-            ? `auto ${value}%`
-            : `${value}% auto`;
-        }
-      });
-    }
-  },
-);
+onMounted(() => {
+  document.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style scoped>
@@ -143,6 +165,12 @@ watch(
   .hero {
     background-size: auto 100%;
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-8);
 }
 
 h1 {
