@@ -64,7 +64,7 @@ const gradient = 'to left top, transparent, hsl(36.7,8.9%,39.6%)';
   gap: var(--size-8);
   margin-block-start: calc((var(--size-14) + var(--size-7)) * -1);
   margin-inline: calc(var(--size-5) * -1);
-  min-block-size: calc(100vh / 3);
+  min-block-size: 50vh;
   padding-block-end: var(--size-7);
   padding-block-start: calc(var(--size-14) + var(--size-7) * 2);
   padding-inline: var(--size-5);
