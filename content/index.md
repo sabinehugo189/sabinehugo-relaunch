@@ -164,8 +164,8 @@ icons: [
     caption: 'Laserbehandlungen',
   },
   {
-    iconName: 'botox',
-    caption: 'Botox',
+    iconName: 'hyaluron-3_hfyq5k',
+    caption: 'Hyaluron',
   },
   {
     iconName: 'byoniklaser',
@@ -302,12 +302,6 @@ questions: {
 Eine Aligner-Therapie wird nicht von den gesetzlichen Krankenkassen übernommen. Private Krankenkassen übernehmen in der Regel die kieferorthopädische Behandlung mit unsichtbaren Zahnschienen. Bitte informieren Sie sich vor Behandlungsbeginn bei Ihrer Versicherung hinsichtlich der Kostenübernahme einer Zahnfehlstellungskorrektur mit unsichtbaren Zahnschienen.',
     },
   },
-  section03: {
-    question: 'Wann sehe ich die Effekte einer Behandlung mit Botox?',
-    answer: {
-      part01: 'Wann der glättende Effekt einer Behandlung mit Botox eintritt, ist individuell unterschiedlich. In den meisten Fällen tritt die verjüngende Wirkung nach 3 bis 7 Tagen ein. Aufgrund der muskellähmenden Wirkung von Botox sehen Sie dann deutlich frischer aus. Freuen Sie sich auf ein neues Lebensgefühl! ',
-    },
-  }
 } 
 ---
 :::
