@@ -8,11 +8,13 @@
       ref="container"
       class="container"
     >
-      <h1>
-        {{ title }}
-        <small>{{ subtitle }}</small>
-      </h1>
-      <p>{{ description }}</p>
+      <div class="copy-box">
+        <h1>
+          {{ title }}
+          <small>{{ subtitle }}</small>
+        </h1>
+        <p v-if="description">{{ description }}</p>
+      </div>
       <div class="cta-bar">
         <NuxtLink
           :to="link"
@@ -49,7 +51,7 @@ const props = defineProps({
   },
   description: {
     type: String,
-    required: true,
+    default: '',
   },
   label: {
     type: String,
@@ -173,6 +175,16 @@ onUnmounted(() => {
   gap: var(--size-8);
 }
 
+.copy-box {
+  align-self: flex-start;
+  animation: var(--animation-fade-in) forwards, var(--animation-slide-in-left);
+  animation-duration: 250ms;
+  animation-timing-function: var(--ease-out-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-8);
+}
+
 h1 {
   background: var(--gradient-hero);
   border-radius: var(--radius-3);
@@ -198,6 +210,10 @@ p {
 }
 
 .cta-bar {
+  align-self: flex-start;
+  animation: var(--animation-fade-in) forwards, var(--animation-slide-in-up);
+  animation-duration: 250ms;
+  animation-timing-function: var(--ease-out-3);
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
