@@ -164,8 +164,8 @@ icons: [
     caption: 'Laserbehandlungen',
   },
   {
-    iconName: 'hyaluron-3_hfyq5k',
-    caption: 'Hyaluron',
+    iconName: 'botox',
+    caption: 'Botox',
   },
   {
     iconName: 'byoniklaser',
