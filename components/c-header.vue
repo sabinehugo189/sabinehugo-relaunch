@@ -10,13 +10,24 @@
       to="/"
       class="logo"
     >
-      <c-logo :size="logoSize" />
+      <c-logo
+        v-if="getHeaderIsSticky"
+        :size="logoSize"
+      />
+      <c-logo
+        v-else
+        fill="hsl(0deg 0% 98%)"
+        :size="logoSize"
+      />
     </NuxtLink>
     <div class="navigation">
       <nav v-if="navigation.length && lgNAbove">
-        <c-navigation :navigation-tree="navigation" />
+        <c-navigation
+          :navigation-tree="navigation"
+          :is-sticky="getHeaderIsSticky"
+        />
       </nav>
-      <c-utilities />
+      <c-utilities :is-sticky="getHeaderIsSticky" />
       <nav v-if="navigation.length && lgNBelow">
         <c-menu>
           <c-navigation :navigation-tree="navigation" />
@@ -67,8 +78,8 @@ watchEffect(() => {
 <style scoped>
 header {
   align-items: center;
-  background-color: var(--surface-2);
-  color: var(--text-4);
+  background-color: transparent;
+  color: var(--gray-0);
   display: flex;
   justify-content: space-between;
   margin-inline: auto;
@@ -83,21 +94,12 @@ header {
   z-index: var(--layer-2);
 }
 
-header::before {
-  background-color: var(--surface-2);
-  content: '';
-  height: var(--size-7);
-  left: 0;
-  position: absolute;
-  top: calc(var(--size-7) * -1);
-  width: 100%;
-}
-
 .is-sticky {
   background-color: hsl(var(--surface-2-hsl) / 0.95);
   border-end-end-radius: var(--radius-3);
   border-end-start-radius: var(--radius-3);
   box-shadow: var(--shadow-2);
+  color: var(--text-4);
 }
 
 .is-plain,
@@ -138,11 +140,6 @@ header::before {
 @media (min-width: 1280px) {
   header {
     padding-inline: var(--size-30);
-  }
-
-  header::before {
-    height: var(--size-16);
-    top: calc(var(--size-16) * -1);
   }
 }
 
