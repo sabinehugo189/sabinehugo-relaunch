@@ -176,15 +176,7 @@ onUnmounted(() => {
 }
 
 .copy-box {
-  align-self: flex-start;
   animation: var(--animation-fade-in) forwards, var(--animation-slide-in-left);
-  animation-delay: 250ms;
-  animation-duration: 250ms;
-  animation-timing-function: var(--ease-out-3);
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-8);
-  opacity: 0;
 }
 
 h1 {
@@ -212,19 +204,23 @@ p {
 }
 
 .cta-bar {
-  align-self: flex-start;
   animation: var(--animation-fade-in) forwards, var(--animation-slide-in-up);
+}
+
+.cta-bar > a {
+  align-self: flex-start;
+}
+
+.copy-box,
+.cta-bar {
+  align-self: flex-start;
   animation-delay: 250ms;
-  animation-duration: 250ms;
+  animation-duration: 350ms;
   animation-timing-function: var(--ease-out-3);
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
   opacity: 0;
-}
-
-.cta-bar > a {
-  align-self: flex-start;
 }
 
 @media (min-width: 768px) {
