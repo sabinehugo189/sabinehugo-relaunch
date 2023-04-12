@@ -45,7 +45,7 @@ Ich freue mich auf Sie! Ihre Dr. med Sabine Hugo
 
 ::c-grid
 :::c-prose
-## INVISALIGN®
+## INVISALIGN<sup>®</sup>
 
 Sie sind unzufrieden mit Ihrer Zahnstellung? 
 Mit den unsichtbaren Zahnschienen von Invisalign® ist auch 
