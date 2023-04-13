@@ -18,7 +18,6 @@
     "color-format/format": {
       "format": "hsl"
     },
-    "color-hex-case": "lower",
     "color-hex-length": "short",
     "color-function-notation": "modern",
     "hue-degree-notation": "angle",
