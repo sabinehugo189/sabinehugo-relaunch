@@ -89,7 +89,7 @@ führt zu einer sehr hohen Zufriedenheit.
 Hinweis: Wir haben unseren Standort gewechselt und sind
 nun in unseren neuen Räumen in Würzburg für Sie da!
 
-[Mehr lesen](/gala-artikel.pdf){.btn}
+<a href="/gala-artikel.pdf" download target="_blank" class="btn">Mehr lesen</a>
 
 [Mehr erfahren zu Byonik Laser](/leistungen/byoniklaser/){.btn}
 :::
