@@ -74,7 +74,7 @@ p:last-of-type {
   font-size: var(--font-size-2);
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .testimonial {
     padding: var(--size-12);
   }

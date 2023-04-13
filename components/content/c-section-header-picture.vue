@@ -82,7 +82,7 @@ picture > img {
   width: 100%;
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   picture > img {
     aspect-ratio: 5 / 1;
   }

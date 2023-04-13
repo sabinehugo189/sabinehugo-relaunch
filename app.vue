@@ -50,7 +50,7 @@ watchEffect(() => {
   display: flex;
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   .root {
     grid-template-rows: var(--size-16) auto 1fr auto;
   }

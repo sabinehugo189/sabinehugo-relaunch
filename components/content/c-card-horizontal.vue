@@ -113,7 +113,7 @@ const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   transform: translateY(2px);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .card {
     column-gap: var(--size-8);
     grid-template-columns: repeat(8, 1fr);
@@ -138,7 +138,7 @@ const src = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   .body {
     grid-column: 5 / -1;
   }

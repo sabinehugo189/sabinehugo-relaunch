@@ -85,7 +85,7 @@ address > p > span {
   gap: 0.5em;
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   address > *:nth-child(3) {
     margin-block-start: var(--size-12);
   }

@@ -184,7 +184,7 @@ const options = reactive({
   z-index: var(--layer-1);
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   :deep(.splide__arrow) {
     block-size: var(--size-16);
     inline-size: var(--size-16);
@@ -218,13 +218,13 @@ const options = reactive({
   left: calc(var(--size-5) * -1);
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   :deep(.splide__arrow--prev) {
     left: calc(var(--size-24) * -1);
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   :deep(.splide__arrow--prev) {
     left: calc(var(--size-32) * -1);
   }
@@ -238,13 +238,13 @@ const options = reactive({
   right: calc(var(--size-5) * -1);
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   :deep(.splide__arrow--next) {
     right: calc(var(--size-24) * -1);
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   :deep(.splide__arrow--next) {
     right: calc(var(--size-32) * -1);
   }
@@ -414,13 +414,10 @@ const options = reactive({
 }
 
 :deep(.splide__pagination--ttb) {
-  bottom: 0;
   display: flex;
   flex-direction: column;
-  left: auto;
+  inset: 0 0.5em 0 auto;
   padding: 1em 0;
-  right: 0.5em;
-  top: 0;
 }
 /* stylelint-enable selector-class-pattern */
 </style>

@@ -91,7 +91,7 @@ button {
   z-index: var(--layer-important);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .modal {
     padding-inline: var(--size-10);
   }
