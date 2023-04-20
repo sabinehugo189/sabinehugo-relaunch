@@ -31,7 +31,7 @@ defineProps({
   padding-inline-start: 0;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .items {
     gap: var(--size-16) var(--size-4);
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -39,13 +39,13 @@ defineProps({
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .items {
     gap: var(--size-5);
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .items {
     gap: var(--size-8);
   }

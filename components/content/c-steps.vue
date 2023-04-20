@@ -40,13 +40,13 @@ const { uid } = getCurrentInstance();
   padding-inline: var(--size-10);
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   .container {
     padding: var(--size-32) var(--size-30);
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .container {
     gap: var(--size-16);
     padding-block: var(--size-30);
@@ -77,7 +77,7 @@ h2 {
   padding-inline-start: 0;
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   .steps {
     gap: var(--size-8);
     grid-template-columns: repeat(3, 1fr);
@@ -98,7 +98,7 @@ h2 {
   padding: var(--size-8) var(--size-5);
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   .step {
     font-size: var(--font-size-2);
   }

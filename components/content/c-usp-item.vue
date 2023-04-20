@@ -63,7 +63,7 @@ const src = buildImageUrl(`${imageUrl}/icons/${props.iconName}`, {
   text-align: center;
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .item {
     align-items: flex-start;
     text-align: left;
@@ -88,7 +88,7 @@ img {
   max-block-size: var(--size-20);
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   img {
     max-block-size: var(--size-24);
   }

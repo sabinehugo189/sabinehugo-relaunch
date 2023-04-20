@@ -253,7 +253,7 @@ button[aria-expanded='true'] > svg {
   transform: rotate(180deg);
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   ul {
     color: var(--text-5);
     flex-direction: row;
@@ -276,7 +276,7 @@ button[aria-expanded='true'] > svg {
   }
 }
 
-@media (width >= 1920px) {
+@media (min-width: 1920px) {
   ul {
     column-gap: var(--size-10);
   }

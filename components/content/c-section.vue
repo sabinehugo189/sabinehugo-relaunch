@@ -64,21 +64,21 @@ const size = computed(() => {
   width: 100%;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .container.is-fullbleed {
     margin-inline: calc(var(--size-10) * -1);
     padding-inline: var(--size-10);
   }
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   .container.is-fullbleed {
     margin-inline: calc(var(--size-30) * -1);
     padding-inline: var(--size-30);
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .container.is-fullbleed {
     margin-inline: calc(var(--size-50) * -1);
     padding-block: var(--size-30);

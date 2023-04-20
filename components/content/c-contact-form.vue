@@ -220,7 +220,7 @@ form {
   gap: var(--size-5) var(--size-8);
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .data {
     grid-template-columns: repeat(2, [col] 1fr);
   }

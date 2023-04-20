@@ -66,13 +66,13 @@ const options = reactive({
   padding-inline: var(--size-10);
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   .container {
     padding-inline: var(--size-30);
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .container {
     gap: var(--size-16);
     padding-block: var(--size-30);
@@ -89,7 +89,7 @@ header {
   text-align: center;
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   header {
     padding-inline: 0;
   }
@@ -244,7 +244,7 @@ h2 {
   z-index: var(--layer-1);
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   :deep(.splide__arrow) {
     block-size: var(--size-16);
     inline-size: var(--size-16);
@@ -278,13 +278,13 @@ h2 {
   left: calc(var(--size-5) * -1);
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   :deep(.splide__arrow--prev) {
     left: calc(var(--size-24) * -1);
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   :deep(.splide__arrow--prev) {
     left: calc(var(--size-32) * -1);
   }
@@ -298,13 +298,13 @@ h2 {
   right: calc(var(--size-5) * -1);
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   :deep(.splide__arrow--next) {
     right: calc(var(--size-24) * -1);
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   :deep(.splide__arrow--next) {
     right: calc(var(--size-32) * -1);
   }
