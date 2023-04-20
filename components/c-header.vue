@@ -123,19 +123,19 @@ header::before {
   display: flex;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   header {
     padding-inline: var(--size-10);
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .navigation {
     column-gap: var(--size-10);
   }
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   header {
     padding-inline: var(--size-30);
   }
@@ -146,7 +146,7 @@ header::before {
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   header {
     padding-inline: var(--size-50);
   }

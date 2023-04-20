@@ -150,7 +150,7 @@ p {
   align-self: flex-start;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .hero {
     margin-inline: calc(var(--size-10) * -1);
     padding-inline: var(--size-10);
@@ -161,7 +161,7 @@ p {
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .hero {
     background-position: bottom right;
     background-size: 55%;
@@ -175,7 +175,7 @@ p {
   }
 }
 
-@media (width >= 1280px) {
+@media (min-width: 1280px) {
   .hero {
     background-size: 45%;
     margin-inline: calc(var(--size-30) * -1);
@@ -189,7 +189,7 @@ p {
   }
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .hero {
     background-size: contain;
     margin-inline: calc(var(--size-50) * -1);

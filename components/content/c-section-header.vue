@@ -65,7 +65,7 @@ header {
   gap: var(--size-8);
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   header {
     align-items: var(--align);
     text-align: var(--text-align);

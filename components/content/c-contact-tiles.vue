@@ -199,7 +199,7 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
   padding-inline-start: 0;
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .tiles {
     gap: var(--size-8);
   }
@@ -218,7 +218,7 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
   padding: var(--size-10) var(--size-8);
 }
 
-@media (width >= 1536px) {
+@media (min-width: 1536px) {
   .tile {
     padding: var(--size-12) var(--size-10);
   }
