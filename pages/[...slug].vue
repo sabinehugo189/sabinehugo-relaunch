@@ -34,19 +34,19 @@ main {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   main {
     padding-inline: var(--size-10);
   }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   main {
     padding-inline: var(--size-30);
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   main {
     padding-inline: var(--size-50);
   }

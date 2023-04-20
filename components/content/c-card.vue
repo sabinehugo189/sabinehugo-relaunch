@@ -128,7 +128,7 @@ h3 {
   line-height: var(--font-lineheight-2);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .card {
     max-inline-size: calc(var(--size-content-3) + (2 * var(--size-5)));
   }
@@ -138,7 +138,7 @@ h3 {
   }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .card {
     max-inline-size: calc(var(--size-content-3) + (2 * var(--size-12)));
   }

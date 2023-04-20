@@ -101,14 +101,14 @@ h4 {
   font-weight: var(--font-weight-5);
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   ul {
     gap: var(--size-8);
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   footer {
     font-size: var(--font-size-3);
     gap: var(--size-16);
@@ -116,7 +116,7 @@ h4 {
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   footer {
     padding: var(--size-32) var(--size-50);
   }

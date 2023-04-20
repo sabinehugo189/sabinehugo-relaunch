@@ -39,7 +39,7 @@ header {
   font-size: var(--font-size-fluid-3);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   header {
     gap: var(--size-4);
     grid-template-columns: repeat(2, 1fr);
@@ -50,7 +50,7 @@ header {
   }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   header {
     grid-template-columns: repeat(10, 1fr);
   }
@@ -72,7 +72,7 @@ header {
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   header {
     gap: var(--size-8);
   }

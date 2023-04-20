@@ -70,14 +70,14 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   content: '';
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .page-top {
     margin-inline: calc(var(--size-10) * -1);
     padding-inline: var(--size-10);
   }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .page-top {
     background-position: bottom right;
     background-size: 45%;
@@ -91,7 +91,7 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   .page-top {
     margin-inline: calc(var(--size-30) * -1);
     min-block-size: calc(50vh - var(--header-height, 67px) - var(--size-10));
@@ -99,7 +99,7 @@ const url = buildImageUrl(`${imageUrl}/${props.imgName}`, {
   }
 }
 
-@media (min-width: 1536px) {
+@media (width >= 1536px) {
   .page-top {
     background-size: contain;
     margin-inline: calc(var(--size-50) * -1);

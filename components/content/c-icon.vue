@@ -70,13 +70,13 @@ figcaption {
   line-height: var(--font-lineheight-1);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   figure {
     aspect-ratio: 1 / 1;
   }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   figure {
     gap: var(--size-10);
   }
@@ -87,7 +87,7 @@ img {
   max-block-size: var(--size-20);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   img {
     max-block-size: var(--size-24);
   }

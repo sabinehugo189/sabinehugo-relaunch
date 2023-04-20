@@ -36,7 +36,7 @@ const { uid } = getCurrentInstance();
   padding-inline-start: 0;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .icons {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     justify-content: center;

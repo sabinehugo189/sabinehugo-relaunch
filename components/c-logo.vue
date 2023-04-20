@@ -104,7 +104,7 @@ svg {
   stroke: none;
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   svg {
     block-size: var(--size, var(--size-10));
   }

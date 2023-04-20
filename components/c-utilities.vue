@@ -120,13 +120,13 @@ button {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .link-phone > span {
     display: block;
   }
 }
 
-@media (min-width: 1920px) {
+@media (width >= 1920px) {
   .container {
     gap: var(--size-10);
   }

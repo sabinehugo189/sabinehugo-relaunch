@@ -130,7 +130,7 @@ watch(
   outline: none;
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   .image-compare-input {
     --thumb-size: var(--size-28);
   }
@@ -164,7 +164,7 @@ watch(
   width: var(--thumb-size);
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
   /* Firefox */
   .image-compare-input::-moz-range-thumb {
     background-image: url("data:image/svg+xml,%3Csvg width='48' height='30' fill='%23FB8C00' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 30c-.549 0-1.097-.21-1.515-.628L.628 16.515a2.142 2.142 0 0 1 0-3.03L13.485.628a2.142 2.142 0 1 1 3.03 3.03L5.173 15l11.343 11.344A2.142 2.142 0 0 1 15 30ZM33 0c.549 0 1.097.21 1.515.628l12.857 12.857a2.142 2.142 0 0 1 0 3.03L34.515 29.372a2.142 2.142 0 1 1-3.03-3.03L42.827 15 31.484 3.656A2.142 2.142 0 0 1 33 0Z'/%3E%3C/svg%3E");
