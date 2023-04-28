@@ -194,14 +194,25 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
 .tiles {
   display: grid;
   gap: var(--size-5);
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   list-style: none;
   padding-inline-start: 0;
+}
+
+@media (min-width: 768px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1536px) {
   .tiles {
     gap: var(--size-8);
+  }
+}
+
+@media (min-width: 1793px) {
+  .tiles {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
