@@ -229,6 +229,11 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
   padding: var(--size-10) var(--size-8);
 }
 
+.tile:nth-child(odd) {
+  inline-size: 100%;
+  justify-self: end;
+}
+
 @media (min-width: 1536px) {
   .tile {
     padding: var(--size-12) var(--size-10);
