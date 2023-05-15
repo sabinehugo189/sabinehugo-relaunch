@@ -194,14 +194,25 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
 .tiles {
   display: grid;
   gap: var(--size-5);
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   list-style: none;
   padding-inline-start: 0;
+}
+
+@media (min-width: 768px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1536px) {
   .tiles {
     gap: var(--size-8);
+  }
+}
+
+@media (min-width: 1793px) {
+  .tiles {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -216,6 +227,11 @@ const src = buildImageUrl(`${imageUrl}/${data.value['u-photo']}`, {
   font-weight: var(--font-weight-3);
   gap: var(--size-12);
   padding: var(--size-10) var(--size-8);
+}
+
+.tile:nth-child(odd) {
+  inline-size: 100%;
+  justify-self: end;
 }
 
 @media (min-width: 1536px) {
