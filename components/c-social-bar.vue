@@ -2,7 +2,7 @@
   <ul class="items">
     <li class="item">
       <a
-        href="https://www.instagram.com/accounts/login/?next=/aesthetik_in_schweinfurt/"
+        href="https://www.instagram.com/zahn.und.aesthetik/"
         class="instagram"
       >
         <svg
