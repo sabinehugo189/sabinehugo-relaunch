@@ -1,5 +1,5 @@
 ---
-title: 'Zahnarztpraxis in Würzburg | Praxis Dr. Hugo'
+title: Praxis für Zahnmedizin und Ästhetische Medizin | Dr. Sabine Hugo'
 description: 'Ihre Zahnarztpraxis in der Würzburger Innenstadt ★ Zahnbehandlungen ★ Dermatologische Ästhetik und mehr ★ Hier informieren und Termin vereinbaren!'
 navigation: false
 ---
